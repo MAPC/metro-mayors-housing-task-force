@@ -2,45 +2,51 @@
 layout: default
 title: Metro Mayor's Task Force on Housing
 ---
+<script>
+  document.addEventListener("DOMContentLoaded", function(event) {
+      var elements = document.getElementsByClassName('slide');
+      for (var i = 1; i < elements.length; i++) {
+        elements[i].className = elements[i].className + " hidden"
+      };
+    });
+  function previousSlide(event) {
+    event.target.parentNode.className = event.target.parentNode.className + " hidden"
+    event.target.parentNode.previousElementSibling.className = "slide"
+  };
+  function nextSlide(event) {
+    event.target.parentNode.className = event.target.parentNode.className + " hidden"
+    event.target.parentNode.nextElementSibling.className = "slide"
+  };
+  function fullScreen(event) {
+    event.target.parentNode.parentNode.className = event.target.parentNode.parentNode.className + " full-screen"
+    event.target.setAttribute('onclick','exitFullScreen(event)');
+    event.target.innerHTML = 'Exit Full Screen';
+  }
+  function exitFullScreen(event) {
+    event.target.parentNode.parentNode.className = 'slide-show'
+    event.target.setAttribute('onclick','fullScreen(event)');
+    event.target.innerHTML = 'Full Screen';
+  }
+</script>
+
 <h1>Metro Mayor’s Task Force on Housing</h1>
 
 <div class="task-force">
-  <h2>Meet the Task Force</h2>
-  <div class="member">
-    Task Force Member
+  <div class="task-force-text">
+    Meet the Task Force
   </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
-  </div>
-  <div class="member">
-    Task Force Member
+  <div class="task-force-members">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
+    <img class="task-force-member" src="images/reardon.jpg">
   </div>
 </div>
 
@@ -51,20 +57,26 @@ title: Metro Mayor's Task Force on Housing
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 
   <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-</div>
 
-<div class="box housing">
-  <h2>Housing Our Region</h2>
-  <a href="">Explore the Issue</a>
-</div>
+  <div class="box" id="housing">
+    <h3>Housing Our Region</h3>
+    <a href="">Explore the Issue ></a>
+  </div>
 
-<div class="box best-practices">
-  <h2>Best Practices</h2>
-  <a href="">Explore Tools</a>
+  <div class="box" id="best-practices">
+    <h3>Best Practices</h3>
+    <a href="">Explore Tools ></a>
+  </div>
 </div>
 
 <div class="slide-show">
-  <h2>Slide Show Stuff</h2>
+  <div class="slide" id="slide-number-1">
+    <button class="next" onclick="nextSlide(event)">></button>
+    <button class="full" onclick="fullScreen(event)">Full Screen</button>
+  </div>
+  <div class="slide" id="slide-number-2">
+    <button class="previous" onclick="previousSlide(event)"><</button>
+  </div>
 </div>
 
 <div class="mayoral-committment">
