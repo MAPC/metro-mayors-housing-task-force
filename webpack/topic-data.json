@@ -1,0 +1,24 @@
+[{
+  "title": "A best practice",
+  "description": "A description of the best practice.",
+  "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+  "subTopics": [
+    {
+      "title": "A sub-topic",
+      "description": "A description of the sub-topic",
+      "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+    }
+  ]
+},
+{
+  "title": "A second best practice",
+  "description": "A second description of the best practice.",
+  "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+  "subTopics": [
+    {
+      "title": "A sub-topic",
+      "description": "A description of the sub-topic",
+      "image": "https://en.wikipedia.org/wiki/Tesla_Model_S#/media/File:Tesla_Model_S_(Facelift_ab_04-2016)_trimmed.jpg"
+    }
+  ]
+}]
