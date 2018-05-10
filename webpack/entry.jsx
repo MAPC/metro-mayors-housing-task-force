@@ -8,50 +8,48 @@ function App() {
   );
 }
 
+function Topic(props) {
+  return (
+    <button className="topic">{props.title}</button>
+  );
+}
+
+function SubTopic(props) {
+  return (
+    <button className="sub-topic">{props.title}</button>
+  );
+}
+
 class Topics extends React.Component {
+  constructor(props) {
+    super(props);
+    this.renderSubTopics = this.renderSubTopics.bind(this)
+  }
+
+  renderTopics(topicData) {
+    return topicData.map((topic) => {
+        return (
+          [<Topic title={topic.title} />, this.renderSubTopics(topic)]
+        );
+    });
+  }
+
+  renderSubTopics(topic) {
+    return topic.subTopics.map((subTopic) => {
+      return (
+        <SubTopic title={subTopic.title} />
+        );
+    });
+  }
+
   render() {
     return (
       <div className="topic-buttons">
-        {
-          topicData.map(function(topic) {
-              const subTopicButtons = topic.subTopics.map(function(subTopic) {
-                return (
-                  <button className='sub-topic'>{subTopic.title}</button>
-                );
-              })
-              return (
-                [<button className='topic'>{topic.title}</button>, subTopicButtons]
-              );
-          })
-        }
+        {this.renderTopics(topicData)}
       </div>
     );
   }
 }
-
-// this.props.data.participants.map(function(player) {
-//    return <li key={player.championId}>{player.summonerName}</li>
-
-// function TopicButton() {
-//   return (
-//     <button className="topic-button">Topic Name</button>
-//   );
-// }
-
-// function BestPractice() {
-//   return (
-//     <div>
-//       <div className="best-practice">
-//         <h2>This is a best practice</h2>
-//         <p>This is the text of the best practice</p>
-//       </div>
-
-//       <div className="best-practice-image">
-//         <img alt="an interesting thing" src="" />
-//       </div>
-//     </div>
-//   );
-// }
 
 ReactDOM.render(
   <App />,
