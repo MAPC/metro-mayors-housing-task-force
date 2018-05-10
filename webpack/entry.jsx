@@ -8,9 +8,34 @@ function App() {
   );
 }
 
-function Topic(props) {
+// function Topic(props) {
+//   return (
+//     <button className="topic">{props.title}</button>
+//   );
+// }
+
+class Topic extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      value: null,
+    };
+  }
+
+  render() {
+    return (
+      <button className="topic" onClick={() => this.setState({value: 'clicked'})}>
+        {this.props.title}
+      </button>
+    );
+  }
+}
+
+function SubTopics(props) {
   return (
-    <button className="topic">{props.title}</button>
+    props.data.map((subTopic) => {
+      return <SubTopic title={subTopic.title} />;
+    })
   );
 }
 
@@ -21,23 +46,10 @@ function SubTopic(props) {
 }
 
 class Topics extends React.Component {
-  constructor(props) {
-    super(props);
-    this.renderSubTopics = this.renderSubTopics.bind(this)
-  }
-
   renderTopics(topicData) {
     return topicData.map((topic) => {
         return (
-          [<Topic title={topic.title} />, this.renderSubTopics(topic)]
-        );
-    });
-  }
-
-  renderSubTopics(topic) {
-    return topic.subTopics.map((subTopic) => {
-      return (
-        <SubTopic title={subTopic.title} />
+          [<Topic title={topic.title} />, <SubTopics data={topic.subTopics} />]
         );
     });
   }
