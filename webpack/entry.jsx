@@ -10,7 +10,9 @@ function App() {
 
 function Topic(props) {
   return (
-    <button className="topic" onClick={() => props.onClick()}>
+    <button className={props.selected ? "selected-topic" : "topic"}
+            onClick={() => props.onClick()}
+    >
       {props.title}
     </button>
   );
@@ -30,11 +32,26 @@ function SubTopic(props) {
   );
 }
 
+function BestPractices(props) {
+  return (
+    props.data.map((bestPractice) => {
+      return <BestPractice title={bestPractice.title} />;
+    })
+  );
+}
+
+function BestPractice(props) {
+  return (
+    <button className="best-practice">{props.title}</button>
+    )
+}
+
 class Topics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
       selectedTopic: topicData[0],
+      selectedSubTopic: topicData[0].subTopics[0]
     };
   }
 
@@ -48,6 +65,7 @@ class Topics extends React.Component {
         <Topic
           title={topic.title}
           onClick={() => this.handleClick(index)}
+          selected={topic === this.state.selectedTopic}
         />
       );
     });
@@ -57,14 +75,23 @@ class Topics extends React.Component {
     return <SubTopics data={topic.subTopics} />
   }
 
+  renderBestPractices(subTopic) {
+    return <BestPractices data={subTopic.bestPractices} />
+  }
+
   render() {
     return (
       <div>
         <div className="topic-buttons">
+          <h3>Topic</h3>
           {this.renderTopics(topicData)}
         </div>
         <div className="sub-topic-buttons">
+          <h3>Subtopic</h3>
           {this.renderSubTopics(this.state.selectedTopic)}
+        </div>
+        <div className="best-practices">
+          {this.renderBestPractices(this.state.selectedSubTopic)}
         </div>
       </div>
     );
