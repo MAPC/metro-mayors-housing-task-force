@@ -10,7 +10,9 @@ function App() {
 
 function Topic(props) {
   return (
-    <button className="topic">{props.title}</button>
+    <button className="topic" onClick={() => props.onClick()}>
+      {props.title}
+    </button>
   );
 }
 
@@ -36,12 +38,16 @@ class Topics extends React.Component {
     };
   }
 
+  handleClick(index) {
+      this.setState({selectedTopic: topicData[index]});
+    }
+
   renderTopics(topicData) {
-    return topicData.map((topic) => {
+    return topicData.map((topic,index) => {
       return (
         <Topic
           title={topic.title}
-          onClick={() => this.handleClick[i]}
+          onClick={() => this.handleClick(index)}
         />
       );
     });
