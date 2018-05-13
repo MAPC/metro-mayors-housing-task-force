@@ -35,14 +35,22 @@ function SubTopic(props) {
 function BestPractices(props) {
   return (
     props.data.map((bestPractice) => {
-      return <BestPractice title={bestPractice.title} />;
+      return <BestPractice
+                title={bestPractice.title}
+                description={bestPractice.description}
+                image={bestPractice.image}
+              />;
     })
   );
 }
 
 function BestPractice(props) {
   return (
-    <button className="best-practice">{props.title}</button>
+    <div class="best-practice">
+      <h4>{props.title}</h4>
+      <p>{props.description}</p>
+      <img src={props.image} />
+    </div>
     )
 }
 
@@ -81,7 +89,7 @@ class Topics extends React.Component {
 
   render() {
     return (
-      <div>
+      <div className=''>
         <div className="topic-buttons">
           <h3>Topic</h3>
           {this.renderTopics(topicData)}
