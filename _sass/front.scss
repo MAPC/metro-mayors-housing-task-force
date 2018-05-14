@@ -23,6 +23,38 @@ button {
   background-color: white;
 }
 
+.housing-best-practices {
+  display: flex;
+}
+
+.button-container {
+  width: 33%;
+}
+
+.best-practices {
+  width: 65%;
+
+  img {
+    max-width: 100%;
+  }
+}
+
+.best-practice {
+  display: flex;
+}
+
+.best-practice-description {
+  width: 55%;
+  border: 0.1em solid;
+  margin: 1em;
+  padding: 1em;
+}
+
+.best-practice-image {
+  width: 45%;
+  margin: 1em;
+}
+
 .compact {
   border: 0.1em solid;
   width: 60%;

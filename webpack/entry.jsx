@@ -35,23 +35,28 @@ function SubTopic(props) {
 function BestPractices(props) {
   return (
     props.data.map((bestPractice) => {
-      return <BestPractice
-                title={bestPractice.title}
-                description={bestPractice.description}
-                image={bestPractice.image}
-              />;
+      return (
+        <BestPractice
+          title={bestPractice.title}
+          description={bestPractice.description}
+          image={bestPractice.image}
+        />);
     })
   );
 }
 
 function BestPractice(props) {
   return (
-    <div class="best-practice">
-      <h4>{props.title}</h4>
-      <p>{props.description}</p>
-      <img src={props.image} />
+    <div className="best-practice">
+      <div className="best-practice-description">
+        <h4>{props.title}</h4>
+        <p>{props.description}</p>
+      </div>
+      <div className="best-practice-image">
+        <img src={props.image} />
+      </div>
     </div>
-    )
+  );
 }
 
 class Topics extends React.Component {
@@ -67,8 +72,12 @@ class Topics extends React.Component {
       this.setState({selectedTopic: topicData[index]});
     }
 
+  handleSubTopicClick(index) {
+      this.setState({selectedSubTopic: this.state.selectedTopic.subTopics[index]});
+    }
+
   renderTopics(topicData) {
-    return topicData.map((topic,index) => {
+    return topicData.map((topic, index) => {
       return (
         <Topic
           title={topic.title}
@@ -80,23 +89,30 @@ class Topics extends React.Component {
   }
 
   renderSubTopics(topic) {
-    return <SubTopics data={topic.subTopics} />
+    return (
+      <SubTopics
+        data={topic.subTopics}
+        onClick={() => this.handleSubTopicClick(3)}
+      />
+    );
   }
 
   renderBestPractices(subTopic) {
-    return <BestPractices data={subTopic.bestPractices} />
+    return <BestPractices data={this.state.selectedSubTopic.bestPractices} />
   }
 
   render() {
     return (
-      <div className=''>
-        <div className="topic-buttons">
-          <h3>Topic</h3>
-          {this.renderTopics(topicData)}
-        </div>
-        <div className="sub-topic-buttons">
-          <h3>Subtopic</h3>
-          {this.renderSubTopics(this.state.selectedTopic)}
+      <div className="housing-best-practices">
+        <div className="button-container">
+          <div className="topic-buttons">
+            <h3>Topic</h3>
+            {this.renderTopics(topicData)}
+          </div>
+          <div className="sub-topic-buttons">
+            <h3>Subtopic</h3>
+            {this.renderSubTopics(this.state.selectedTopic)}
+          </div>
         </div>
         <div className="best-practices">
           {this.renderBestPractices(this.state.selectedSubTopic)}

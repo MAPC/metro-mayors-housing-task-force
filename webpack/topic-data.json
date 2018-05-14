@@ -236,7 +236,7 @@
         },
         {
           "title": "Construction Excise Tax",
-          "description": "Local jurisdiction can levy a tax of up to 1 percent of the permit value on residential construction. They may also levy a non-capped tax on the permit value of commercial and industrial construction. Revenue must go to incentives for developers  to create affordable housing, affordable housing programs, and to down payment assistance",
+          "description": "Local jurisdiction can levy a tax of up to 1 percent of the permit value on residential construction. They may also levy a non-capped tax on the permit value of commercial and industrial construction. Revenue must go to incentives for developers to create affordable housing, affordable housing programs, and to down payment assistance",
           "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
         },
         {
@@ -682,4 +682,99 @@
       ]
     }
   ]
-},]
+},
+{
+  "title": "Tenant Protection",
+  "subTopics": [
+    {
+      "title": "Tenant Protections",
+      "bestPractices": [
+        {
+          "title": "Tenant Legal Aid Fund",
+          "description": "Fund for tenants seeking counsel in eviction cases",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Tenant Right to Counsel",
+          "description": "Supports free, universal access to lawyers for tenants in housing court who earn up to 200 percent of the poverty line",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Fair Chance Housing Ordinance",
+          "description": "Bars landlords from screening tenants for past convictions or arrests, with a few exceptions",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Office of Tenant Advocates",
+          "description": "Establishes a new Office of Tenant Advocates to investigate tenant harrassment complaints, including construction complaints",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Regulation of Buyouts",
+          "description": "Makes it unlawful for an owner, in connection with a buyout offer, to threaten a tenant, to contact tenants at odd hours, or to provide false information to a tenant.",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Certificate of No Harassment (CONH) program",
+          "description": "Requires developers to prove to the city they have not been harassing existing tenants prior to seeking permits for renovating or demolishing buildings covered by the program.",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Just Cause Eviction",
+          "description": "Prevents landlords from evicting tentants without reason. Landlords cannot legally evict tentants without breach of contract. ",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Relocation Assistance",
+          "description": "Payments to displaced tenants and counseling servcies to help with apartment search and application process",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Unified Tenant Screening Report",
+          "description": "Common application and criteria for rental units negotioated with landlord and tenants' groups",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Tenant Blacklist Protections",
+          "description": "Court records in eviction lawsuits become public only if a landlord wins in court; tenant blacklists can only list the names of tenants who are actually evicted. ",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Eviction Screening Protections",
+          "description": "Creates a procedure for an ‘order for limited dissemination,’ which will enable tenants to have their case records excluded from future tenant screening reports. A tenant may request this order from a judge on the grounds that there was insufficient basis for the lawsuit in the first place or that their tenancy was “reinstated” after paying off eviction judgement, or on a showing of “other good cause.” Tenants who have existing eviction records can also request orders for limited dissemination.",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Anti-Harrassment Laws",
+          "description": "laws prohibiting harrasment behavior and creation of affirmative enforcement mechanisms",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Notice of Sale",
+          "description": "Long notice period before a (condo) conversion or property sale",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Tenant Organizing",
+          "description": "Support tenant organizing that is focused on specific campaigns or institutions, with the goal increasing community control",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Fair Housing",
+          "description": "Support enforcement of Fair Housing laws",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Rental Registration and Inspection Ordinances",
+          "description": "Helps ensure that all rental housing is safe and meets basic housing maintenance requirements. Rental property owners must register their properties with the City. Inspectors make sure all registered properties comply with minimum housing and safety standards at least once every X years.",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        },
+        {
+          "title": "Know and Enforce Your Rights Assistance",
+          "description": "Fund tenant and landlord education and public dissemination of tenants rights disclosures",
+          "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+        }
+      ]
+    }
+  ]
+}]
