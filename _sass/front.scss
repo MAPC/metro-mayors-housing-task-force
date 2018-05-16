@@ -1,3 +1,7 @@
+$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$desktop: "(min-width: 1024px)";
+$phone: "(max-width: 768px)";
+
 body {
   font-family: sans-serif;
   color: #707070;
@@ -56,10 +60,14 @@ button {
 }
 
 .compact {
+  padding: 1em;
+  margin: 1em 0.1em;
+  @media #{$desktop} {
+    width: 60%;
+    margin: 2em 5em;
+    padding: 2em 5em;
+  }
   border: 0.1em solid;
-  width: 60%;
-  margin: 2em 5em;
-  padding: 2em 5em;
   position: relative;
 
   h2 {
@@ -121,14 +129,20 @@ button {
 }
 
 #best-practices {
-  padding: 3em 0.7em;
-  margin-left: -13em;
-  margin-top: -12em;
-  position: absolute;
+  margin: 2em 0;
+  @media #{$desktop} {
+    padding: 3em 0.7em;
+    margin-left: -13em;
+    margin-top: -40em;
+    position: absolute;
+  }
 }
 
 #housing {
-  margin-left: 87%;
-  margin-top: -17em;
-  position: absolute;
+  margin: 2em 0;
+  @media #{$desktop} {
+    margin-left: 87%;
+    margin-top: -70em;
+    position: absolute;
+  }
 }
