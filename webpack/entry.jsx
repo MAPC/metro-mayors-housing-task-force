@@ -10,8 +10,9 @@ function App() {
 
 function Topic(props) {
   return (
-    <button className={props.selected ? "selected-topic" : "topic"}
-            onClick={() => props.onClick()}
+    <button
+      className={props.selected ? 'selected-topic' : 'topic'}
+      onClick={() => props.onClick()}
     >
       {props.title}
     </button>
@@ -64,17 +65,17 @@ class Topics extends React.Component {
     super(props);
     this.state = {
       selectedTopic: topicData[0],
-      selectedSubTopic: topicData[0].subTopics[0]
+      selectedSubTopic: topicData[0].subTopics[0],
     };
   }
 
   handleClick(index) {
-      this.setState({selectedTopic: topicData[index]});
-    }
+    this.setState({selectedTopic: topicData[index] });
+  }
 
   handleSubTopicClick(index) {
-      this.setState({selectedSubTopic: this.state.selectedTopic.subTopics[index]});
-    }
+    this.setState({selectedSubTopic: this.state.selectedTopic.subTopics[index]});
+  }
 
   renderTopics(topicData) {
     return topicData.map((topic, index) => {
@@ -98,7 +99,7 @@ class Topics extends React.Component {
   }
 
   renderBestPractices(subTopic) {
-    return <BestPractices data={this.state.selectedSubTopic.bestPractices} />
+    return <BestPractices data={this.state.selectedSubTopic.bestPractices} />;
   }
 
   render() {
