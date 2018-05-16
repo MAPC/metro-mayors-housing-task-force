@@ -28,16 +28,21 @@ button {
 }
 
 .housing-best-practices {
-  display: flex;
+  @media #{$desktop} {
+    display: flex;
+  }
 }
 
 .button-container {
-  width: 33%;
+  @media #{$desktop} {
+    width: 33%;
+  }
 }
 
 .best-practices {
-  width: 65%;
-
+  @media #{$desktop} {
+    width: 65%;
+  }
   img {
     max-width: 100%;
   }
