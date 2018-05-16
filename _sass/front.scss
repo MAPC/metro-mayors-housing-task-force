@@ -72,35 +72,8 @@ button {
   }
 }
 
-.hidden {
-  display: none;
-}
-
-.next {
-  margin-top: 12.9em;
-}
-
-.previous {
-  margin-top: 12.9em;
-}
-
 .signature {
   max-width: 15em;
-}
-
-.slide {
-  width: 80em;
-  height: 30em;
-}
-
-.slide-show.full-screen {
-  width: 100vw;
-  height: 100vw;
-  position: fixed;
-  top: 0;
-  left: 0;
-  background: rgba(51,51,51,0.7);
-  z-index: 10;
 }
 
 .task-force {
@@ -158,12 +131,4 @@ button {
   margin-left: 87%;
   margin-top: -17em;
   position: absolute;
-}
-
-#slide-number-1 {
-  background-image: url("../images/hartford-ct.jpg");
-}
-
-#slide-number-2 {
-  background-image: url("../images/hartford-ct-2.jpg");
 }
