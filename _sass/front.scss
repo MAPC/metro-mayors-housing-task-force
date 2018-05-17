@@ -90,30 +90,38 @@ button {
 }
 
 .task-force {
-  width: 80%;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  justify-content: flex-end;
+  @media #{$desktop} {
+    width: 80%;
+    justify-content: flex-end;
+  }
 }
 
 .task-force-member {
-  width: 10em;
-  height: 10em;
-  border: 0.1em solid;
-  object-fit: cover;
+  @media #{$desktop} {
+    width: 10em;
+    height: 10em;
+    border: 0.1em solid;
+    object-fit: cover;
+  }
 }
 
 .task-force-text {
-  width: 10%;
+  @media #{$desktop} {
+    width: 10%;
+  }
   font-size: 22px;
 }
 
 .task-force-members {
-  width: 90%;
   overflow: hidden;
   img {
     float: left;
+  }
+  @media #{$desktop} {
+    width: 90%;
   }
 }
 
@@ -149,5 +157,11 @@ button {
     margin-left: 87%;
     margin-top: -70em;
     position: absolute;
+  }
+}
+
+#first-task-force-member {
+  @media #{$desktop} {
+    margin-left: 4em;
   }
 }
