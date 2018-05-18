@@ -67,7 +67,6 @@ function BestPractice(props) {
 
 class Topics extends React.Component {
   constructor(props) {
-    console.log('Whats up');
     super(props);
     this.state = {
       selectedTopic: topicData[0],
