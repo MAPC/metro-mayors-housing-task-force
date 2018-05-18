@@ -30,7 +30,7 @@ function SubTopics(props) {
 function SubTopic(props) {
   return (
     <button
-      className="sub-topic"
+      className={props.selected ? 'selected-topic' : 'topic'}
       onClick={() => props.onClick()}
     >
       {props.title}
@@ -100,6 +100,7 @@ class Topics extends React.Component {
         <SubTopic
           title={subtopic.title}
           onClick={() => this.handleSubTopicClick(index)}
+          selected={subtopic === this.state.selectedSubTopic}
         />
       );
     });
