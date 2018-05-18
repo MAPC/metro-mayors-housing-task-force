@@ -53,19 +53,25 @@ button {
 }
 
 .best-practice {
-  display: flex;
+  @media #{$desktop} {
+    display: flex;
+  }
 }
 
 .best-practice-description {
-  width: 55%;
+  @media #{$desktop} {
+    width: 55%;
+  }
   border: 0.1em solid;
   margin: 1em;
   padding: 1em;
 }
 
 .best-practice-image {
-  width: 45%;
-  margin: 1em;
+  @media #{$desktop} {
+    width: 45%;
+    margin: 1em;
+  }
 }
 
 .compact {
