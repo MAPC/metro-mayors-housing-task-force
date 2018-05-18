@@ -107,11 +107,6 @@ button {
 }
 
 .task-force-member {
-  @media #{$desktop} {
-    width: 8em;
-    height: 8em;
-
-  }
   width: 6em;
   height: 6em;
   border: 0.1em solid;
