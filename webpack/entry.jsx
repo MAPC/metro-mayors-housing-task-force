@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import topicData from './topic-data.json';
+import topicData from '../_data/topic-data.json';
 
 function App() {
   return (
