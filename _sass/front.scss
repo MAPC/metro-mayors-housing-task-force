@@ -86,11 +86,6 @@ button {
   h2 {
     text-align: center;
   }
-
-  a {
-    color: #707070;
-    text-decoration: none;
-  }
 }
 
 .signature {
@@ -166,4 +161,15 @@ button {
   @media #{$desktop} {
     margin-left: 4em;
   }
+}
+
+.navigation {
+  list-style-type: none;
+  padding: 0;
+  text-align: right;
+}
+
+a {
+  color: #707070;
+  text-decoration: none;
 }
