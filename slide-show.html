@@ -17,22 +17,11 @@ title: Metro Mayor's Task Force on Housing Slide Show
     event.target.parentNode.className = event.target.parentNode.className + " hidden"
     event.target.parentNode.nextElementSibling.className = "slide"
   };
-  function fullScreen(event) {
-    event.target.parentNode.parentNode.className = event.target.parentNode.parentNode.className + " full-screen"
-    event.target.setAttribute('onclick','exitFullScreen(event)');
-    event.target.innerHTML = 'Exit Full Screen';
-  }
-  function exitFullScreen(event) {
-    event.target.parentNode.parentNode.className = 'slide-show'
-    event.target.setAttribute('onclick','fullScreen(event)');
-    event.target.innerHTML = 'Full Screen';
-  }
 </script>
 
-<div class="slide-show">
+<div class="slide-show full-screen">
   <div class="slide" id="slide-number-1">
     <button class="next" onclick="nextSlide(event)">></button>
-    <button class="full" onclick="fullScreen(event)">Full Screen</button>
   </div>
   <div class="slide" id="slide-number-2">
     <button class="previous" onclick="previousSlide(event)"><</button>
