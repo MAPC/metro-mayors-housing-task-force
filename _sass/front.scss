@@ -3,14 +3,13 @@ $desktop: "(min-width: 1024px)";
 $phone: "(max-width: 768px)";
 
 body {
-  font-family: sans-serif;
-  color: #707070;
+  font-family: 'Roboto', sans-serif;
   margin: 0 auto;
+  width: 16em;
+  font-size: 16px;
   @media #{$desktop} {
     width: 75em;
   }
-  width: 20em;
-  font-size: 16px;
 }
 
 button {
@@ -22,6 +21,10 @@ button {
   text-decoration: none;
   display: inline-block;
   font-size: 32px;
+}
+
+h1 {
+  font-size: 40px;
 }
 
 .box {
@@ -44,11 +47,11 @@ button {
 }
 
 .best-practices {
-  @media #{$desktop} {
-    width: 65%;
-  }
   img {
     max-width: 100%;
+  }
+  @media #{$desktop} {
+    width: 65%;
   }
 }
 
@@ -59,12 +62,12 @@ button {
 }
 
 .best-practice-description {
-  @media #{$desktop} {
-    width: 55%;
-  }
   border: 0.1em solid;
   margin: 1em;
   padding: 1em;
+  @media #{$desktop} {
+    width: 55%;
+  }
 }
 
 .best-practice-image {
@@ -77,14 +80,9 @@ button {
 .compact {
   padding: 1em;
   margin: 1em 0.1em;
+  position: relative;
   @media #{$desktop} {
     padding: 2em 5em;
-  }
-  border: 0.1em solid;
-  position: relative;
-
-  h2 {
-    text-align: center;
   }
 }
 
@@ -96,25 +94,32 @@ button {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  @media #{$desktop} {
-    justify-content: flex-end;
-  }
 }
 
 .task-force-member {
-  width: 6em;
-  height: 6em;
+  width: 5em;
+  height: 5em;
   border: 0.1em solid;
   object-fit: cover;
   border-radius: 50%;
   margin: 1em;
+  @media #{$desktop} {
+    width: 6em;
+    height: 6em;
+  }
 }
 
 .task-force-text {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 0;
+  padding: 0;
   @media #{$desktop} {
-    width: 10%;
+    width: 8em;
+    position: relative;
+    left: 34.5em;
+    top: -6em;
   }
-  font-size: 22px;
 }
 
 .task-force-members {
@@ -123,7 +128,7 @@ button {
     float: left;
   }
   @media #{$desktop} {
-    width: 90%;
+    width: 66em;
   }
 }
 
@@ -159,8 +164,22 @@ button {
 
 #first-task-force-member {
   @media #{$desktop} {
-    margin-left: 4em;
+    margin-left: 5em;
   }
+}
+
+#right-bottom-border {
+  border-bottom: 8px solid #81B7B7;
+  right: 0;
+  width: 9.5em;
+  positon: absolute;
+}
+
+#left-bottom-border {
+  border-bottom: 8px solid #81B7B7;
+  width: 9.5em;
+  position: absolute;
+  left: 0;
 }
 
 .navigation {
