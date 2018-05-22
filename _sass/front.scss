@@ -12,6 +12,14 @@ body {
   }
 }
 
+h1 {
+  font-size: 40px;
+}
+
+li {
+  padding: 0.5em 0;
+}
+
 button {
   background-color: rgba(0, 0, 0, 0.5);
   border: none;
@@ -23,62 +31,11 @@ button {
   font-size: 32px;
 }
 
-h1 {
-  font-size: 40px;
-}
-
-li {
-  padding: 0.5em 0;
-}
-
 .box {
   border: 0.1em solid;
   width: 10em;
   padding: 2em;
   background-color: white;
-}
-
-.housing-best-practices {
-  @media #{$desktop} {
-    display: flex;
-  }
-}
-
-.button-container {
-  @media #{$desktop} {
-    width: 33%;
-  }
-}
-
-.best-practices {
-  img {
-    max-width: 100%;
-  }
-  @media #{$desktop} {
-    width: 65%;
-  }
-}
-
-.best-practice {
-  @media #{$desktop} {
-    display: flex;
-  }
-}
-
-.best-practice-description {
-  border: 0.1em solid;
-  margin: 1em;
-  padding: 1em;
-  @media #{$desktop} {
-    width: 55%;
-  }
-}
-
-.best-practice-image {
-  @media #{$desktop} {
-    width: 45%;
-    margin: 1em;
-  }
 }
 
 .compact {
@@ -134,17 +91,6 @@ li {
   @media #{$desktop} {
     width: 66em;
   }
-}
-
-.topic {
-  font-size: 16px;
-  padding: 8px 16px;
-}
-
-.selected-topic {
-  font-size: 16px;
-  padding: 8px 16px;
-  background: black;
 }
 
 #best-practices {
