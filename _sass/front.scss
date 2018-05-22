@@ -8,7 +8,7 @@ body {
   width: 16em;
   font-size: 16px;
   @media #{$desktop} {
-    width: 75em;
+    width: 73em;
   }
 }
 
@@ -25,6 +25,10 @@ button {
 
 h1 {
   font-size: 40px;
+}
+
+li {
+  padding: 0.5em 0;
 }
 
 .box {
@@ -144,21 +148,57 @@ h1 {
 }
 
 #best-practices {
-  margin: 2em 0;
   @media #{$desktop} {
-    padding: 3em 0.7em;
-    margin-left: -13em;
-    margin-top: -40em;
+    padding: 3.1em 3.1em;
+    margin-left: -17em;
+    margin-top: -50em;
     position: absolute;
+    background: url("../images/best-practices-background.svg") no-repeat;
+    color: white;
+    a {
+      margin-left: 80px;
+      color: white;
+    }
+    img {
+      margin-top: -2.9em;
+      margin-left: 6em;
+    }
+    h3 {
+      margin-left: 80px;
+    }
+  }
+  img {
+    height: 140px;
+  }
+  h3 {
+    margin-bottom: 0em;
   }
 }
 
 #housing {
-  margin: 2em 0;
   @media #{$desktop} {
-    margin-left: 87%;
-    margin-top: -70em;
+    margin-left: 55em;
+    margin-top: -45em;
     position: absolute;
+    background: url("../images/housing-background.svg") no-repeat;
+    padding: 12em 12em;
+    img {
+      margin-top: -6em;
+    }
+    h3 {
+      color: white;
+      width: 10em;
+      padding: 0;
+      margin-bottom: 0;
+      margin-left: -70px;
+    }
+    a {
+      color: white;
+      margin-left: -70px;
+    }
+  }
+  img {
+    height: 140px;
   }
 }
 
