@@ -27,10 +27,10 @@ class CompactSection extends React.Component {
     ));
 
     return (
-      <section className="component CompactSection compact">
+      <section className="component CompactSection">
         <h2>
           The Compact
-          <div className="left-bottom-border"></div>
+          <div className="underline"></div>
         </h2>
         <p>Metro Boston is experiencing a housing crisis. The rate of housing production in Massachusetts is one of the lowest in the country, even as we’ve seen increases in population and employment. Since 2010, the Commonwealth has added nearly 250,000 residents and 350,000 new jobs, while permitting only 81,000 new housing units (U.S. Census Bureau and U.S. Bureau of Labor Statistics). High demand and inadequate housing production contribute to rapidly rising home prices throughout eastern Massachusetts, so that housing here has become among the highest cost in the nation. Limited supply makes it difficult for Metro Boston residents to find housing that works for them, and for employers to retain and recruit workers. </p>
 
@@ -62,16 +62,16 @@ class CompactSection extends React.Component {
         {signatures}
 
         <a href="slide-show.html">
-          <div id="housing">
-            <img alt="A house" src="images/housing-house.svg" />
+          <div className="bubble housing">
+            <img alt="A house" src="/assets/images/housing-house.svg" />
             <h3>Housing Our Region</h3>
             <span>Explore the Issue ></span>
           </div>
         </a>
 
         <a href="best-practices.html">
-          <div id="best-practices">
-            <img alt="A house" src="images/best-practices-house.svg" />
+          <div className="bubble best-practices">
+            <img alt="A house" src="/assets/images/best-practices-house.svg" />
             <h3>Best Practices</h3>
             <span>Explore Tools ></span>
           </div>

@@ -5,7 +5,7 @@ class Signature extends React.Component {
   render() {
     return (
       <img
-        className="component signature Signature"
+        className="component Signature"
         alt={`Signature of ${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
         src={this.props.image}
       />

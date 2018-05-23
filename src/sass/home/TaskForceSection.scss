@@ -1,0 +1,37 @@
+.component.TaskForceSection {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+
+  h2 {
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    @media #{$desktop} {
+      width: 8em;
+      position: relative;
+      left: 34.5em;
+      top: -6em;
+    }
+    .underline {
+      border-bottom: 8px solid #81B7B7;
+      right: 0;
+      width: 9.5em;
+      positon: absolute;
+    }
+  }
+
+  .task-force-members {
+    display: flex;
+    flex-wrap: wrap;
+    a:first-child {
+      @media #{$desktop} {
+        margin-left: 5em;
+      }
+    }
+    @media #{$desktop} {
+      width: 66em;
+    }
+  }
+}

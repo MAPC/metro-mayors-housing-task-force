@@ -7,9 +7,9 @@ class Member extends React.Component {
     return (
       <Link to={this.props.municipalityName.toLowerCase()}>
         <img
-          className="task-force-member"
+          className="component Member"
           alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
-          src={this.props.image}
+          src={`/assets/images/${this.props.municipalityName}.png`}
         />
       </Link>
     );

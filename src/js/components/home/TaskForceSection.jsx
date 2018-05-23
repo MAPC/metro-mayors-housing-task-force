@@ -8,10 +8,65 @@ class TaskForceSection extends React.Component {
   constructor(props) {
     super(props);
     this.taskForceMembers = [{
-      title: '',
-      name: '',
-      image: '',
-      municipalityName: '',
+      title: 'Town Manager',
+      name: 'Adam Chapdelaine',
+      municipalityName: 'Arlington',
+    }, {
+      title: 'Mayor',
+      name: 'Martin Walsh',
+      municipalityName: 'Boston',
+    }, {
+      title: 'Mayor',
+      name: 'Joseph Sullivan',
+      municipalityName: 'Braintree',
+    }, {
+      title: 'Town Administrator',
+      name: 'Mel Kleckner',
+      municipalityName: 'Brookline',
+    }, {
+      title: 'City Manager',
+      name: 'Louis Depasquale',
+      municipalityName: 'Cambridge',
+    }, {
+      title: 'City Manager',
+      name: 'Thomas Ambrosino',
+      municipalityName: 'Chelsea',
+    }, {
+      title: 'Mayor',
+      name: 'Carlo DeMaria Jr.',
+      municipalityName: 'Everett',
+    }, {
+      title: 'Mayor',
+      name: 'Gary Christenson',
+      municipalityName: 'Malden',
+    }, {
+      title: 'Mayor',
+      name: 'Stephanie Muccini Burke',
+      municipalityName: 'Medford',
+    }, {
+      title: 'Mayor',
+      name: 'Gail Infurna',
+      municipalityName: 'Melrose',
+    }, {
+      title: 'Mayor',
+      name: 'Ruthanne Fuller',
+      municipalityName: 'Newton',
+    }, {
+      title: 'Mayor',
+      name: 'Thomas Koch',
+      municipalityName: 'Quincy',
+    }, {
+      title: 'Mayor',
+      name: 'Brian Arrigo',
+      municipalityName: 'Revere',
+    }, {
+      title: 'Mayor',
+      name: 'Joseph Curatone',
+      municipalityName: 'Somerville',
+    }, {
+      title: 'Interim Town Manager',
+      name: 'Chief Terence Delehanty',
+      municipalityName: 'Winthrop',
     }];
   }
 
@@ -28,13 +83,13 @@ class TaskForceSection extends React.Component {
     ));
 
     return (
-      <section className="component TaskForceSection task-force">
+      <section className="component TaskForceSection">
         <div className="task-force-members">
           {members}
         </div>
-        <h2 className="task-force-text">
+        <h2>
           {'Meet the Mayors'}
-          <div className="right-bottom-border"></div>
+          <div className="underline"></div>
         </h2>
       </section>
     );
