@@ -64,8 +64,8 @@ class TaskForceSection extends React.Component {
       name: 'Joseph Curatone',
       municipalityName: 'Somerville',
     }, {
-      title: 'Interim Town Manager',
-      name: 'Chief Terence Delehanty',
+      title: 'Town Manager',
+      name: 'David Cressman',
       municipalityName: 'Winthrop',
     }];
   }
