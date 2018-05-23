@@ -3,3 +3,5 @@ _site/
 .jekyll-metadata
 assets/bundle.js
 node_modules
+public/bundle.js
+public/bundle.css

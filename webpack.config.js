@@ -1,24 +1,49 @@
+const webpack = require('webpack');
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
+
 module.exports = {
+  mode: 'development',
   // webpack folder’s entry js — excluded from jekll’s build process.
-  entry: "./webpack/entry.jsx",
-  devtool: "cheap-module-eval-source-map",
+  entry: {
+    bundle: './src/js/index.jsx'
+  },
+  devtool: 'source-map',
   output: {
     // we’re going to put the generated file in the assets folder so jekyll will grab it.
     // if using GitHub Pages, use the following:
     // path: "assets/javascripts"
-    path: __dirname + "/assets/javascripts",
-    filename: "bundle.js"
+    path: __dirname + '/public',
+    filename: '[name].js'
+  },
+  plugins: [
+    new MiniCssExtractPlugin({
+      // Options similar to the same options in webpackOptions.output
+      // both options are optional
+      filename: "[name].css",
+      chunkFilename: "[id].css"
+    })
+  ],
+  devServer: {
+    contentBase: __dirname + '/public'
   },
   module: {
-  rules: [
-    {
-      test: /\.jsx?$/,
-      exclude: /(node_modules)/,
-      loader: "babel-loader", // "babel-loader" is also a legal name to reference
-      query: {
-        presets: ["react", "es2015"]
+    rules: [
+      {
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'babel-loader', // "babel-loader" is also a legal name to reference
+        query: {
+          presets: ['react', 'es2015']
+        }
+      }, {
+        test: /\.scss$/,
+        include: __dirname + '/src/sass',
+        loader: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { url: false } }, 'sass-loader'],
+        exclude: /node_modules/,
       }
-    }
     ]
+  },
+  performance: {
+    hints: false
   }
 };

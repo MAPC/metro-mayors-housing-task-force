@@ -1,12 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import topicData from '../_data/topic-data.json';
+import topicData from '../../_data/topic-data.json';
+import '../sass/index.scss';
 
-function App() {
-  return (
-    <Topics />
-  );
-}
+import App from './components/App.jsx';
 
 function Topic(props) {
   return (
@@ -130,6 +127,8 @@ class Topics extends React.Component {
     );
   }
 }
+
+
 
 ReactDOM.render(
   <App />,
