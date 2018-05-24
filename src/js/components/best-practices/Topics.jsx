@@ -20,17 +20,22 @@ class Topics extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      selectedTopic: topicData[0],
-      selectedSubTopic: topicData[0].subTopics[0],
+      selectedTopics: [topicData[0]],
+      selectedSubTopics: [topicData[0].subTopics[0]],
     };
   }
 
   handleClick(index) {
-    this.setState({selectedTopic: topicData[index] });
+    if (this.state.selectedTopics.includes(topicData[index])) {
+      let arrayIndex = this.state.selectedTopics.indexOf(topicData[index]);
+      if (arrayIndex !== -1) this.setState({ selectedTopics: this.state.selectedTopics.splice(arrayIndex, 1)});
+    } else {
+      this.setState({ selectedTopics: [...this.state.selectedTopics, topicData[index]] });
+    }
   }
 
   handleSubTopicClick(index) {
-    this.setState({selectedSubTopic: this.state.selectedTopic.subTopics[index]});
+    this.setState({ selectedSubTopics: this.state.selectedTopics[0].subTopics[index] });
   }
 
   renderTopics(topicData) {
@@ -39,19 +44,23 @@ class Topics extends React.Component {
         <Topic
           title={topic.title}
           onClick={() => this.handleClick(index)}
-          selected={topic === this.state.selectedTopic}
+          selected={this.state.selectedTopics.includes(topic)}
         />
       );
     });
   }
 
-  renderSubTopics(topic) {
-    return topic.subTopics.map((subtopic, index) => {
+  renderSubTopics(topics) {
+    // collect all the subtopics from each selected topic
+    let allSubTopics = topics
+      .map(topic => topic.subTopics)
+      .reduce((a, b) => a.concat(b), []);
+    return allSubTopics.map((subtopic, index) => {
       return (
         <SubTopic
           title={subtopic.title}
           onClick={() => this.handleSubTopicClick(index)}
-          selected={subtopic === this.state.selectedSubTopic}
+          selected={subtopic === this.state.selectedSubTopics}
         />
       );
     });
@@ -79,11 +88,11 @@ class Topics extends React.Component {
           </div>
           <div className="sub-topic-buttons">
             <h3>Subtopic</h3>
-            {this.renderSubTopics(this.state.selectedTopic)}
+            {this.renderSubTopics(this.state.selectedTopics)}
           </div>
         </div>
         <div className="best-practices">
-          {this.renderBestPractices(this.state.selectedSubTopic)}
+          {this.renderBestPractices(this.state.selectedSubTopics[0])}
         </div>
       </div>
     );
