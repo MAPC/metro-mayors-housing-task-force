@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 class BestPractice extends React.Component {
   render() {
     return (
-      <div className="best-practice">
+      <div className="component BestPractice best-practice">
         <div className="best-practice-description">
           <h4>{this.props.title}</h4>
           <p>{this.props.description}</p>
