@@ -116,7 +116,7 @@ class CompactSection extends React.Component {
 
         {signatures}
 
-        <a href="slide-show.html">About
+        <a href="slide-show.html">
           <div className="bubble housing">
             <img alt="A house" src="/assets/images/housing-house.svg" />
             <h3>Housing Our Region</h3>
