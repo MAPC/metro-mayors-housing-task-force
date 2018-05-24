@@ -7,7 +7,7 @@ class Signature extends React.Component {
       <img
         className="component Signature"
         alt={`Signature of ${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
-        src={`/assets/images/${this.props.municipalityName}-signature.svg`}
+        src={`/assets/images/${this.props.municipalityName.toLowerCase()}-signature.svg`}
       />
     );
   }
