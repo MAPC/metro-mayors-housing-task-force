@@ -28,14 +28,27 @@ class Topics extends React.Component {
   handleClick(index) {
     if (this.state.selectedTopics.includes(topicData[index])) {
       let arrayIndex = this.state.selectedTopics.indexOf(topicData[index]);
-      if (arrayIndex !== -1) this.setState({ selectedTopics: this.state.selectedTopics.splice(arrayIndex, 1)});
+      if (arrayIndex !== -1) {
+        let tempArray = this.state.selectedTopics;
+        tempArray.splice(arrayIndex, 1);
+        this.setState({ selectedTopics: tempArray });
+      }
     } else {
       this.setState({ selectedTopics: [...this.state.selectedTopics, topicData[index]] });
     }
   }
 
-  handleSubTopicClick(index) {
-    this.setState({ selectedSubTopics: this.state.selectedTopics[0].subTopics[index] });
+  handleSubTopicClick(subtopic) {
+    if (this.state.selectedSubTopics.includes(subtopic)) {
+      let arrayIndex = this.state.selectedSubTopics.indexOf(subtopic);
+      if (arrayIndex !== -1) {
+        let tempArray = this.state.selectedSubTopics;
+        tempArray.splice(arrayIndex, 1);
+        this.setState({ selectedSubTopics: tempArray });
+      }
+    } else {
+      this.setState({ selectedSubTopics: [...this.state.selectedSubTopics, subtopic] });
+    }
   }
 
   renderTopics(topicData) {
@@ -59,8 +72,8 @@ class Topics extends React.Component {
       return (
         <SubTopic
           title={subtopic.title}
-          onClick={() => this.handleSubTopicClick(index)}
-          selected={subtopic === this.state.selectedSubTopics}
+          onClick={() => this.handleSubTopicClick(subtopic)}
+          selected={this.state.selectedSubTopics.includes(subtopic)}
         />
       );
     });
