@@ -124,13 +124,13 @@ class CompactSection extends React.Component {
           </div>
         </a>
 
-        <a href="best-practices.html">
+        <Link to={'/best-practices'}>
           <div className="bubble best-practices">
             <img alt="A house" src="/assets/images/best-practices-house.svg" />
             <h3>Best Practices</h3>
             <span>Explore Tools ></span>
           </div>
-        </a>
+        </Link>
       </section>
     );
   }

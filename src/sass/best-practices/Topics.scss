@@ -1,0 +1,37 @@
+.component.Topics {
+  .best-practices {
+    @media #{$desktop} {
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  .topic-buttons {
+    @media #{$desktop} {
+      width: 50em;
+    }
+  }
+
+  .sub-topic-buttons {
+    @media #{$desktop} {
+      width: 50em;
+    }
+  }
+
+  .topic {
+    font-size: 16px;
+    padding: 0.5em 1em;
+    background: white;
+    color: #002D40;
+    border: 1px solid #002D40;
+    text-transform: uppercase;
+  }
+
+  .selected-topic {
+    font-size: 16px;
+    padding: 0.5em 1em;
+    background: #81B7B7;
+    border: 1px solid #002D40;
+    text-transform: uppercase;
+  }
+}
