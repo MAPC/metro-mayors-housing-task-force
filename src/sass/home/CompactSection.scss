@@ -13,6 +13,14 @@
     left: 0;
   }
 
+  .bubble-container{
+    padding-left: 1em;
+    padding-right: 1em;
+    max-width: 72em;
+    margin: 0 auto;
+  }
+
+
   .bubble.best-practices {
     @media #{$desktop} {
       padding: 3.1em 3.1em;

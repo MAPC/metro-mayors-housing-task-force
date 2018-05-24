@@ -83,7 +83,7 @@ class TaskForceSection extends React.Component {
     ));
 
     return (
-      <section className="component TaskForceSection">
+      <section className="component TaskForceSection container">
         <div className="task-force-members">
           {members}
         </div>

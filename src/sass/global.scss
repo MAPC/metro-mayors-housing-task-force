@@ -4,17 +4,13 @@ $phone: "(max-width: 768px)";
 
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0 auto;
-  width: 16em;
-  font-size: 16px;
+  margin: 0;
+  padding: 0;
   color: #002D40;
-  @media #{$desktop} {
-    width: 73em;
-  }
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2rem;
 }
 
 li {
@@ -35,4 +31,11 @@ button {
 a {
   color: #707070;
   text-decoration: none;
+}
+
+.container {
+  padding-left: 1em;
+  padding-right: 1em;
+  max-width: 42em;
+  margin: 0 auto;
 }

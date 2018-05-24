@@ -6,12 +6,18 @@ class Header extends React.Component {
   render() {
     return (
       <header className="component Header">
+        <h1>
+          <div className="subtle">Metropolitan Mayors Coalition</div>
+          <div>Regional Housing Task Force</div>
+          <div className="underline yellow"></div>
+        </h1>
         <nav>
           <ul>
             <li><Link to={'/about'}>About</Link></li>
+            <li><Link to={'/about'}>Best Practices</Link></li>
+            <li><Link to={'/about'}>Story</Link></li>
           </ul>
         </nav>
-        <h1>Metro Mayors' Coalition on Housing</h1>
       </header>
     );
   }

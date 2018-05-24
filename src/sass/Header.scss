@@ -1,7 +1,43 @@
 .component.Header {
-  nav ul {
-    list-style-type: none;
-    padding: 0;
-    text-align: right;
+  padding: 3em 2em 4em 2em;
+  display: flex;
+  max-width: 96em;
+  margin: 0 auto;
+  h1 {
+    font-weight: 700;
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    .subtle {
+      font-size: 0.5em;
+    }
+    .underline {
+      position: absolute;
+      bottom: 0.15em;
+      left: -1em;
+      height: 0.2em;
+      width: 110%;
+      z-index: -10;
+      &.yellow {
+        background-color: #ECCF54;
+      }
+    }
+  }
+  nav {
+    flex: 1;
+    ul {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      list-style-type: none;
+      li {
+        a {
+          font-weight: 700;
+        }
+        &:not(:last-child) {
+          margin-right: 1em;
+        }
+      }
+    }
   }
 }
