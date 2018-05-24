@@ -2,6 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import topicData from '../../../../_data/topic-data.json';
 
+import SubTopic from './SubTopic.jsx';
+import BestPractice from './BestPractice.jsx';
+
 function Topic(props) {
   return (
     <button
@@ -10,52 +13,6 @@ function Topic(props) {
     >
       {props.title}
     </button>
-  );
-}
-
-function SubTopics(props) {
-  return (
-    props.data.map((subTopic) => {
-      return <SubTopic title={subTopic.title} />;
-    })
-  );
-}
-
-function SubTopic(props) {
-  return (
-    <button
-      className={props.selected ? 'selected-topic' : 'topic'}
-      onClick={() => props.onClick()}
-    >
-      {props.title}
-    </button>
-  );
-}
-
-function BestPractices(props) {
-  return (
-    props.data.map((bestPractice) => {
-      return (
-        <BestPractice
-          title={bestPractice.title}
-          description={bestPractice.description}
-          image={bestPractice.image}
-        />);
-    })
-  );
-}
-
-function BestPractice(props) {
-  return (
-    <div className="best-practice">
-      <div className="best-practice-description">
-        <h4>{props.title}</h4>
-        <p>{props.description}</p>
-      </div>
-      <div className="best-practice-image">
-        <img src={props.image} />
-      </div>
-    </div>
   );
 }
 
@@ -100,8 +57,16 @@ class Topics extends React.Component {
     });
   }
 
-  renderBestPractices() {
-    return <BestPractices data={this.state.selectedSubTopic.bestPractices} />;
+  renderBestPractices(subTopicData) {
+    return subTopicData.bestPractices.map((bestPractice) => {
+      return (
+        <BestPractice
+          title={bestPractice.title}
+          description={bestPractice.description}
+          image={bestPractice.image}
+        />
+      );
+    });
   }
 
   render() {
@@ -126,8 +91,6 @@ class Topics extends React.Component {
 }
 
 Topics.propTypes = {
-  title: PropTypes.string.isRequired,
-  selected: PropTypes.boolean.isRequired,
 };
 
 export default Topics;
