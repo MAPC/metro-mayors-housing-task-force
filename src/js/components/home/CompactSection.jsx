@@ -82,7 +82,7 @@ class CompactSection extends React.Component {
     ));
 
     return (
-      <section className="component CompactSection">
+      <section className="component CompactSection container generous">
         <div className="container">
           <h2>
             The Compact
@@ -92,8 +92,6 @@ class CompactSection extends React.Component {
           <p>To accommodate a growing economy, Metro Boston will need to build about 330,000 additional units between 2010 and 2030 (MAPC Population and Housing Demand Projections). Furthermore, changing preferences and rapid job growth in and around Boston mean that an increasing share of this demand will be in the region’s Inner Core, putting pressure on the existing housing stock. Without additional units to meet that demand, rents and sale prices will continue to rise, and lower-income households will be pushed out of their communities.</p>
 
           <p>However, this crisis is not just about sheer numbers; it’s about people. We need housing that works for a range of household types and incomes, including families with lower incomes: renters, students, young homebuyers, empty nesters, seniors looking to downsize, families with children, vulnerable residents, and people with disabilities. The Metro Mayors Coalition (MMC) believes current residents must have housing options they can afford in the communities where they want to live, and that newcomers looking to live and work in the region should be able to make a home here. Towards that end, we pledge to work together to increase housing opportunity in Metro Boston in accordance with these principles:</p>
-        </div>
-        <div className="bubble-container">
           <ol>
             <li><b>Stakeholder and Municipal Engagement.</b> We must engage in broad, inclusive outreach to municipal officials, residents, and other stakeholders within and beyond the MMC to understand and address regional housing concerns.</li>
 
@@ -115,20 +113,23 @@ class CompactSection extends React.Component {
 
             <li><b>Fair Housing.</b> We are committed to abolishing discrimination against tenants and buyers, and advancing fair and equitable access to housing opportunity for everyone.</li>
           </ol>
-          {signatures}
-
-          <Link className="bubble housing" to={'/story'}>
-            <img alt="A house" src="/assets/images/housing-house.svg" />
+          <div className="signatures">
+            {signatures}
+          </div>
+        </div>
+        <Link className="bubble housing" to={'/story'}>
+          <div>
             <h3>Housing Our Region</h3>
             <span>Explore the Issue ></span>
-          </Link>
+          </div>
+        </Link>
 
-          <Link className="bubble best-practices" to={'/best-practices'}>
-            <img alt="A house" src="/assets/images/best-practices-house.svg" />
+        <Link className="bubble best-practices" to={'/best-practices'}>
+          <div>
             <h3>Best Practices</h3>
             <span>Explore Tools ></span>
-          </Link>
-        </div>
+          </div>
+        </Link>
       </section>
     );
   }

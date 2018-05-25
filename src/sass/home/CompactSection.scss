@@ -1,10 +1,5 @@
 .component.CompactSection {
-  padding: 1em;
-  margin: 0 0.1em;
   position: relative;
-  @media #{$desktop} {
-    padding: 2em 5em;
-  }
 
   .bubble-container{
     padding-left: 1em;
@@ -13,59 +8,42 @@
     margin: 0 auto;
   }
 
+  .bubble {
+    h3 {
+      margin: 0 0 0.5rem 0;
+
+    }
+  }
 
   .bubble.best-practices {
     @media #{$desktop} {
-      padding: 3.1em 3.1em;
-      margin-left: -17em;
-      margin-top: -50em;
+      width: $bubble-width;
+      height: $bubble-width;
+      display: flex;
+      justify-content: center;
+      align-items: center;
       position: absolute;
+      top: 10rem;
+      left: 0;
       background: url("../assets/images/best-practices-background.svg") no-repeat;
+      background-size: contain;
       color: white;
-      span {
-        margin-left: 80px;
-        color: white;
-      }
-      img {
-        margin-top: -2.9em;
-        margin-left: 6em;
-      }
-      h3 {
-        margin-left: 80px;
-      }
-    }
-    img {
-      height: 140px;
-    }
-    h3 {
-      margin-bottom: 0em;
     }
   }
 
   .bubble.housing {
     @media #{$desktop} {
-      margin-left: 55em;
-      margin-top: -45em;
+      width: $bubble-width;
+      height: $bubble-width;
       position: absolute;
+      top: 30rem;
+      right: 0;
       background: url("../assets/images/housing-background.svg") no-repeat;
-      padding: 12em 12em;
-      img {
-        margin-top: -6em;
-      }
-      h3 {
-        color: white;
-        width: 10em;
-        padding: 0;
-        margin-bottom: 0;
-        margin-left: -70px;
-      }
-      span {
-        color: white;
-        margin-left: -70px;
-      }
-    }
-    img {
-      height: 140px;
+      background-size: contain;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
     }
   }
 }
