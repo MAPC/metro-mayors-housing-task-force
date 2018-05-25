@@ -14,8 +14,9 @@ class Member extends React.Component {
           src={`/assets/images/${this.props.municipalityName}-small.png`}
         />
         <div className="name-title">
+          <div>{this.props.title}</div>
           <div className="name">{this.props.name}</div>
-          <div>{this.props.municipalityName} {this.props.title}</div>
+          <div>{this.props.municipalityName}</div>
         </div>
       </Link>
     );

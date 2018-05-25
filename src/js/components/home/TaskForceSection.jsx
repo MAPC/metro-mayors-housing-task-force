@@ -41,7 +41,7 @@ class TaskForceSection extends React.Component {
       municipalityName: 'Malden',
     }, {
       title: 'Mayor',
-      name: 'Stephanie Muccini Burke',
+      name: 'Stephanie Burke',
       municipalityName: 'Medford',
     }, {
       title: 'Mayor',
