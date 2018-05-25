@@ -83,18 +83,25 @@ class TaskForceSection extends React.Component {
     ));
 
     return (
-      <section className="component TaskForceSection container generous">
-        <div className="row-1">
-          <div className="task-force-members">
-            {members.slice(0, 7)}
+      <section className="component TaskForceSection">
+        <div>
+          <div className="row-1">
+            <div className="task-force-members">
+              {members.slice(0, 5)}
+            </div>
           </div>
-          <div className="heading-container">
-            <h2>{'Meet the Mayors'}</h2>
+          <div className="row-2">
+            <div className="task-force-members">
+              {members.slice(5, 10)}
+            </div>
+            <div className="heading-container">
+              <h2>{'The Task Force'}</h2>
+            </div>
           </div>
-        </div>
-        <div className="row-2">
-          <div className="task-force-members">
-            {members.slice(7)}
+          <div className="row-3">
+            <div className="task-force-members">
+              {members.slice(10)}
+            </div>
           </div>
         </div>
       </section>

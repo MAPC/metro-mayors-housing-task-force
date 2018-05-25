@@ -11,8 +11,8 @@ class Home extends React.Component {
 
     return (
       <main className="component Home">
-        <IntroSection />
         <TaskForceSection />
+        <IntroSection />
         <CompactSection />
       </main>
     );
