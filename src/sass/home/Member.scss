@@ -3,15 +3,14 @@
   font-size: 0.8rem;
   text-align: center;
   img {
-    width: 7rem;
-    height: 7rem;
+    width: 8rem;
+    height: 8rem;
     object-fit: cover;
     border-radius: 50%;
-
-    @media #{$desktop} {
-      width: 8rem;
-      height: 8rem;
-    }
+    // @media #{$layout-tablet} {
+    //   width: 5rem;
+    //   height: 5rem;
+    // }
   }
   .name-title {
     margin-top: 0.4em;

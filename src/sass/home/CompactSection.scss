@@ -1,49 +1,48 @@
 .component.CompactSection {
-  position: relative;
+  overflow: hidden;
 
-  .bubble-container{
-    padding-left: 1em;
-    padding-right: 1em;
-    max-width: 72em;
-    margin: 0 auto;
+  .container {
+    position: relative;
+    padding-left: $bubble-width;
+    padding-right: $bubble-width;
   }
 
   .bubble {
     h3 {
       margin: 0 0 0.5rem 0;
-
+    }
+    .text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
     }
   }
 
   .bubble.best-practices {
-    @media #{$desktop} {
-      width: $bubble-width;
-      height: $bubble-width;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      position: absolute;
-      top: 10rem;
-      left: 0;
-      background: url("../assets/images/best-practices-background.svg") no-repeat;
-      background-size: contain;
-      color: white;
+    width: $bubble-width * 2;
+    height: $bubble-width * 2;
+    position: absolute;
+    top: 10rem;
+    left: -#{$bubble-width + 1rem};
+    background-color: $palette-red;
+    border-radius: 50%;
+    color: white;
+    .text {
+      left: 66%;
     }
   }
 
   .bubble.housing {
-    @media #{$desktop} {
-      width: $bubble-width;
-      height: $bubble-width;
-      position: absolute;
-      top: 30rem;
-      right: 0;
-      background: url("../assets/images/housing-background.svg") no-repeat;
-      background-size: contain;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      color: white;
+    width: $bubble-width * 2;
+    height: $bubble-width * 2;
+    position: absolute;
+    top: 60rem;
+    right: -#{$bubble-width + 1rem};
+    color: white;
+    border-radius: 50%;
+    background-color: $palette-green;
+    .text {
+      right: 66%;
     }
   }
 }

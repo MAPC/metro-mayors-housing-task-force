@@ -82,7 +82,7 @@ class CompactSection extends React.Component {
     ));
 
     return (
-      <section className="component CompactSection container generous">
+      <section className="component CompactSection">
         <div className="container">
           <h2>
             The Compact
@@ -116,20 +116,20 @@ class CompactSection extends React.Component {
           <div className="signatures">
             {signatures}
           </div>
-        </div>
-        <Link className="bubble housing" to={'/story'}>
-          <div>
-            <h3>Housing Our Region</h3>
-            <span>Explore the Issue ></span>
-          </div>
-        </Link>
+          <Link className="bubble housing" to={'/story'}>
+            <div className="text">
+              <h3>Housing Our Region</h3>
+              <span>Explore the Issue ></span>
+            </div>
+          </Link>
 
-        <Link className="bubble best-practices" to={'/best-practices'}>
-          <div>
-            <h3>Best Practices</h3>
-            <span>Explore Tools ></span>
-          </div>
-        </Link>
+          <Link className="bubble best-practices" to={'/best-practices'}>
+            <div className="text">
+              <h3>Best Practices</h3>
+              <span>Explore Tools ></span>
+            </div>
+          </Link>
+        </div>
       </section>
     );
   }

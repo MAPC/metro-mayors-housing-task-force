@@ -84,13 +84,13 @@ class TaskForceSection extends React.Component {
 
     return (
       <section className="component TaskForceSection">
-        <div>
-          <div className="row-1">
+        <div className="column five">
+          <div className="row">
             <div className="task-force-members">
               {members.slice(0, 5)}
             </div>
           </div>
-          <div className="row-2">
+          <div className="row heading-row">
             <div className="task-force-members">
               {members.slice(5, 10)}
             </div>
@@ -98,9 +98,40 @@ class TaskForceSection extends React.Component {
               <h2>{'The Task Force'}</h2>
             </div>
           </div>
-          <div className="row-3">
+          <div className="row">
             <div className="task-force-members">
               {members.slice(10)}
+            </div>
+          </div>
+        </div>
+
+        <div className="column three">
+          <div className="row">
+            <div className="task-force-members">
+              {members.slice(0, 3)}
+            </div>
+          </div>
+          <div className="row heading-row">
+            <div className="task-force-members">
+              {members.slice(3, 6)}
+            </div>
+            <div className="heading-container">
+              <h2>{'The Task Force'}</h2>
+            </div>
+          </div>
+          <div className="row">
+            <div className="task-force-members">
+              {members.slice(6, 9)}
+            </div>
+          </div>
+          <div className="row">
+            <div className="task-force-members">
+              {members.slice(9, 12)}
+            </div>
+          </div>
+          <div className="row">
+            <div className="task-force-members">
+              {members.slice(12, 15)}
             </div>
           </div>
         </div>

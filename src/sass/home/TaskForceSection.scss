@@ -7,30 +7,32 @@
     h2 {
       margin: 0;
       padding: 0;
-      @media #{$desktop} {
-        // width: 8em;
-        // position: relative;
-        // left: 34.5em;
-        // top: -6em;
-      }
     }
   }
-
-  .row-2 {
-    display: flex;
-    align-items: center;
+  .column {
+    .row:nth-child(odd) > *:first-child {
+      margin-left: 4rem;
+    }
+    &.three {
+      display: none;
+    }
+    .heading-row {
+      display: flex;
+      align-items: center;
+    }
+    .row {
+      display: flex;
+    }
   }
-  .row-1, .row-3 {
-    .task-force-members a:first-child {
-      @media #{$desktop} {
-        margin-left: 4rem;
-      }
+  @media #{$layout-tablet} {
+    .column.five {
+      display: none;
+    }
+    .column.three {
+      display: block;
     }
   }
   .task-force-members {
     display: flex;
-    @media #{$desktop} {
-      // width: 66em;
-    }
   }
 }
