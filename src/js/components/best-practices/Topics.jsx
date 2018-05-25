@@ -80,15 +80,17 @@ class Topics extends React.Component {
   }
 
   renderBestPractices(subTopicData) {
-    return subTopicData.bestPractices.map((bestPractice) => {
-      return (
-        <BestPractice
-          title={bestPractice.title}
-          description={bestPractice.description}
-          image={bestPractice.image}
-        />
-      );
-    });
+    if (subTopicData && Array.isArray(subTopicData.bestPractices)) {
+      return subTopicData.bestPractices.map((bestPractice) => {
+        return (
+          <BestPractice
+            title={bestPractice.title}
+            description={bestPractice.description}
+            image={bestPractice.image}
+          />
+        );
+      });
+    }
   }
 
   render() {
