@@ -1,11 +1,11 @@
 .component.Member {
-  width: 5em;
-  height: 5em;
+  width: 5rem;
+  height: 5rem;
   object-fit: cover;
   border-radius: 50%;
-  margin: 1em;
+  padding: 0.4rem 1rem;
   @media #{$desktop} {
-    width: 6em;
-    height: 6em;
+    width: 6rem;
+    height: 6rem;
   }
 }

@@ -1,16 +1,37 @@
 $tablet: "(min-width: 768px) and (max-width: 1023px)";
 $desktop: "(min-width: 1024px)";
 $phone: "(max-width: 768px)";
+$text-color: #002D40;
+$palette-yellow: #ECCF54;
+$palette-green: #ECCF54;
+$underline-hover-transition-speed: 0.25s;
 
 body {
   font-family: 'Roboto', sans-serif;
   margin: 0;
   padding: 0;
-  color: #002D40;
+  color: $text-color;
 }
 
 h1 {
   font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0.1em; // Relative to the size of the font
+    left: -1em; // Relative to the size of the font
+    height: 0.3em; // Relative to the size of the font
+    width: calc(100% + 1.5em);
+    z-index: -10;
+    background-color: $palette-green;
+  }
 }
 
 li {
@@ -28,14 +49,21 @@ button {
   font-size: 32px;
 }
 
+p {
+  line-height: 1.7rem;
+}
+
 a {
-  color: #707070;
+  color: $text-color;
   text-decoration: none;
 }
 
 .container {
-  padding-left: 1em;
-  padding-right: 1em;
-  max-width: 42em;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: 42rem;
   margin: 0 auto;
+  &.generous {
+    max-width: 72rem
+  }
 }

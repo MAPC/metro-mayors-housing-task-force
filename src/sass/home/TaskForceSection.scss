@@ -1,37 +1,35 @@
 .component.TaskForceSection {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-
-  h2 {
-    font-size: 28px;
-    font-weight: bold;
-    margin: 0;
-    padding: 0;
-    @media #{$desktop} {
-      width: 8em;
-      position: relative;
-      left: 34.5em;
-      top: -6em;
-    }
-    .underline {
-      border-bottom: 8px solid #81B7B7;
-      right: 0;
-      width: 9.5em;
-      positon: absolute;
+  .heading-container {
+    flex: 1;
+    margin: 0 0 0 2rem;
+    h2 {
+      margin: 0;
+      padding: 0;
+      @media #{$desktop} {
+        // width: 8em;
+        // position: relative;
+        // left: 34.5em;
+        // top: -6em;
+      }
     }
   }
 
-  .task-force-members {
+
+  .row-1 {
     display: flex;
-    flex-wrap: wrap;
-    a:first-child {
+    align-items: center;
+  }
+  .row-2 {
+    .task-force-members a:first-child {
       @media #{$desktop} {
-        margin-left: 5em;
+        margin-left: 4rem;
       }
     }
+  }
+  .task-force-members {
+    display: flex;
     @media #{$desktop} {
-      width: 66em;
+      // width: 66em;
     }
   }
 }

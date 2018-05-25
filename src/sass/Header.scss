@@ -1,26 +1,35 @@
 .component.Header {
-  padding: 3em 2em 4em 2em;
+  padding: 3rem 2rem 4rem 2rem;
   display: flex;
-  max-width: 96em;
+  max-width: 96rem;
   margin: 0 auto;
   h1 {
     font-weight: 700;
+    margin: 0;
     position: relative;
     display: inline-block;
-    margin: 0;
-    .subtle {
-      font-size: 0.5em;
-    }
-    .underline {
+    &::after {
+      content: " ";
+      display: block;
       position: absolute;
-      bottom: 0.15em;
+      bottom: 0.1em;
       left: -1em;
-      height: 0.2em;
+      height: 0.3em;
       width: 110%;
       z-index: -10;
-      &.yellow {
-        background-color: #ECCF54;
-      }
+      -webkit-transition: left $underline-hover-transition-speed;
+      transition: left $underline-hover-transition-speed;
+    }
+    &.yellow::after {
+      background-color: $palette-yellow;
+    }
+    .subtle {
+      font-size: 1rem;
+    }
+  }
+  a:hover {
+    h1::after {
+      left: -1rem;
     }
   }
   nav {
@@ -33,9 +42,29 @@
       li {
         a {
           font-weight: 700;
+          position: relative;
+          display: inline-block;
+          &::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            bottom: 0em;
+            left: -0.2em;
+            height: 0.4em;
+            width: 100%;
+            z-index: -10;
+            -webkit-transition: left $underline-hover-transition-speed;
+            transition: left $underline-hover-transition-speed;
+            background-color: $palette-yellow;
+          }
+          &:hover {
+            &::after {
+              left: 0.2rem;
+            }
+          }
         }
         &:not(:last-child) {
-          margin-right: 1em;
+          margin-right: 1rem;
         }
       }
     }
