@@ -80,7 +80,11 @@ class Topics extends React.Component {
   }
 
   renderBestPractices(subTopicData) {
-    return subTopicData.bestPractices.map((bestPractice) => {
+    let allBestPractices = subTopicData
+      .map(subTopic => subTopic.bestPractices)
+      .reduce((a, b) => a.concat(b), []);
+    console.log(allBestPractices)
+    return allBestPractices.map((bestPractice) => {
       return (
         <BestPractice
           title={bestPractice.title}
@@ -105,7 +109,7 @@ class Topics extends React.Component {
           </div>
         </div>
         <div className="best-practices">
-          {this.renderBestPractices(this.state.selectedSubTopics[0])}
+          {this.renderBestPractices(this.state.selectedSubTopics)}
         </div>
       </div>
     );
