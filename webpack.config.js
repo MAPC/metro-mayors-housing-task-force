@@ -33,7 +33,8 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader', // "babel-loader" is also a legal name to reference
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'es2015'],
+          plugins: [require('babel-plugin-transform-object-rest-spread')]
         }
       }, {
         test: /\.scss$/,
