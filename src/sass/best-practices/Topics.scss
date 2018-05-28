@@ -1,4 +1,5 @@
 .component.Topics {
+  $topic_margin: .4em;
 
   &.container {
     max-width: 70rem; 
@@ -16,15 +17,15 @@
     @media #{$desktop} {
       width: 50em;
     }
+
+    & + .button-container { margin-top: $topic_margin * 8; }
   }
 
   h3 {
-    margin: 0 auto;  
+    margin: 0 auto ($topic_margin / 2);  
   }
 
   .topic {
-    $topic_margin: .4em;
-
     margin: $topic_margin 0;
     margin-right: $topic_margin * 2;
     padding: ($topic_margin + .1) ($topic_margin * 2) $topic_margin;
@@ -38,7 +39,7 @@
     cursor: pointer;
     outline: none;
 
-    &:hover, &:focus {
+    &:hover {
       color: $bg-color;
 
       background: $palette-blue-light;
@@ -51,7 +52,7 @@
       background: $palette-blue;
       border-color: $palette-blue;
 
-      &:hover, &:focus {
+      &:hover {
         background: $palette-blue-dark; 
         border-color: $palette-blue-dark;
       }

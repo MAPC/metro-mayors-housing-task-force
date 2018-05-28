@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import topicData from '~/_data/topic-data';
 
-import SubTopic from './SubTopic';
 import BestPractice from './BestPractice';
 
 
@@ -124,7 +123,7 @@ class Topics extends React.Component {
 
     return Object.keys(allSubTopics).map((subtopic, index) => {
       return (
-        <SubTopic
+        <Topic
           title={subtopic}
           onClick={() => this.handleSubTopicClick(subtopic)}
           selected={this.getSelectedSubTopics().includes(subtopic)}
