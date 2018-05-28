@@ -1,0 +1,17 @@
+.component.IntroSection {
+  background-color: $palette-blue;
+  color: white;
+  padding: 3rem 0;
+  margin: 2rem 0;
+  h2 {
+    margin: 0 0 0.4rem 0;
+    &::after {
+      display: none;
+    }
+  }
+  p {
+    margin: 0;
+    font-size: 1.3rem;
+    font-style: italic;
+  }
+}

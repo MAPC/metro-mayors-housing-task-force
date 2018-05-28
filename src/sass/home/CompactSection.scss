@@ -1,70 +1,48 @@
 .component.CompactSection {
-  padding: 1em;
-  margin: 0 0.1em;
-  position: relative;
-  @media #{$desktop} {
-    padding: 2em 5em;
+  overflow: hidden;
+
+  .container {
+    position: relative;
+    padding-left: $bubble-width;
+    padding-right: $bubble-width;
   }
 
-  h2 .underline {
-    border-bottom: 8px solid #81B7B7;
-    width: 9.5em;
-    position: absolute;
-    left: 0;
+  .bubble {
+    h3 {
+      margin: 0 0 0.5rem 0;
+    }
+    .text {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
 
   .bubble.best-practices {
-    @media #{$desktop} {
-      padding: 3.1em 3.1em;
-      margin-left: -17em;
-      margin-top: -50em;
-      position: absolute;
-      background: url("../assets/images/best-practices-background.svg") no-repeat;
-      color: white;
-      span {
-        margin-left: 80px;
-        color: white;
-      }
-      img {
-        margin-top: -2.9em;
-        margin-left: 6em;
-      }
-      h3 {
-        margin-left: 80px;
-      }
-    }
-    img {
-      height: 140px;
-    }
-    h3 {
-      margin-bottom: 0em;
+    width: $bubble-width * 2;
+    height: $bubble-width * 2;
+    position: absolute;
+    top: 10rem;
+    left: -#{$bubble-width + 1rem};
+    background-color: $palette-red;
+    border-radius: 50%;
+    color: white;
+    .text {
+      left: 66%;
     }
   }
 
   .bubble.housing {
-    @media #{$desktop} {
-      margin-left: 55em;
-      margin-top: -45em;
-      position: absolute;
-      background: url("../assets/images/housing-background.svg") no-repeat;
-      padding: 12em 12em;
-      img {
-        margin-top: -6em;
-      }
-      h3 {
-        color: white;
-        width: 10em;
-        padding: 0;
-        margin-bottom: 0;
-        margin-left: -70px;
-      }
-      span {
-        color: white;
-        margin-left: -70px;
-      }
-    }
-    img {
-      height: 140px;
+    width: $bubble-width * 2;
+    height: $bubble-width * 2;
+    position: absolute;
+    top: 60rem;
+    right: -#{$bubble-width + 1rem};
+    color: white;
+    border-radius: 50%;
+    background-color: $palette-green;
+    .text {
+      right: 66%;
     }
   }
 }
