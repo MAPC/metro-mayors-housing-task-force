@@ -1,11 +1,22 @@
 .component.Member {
-  width: 5em;
-  height: 5em;
-  object-fit: cover;
-  border-radius: 50%;
-  margin: 1em;
-  @media #{$desktop} {
-    width: 6em;
-    height: 6em;
+  padding: 0.4rem 1rem;
+  font-size: 0.8rem;
+  text-align: center;
+  img {
+    width: 8rem;
+    height: 8rem;
+    object-fit: cover;
+    border-radius: 50%;
+    // @media #{$layout-tablet} {
+    //   width: 5rem;
+    //   height: 5rem;
+    // }
   }
+  .name-title {
+    margin-top: 0.4em;
+    .name {
+      font-weight: 700;
+    }
+  }
+
 }

@@ -1,0 +1,27 @@
+.component.Slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  h1 {
+    background: white;
+    margin-left: 20%;
+    display: inline-block;
+  }
+}
+
+#slide-number-0 {
+  background-image: url("../assets/images/hartford-ct.jpg");
+}
+
+#slide-number-1 {
+  background-image: url("../assets/images/boston.jpg");
+}
+
+#slide-number-2 {
+  background-image: url("../assets/images/new-york-city.jpg");
+}

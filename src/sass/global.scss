@@ -1,20 +1,48 @@
-$tablet: "(min-width: 768px) and (max-width: 1023px)";
+$tablet: "(min-width: 768px) and (max-width: 1100px)";
 $desktop: "(min-width: 1024px)";
 $phone: "(max-width: 768px)";
 
+$layout-tablet: "(max-width: 70rem)";
+
+$text-color: #002D40;
+$palette-yellow: #ECCF54;
+$palette-green: #4eab8c;
+$palette-red: #e46c57;
+$palette-blue: #195274;
+$underline-hover-transition-speed: 0.25s;
+
+$container-width: 42rem;
+$container-generous-width: 80rem;
+$standard-padding: 1rem;
+$bubble-width: ($container-generous-width - $container-width) / 2 - $standard-padding;
+
+
 body {
   font-family: 'Roboto', sans-serif;
-  margin: 0 auto;
-  width: 16em;
-  font-size: 16px;
-  color: #002D40;
-  @media #{$desktop} {
-    width: 73em;
-  }
+  margin: 0;
+  padding: 0;
+  color: $text-color;
 }
 
 h1 {
-  font-size: 40px;
+  font-size: 2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  position: relative;
+  display: inline-block;
+  &::after {
+    content: " ";
+    display: block;
+    position: absolute;
+    bottom: 0.1em; // Relative to the size of the font
+    left: -1em; // Relative to the size of the font
+    height: 0.3em; // Relative to the size of the font
+    width: calc(100% + 1.5em);
+    z-index: -10;
+    background-color: $palette-green;
+  }
 }
 
 li {
@@ -32,7 +60,21 @@ button {
   font-size: 32px;
 }
 
+p {
+  line-height: 1.7rem;
+}
+
 a {
-  color: #707070;
+  color: $text-color;
   text-decoration: none;
+}
+
+.container {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  max-width: $container-width;
+  margin: 0 auto;
+  &.generous {
+    max-width: $container-generous-width;
+  }
 }
