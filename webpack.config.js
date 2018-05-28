@@ -24,7 +24,11 @@ module.exports = {
     })
   ],
   devServer: {
-    contentBase: __dirname + '/public'
+    contentBase: __dirname + '/public',
+    historyApiFallback: true,
+  },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
   },
   module: {
     rules: [
@@ -33,7 +37,11 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader', // "babel-loader" is also a legal name to reference
         query: {
-          presets: ['react', 'es2015']
+          presets: ['react', 'es2015'],
+          plugins: [
+            require('babel-plugin-transform-object-rest-spread'),
+            require('babel-plugin-root-import').default,
+          ],
         }
       }, {
         test: /\.scss$/,

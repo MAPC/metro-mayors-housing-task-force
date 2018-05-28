@@ -29,5 +29,3 @@ App.propTypes = {
 };
 
 export default App;
-
-            // <Route path="/:municipality" component={Municipality} />
