@@ -6,10 +6,8 @@ class BestPractice extends React.Component {
     return (
       <div className="component BestPractice">
         <div className="best-practice-description">
-          <div className="description-content">
-            <h4>{this.props.title}</h4>
-            <p>{this.props.description}</p>
-          </div>
+          <h4>{this.props.title}</h4>
+          <p>{this.props.description}</p>
         </div>
         <div className="best-practice-image"></div>
       </div>
