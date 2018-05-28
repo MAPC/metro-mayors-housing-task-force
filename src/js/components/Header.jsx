@@ -17,7 +17,7 @@ class Header extends React.Component {
           <ul>
             <li><Link to={'/about'}>About</Link></li>
             <li><Link to={'/best-practices'}>Best Practices</Link></li>
-            <li><Link to={'/about'}>Story</Link></li>
+            <li><Link to={'/story'}>Story</Link></li>
           </ul>
         </nav>
       </header>

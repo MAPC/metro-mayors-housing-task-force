@@ -4,5 +4,7 @@ _site/
 assets/bundle.js
 node_modules
 public/bundle.js
+public/bundle.js.map
 public/bundle.css
+public/bundle.css.map
 .DS_Store
