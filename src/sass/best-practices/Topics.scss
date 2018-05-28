@@ -6,24 +6,15 @@
     padding: 0 5rem;
   }
 
-  .best-practices {
-    @media #{$desktop} {
-      display: flex;
-      flex-wrap: wrap;
-    }
-  }
-
   .button-container {
     @media #{$desktop} {
       width: 50em;
     }
 
-    & + .button-container { margin-top: $topic_margin * 8; }
+    margin-bottom: $topic_margin * 8;
   }
 
-  h3 {
-    margin: 0 auto ($topic_margin / 2);  
-  }
+  h3 { margin: 0 auto ($topic_margin / 2); }
 
   .topic {
     margin: $topic_margin 0;
@@ -57,6 +48,12 @@
         border-color: $palette-blue-dark;
       }
     }
+  }
+
+  .best-practices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $standard-padding;
   }
 
 }
