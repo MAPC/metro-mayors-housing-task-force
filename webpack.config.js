@@ -26,6 +26,9 @@ module.exports = {
   devServer: {
     contentBase: __dirname + '/public'
   },
+  resolve: {
+    extensions: ['.js', '.jsx', '.json'],
+  },
   module: {
     rules: [
       {
@@ -34,7 +37,10 @@ module.exports = {
         loader: 'babel-loader', // "babel-loader" is also a legal name to reference
         query: {
           presets: ['react', 'es2015'],
-          plugins: [require('babel-plugin-transform-object-rest-spread')]
+          plugins: [
+            require('babel-plugin-transform-object-rest-spread'),
+            require('babel-plugin-root-import').default,
+          ],
         }
       }, {
         test: /\.scss$/,

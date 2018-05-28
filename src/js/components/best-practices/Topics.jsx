@@ -1,9 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import topicData from '../../../../_data/topic-data.json';
+import topicData from '~/_data/topic-data';
 
-import SubTopic from './SubTopic.jsx';
-import BestPractice from './BestPractice.jsx';
+import SubTopic from './SubTopic';
+import BestPractice from './BestPractice';
+
 
 function Topic(props) {
   return (
