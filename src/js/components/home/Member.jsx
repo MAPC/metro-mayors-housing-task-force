@@ -26,7 +26,6 @@ class Member extends React.Component {
 Member.propTypes = {
   title: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
   municipalityName: PropTypes.string.isRequired,
 };
 
