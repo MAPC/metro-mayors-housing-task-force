@@ -14,24 +14,20 @@
     display: inline-block;
   }
 
-  .slide-content {
-  
-  }
-
   .slide-controls {
     position: absolute;
     bottom: $standard-padding;
   }
 
   &[data-slide="0"] {
-    background-image: url("../assets/images/hartford-ct.jpg");
+    background-image: url("/assets/images/hartford-ct.jpg");
   }
 
   &[data-slide="1"] {
-    background-image: url("../assets/images/boston.jpg");
+    background-image: url("/assets/images/boston.jpg");
   }
 
   &[data-slide="2"] {
-    background-image: url("../assets/images/new-york-city.jpg");
+    background-image: url("/assets/images/new-york-city.jpg");
   }
 }
