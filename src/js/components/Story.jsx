@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 
 import Slide from './story/Slide.jsx';
 
@@ -10,13 +9,18 @@ class Story extends React.Component {
     this.state = {
       currentSlide: 0,
     };
-    this.slides = [{
-      text: 'Slide 1 We Hold These Truths',
-    }, {
-      text: 'Slide 2 To Be Self Evident',
-    }, {
-      text: 'Slide 3 That All Men are Created Equal',
-    }, {
+    this.slides = [
+      {
+        text: 'Slide 1 We Hold These Truths',
+      }, 
+      {
+        text: 'Slide 2 To Be Self Evident',
+      }, 
+      {
+        text: 'Slide 3 That All Men are Created Equal',
+      }, 
+      /*
+      {
       text: 'Slide 4 I Have a Dream',
     }, {
       text: 'Slide 5 That One Day Everyone',
@@ -40,11 +44,13 @@ class Story extends React.Component {
       text: 'Slide 14 Do not stop believing',
     }, {
       text: 'Slide 15 Do not back down',
-    }];
+    }
+      */
+    ];
   }
 
   handleForwardClick() {
-    if(this.state.currentSlide < 14) {
+    if(this.state.currentSlide < this.slides.length - 1) {
       this.setState({currentSlide: this.state.currentSlide + 1});
     }
   }
