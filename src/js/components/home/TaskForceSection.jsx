@@ -95,7 +95,9 @@ class TaskForceSection extends React.Component {
               {members.slice(5, 10)}
             </div>
             <div className="heading-container">
-              <h2>{'The Task Force'}</h2>
+              <Link to={'/about'}>
+                <h2>{'The Task Force'}</h2>
+              </Link>
             </div>
           </div>
           <div className="row">
@@ -116,7 +118,9 @@ class TaskForceSection extends React.Component {
               {members.slice(3, 6)}
             </div>
             <div className="heading-container">
-              <h2>{'The Task Force'}</h2>
+              <Link to={'/about'}>
+                <h2>{'The Task Force'}</h2>
+              </Link>
             </div>
           </div>
           <div className="row">

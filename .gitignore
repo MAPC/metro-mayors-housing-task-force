@@ -8,3 +8,4 @@ public/bundle.js.map
 public/bundle.css
 public/bundle.css.map
 .DS_Store
+*.sublime-project

@@ -8,7 +8,10 @@ class Slide extends React.Component {
   render() {
     return (
       <div className="component Slide" data-slide={this.props.slideIndex}>
-        <h1>{this.props.slide.text}</h1>
+        <div className="slide-content container">
+          <h1>{this.props.slide.text}</h1>
+        </div>
+
         <div className="slide-controls">
           <BackButton
             onBackwardClick={() => this.props.onBackwardClick()}

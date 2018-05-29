@@ -7,16 +7,23 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
+  text-align: center;
 
   h1 {
     background: white;
-    margin-left: 20%;
     display: inline-block;
   }
 
+  .slide-content { text-align: left; }
+
   .slide-controls {
     position: absolute;
+    left: 0;
+    right: 0;
     bottom: $standard-padding;
+
+    width: calc(100% - #{$standard-padding * 2});
+    margin: 0 auto;
   }
 
   &[data-slide="0"] {
