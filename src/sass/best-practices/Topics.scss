@@ -1,37 +1,59 @@
 .component.Topics {
-  .best-practices {
-    @media #{$desktop} {
-      display: flex;
-      flex-wrap: wrap;
-    }
+  $topic_margin: .4em;
+
+  &.container {
+    max-width: 70rem; 
+    padding: 0 5rem;
   }
 
-  .topic-buttons {
+  .button-container {
     @media #{$desktop} {
       width: 50em;
     }
+
+    margin-bottom: $topic_margin * 8;
   }
 
-  .sub-topic-buttons {
-    @media #{$desktop} {
-      width: 50em;
-    }
-  }
+  h3 { margin: 0 auto ($topic_margin / 2); }
 
   .topic {
+    margin: $topic_margin 0;
+    margin-right: $topic_margin * 2;
+    padding: ($topic_margin + .1) ($topic_margin * 2) $topic_margin;
+
+    color: $text-color;
     font-size: 16px;
-    padding: 0.5em 1em;
-    background: white;
-    color: #002D40;
-    border: 1px solid #002D40;
     text-transform: uppercase;
+
+    background: $bg-color;
+    border: 1px solid $text-color;
+    cursor: pointer;
+    outline: none;
+
+    &:hover {
+      color: $bg-color;
+
+      background: $palette-blue-light;
+      border-color: $palette-blue-light;
+    }
+
+    &.selected {
+      color: $bg-color;
+
+      background: $palette-blue;
+      border-color: $palette-blue;
+
+      &:hover {
+        background: $palette-blue-dark; 
+        border-color: $palette-blue-dark;
+      }
+    }
   }
 
-  .selected-topic {
-    font-size: 16px;
-    padding: 0.5em 1em;
-    background: #81B7B7;
-    border: 1px solid #002D40;
-    text-transform: uppercase;
+  .best-practices {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: $standard-padding;
   }
+
 }

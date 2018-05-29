@@ -5,10 +5,14 @@ $phone: "(max-width: 768px)";
 $layout-tablet: "(max-width: 70rem)";
 
 $text-color: #002D40;
+$bg-color: white;
 $palette-yellow: #ECCF54;
 $palette-green: #4eab8c;
 $palette-red: #e46c57;
 $palette-blue: #195274;
+$palette-blue-light: mix(white, $palette-blue, 10);
+$palette-blue-dark: mix(black, $palette-blue, 15);
+
 $underline-hover-transition-speed: 0.25s;
 
 $container-width: 42rem;
@@ -22,6 +26,10 @@ body {
   margin: 0;
   padding: 0;
   color: $text-color;
+}
+
+#root {
+  padding-bottom: 8rem;
 }
 
 h1 {
@@ -47,17 +55,6 @@ h2 {
 
 li {
   padding: 0.5em 0;
-}
-
-button {
-  background-color: rgba(0, 0, 0, 0.5);
-  border: none;
-  color: white;
-  padding: 15px 32px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 32px;
 }
 
 p {

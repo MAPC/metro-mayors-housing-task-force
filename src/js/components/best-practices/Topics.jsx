@@ -2,14 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import topicData from '~/_data/topic-data';
 
-import SubTopic from './SubTopic';
 import BestPractice from './BestPractice';
 
 
 function Topic(props) {
   return (
     <button
-      className={props.selected ? 'selected-topic' : 'topic'}
+      className={`topic ${props.selected?'selected':''}`}
       onClick={() => props.onClick()}
     >
       {props.title}
@@ -124,7 +123,7 @@ class Topics extends React.Component {
 
     return Object.keys(allSubTopics).map((subtopic, index) => {
       return (
-        <SubTopic
+        <Topic
           title={subtopic}
           onClick={() => this.handleSubTopicClick(subtopic)}
           selected={this.getSelectedSubTopics().includes(subtopic)}
@@ -159,16 +158,14 @@ class Topics extends React.Component {
 
   render() {
     return (
-      <div className="component Topics housing-best-practices">
+      <div className="component Topics housing-best-practices container">
         <div className="button-container">
-          <div className="topic-buttons">
-            <h3>Topic</h3>
-            {this.renderTopics(topicData)}
-          </div>
-          <div className="sub-topic-buttons">
-            <h3>Subtopic</h3>
-            {this.renderSubTopics()}
-          </div>
+          <h3>TOPIC</h3>
+          {this.renderTopics(topicData)}
+        </div>
+        <div className="button-container">
+          <h3>SUBTOPIC</h3>
+          {this.renderSubTopics()}
         </div>
         <div className="best-practices">
           {this.renderBestPractices()}
