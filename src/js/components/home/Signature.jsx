@@ -16,7 +16,6 @@ class Signature extends React.Component {
 Signature.propTypes = {
   title: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
-  image: PropTypes.string.isRequired,
   municipalityName: PropTypes.string.isRequired,
 };
 
