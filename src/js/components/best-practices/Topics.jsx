@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import topicData from '~/_data/topic-data';
 
 import BestPractice from './BestPractice';
+import topicData from '~/_data/topic-data';
 
 
 function Topic(props) {
