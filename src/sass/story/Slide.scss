@@ -1,0 +1,40 @@
+.component.Slide {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100vh;
+  text-align: center;
+
+  h1 {
+    background: white;
+    display: inline-block;
+  }
+
+  .slide-content { text-align: left; }
+
+  .slide-controls {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: $standard-padding;
+
+    width: calc(100% - #{$standard-padding * 2});
+    margin: 0 auto;
+  }
+
+  &[data-slide="0"] {
+    background-image: url("/assets/images/hartford-ct.jpg");
+  }
+
+  &[data-slide="1"] {
+    background-image: url("/assets/images/boston.jpg");
+  }
+
+  &[data-slide="2"] {
+    background-image: url("/assets/images/new-york-city.jpg");
+  }
+}
