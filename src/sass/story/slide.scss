@@ -7,34 +7,21 @@
   background-position: center;
   width: 100vw;
   height: 100vh;
-  text-align: center;
-
   h1 {
     background: white;
+    margin-left: 20%;
     display: inline-block;
   }
+}
 
-  .slide-content { text-align: left; }
+#slide-number-0 {
+  background-image: url("../assets/images/hartford-ct.jpg");
+}
 
-  .slide-controls {
-    position: absolute;
-    left: 0;
-    right: 0;
-    bottom: $standard-padding;
+#slide-number-1 {
+  background-image: url("../assets/images/boston.jpg");
+}
 
-    width: calc(100% - #{$standard-padding * 2});
-    margin: 0 auto;
-  }
-
-  &[data-slide="0"] {
-    background-image: url("/assets/images/hartford-ct.jpg");
-  }
-
-  &[data-slide="1"] {
-    background-image: url("/assets/images/boston.jpg");
-  }
-
-  &[data-slide="2"] {
-    background-image: url("/assets/images/new-york-city.jpg");
-  }
+#slide-number-2 {
+  background-image: url("../assets/images/new-york-city.jpg");
 }
