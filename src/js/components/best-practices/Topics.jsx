@@ -20,6 +20,8 @@ class Topics extends React.Component {
   constructor(props) {
     super(props);
 
+    this.deselectTopics = this.deselectTopics.bind(this);
+    this.deselectSubTopics = this.deselectSubTopics.bind(this);
     this.getSelectedTopics = this.getSelectedTopics.bind(this);
     this.getSelectedSubTopics = this.getSelectedSubTopics.bind(this);
 
@@ -67,21 +69,16 @@ class Topics extends React.Component {
   }
 
 
-  handleClick({ title }) {
+  handleTopicClick(topic) {
     const { topics } = this.state;
     const selectedSubTopics = this.getSelectedSubTopics();
 
-    topics[title].selected = !topics[title].selected;
+    topics[topic].selected = !topics[topic].selected;
 
-    if (!topics[title].selected) {
-      Object.keys(topics[title].subTopics).forEach(subTopic => {
-        topics[title].subTopics[subTopic].selected = false;
-      });
-    }
-    else {
-      Object.keys(topics[title].subTopics).forEach(subTopic => {
-        topics[title].subTopics[subTopic].selected = selectedSubTopics.includes(subTopic);
-      });
+    for (let subTopic in topics[topic].subTopics) {
+      topics[topic].subTopics[subTopic].selected = (
+        !topics[topic].selected ? false : selectedSubTopics.includes(subTopic)
+      );
     }
         
     this.setState({ topics });
@@ -102,16 +99,49 @@ class Topics extends React.Component {
   }
 
 
+  deselectTopics() {
+    const { topics } = this.state;
+
+    for (let topic in topics) {
+      topics[topic].selected = false;
+    }
+
+    this.setState({ topics }); 
+  }
+
+
+  deselectSubTopics() {
+    const { topics } = this.state;
+
+    for (let topic in topics) {
+      for (let subTopic in topics[topic].subTopics) {
+        topics[topic].subTopics[subTopic].selected = false;
+      }
+    }
+
+    this.setState({ topics });
+  }
+
+
   renderTopics(topicData) {
-    return topicData.map(topic => {
+    const topics = topicData.map(topic => {
       return (
         <Topic
           title={topic.title}
-          onClick={() => this.handleClick(topic)}
+          onClick={() => this.handleTopicClick(topic.title)}
           selected={this.getSelectedTopics().includes(topic.title)}
         />
       );
     });
+
+    return [
+      <Topic
+        title={'All'}
+        onClick={() => this.deselectTopics()}
+        selected={this.getSelectedTopics().length === 0}
+      />,
+      ...topics, 
+    ];
   }
 
 
@@ -121,7 +151,7 @@ class Topics extends React.Component {
       .map(topic => this.state.topics[topic].subTopics)
       .reduce((a, b) => ({ ...a, ...b }), {});
 
-    return Object.keys(allSubTopics).map((subtopic, index) => {
+    const subTopics = Object.keys(allSubTopics).map((subtopic, index) => {
       return (
         <Topic
           title={subtopic}
@@ -130,7 +160,17 @@ class Topics extends React.Component {
         />
       );
     });
+
+    return [
+      <Topic
+        title={'All'}
+        onClick={() => this.deselectSubTopics()}
+        selected={this.getSelectedSubTopics().length === 0}
+      />,
+      ...subTopics,
+    ];
   }
+
 
   renderBestPractices() {
     const selectedSubTopics = this.getSelectedSubTopics();
@@ -155,6 +195,7 @@ class Topics extends React.Component {
       );
     });
   }
+
 
   render() {
     return (
