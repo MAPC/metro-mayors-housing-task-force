@@ -7,6 +7,8 @@
     padding-right: $bubble-width;
   }
 
+  p + p { margin-top: 2rem; }
+
   .bubble {
     h3 {
       margin: 0 0 0.5rem 0;
@@ -17,6 +19,16 @@
       transform: translateY(-50%);
     }
   }
+
+  
+  ol { margin: 2rem auto; }
+
+  li { 
+    line-height: 1.6rem; 
+
+    & + li { margin-top: .5rem; }
+  }
+  
 
   .bubble.best-practices {
     width: $bubble-width * 2;
