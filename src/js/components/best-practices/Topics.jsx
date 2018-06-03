@@ -22,8 +22,10 @@ class Topics extends React.Component {
 
     this.deselectTopics = this.deselectTopics.bind(this);
     this.deselectSubTopics = this.deselectSubTopics.bind(this);
+    this.getFilteredTopics = this.getFilteredTopics.bind(this);
     this.getSelectedTopics = this.getSelectedTopics.bind(this);
     this.getSelectedSubTopics = this.getSelectedSubTopics.bind(this);
+    this.withoutSubTopics = this.withoutSubTopics.bind(this);
 
     this.state = {
       topics: topicData.reduce((topics, topic) => {
@@ -50,14 +52,14 @@ class Topics extends React.Component {
     const { topics } = this.state;
 
     return Object.keys(topics)
-                 .filter(topicTitle => topics[topicTitle].selected);
+                 .filter(topic => topics[topic].selected);
   }
 
 
   getSelectedSubTopics() {
-    const { topics }  = this.state;
+    const { topics } = this.state;
 
-    const selectedSubTopics = this.getSelectedTopics()
+    const selectedSubTopics = this.getFilteredTopics()
       .map(topic => topics[topic])
       .map(({ subTopics }) => (
         Object.keys(subTopics)
@@ -69,15 +71,43 @@ class Topics extends React.Component {
   }
 
 
-  handleTopicClick(topic) {
-    const { topics } = this.state;
+  getFilteredTopics() {
+    const selectedTopics = this.getSelectedTopics();
+    return selectedTopics.length > 0 ? selectedTopics : Object.keys(this.state.topics);
+  }
+
+
+  withoutSubTopics() {
+    const { topics } = { ...this.state };
+
+    for (let topic in topics) {
+      for (let subTopic in topics[topic].subTopics) {
+        topics[topic].subTopics[subTopic].selected = false;
+      }
+    }
+ 
+    return topics;
+  }
+
+
+  handleTopicClick(topicTitle) {
+    /**
+     * This order must be retained!!!
+     *
+     * I haven't implemented deep nesting into `withoutSubTopics()`. 
+     * That method needs to implement deep nesting to avoid
+     * the state overwrite that is occurring. Without deep nesting,
+     * `withoutSubTopics()` will erase the contents of `selectedSubTopics`. :(
+     */
     const selectedSubTopics = this.getSelectedSubTopics();
+    const topics = this.withoutSubTopics();
+    const topic = topics[topicTitle];
 
-    topics[topic].selected = !topics[topic].selected;
+    topic.selected = !topic.selected;
 
-    for (let subTopic in topics[topic].subTopics) {
-      topics[topic].subTopics[subTopic].selected = (
-        !topics[topic].selected ? false : selectedSubTopics.includes(subTopic)
+    for (let subTopic in topic.subTopics) {
+      topic.subTopics[subTopic].selected = (
+        !topic.selected ? false : selectedSubTopics.includes(subTopic)
       );
     }
         
@@ -88,10 +118,11 @@ class Topics extends React.Component {
   handleSubTopicClick(subtopic) {
     const { topics } = this.state;
 
-    this.getSelectedTopics().forEach(topic => {
+    this.getFilteredTopics().forEach(topic => {
       const subTopic = topics[topic].subTopics[subtopic];
+
       if (subTopic) {
-        topics[topic].subTopics[subtopic].selected = !subTopic.selected;
+        subTopic.selected = !subTopic.selected;
       }
     });
 
@@ -111,15 +142,9 @@ class Topics extends React.Component {
 
 
   deselectSubTopics() {
-    const { topics } = this.state;
-
-    for (let topic in topics) {
-      for (let subTopic in topics[topic].subTopics) {
-        topics[topic].subTopics[subTopic].selected = false;
-      }
-    }
-
-    this.setState({ topics });
+    this.setState({ 
+      topics: this.withoutSubTopics(),
+    });
   }
 
 
@@ -127,6 +152,7 @@ class Topics extends React.Component {
     const topics = topicData.map(topic => {
       return (
         <Topic
+          key={topic.title}
           title={topic.title}
           onClick={() => this.handleTopicClick(topic.title)}
           selected={this.getSelectedTopics().includes(topic.title)}
@@ -136,6 +162,7 @@ class Topics extends React.Component {
 
     return [
       <Topic
+        key={'All'}
         title={'All'}
         onClick={() => this.deselectTopics()}
         selected={this.getSelectedTopics().length === 0}
@@ -146,26 +173,30 @@ class Topics extends React.Component {
 
 
   renderSubTopics() {
-    // collect all the subtopics from each selected topic
-    let allSubTopics = this.getSelectedTopics()
-      .map(topic => this.state.topics[topic].subTopics)
-      .reduce((a, b) => ({ ...a, ...b }), {});
+    const selectedTopics = this.getSelectedTopics();
+    const selectedSubTopics = this.getSelectedSubTopics();
+    const topics = selectedTopics.length > 0 ? selectedTopics : Object.keys(this.state.topics);
 
-    const subTopics = Object.keys(allSubTopics).map((subtopic, index) => {
+    const uniqueSubTopics = topics.map(topic => this.state.topics[topic].subTopics)
+                                  .reduce((a, b) => ({ ...a, ...b }), {});
+
+    const subTopics = Object.keys(uniqueSubTopics).map(subtopic => {
       return (
         <Topic
+          key={subtopic}
           title={subtopic}
           onClick={() => this.handleSubTopicClick(subtopic)}
-          selected={this.getSelectedSubTopics().includes(subtopic)}
+          selected={selectedSubTopics.includes(subtopic)}
         />
       );
     });
 
     return [
       <Topic
+        key={'All'}
         title={'All'}
         onClick={() => this.deselectSubTopics()}
-        selected={this.getSelectedSubTopics().length === 0}
+        selected={selectedSubTopics.length === 0}
       />,
       ...subTopics,
     ];
@@ -173,21 +204,28 @@ class Topics extends React.Component {
 
 
   renderBestPractices() {
+    const topics = this.getFilteredTopics();
     const selectedSubTopics = this.getSelectedSubTopics();
-    const allBestPractices = this.getSelectedTopics().reduce((bestPractices, topic) => {
-      const subTopics = this.state.topics[topic].subTopics;
 
-      const topicBestPractices = Object.keys(subTopics)
-        .filter(subTopic => selectedSubTopics.includes(subTopic))
-        .map(subTopic => subTopics[subTopic].bestPractices)
-        .reduce((a,b) => a.concat(b), []);
+    const bestPractices = topics.reduce((bestPractices, topic) => {
+      const { subTopics } = { ...this.state.topics[topic] };
+
+      const filteredSubTopics = (
+        selectedSubTopics.length > 0 
+        ? Object.keys(subTopics).filter(subTopic => selectedSubTopics.includes(subTopic))
+        : Object.keys(subTopics)
+      );
+
+      const topicBestPractices = filteredSubTopics.map(subTopic => subTopics[subTopic].bestPractices)
+                                                  .reduce((a,b) => a.concat(b), []);
 
       return [ ...bestPractices, ...topicBestPractices ];
-    }, [])
+    }, []);
 
-    return allBestPractices.map((bestPractice) => {
+    return bestPractices.map(bestPractice => {
       return (
         <BestPractice
+          key={bestPractice.title}
           title={bestPractice.title}
           description={bestPractice.description}
           image={bestPractice.image}
