@@ -78,7 +78,7 @@ class Topics extends React.Component {
 
 
   withoutSubTopics() {
-    const { topics } = { ...this.state };
+    const { topics } = JSON.parse(JSON.stringify(this.state)); // Deep copy
 
     for (let topic in topics) {
       for (let subTopic in topics[topic].subTopics) {
@@ -91,14 +91,6 @@ class Topics extends React.Component {
 
 
   handleTopicClick(topicTitle) {
-    /**
-     * This order must be retained!!!
-     *
-     * I haven't implemented deep nesting into `withoutSubTopics()`. 
-     * That method needs to implement deep nesting to avoid
-     * the state overwrite that is occurring. Without deep nesting,
-     * `withoutSubTopics()` will erase the contents of `selectedSubTopics`. :(
-     */
     const selectedSubTopics = this.getSelectedSubTopics();
     const topics = this.withoutSubTopics();
     const topic = topics[topicTitle];
