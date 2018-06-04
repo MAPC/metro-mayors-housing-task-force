@@ -7,7 +7,7 @@
     padding-right: $bubble-width;
   }
 
-  p + p { margin-top: 2rem; }
+  p + p { margin-top: 2em; }
 
   .bubble {
     h3 {
@@ -21,12 +21,12 @@
   }
 
   
-  ol { margin: 2rem auto; }
+  ol { margin: 2em auto; }
 
   li { 
-    line-height: 1.6rem; 
+    line-height: 1.6em; 
 
-    & + li { margin-top: .5rem; }
+    & + li { margin-top: .5em; }
   }
   
 
