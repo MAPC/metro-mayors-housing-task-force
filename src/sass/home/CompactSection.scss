@@ -5,6 +5,11 @@
     position: relative;
     padding-left: $bubble-width;
     padding-right: $bubble-width;
+    @media #{$phone} {
+      padding-right: 1em;
+      padding-left: 1em;
+      font-size: 1.3em;
+    }
   }
 
   p + p { margin-top: 2em; }
@@ -17,6 +22,9 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
+    }
+    @media #{$phone} {
+      display: none;
     }
   }
 
@@ -56,5 +64,11 @@
     .text {
       right: 66%;
     }
+  }
+
+  ol li h4 {
+    border-bottom: 0.2em solid $palette-green;
+    padding-bottom: 0.2em;
+    margin-bottom: 0.2em;
   }
 }

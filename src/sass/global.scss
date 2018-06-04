@@ -40,17 +40,7 @@ h2 {
   font-size: 1.5rem;
   position: relative;
   display: inline-block;
-  &::after {
-    content: " ";
-    display: block;
-    position: absolute;
-    bottom: 0.1em; // Relative to the size of the font
-    left: -1em; // Relative to the size of the font
-    height: 0.3em; // Relative to the size of the font
-    width: calc(100% + 1.5em);
-    z-index: -10;
-    background-color: $palette-green;
-  }
+  border-bottom: 0.3em solid $palette-green;
 }
 
 li {

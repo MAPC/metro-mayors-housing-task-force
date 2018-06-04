@@ -38,25 +38,16 @@ class CompactSection extends React.Component {
 
           <p>However, this crisis is not just about sheer numbers; it’s about people. We need housing that works for a range of household types and incomes, including families with lower incomes: renters, students, young homebuyers, empty nesters, seniors looking to downsize, families with children, vulnerable residents, and people with disabilities. The Metro Mayors Coalition (MMC) believes current residents must have housing options they can afford in the communities where they want to live, and that newcomers looking to live and work in the region should be able to make a home here. Towards that end, we pledge to work together to increase housing opportunity in Metro Boston in accordance with these principles:</p>
           <ol>
-            <li><b>Stakeholder and Municipal Engagement.</b> We must engage in broad, inclusive outreach to municipal officials, residents, and other stakeholders within and beyond the MMC to understand and address regional housing concerns.</li>
-
-            <li><b>Housing Production.</b> We strive to increase the production of housing throughout Metro Boston so that we can provide homes for all types of households and income levels. This should include both rental and homeownership opportunities, consistent with regional need, and designed in ways that respect the neighborhoods in which they are located.</li>
-
-            <li><b>Housing Preservation.</b> We support the preservation of existing affordable housing choices. This includes protecting affordable apartments at risk of expiring subsidies or deed restrictions; preserving “naturally occurring” affordable housing; repairing older homes in need of maintenance and minimizing tear-downs; and preserving smaller homes.</li>
-
-            <li><b>Housing Affordability.</b> We welcome and will invest in the development of housing that is affordable to low-, moderate-, and middle-income households.</li>
-
-            <li><b>Housing Diversity.</b> We promote the development and preservation of diverse types of rental and homeownership housing at a range of scales and a unit mix inclusive of multiple bedrooms. </li>
-
-            <li><b>Housing Location.</b> We encourage residential and mixed-use development in transit-accessible and/or walkable areas where people can get around locally and make connections throughout the region without relying on private auto. We also support creation of more such neighborhoods through expansion of public transit and retrofits of select former industrial sites.</li>
-
-            <li><b>Complete Neighborhoods.</b> Our commitment to greater housing opportunity is part of a holistic approach to community building that includes a mix of land uses and access to open space. Our residents want to live in areas that offer a range of activity throughout the day and evening.</li>
-
-            <li><b>Housing Design.</b> We support universal design in housing to create accessible and barrier-free homes through the incorporation of features that are commonly available and easily usable by people of virtually all ages and abilities.</li>
-
-            <li><b>Housing Stability.</b> We will work to address extreme cost burdens, minimize the risk of displacement, reduce evictions, eliminate unfair rental practices, create permanent housing for homeless residents, and ensure safe and stable housing throughout Metro Boston.</li>
-
-            <li><b>Fair Housing.</b> We are committed to abolishing discrimination against tenants and buyers, and advancing fair and equitable access to housing opportunity for everyone.</li>
+            <li><h4>Stakeholder and Municipal Engagement.</h4> We must engage in broad, inclusive outreach to municipal officials, residents, and other stakeholders within and beyond the MMC to understand and address regional housing concerns.</li>
+            <li><h4>Housing Production.</h4> We strive to increase the production of housing throughout Metro Boston so that we can provide homes for all types of households and income levels. This should include both rental and homeownership opportunities, consistent with regional need, and designed in ways that respect the neighborhoods in which they are located.</li>
+            <li><h4>Housing Preservation.</h4> We support the preservation of existing affordable housing choices. This includes protecting affordable apartments at risk of expiring subsidies or deed restrictions; preserving “naturally occurring” affordable housing; repairing older homes in need of maintenance and minimizing tear-downs; and preserving smaller homes.</li>
+            <li><h4>Housing Affordability.</h4> We welcome and will invest in the development of housing that is affordable to low-, moderate-, and middle-income households.</li>
+            <li><h4>Housing Diversity.</h4> We promote the development and preservation of diverse types of rental and homeownership housing at a range of scales and a unit mix inclusive of multiple bedrooms. </li>
+            <li><h4>Housing Location.</h4> We encourage residential and mixed-use development in transit-accessible and/or walkable areas where people can get around locally and make connections throughout the region without relying on private auto. We also support creation of more such neighborhoods through expansion of public transit and retrofits of select former industrial sites.</li>
+            <li><h4>Complete Neighborhoods.</h4> Our commitment to greater housing opportunity is part of a holistic approach to community building that includes a mix of land uses and access to open space. Our residents want to live in areas that offer a range of activity throughout the day and evening.</li>
+            <li><h4>Housing Design.</h4> We support universal design in housing to create accessible and barrier-free homes through the incorporation of features that are commonly available and easily usable by people of virtually all ages and abilities.</li>
+            <li><h4>Housing Stability.</h4> We will work to address extreme cost burdens, minimize the risk of displacement, reduce evictions, eliminate unfair rental practices, create permanent housing for homeless residents, and ensure safe and stable housing throughout Metro Boston.</li>
+            <li><h4>Fair Housing.</h4> We are committed to abolishing discrimination against tenants and buyers, and advancing fair and equitable access to housing opportunity for everyone.</li>
           </ol>
           <div className="signatures">
             {signatures}
