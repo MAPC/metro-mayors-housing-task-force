@@ -16,6 +16,7 @@ function Topic(props) {
   );
 }
 
+
 class Topics extends React.Component {
   constructor(props) {
     super(props);
@@ -92,7 +93,8 @@ class Topics extends React.Component {
 
   handleTopicClick(topicTitle) {
     const selectedSubTopics = this.getSelectedSubTopics();
-    const topics = this.withoutSubTopics();
+    const selectedTopics = this.getSelectedTopics();
+    const topics = this.state.topics;
     const topic = topics[topicTitle];
 
     topic.selected = !topic.selected;
@@ -102,6 +104,16 @@ class Topics extends React.Component {
         !topic.selected ? false : selectedSubTopics.includes(subTopic)
       );
     }
+
+    const unselectedTopics = Object.keys(topics).filter(
+      topic => topic !== topicTitle && !selectedTopics.includes(topic)
+    );
+
+    unselectedTopics.forEach(topic => {
+      for (let subTopic in topics[topic].subTopics) {
+        topics[topic].subTopics[subTopic].selected = false;
+      }
+    });
         
     this.setState({ topics });
   }
@@ -109,12 +121,13 @@ class Topics extends React.Component {
 
   handleSubTopicClick(subtopic) {
     const { topics } = this.state;
+    const selectedSubTopics = this.getSelectedSubTopics();
 
     this.getFilteredTopics().forEach(topic => {
       const subTopic = topics[topic].subTopics[subtopic];
 
       if (subTopic) {
-        subTopic.selected = !subTopic.selected;
+        subTopic.selected = !subTopic.selected ? true : selectedSubTopics.includes(subTopic.title);
       }
     });
 
@@ -167,7 +180,7 @@ class Topics extends React.Component {
   renderSubTopics() {
     const selectedTopics = this.getSelectedTopics();
     const selectedSubTopics = this.getSelectedSubTopics();
-    const topics = selectedTopics.length > 0 ? selectedTopics : Object.keys(this.state.topics);
+    const topics = this.getFilteredTopics();
 
     const uniqueSubTopics = topics.map(topic => this.state.topics[topic].subTopics)
                                   .reduce((a, b) => ({ ...a, ...b }), {});
