@@ -1,38 +1,15 @@
 .component.TaskForceSection {
-  display: flex;
-  justify-content: center;
-  .heading-container {
-    flex: 1;
-    margin: 0 0 0 2rem;
-    h2 {
-      margin: 0;
-      padding: 0;
-    }
-  }
-  .column {
-    .row:nth-child(odd) > *:first-child {
-      margin-left: 4rem;
-    }
-    &.three {
-      display: none;
-    }
-    .heading-row {
-      display: flex;
-      align-items: center;
-    }
-    .row {
-      display: flex;
-    }
-  }
-  @media #{$layout-tablet} {
-    .column.five {
-      display: none;
-    }
-    .column.three {
-      display: block;
-    }
+  h2 {
+    border-bottom: 0.4em solid $palette-yellow;
+    margin: 0 auto 2em auto;
+    display: block;
+    width: max-content;
   }
   .task-force-members {
     display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    max-width: 80em;
+    margin: 0 auto;
   }
 }
