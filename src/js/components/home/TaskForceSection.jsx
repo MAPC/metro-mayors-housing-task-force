@@ -19,9 +19,7 @@ class TaskForceSection extends React.Component {
 
     return (
       <section className="component TaskForceSection">
-        <Link to={'/about'}>
-          <h2>{'The Task Force'}</h2>
-        </Link>
+        <h2>{'The Task Force'}</h2>
         <div className="task-force-members">
           {members}
         </div>
