@@ -28,15 +28,21 @@
     }
   }
 
-  
+
   ol { margin: 2em auto; }
 
-  li { 
-    line-height: 1.6em; 
+  li {
+    line-height: 1.6em;
 
     & + li { margin-top: .5em; }
   }
-  
+
+  h2 {
+    @media #{$phone} {
+      margin-top: 3em;
+    }
+  }
+
 
   .bubble.best-practices {
     width: $bubble-width * 2;
