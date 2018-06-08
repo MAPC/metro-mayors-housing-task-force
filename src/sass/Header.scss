@@ -1,4 +1,7 @@
 .component.Header {
+  @media #{$desktop} {
+    display: flex;
+  }
   h1 {
     text-transform: uppercase;
     font-size: 14px;
@@ -6,6 +9,7 @@
     margin: 0;
     @media #{$desktop} {
       font-size: 20px;
+      flex-grow: 2;
     }
   }
   img {
@@ -13,19 +17,23 @@
     padding-right: 1em;
   }
   nav {
+    text-align: center;
+
     ul {
-      background: #f8f8f8;
-      border-top: 2px solid #d0e4ea;
-      padding: 1em 1.5em;
       margin: 0 auto;
+      padding: 0;
+      @media #{$phone} {
+        background: #f8f8f8;
+        border-top: 2px solid #d0e4ea;
+      }
     }
     ul li {
       display: inline;
-      text-align: center;
       padding: 0 1.5em;
     }
   }
   .title {
     padding: 1em;
+    flex-grow: 2;
   }
 }
