@@ -1,15 +1,16 @@
 .component.Header {
-  @media #{$desktop} {
-    display: flex;
-  }
+  display: flex;
   h1 {
     text-transform: uppercase;
-    font-size: 14px;
     display: inline-block;
     margin: 0;
-    @media #{$desktop} {
-      font-size: 20px;
-      flex-grow: 2;
+    font-size: 20px;
+    flex-grow: 2;
+    @media #{$tablet} {
+      font-size: 14px;
+    }
+    @media #{$phone} {
+      font-size: 14px;
     }
   }
   img {
@@ -18,6 +19,7 @@
   }
   nav {
     text-align: center;
+    margin-top: 2em;
 
     ul {
       margin: 0 auto;
@@ -25,15 +27,25 @@
       @media #{$phone} {
         background: #f8f8f8;
         border-top: 2px solid #d0e4ea;
+        padding: 1em 0;
       }
     }
     ul li {
       display: inline;
       padding: 0 1.5em;
     }
+    @media #{$phone} {
+      margin-top: initial;
+    }
   }
   .title {
     padding: 1em;
     flex-grow: 2;
+  }
+  @media #{$tablet} {
+    display: initial;
+  }
+  @media #{$phone} {
+    display: initial;
   }
 }
