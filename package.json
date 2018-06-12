@@ -1,7 +1,8 @@
 {
   "scripts": {
     "dev": "webpack-dev-server --port 3000",
-    "build": "webpack"
+    "build": "webpack",
+    "staging": "webpack && rsync -r public/* metro-mayors-housing-task-force@prep.mapc.org:/var/www/metro-mayors-housing-task-force"
   },
   "devDependencies": {
     "babel-core": "^6.26.3",
