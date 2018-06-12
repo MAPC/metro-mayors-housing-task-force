@@ -3,15 +3,40 @@
   font-size: 0.8rem;
   text-align: center;
   img {
-    width: 8rem;
-    height: 8rem;
     object-fit: cover;
     border-radius: 50%;
+    height: auto;
+    max-width: 101%;
+    max-height: 101%;
+    top: -0.5%;
+    left: -0.5%;
+    position: relative;
   }
   .name-title {
     margin-top: 0.4em;
     .name {
       font-weight: 700;
     }
+  }
+
+  .image-container {
+    position: relative;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 1px solid black;
+    width: 8rem;
+    height: 8rem;
+  }
+
+  .municipality-name {
+    position: absolute;
+    bottom: -57%;
+    left: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    text-transform: uppercase;
+    padding: 0.25em 0 0 0;
+    height: 50%;
+    width: 100%;
   }
 }

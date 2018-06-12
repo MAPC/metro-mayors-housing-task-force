@@ -13,11 +13,11 @@
     flex-wrap: wrap;
     justify-content: center;
     margin: 0 auto;
-    max-width: 80em;
+    max-width: 88em;
     a:first-child {
       margin-left: 1em;
     }
-    @media (max-width: 1382px) {
+    @media (max-width: 1400px) {
       max-width: 40em;
     }
   }
