@@ -9,12 +9,12 @@ class Member extends React.Component {
         className="component Member"
         to={this.props.municipalityName.toLowerCase()}
       >
-        <div className="image-container" style={{marginRight: '1em'}}>
+        <div className="image-container">
           <img
             alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
             src={`/assets/images/${this.props.municipalityName}-small.png`}
           />
-          <div className="municipality-name">{this.props.municipalityName}</div>
+          <div className="municipality-name" style={{color: this.props.color}}>{this.props.municipalityName}</div>
         </div>
         <div className="name-title">
           <div>{this.props.title}</div>
@@ -29,6 +29,7 @@ Member.propTypes = {
   title: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   municipalityName: PropTypes.string.isRequired,
+  color: PropTypes.string.isRequired,
 };
 
 export default Member;

@@ -14,6 +14,7 @@ class TaskForceSection extends React.Component {
         title={info.title}
         name={info.name}
         municipalityName={info.municipalityName}
+        color={info.color}
       />
     ));
 
