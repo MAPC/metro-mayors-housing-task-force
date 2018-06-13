@@ -29,12 +29,28 @@
   }
 
 
-  ol { margin: 2em auto; }
+  ol {
+    margin: 2em auto;
+    columns: 2;
+    padding-left: 0;
+    @media #{$phone} {
+      columns: 1;
+    }
+  }
 
   li {
     line-height: 1.6em;
-
+    margin-left: 2em;
+    font-size: 12px;
     & + li { margin-top: .5em; }
+  }
+
+  h4 {
+    margin-top: 0;
+    font-size: 14px;
+    @media #{$phone} {
+      margin-top: initial;
+    }
   }
 
   h2 {

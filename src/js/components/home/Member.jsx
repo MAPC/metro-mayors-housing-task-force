@@ -9,7 +9,7 @@ class Member extends React.Component {
         className="component Member"
         to={this.props.municipalityName.toLowerCase()}
       >
-        <div className="image-container">
+        <div className="image-container" style={{'border-color': this.props.color}}>
           <img
             alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
             src={`/assets/images/${this.props.municipalityName}-small.png`}
