@@ -33,23 +33,35 @@
 
   ol {
     margin: 2em auto;
-    columns: 2;
     padding-left: 0;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr;
     @media #{$phone} {
       columns: 1;
+      display: initial;
     }
   }
 
   li {
     line-height: 1.6em;
-    margin-left: 2em;
     font-size: 12px;
-    & + li { margin-top: .5em; }
+    display: flex;
+    flex-direction: column;
+    @media #{$phone} {
+      display: initial;
+      p {
+        font-size: 12px;
+      }
+      & + li {
+        margin-top: 0.5em;
+      }
+    }
   }
 
   h4 {
     margin-top: 0;
-    font-size: 14px;
+    font-size: 13px;
     @media #{$phone} {
       margin-top: initial;
     }
