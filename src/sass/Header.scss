@@ -42,9 +42,6 @@
     padding: 1em;
     flex-grow: 2;
   }
-  @media #{$tablet} {
-    display: initial;
-  }
   @media #{$phone} {
     display: initial;
   }
