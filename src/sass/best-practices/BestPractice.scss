@@ -8,36 +8,57 @@
   * { box-sizing: border-box; }
 
 
-  &:nth-of-type(3n+1) {
+  &.blue {
     color: $palette-blue;
-    border-color: $palette-blue; 
+    border-color: $palette-blue;
 
-    .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
+    & .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
   }
 
-  &:nth-of-type(3n+2) {
-    color: $palette-red; 
+  &.blue-light {
+    color: $palette-blue-light;
+    border-color: $palette-blue-light;
+
+    & .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
+  }
+
+  &.blue-dark {
+    color: $palette-blue-dark;
+    border-color: $palette-blue-dark;
+
+    & .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
+  }
+
+  &.red {
+    color: $palette-red;
     border-color: $palette-red;
 
-    .best-practice-image { background-image: url('/assets/images/red-best-practice.jpg'); }
+    & .best-practice-image { background-image: url('/assets/images/red-best-practice.jpg'); }
   }
 
-  &:nth-of-type(3n) {
-    color: $palette-green; 
+  &.green {
+    color: $palette-green;
     border-color: $palette-green;
 
-    .best-practice-image { background-image: url('/assets/images/green-best-practice.jpg'); }
+    & .best-practice-image { background-image: url('/assets/images/green-best-practice.jpg'); }
+  }
+
+  &.yellow {
+    color: $palette-yellow;
+    border-color: $palette-yellow;
+
+    & .best-practice-image { background-image: url('/assets/images/green-best-practice.jpg'); }
   }
 
   .best-practice-description {
     flex: 1 0 70%;
-    padding: $standard-padding; 
+    padding: $standard-padding;
 
-    h4 { 
+    h4 {
       margin-bottom: 0;
 
       font-size: 1.2rem;
-      text-transform: uppercase; 
+      text-transform: uppercase;
     }
   }
 
@@ -45,7 +66,7 @@
     flex: 1 0 30%;
     width: 100%;
 
-    background-size: cover; 
+    background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
   }

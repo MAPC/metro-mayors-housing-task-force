@@ -33,8 +33,8 @@ class Topics extends React.Component {
         topics[topic.title] = {
           selected: false,
           subTopics: topic.subTopics.reduce((subTopics, subTopic) => {
-            return { 
-              ...subTopics, 
+            return {
+              ...subTopics,
               [subTopic.title]: {
                 selected: false,
                 bestPractices: subTopic.bestPractices,
@@ -86,7 +86,7 @@ class Topics extends React.Component {
         topics[topic].subTopics[subTopic].selected = false;
       }
     }
- 
+
     return topics;
   }
 
@@ -114,7 +114,7 @@ class Topics extends React.Component {
         topics[topic].subTopics[subTopic].selected = false;
       }
     });
-        
+
     this.setState({ topics });
   }
 
@@ -142,12 +142,12 @@ class Topics extends React.Component {
       topics[topic].selected = false;
     }
 
-    this.setState({ topics }); 
+    this.setState({ topics });
   }
 
 
   deselectSubTopics() {
-    this.setState({ 
+    this.setState({
       topics: this.withoutSubTopics(),
     });
   }
@@ -172,7 +172,7 @@ class Topics extends React.Component {
         onClick={() => this.deselectTopics()}
         selected={this.getSelectedTopics().length === 0}
       />,
-      ...topics, 
+      ...topics,
     ];
   }
 
@@ -216,7 +216,7 @@ class Topics extends React.Component {
       const { subTopics } = { ...this.state.topics[topic] };
 
       const filteredSubTopics = (
-        selectedSubTopics.length > 0 
+        selectedSubTopics.length > 0
         ? Object.keys(subTopics).filter(subTopic => selectedSubTopics.includes(subTopic))
         : Object.keys(subTopics)
       );
@@ -234,6 +234,7 @@ class Topics extends React.Component {
           title={bestPractice.title}
           description={bestPractice.description}
           image={bestPractice.image}
+          color={bestPractice.color}
         />
       );
     });

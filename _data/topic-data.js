@@ -273,6 +273,7 @@ module.exports = [
             title: 'Real Estate Transfer Fee',
             description: 'Dedicated source of funding usually applied as percent of sales price or set dollar amount per $1000 of value property sold on real estate transactions',
             image: 'https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1',
+            color: 'blue',
           },
           /*
           {
@@ -307,6 +308,7 @@ module.exports = [
             title: 'Property Tax Exemption/Abatement',
             description: 'Tax abatements/exemptions for low-income homeowners, veterans, seniors, or other special classes of individuals',
             image: 'https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1',
+            color: 'blue',
           },
         ],
       },
