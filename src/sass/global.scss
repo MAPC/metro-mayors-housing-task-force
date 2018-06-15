@@ -40,25 +40,24 @@ h2 {
   font-size: 1.5rem;
   position: relative;
   display: inline-block;
-  &::after {
-    content: " ";
-    display: block;
-    position: absolute;
-    bottom: 0.1em; // Relative to the size of the font
-    left: -1em; // Relative to the size of the font
-    height: 0.3em; // Relative to the size of the font
-    width: calc(100% + 1.5em);
-    z-index: -10;
-    background-color: $palette-green;
+  border-bottom: 0.3em solid $palette-green;
+  @media #{$phone} {
+    font-size: 1.25rem;
   }
 }
 
 li {
   padding: 0.5em 0;
+  @media #{$phone} {
+    font-size: 1rem;
+  }
 }
 
 p {
   line-height: 1.9em;
+  @media #{$phone} {
+    font-size: 1rem;
+  }
 }
 
 a {
@@ -74,4 +73,20 @@ a {
   &.generous {
     max-width: $container-generous-width;
   }
+}
+
+.green {
+  color: $palette-green;
+}
+
+.yellow {
+  color: $palette-yellow;
+}
+
+.red {
+  color: $palette-red;
+}
+
+.blue {
+  color: $palette-blue;
 }

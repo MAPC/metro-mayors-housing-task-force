@@ -1,17 +1,33 @@
 .component.IntroSection {
-  background-color: $palette-blue;
-  color: white;
-  padding: 3rem 0;
-  margin: 2rem 0;
+  background: url('/assets/images/skyline.jpg');
+  background-size: cover;
+  background-position: 50% 50%;
+  padding: 3em 0;
+
+  margin: 0 0 2em 0;
+  text-align: center;
   h2 {
-    margin: 0 0 0.4rem 0;
-    &::after {
-      display: none;
+    border: none;
+    padding: 0;
+    margin: 0.2em 0;
+    font-size: 1rem;
+    @media #{$desktop} {
+      font-size: 2.5rem;
+      font-weight: 200;
     }
   }
   p {
     margin: 0;
     font-size: 1.3rem;
     font-style: italic;
+    font-size: 1rem;
+    line-height: 1rem;
+    @media #{$desktop} {
+      font-size: 1.125rem;
+      font-weight: 200;
+    }
+  }
+  @media #{$desktop} {
+    padding: 12em 0;
   }
 }

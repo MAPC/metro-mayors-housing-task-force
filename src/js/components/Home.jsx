@@ -9,8 +9,8 @@ class Home extends React.Component {
   render() {
     return (
       <main className="component Home">
-        <TaskForceSection />
         <IntroSection />
+        <TaskForceSection />
         <CompactSection />
       </main>
     );
