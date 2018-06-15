@@ -45,7 +45,8 @@ module.exports = [
           {
             "title": "Tax Abatements/Exemptions",
             "description": "Tax abatements/exemptions to renovate multifamily buildings",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue"
           },
           /*
           {
@@ -57,12 +58,14 @@ module.exports = [
           {
             "title": "NOAH Impact Fund",
             "description": "Provides equity investments to non-profit developers and for-profit owner-operators to support the preservation of naturally occuring affordable rental housing",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue"
           },
           {
             "title": "Housing Acquisition Program",
             "description": "Funding for private developers, nonprofits, CDCs, (etc.) to purchase rental buildings/units with the purpose of keeping them affordable in perpetuity",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue"
           },
         ]
       },
@@ -94,7 +97,8 @@ module.exports = [
           {
             "title": "Community development financing institutions (CDFI)",
             "description": "Provide credit and financial services to under-served markets and populations",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue"
           }
         ]
       },
@@ -116,7 +120,8 @@ module.exports = [
           {
             "title": "Place-based TIF",
             "description": "Center TIF financing in particular muncipality areas around transportation nodes or other high-value public infrastructure",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue"
           },
           /*
           {
@@ -333,7 +338,8 @@ module.exports = [
           {
             "title": "Inclusionary Zoning",
             "description": "New residential development in certain zones must include some proportion of affordable housing units or meet some other type of compliance",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-light"
           },
           /*
           {
@@ -345,7 +351,8 @@ module.exports = [
           {
             "title": "Upzones + Rezones",
             "description": "Increase capacity for new residential development to include affordable housing",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-light"
           },
           /*
           {
@@ -363,21 +370,25 @@ module.exports = [
             title: 'Expedited Permitting',
             description: 'Allow affordable housing developers to undergo permitting processes quicker',
             image: '',
+            "color": "blue-light"
           },
           {
             title: 'Reduced Parking Requirements',
             description: 'Cap parking requirements in location-efficient areas to reduce costs',
             image: '',
+            "color": "blue-light"
           },
           {
             title: 'Accessory Dwelling Unit Cost',
             description: 'Waive regulations and fees that impose higher costs on ADU construction, such as water and sewer connection fees and fire sprinkler requirements, parking requirements (school fees not included but being considered)',
             image: '',
+            "color": "blue-light"
           },
           {
             title: 'Accessory Dwelling Unit Financing',
             description: "Forgivable loans for developing ADU's in exchange for renting to a voucher recepient",
             image: '',
+            "color": "blue-light"
           },
         ],
       },
@@ -387,7 +398,8 @@ module.exports = [
           {
             "title": "Accessory Dwelling Units Type and Occupancy",
             "description": "By-right ADU's (carved out, attached, detached, basement/attic conversions) to be built and to be occupied by non-family occupants. Allow ADU's without owner occupancy of main structure.",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-light"
           },
           /*
           {
@@ -414,7 +426,8 @@ module.exports = [
           {
             "title": "Eliminating maximum densities",
             "description": "Focus on building form over unit count or FAR for multi-family and mixed-use districts",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-light"
           },
           /*
           {
@@ -466,7 +479,8 @@ module.exports = [
           {
             "title": "Diverse housing arrangements",
             "description": "Enable co-op, co-housing, rent-to-own and other hybrid tenures as a way to improve affordbility and access for a broader range of households, including older adults",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-light"
           },
           /*
           {
@@ -488,7 +502,8 @@ module.exports = [
           {
             "title": "Transferable Development Rights",
             "description": "Allow density rights from at-risk affordable housing units to be 'bought' by developers as density credits, using the payment to upgrade or increase affordable housing units",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           },
           /*
           {
@@ -500,7 +515,8 @@ module.exports = [
           {
             "title": "Good Landlord' Loan Products",
             "description": "Rehabilitation loans for eligible homeowners, developers, nonprofits (etc.) who agree to rent to income-eligible tenants",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           }
         ]
       },
@@ -510,17 +526,20 @@ module.exports = [
           {
             "title": "Rent control",
             "description": "Mandates reasonable and gradual rent increases while ensuring landlords receive a fair return on investment",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           },
           {
             "title": "Tenant Right of First Refusal",
             "description": "Requires that residential tenants in any building up for sale or demolition must be offered the first opportunity to buy the building—either individually as tenants, turning the building into condominiums, or by forming a tenant association and buying the building as a whole, usually in partnership with a developer of their choosing",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           },
           {
             "title": "Right to Remain",
             "description": "Right to remain as a renter or renew a tenancy following a (condo) conversation or sale",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           },
           /*
           {
@@ -532,17 +551,20 @@ module.exports = [
           {
             "title": "Rent Increase Notification",
             "description": "Requirement to provide up to 90 days notice for any rent increase. Other states have up to 60 days notice requirements. Notification requirements may be tied to amount of rent increase (CA) or type of tenant, such as older adult (RI)",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           },
           {
             "title": "Preference for Affordable Housing",
             "description": "Preferences for available subsidized units for individuals vulnerable to displacement",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           },
           {
             "title": "Right to Return",
             "description": "Preferences of available subsidized rental and homeownership units for individuals that have been displaced",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "blue-dark"
           },
           /*
           {
@@ -565,6 +587,7 @@ module.exports = [
             title: 'Community Benefit Agreements',
             description: 'Promote Community Benefits Agreements (CBAs) that include anti-displacement provisions, prioritize minority- and women-owned businesses, and include local monitoring',
             image: '',
+            "color": "blue-dark"
           },
         ]
       },
@@ -575,11 +598,13 @@ module.exports = [
             title: 'Rent to Own',
             description: 'Lease and live as a renter, after a certain time lessor transfers house title to lessee. Some startups have begun working with this model to help low and middle-income households access homeownership. Startups can contribute a percentage of the mortgage, and/or share a percentage of the total house cost. Homeowner shares equity or losses with startup.',
             image: '',
+            "color": "blue-dark"
           },
           {
             title: 'Shared Equity Ownership Program',
             description: 'Assist income-eligible households to purchase a house by sharing the cost of buying, in return for limiting selling proceeds and selling to another income-eligible household',
             image: '',
+            "color": "blue-dark"
           },
         ]
       },
@@ -590,6 +615,7 @@ module.exports = [
             title: 'Housing Cooperatives',
             description: 'For ownership or rent, housing cost and equity is shared amongst participating households',
             image: '',
+            "color": "blue-dark"
           },
         ]
       },
@@ -600,11 +626,13 @@ module.exports = [
             title: 'Community Land Trust',
             description: 'City, nonprofit and/or community development company purchase land and allow developers to build housing yet own the land in perpetuity, keeping housing affordable',
             image: '',
+            "color": "blue-dark"
           },
           {
             title: 'Vacant Site Acquisition Program',
             description: 'Assist affordable housing developers to purchase land for AH development',
             image: '',
+            "color": "blue-dark"
           },
         ]
       },
@@ -671,22 +699,26 @@ module.exports = [
           {
             "title": "Low-cost efficient construction techniques",
             "description": "3D printed homes built for a fraction of traditional construction costs, already being piloted around the world",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "red"
           },
           {
             "title": "Pre-fab small housing",
             "description": "Ready-made housing that can be low-cost and easy to transport; includes small housing options such as ADUs and tiny houses",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "red"
           },
           {
             "title": "Modular construction",
             "description": "Parts are built indoors, at a mass-scale, for lower-cost, quicker construction; can be used for high-rise construction",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "red"
           },
           {
             "title": "Timber construction",
             "description": "Permit construction of cross laminated timber for increased installation and finishes savings",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "red"
           }
         ]
       }
@@ -708,7 +740,8 @@ module.exports = [
           {
             "title": "CA AB1521",
             "description": "Requires owners to accept a qualified offer to purchase an apartment complex with expiring affordability restrictions from someone who pledges to continue renting the homes to low-income residents",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "green"
           }
         ]
       },
@@ -725,7 +758,8 @@ module.exports = [
           {
             "title": "CA SB35",
             "description": "Forces cities to approve projects that comply with existing zoning if not enough housing has been built to keep pace with state home-building targets. Projects must reserve a certain percentage of homes for low-income residents and pay construction workers union-level wages and abide by union-standard hiring rules",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "green"
           },
           /*
           {
@@ -755,6 +789,7 @@ module.exports = [
             title: 'Anti-speculation measures',
             description: 'Anti-speculation, anti-flipping tax targeted at homes that are bought, renovated and sold within a short time frame (typically up to 24 months)',
             image: '',
+            "color": "green"
           },
         ],
       },
@@ -764,12 +799,14 @@ module.exports = [
           {
             "title": "CA AB 879",
             "description": "Instructs cities to analyze how long it takes developers to actually build their projects once they’ve been approved, and then take steps to shorten that time",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "green"
           },
           {
             "title": "Great Neighborhoods Legislation (House 2420 and Senate 81)",
             "description": "Support increased housing choices for households by limiting Town's restrictive zoning against multifamily housing and ADUs (not yet approved)",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "green"
           }
         ]
       },
@@ -796,12 +833,14 @@ module.exports = [
           {
             "title": "Tenant Legal Aid Fund",
             "description": "Fund for tenants seeking counsel in eviction cases",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "yellow"
           },
           {
             "title": "Tenant Right to Counsel",
             "description": "Supports free, universal access to lawyers for tenants in housing court who earn up to 200 percent of the poverty line",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "yellow"
           },
           /*
           {
@@ -823,17 +862,20 @@ module.exports = [
           {
             "title": "Certificate of No Harassment (CONH) program",
             "description": "Requires developers to prove to the city they have not been harassing existing tenants prior to seeking permits for renovating or demolishing buildings covered by the program.",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "yellow"
           },
           {
             "title": "Just Cause Eviction",
             "description": "Prevents landlords from evicting tentants without reason. Landlords cannot legally evict tentants without breach of contract. ",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "yellow"
           },
           {
             "title": "Relocation Assistance",
             "description": "Payments to displaced tenants and counseling servcies to help with apartment search and application process",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "yellow"
           },
           /*
           {
@@ -860,7 +902,8 @@ module.exports = [
           {
             "title": "Notice of Sale",
             "description": "Long notice period before a (condo) conversion or property sale",
-            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
+            "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1",
+            "color": "yellow"
           },
           /*
           {
