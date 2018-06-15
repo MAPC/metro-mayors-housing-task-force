@@ -4,13 +4,13 @@
     text-transform: uppercase;
     display: inline-block;
     margin: 0;
-    font-size: 20px;
+    font-size: 1.25rem;
     flex-grow: 2;
     @media #{$tablet} {
-      font-size: 14px;
+      font-size: 0.875rem;
     }
     @media #{$phone} {
-      font-size: 14px;
+      font-size: 0.875rem;
     }
   }
   img {
@@ -19,7 +19,7 @@
   }
   nav {
     text-align: center;
-    margin-top: 2em;
+    margin-top: 1.7em;
 
     ul {
       margin: 0 auto;

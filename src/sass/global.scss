@@ -49,14 +49,14 @@ h2 {
 li {
   padding: 0.5em 0;
   @media #{$phone} {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
 p {
   line-height: 1.9em;
   @media #{$phone} {
-    font-size: 16px;
+    font-size: 1rem;
   }
 }
 
