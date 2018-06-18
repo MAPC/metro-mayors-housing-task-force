@@ -5,18 +5,10 @@ import { Link } from 'react-router-dom';
 import Signature from './Signature';
 import taskForce from '~/_data/task-force';
 
-const missingSignatures = [
-  'Arlington',
-  'Melrose',
-  'Newton',
-  'Winthrop',
-];
-
 class CompactSection extends React.Component {
 
   render() {
     const signatures = taskForce
-      .filter(member => missingSignatures.indexOf(member.municipalityName) === -1)
       .map((info) => (
         <Signature
           key={info.name}
