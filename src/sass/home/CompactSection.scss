@@ -80,6 +80,7 @@
     left: -#{$bubble-width + 1rem};
     // background-color: $palette-red;
     background: url('/assets/images/red-best-practice.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(228,108,87,.7);
     border-radius: 50%;
     color: white;
     .text {
@@ -97,6 +98,7 @@
     border-radius: 50%;
     // background-color: $palette-green;
     background: url('/assets/images/green-best-practice.jpg');
+    box-shadow: inset 0 0 0 1000px rgba(79,171,140,.7);
     .text {
       right: 66%;
     }
