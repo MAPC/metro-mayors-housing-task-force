@@ -78,7 +78,8 @@
     position: absolute;
     top: 10rem;
     left: -#{$bubble-width + 1rem};
-    background-color: $palette-red;
+    // background-color: $palette-red;
+    background: url('/assets/images/red-best-practice.jpg');
     border-radius: 50%;
     color: white;
     .text {
@@ -94,7 +95,8 @@
     right: -#{$bubble-width + 1rem};
     color: white;
     border-radius: 50%;
-    background-color: $palette-green;
+    // background-color: $palette-green;
+    background: url('/assets/images/green-best-practice.jpg');
     .text {
       right: 66%;
     }
