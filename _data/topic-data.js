@@ -891,16 +891,27 @@ const topics = [
 ];
 
 const focusAreas = {
-  "Affordable Housing Preservation": 'yellow',
-  "Planning/Technical Assistance": 'blue',
-  "default": 'green',
+  default: 'gray',
+  'Affordable Housing Preservation': 'light-pink',
+  'Planning/Technical Assistance': 'blue',
+  'Affordable Housing Production': 'pink',
+  'Community Benefit': 'green',
+  'New Taxes/Fees': 'light-yellow',
+  'Tax Incentive': 'yellow',
+  'Affordable Housing': 'pink',
+  'Developer Incentive': 'light-blue',
+  'Housing Production': 'purple',
+  'Anti-Displacement': 'gray',
+  'Housing Preservation': 'light-purple',
+  'Land/Property Acquisition': 'dark-purple',
+  'Tenant Protections': 'orange',
 };
 
-const topicsWithColor = topics.map(topic => {
-  topic.subTopics = topic.subTopics.map(subTopic => {
-    subTopic.bestPractices = subTopic.bestPractices.map(bestPractice => {
-      bestPractice.color = focusAreas[subTopic.title] || focusAreas['default'];
-      return bestPractice; 
+const topicsWithColor = topics.map((topic) => {
+  topic.subTopics = topic.subTopics.map((subTopic) => {
+    subTopic.bestPractices = subTopic.bestPractices.map((bestPractice) => {
+      bestPractice.color = focusAreas[subTopic.title] || focusAreas.default;
+      return bestPractice;
     });
 
     return subTopic;

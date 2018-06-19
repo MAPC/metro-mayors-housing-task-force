@@ -7,47 +7,28 @@
 
   * { box-sizing: border-box; }
 
+  $color-list: (
+    gray: #d8d8d8,
+    light-pink: #fbe1e2,
+    blue: #3bc5e8,
+    green: #72c6a6,
+    light-yellow: #ffe3a3,
+    pink: #f8c4c5,
+    light-blue: #bdebf7,
+    purple: #d3adc0,
+    light-purple: #eddee5,
+    dark-purple: #b16e90,
+    orange: #e96916,
+    dark-blue: #106b82
+  );
 
-  &.blue {
-    color: $palette-blue;
-    border-color: $palette-blue;
+  @each $color, $value in $color-list {
+    &.#{$color} {
+      color: $value;
+      border-color: $value;
 
-    & .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
-  }
-
-  &.blue-light {
-    color: $palette-blue-light;
-    border-color: $palette-blue-light;
-
-    & .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
-  }
-
-  &.blue-dark {
-    color: $palette-blue-dark;
-    border-color: $palette-blue-dark;
-
-    & .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
-  }
-
-  &.red {
-    color: $palette-red;
-    border-color: $palette-red;
-
-    & .best-practice-image { background-image: url('/assets/images/red-best-practice.jpg'); }
-  }
-
-  &.green {
-    color: $palette-green;
-    border-color: $palette-green;
-
-    & .best-practice-image { background-image: url('/assets/images/green-best-practice.jpg'); }
-  }
-
-  &.yellow {
-    color: $palette-yellow;
-    border-color: $palette-yellow;
-
-    & .best-practice-image { background-image: url('/assets/images/green-best-practice.jpg'); }
+      .best-practice-image { background-image: url('/assets/images/green-best-practice.jpg'); }
+    }
   }
 
   .best-practice-description {
