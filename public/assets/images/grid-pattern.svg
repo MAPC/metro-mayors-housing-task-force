@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 14 14">
+  <defs>
+    <style>
+      .cls-1, .cls-2 {
+        fill: none;
+        stroke: #dce9ec;
+      }
+
+      .cls-2 {
+        opacity: 0.358;
+      }
+    </style>
+  </defs>
+  <g id="Groupe_295" data-name="Groupe 295" transform="translate(-410.5 -1421.5)">
+    <line id="Ligne_23" data-name="Ligne 23" class="cls-1" y2="14" transform="translate(417.5 1421.5)"/>
+    <path id="Tracé_1048" data-name="Tracé 1048" class="cls-2" d="M14,0H0" transform="translate(410.5 1428.5)"/>
+  </g>
+</svg>
