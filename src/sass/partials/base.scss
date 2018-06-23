@@ -1,0 +1,16 @@
+* { 
+  position: relative;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  color: $color_font-dark;
+  font-family: $font_family-primary;
+}
+
+p {
+  font-family: $font_family-secondary;;
+}

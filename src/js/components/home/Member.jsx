@@ -12,7 +12,7 @@ class Member extends React.Component {
         <div className="image-container" style={{borderColor: this.props.color}}>
           <img
             alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
-            src={`/assets/images/${this.props.municipalityName}-small.png`}
+            src={`/assets/images/${this.props.municipalityName}.png`}
           />
           <div className={`municipality-name ${this.props.color}`}>{this.props.municipalityName}</div>
         </div>

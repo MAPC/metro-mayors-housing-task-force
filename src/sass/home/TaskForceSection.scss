@@ -1,24 +1,24 @@
-.component.TaskForceSection {
-  h2 {
-    border-bottom: 0.4em solid $palette-yellow;
-    margin: 0 auto 2em auto;
-    display: block;
-    width: max-content;
-    @media #{$phone} {
-      font-size: 20px
-    }
-  }
-  .task-force-members {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    max-width: 80em;
-    a:first-child {
-      margin-left: 1em;
-    }
-    @media (max-width: 1400px) {
-      max-width: 40em;
-    }
-  }
-}
+//.component.TaskForceSection {
+//  h2 {
+//    border-bottom: 0.4em solid $palette-yellow;
+//    margin: 0 auto 2em auto;
+//    display: block;
+//    width: max-content;
+//    @media #{$phone} {
+//      font-size: 20px
+//    }
+//  }
+//  .task-force-members {
+//    display: flex;
+//    flex-wrap: wrap;
+//    justify-content: center;
+//    margin: 0 auto;
+//    max-width: 80em;
+//    a:first-child {
+//      margin-left: 1em;
+//    }
+//    @media (max-width: 1400px) {
+//      max-width: 40em;
+//    }
+//  }
+//}

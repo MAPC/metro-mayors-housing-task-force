@@ -1,113 +1,113 @@
-.component.CompactSection {
-  overflow: hidden;
-  background-color: #edf5f5;
-  margin-top: 2em;
-
-  .container {
-    position: relative;
-    padding-left: $bubble-width;
-    padding-right: $bubble-width;
-    @media #{$phone} {
-      padding-right: 1em;
-      padding-left: 1em;
-      font-size: 1.3em;
-    }
-  }
-
-  p {
-    z-index: 30;
-  }
-
-  p + p { margin-top: 2em; }
-
-  .bubble {
-    h3 {
-      margin: 0 0 0.5rem 0;
-    }
-    .text {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    @media #{$phone} {
-      display: none;
-    }
-  }
-
-
-  ol {
-    margin: 2em auto;
-    padding-left: 0;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    @media #{$phone} {
-      columns: 1;
-      display: initial;
-    }
-  }
-
-  li {
-    line-height: 1.6em;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    @media #{$phone} {
-      display: initial;
-      p {
-        font-size: 12px;
-      }
-      & + li {
-        margin-top: 0.5em;
-      }
-    }
-  }
-
-  h4 {
-    margin-top: 0;
-    font-size: 13px;
-    @media #{$phone} {
-      margin-top: initial;
-    }
-  }
-
-  h2 {
-    margin-top: 1.5em;
-    z-index: 30;
-  }
-
-
-  .bubble.best-practices {
-    width: $bubble-width * 2;
-    height: $bubble-width * 2;
-    position: absolute;
-    top: 10rem;
-    left: -#{$bubble-width + 1rem};
-    background: url('/assets/images/best-practices-background.svg');
-    background-repeat: no-repeat;
-    color: white;
-    .text {
-      left: 66%;
-    }
-  }
-
-  .bubble.housing {
-    width: $bubble-width * 2;
-    height: $bubble-width * 2;
-    position: absolute;
-    top: 60rem;
-    right: -#{$bubble-width - 15rem};
-    color: white;
-    background: url('/assets/images/housing-background.svg');
-    background-repeat: no-repeat;
-    .text {
-      right: 40%;
-    }
-  }
-
-  ol li h4 {
-    border-bottom: 0.2em solid $palette-green;
-    padding-bottom: 0.2em;
-    margin-bottom: 0.2em;
-  }
-}
+//.component.CompactSection {
+//  overflow: hidden;
+//  background-color: #edf5f5;
+//  margin-top: 2em;
+//
+//  .container {
+//    position: relative;
+//    padding-left: $bubble-width;
+//    padding-right: $bubble-width;
+//    @media #{$phone} {
+//      padding-right: 1em;
+//      padding-left: 1em;
+//      font-size: 1.3em;
+//    }
+//  }
+//
+//  p {
+//    z-index: 30;
+//  }
+//
+//  p + p { margin-top: 2em; }
+//
+//  .bubble {
+//    h3 {
+//      margin: 0 0 0.5rem 0;
+//    }
+//    .text {
+//      position: absolute;
+//      top: 50%;
+//      transform: translateY(-50%);
+//    }
+//    @media #{$phone} {
+//      display: none;
+//    }
+//  }
+//
+//
+//  ol {
+//    margin: 2em auto;
+//    padding-left: 0;
+//    display: grid;
+//    grid-gap: 20px;
+//    grid-template-columns: 1fr 1fr;
+//    @media #{$phone} {
+//      columns: 1;
+//      display: initial;
+//    }
+//  }
+//
+//  li {
+//    line-height: 1.6em;
+//    font-size: 12px;
+//    display: flex;
+//    flex-direction: column;
+//    @media #{$phone} {
+//      display: initial;
+//      p {
+//        font-size: 12px;
+//      }
+//      & + li {
+//        margin-top: 0.5em;
+//      }
+//    }
+//  }
+//
+//  h4 {
+//    margin-top: 0;
+//    font-size: 13px;
+//    @media #{$phone} {
+//      margin-top: initial;
+//    }
+//  }
+//
+//  h2 {
+//    margin-top: 1.5em;
+//    z-index: 30;
+//  }
+//
+//
+//  .bubble.best-practices {
+//    width: $bubble-width * 2;
+//    height: $bubble-width * 2;
+//    position: absolute;
+//    top: 10rem;
+//    left: -#{$bubble-width + 1rem};
+//    background: url('/assets/images/best-practices-background.svg');
+//    background-repeat: no-repeat;
+//    color: white;
+//    .text {
+//      left: 66%;
+//    }
+//  }
+//
+//  .bubble.housing {
+//    width: $bubble-width * 2;
+//    height: $bubble-width * 2;
+//    position: absolute;
+//    top: 60rem;
+//    right: -#{$bubble-width - 15rem};
+//    color: white;
+//    background: url('/assets/images/housing-background.svg');
+//    background-repeat: no-repeat;
+//    .text {
+//      right: 40%;
+//    }
+//  }
+//
+//  ol li h4 {
+//    border-bottom: 0.2em solid $palette-green;
+//    padding-bottom: 0.2em;
+//    margin-bottom: 0.2em;
+//  }
+//}

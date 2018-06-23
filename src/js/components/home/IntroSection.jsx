@@ -1,10 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
 class IntroSection extends React.Component {
 
   render() {
-
     return (
       <section className="component IntroSection">
         <div className="container">
@@ -16,9 +14,7 @@ class IntroSection extends React.Component {
       </section>
     );
   }
-}
 
-IntroSection.propTypes = {
-};
+}
 
 export default IntroSection;
