@@ -9,7 +9,7 @@ class Header extends React.Component {
         <div className="title">
           <Link to='/'>
             <img src="/assets/images/logo.svg" />
-            <h1>
+            <h1 className="unstyled">
               Metro Mayors Coalition <br /> 
               Regional Housing Task Force
             </h1>

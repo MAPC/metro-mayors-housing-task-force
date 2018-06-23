@@ -12,15 +12,17 @@ body {
   font-family: $font_family-primary;
 }
 
-p {
-  font-family: $font_family-secondary;;
+h1 { 
+  &:not(.unstyled) {
+    font-family: $font_family-secondary; 
+    font-weight: 400;
+  }
 }
 
-a {
-  text-decoration: none;
-}
+a { text-decoration: none; }
 
 .container {
+  width: 95%;
+  max-width: 1540px;
   margin: 0 auto;
-  max-width: 1440px;
 }
