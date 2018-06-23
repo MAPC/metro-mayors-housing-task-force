@@ -2,6 +2,7 @@
 
 $color_font-light: #fff;
 $color_font-dark: #002D40;
+$color_font-dark--light: mix(white, $color_font-dark, 15);
 
 $color_bg-light: #fff;
 $color_bg-medium: #FAFAF8;
@@ -21,6 +22,8 @@ $color_palette-blue--dark: mix(black, $color_palette-blue, 15);
 
 $font_family-primary: 'Roboto', sans-serif;
 $font_family-secondary: 'gastromond', serif;
+
+$font_size-15px: .9375rem;
 
 
 // Breakpoints

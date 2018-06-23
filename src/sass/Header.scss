@@ -1,48 +1,73 @@
 .component.Header {
   display: flex;
-  h1 {
-    text-transform: uppercase;
-    display: inline-block;
-    margin: 0;
-    font-size: 1.25rem;
-    flex-grow: 2;
-    @media #{$tablet} {
-      font-size: 0.875rem;
-    }
-    @media #{$phone} {
-      font-size: 0.875rem;
-    }
+
+  padding: 32px 0 20px;
+
+  border-bottom: 1px solid $color_bg-dark;
+
+  @media #{$phone} { display: block; }
+
+  .title { 
+    flex: 1 0 30%;
   }
+
+  h1 {
+    display: inline-block;
+
+    margin: 0;
+
+    color: $color_font-dark;
+    font-size: $font_size-15px;
+    font-weight: 100;
+    text-transform: uppercase;
+
+    @media #{$tablet} { font-size: 0.875rem; }
+  }
+
   img {
-    height: 2em;
+    height: 1.8em;
     padding-right: 1em;
   }
+
   nav {
+    flex: 1 0 70%;
+
     text-align: center;
-    margin-top: 1.7em;
 
     ul {
+      @extend ._vertical-center;
+      left: initial;
+
       margin: 0 auto;
       padding: 0;
+
       @media #{$phone} {
+        padding: 1em 0;
+
         background: #f8f8f8;
         border-top: 2px solid #d0e4ea;
-        padding: 1em 0;
+      }
+
+      li {
+        display: inline;
+
+        padding: 0 1.5em;
       }
     }
-    ul li {
-      display: inline;
-      padding: 0 1.5em;
+
+    a {
+      color: $color_font-dark;
+      font-size: $font_size-15px; 
+      font-weight: 600;
+
+      transition: color .12s;
+
+      &:hover {
+        color: $color_palette-orange;
+
+        transition: color .12s;
+      }
     }
-    @media #{$phone} {
-      margin-top: initial;
-    }
   }
-  .title {
-    padding: 1em;
-    flex-grow: 2;
-  }
-  @media #{$phone} {
-    display: initial;
-  }
+
 }
