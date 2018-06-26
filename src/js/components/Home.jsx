@@ -11,13 +11,10 @@ class Home extends React.Component {
       <main className="component Home">
         <IntroSection />
         <TaskForceSection />
+        <CompactSection />
       </main>
     );
   }
 }
-
-  /*
-        <CompactSection />
-        */
 
 export default Home;

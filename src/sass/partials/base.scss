@@ -10,7 +10,11 @@ body {
   color: $color_font-dark;
   font-size: $font_size-base;
   font-family: $font_family-primary;
+
+  overflow-x: hidden;
 }
+
+main { padding-bottom: 180px; }
 
 h1 { 
   &:not(.unstyled) {

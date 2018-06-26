@@ -1,10 +1,11 @@
 import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import BestPractices from './BestPractices.jsx';
-import Header from './Header.jsx';
-import Home from './Home.jsx';
-import Story from './Story.jsx';
+import BestPractices from './BestPractices';
+import Header from './Header';
+import Footer from './Footer';
+import Home from './Home';
+import Story from './Story';
 
 
 class App extends React.Component {
@@ -18,6 +19,7 @@ class App extends React.Component {
               <Route exact path="/best-practices" component={BestPractices} />
               <Route path="/story" component={Story} />
             </Switch>
+            <Footer />
         </div>
       </BrowserRouter>
     );

@@ -21,3 +21,15 @@
   animation-timing-function: linear;
   animation-iteration-count: infinite;
 }
+
+._pseudo {
+  content: '';
+  display: block;
+  height: 0;
+}
+
+._grid-bg {
+  background-image: url('/assets/images/grid-pattern.svg');
+  background-size: 12px;
+  background-repeat: repeat;
+}

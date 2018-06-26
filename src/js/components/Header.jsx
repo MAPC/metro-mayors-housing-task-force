@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
@@ -27,8 +26,5 @@ class Header extends React.Component {
     );
   }
 }
-
-Header.propTypes = {
-};
 
 export default Header;
