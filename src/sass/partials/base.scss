@@ -8,7 +8,7 @@ body {
   padding: 0;
 
   color: $color_font-dark;
-  font-size: 16px;
+  font-size: $font_size-base;
   font-family: $font_family-primary;
 }
 
@@ -19,10 +19,31 @@ h1 {
   }
 }
 
+h3 { 
+  font-weight: 500;
+  font-size: $font_size-medium;
+  font-family: $font_family-primary;
+  text-transform: uppercase;
+
+  &.with-bar {
+    &:after {
+      content: '';
+      display: inline-block;
+      vertical-align: middle; 
+      top: -2px;
+
+      width: 140px;
+      margin-left: .5em;
+
+      border-bottom: 1px solid $color_bg-dark;
+    } 
+  }
+}
+
 a { text-decoration: none; }
 
 .container {
-  width: 95%;
-  max-width: 1540px;
+  width: 88.5%;
+  max-width: 1400px;
   margin: 0 auto;
 }

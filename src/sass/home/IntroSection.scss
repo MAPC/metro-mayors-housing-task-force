@@ -1,5 +1,7 @@
 .component.IntroSection {
   $_layer-back: 1;
+
+  margin-bottom: 8%;
   
   h1 { 
     z-index: $_layer-back + 1;
@@ -7,8 +9,7 @@
     max-width: 65%;
     margin-bottom: 0;
 
-    font-size: $font_size-75px;
-
+    font-size: $font_size-xlarge;
   }
 
   p {
@@ -16,7 +17,7 @@
     max-width: 55%; 
     margin-top: 0; 
 
-    font-size: $font_size-22px + .19rem;
+    font-size: $font_size-medium + .24rem;
   }
 
   .header-image {
@@ -40,7 +41,7 @@
 
       position: absolute;
       left: 9vw;
-      bottom: -$_height / 2;
+      bottom: -($_height * .35);
       z-index: 0;
       display: block;
 

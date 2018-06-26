@@ -2,7 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+
 class Member extends React.Component {
+
   render() {
     return (
       <Link
@@ -14,15 +16,15 @@ class Member extends React.Component {
             alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
             src={`/assets/images/${this.props.municipalityName.toLowerCase()}.png`}
           />
-          <div className={`municipality-name ${this.props.color}`}>{this.props.municipalityName}</div>
+          <h4 className={this.props.color}>{this.props.municipalityName}</h4>
         </div>
-        <div className="name-title">
-          <div>{this.props.title}</div>
-          <div className="name">{this.props.name}</div>
-        </div>
+
+        <div className="name">{this.props.name}</div>
+        <div className="title">{this.props.title}</div>
       </Link>
     );
   }
+
 }
 
 Member.propTypes = {
