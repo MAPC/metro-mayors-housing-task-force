@@ -26,15 +26,14 @@ h1 {
     @include media(small) { font-size: $font_size-large - $font_mod-large; }
   }
 
-  &:not(.unstyled) {
-    font-family: $font_family-secondary; 
-  }
+  &:not(.unstyled) { font-family: $font_family-secondary; }
 }
 
 h3 { 
   font-weight: 500;
   font-size: $font_size-medium;
   font-family: $font_family-primary;
+  letter-spacing: $font_spacing-large;
   text-transform: uppercase;
 
   @include media(small) { font-size: $font_size-medium - $font_mod-small; }

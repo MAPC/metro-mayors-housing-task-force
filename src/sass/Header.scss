@@ -27,6 +27,7 @@
 
     color: $color_font-dark;
     font-size: $font_size-base;
+    letter-spacing: $font_spacing-medium;
     text-transform: uppercase;
   }
 
@@ -71,6 +72,7 @@
       color: $color_font-dark;
       font-size: $font_size-base; 
       font-weight: 500;
+      letter-spacing: $font_spacing-small;
 
       transition: color .12s;
 
