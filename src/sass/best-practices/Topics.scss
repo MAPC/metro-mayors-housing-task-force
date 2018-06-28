@@ -1,59 +1,18 @@
 .component.Topics {
-  $topic_margin: .4em;
-
-  &.container {
-    max-width: 70rem; 
-    padding: 0 5rem;
-  }
+  padding-top: 2rem;
 
   .button-container {
-    @media #{$desktop} {
-      width: 50em;
-    }
-
     margin-bottom: $topic_margin * 8;
+
+    @media #{$desktop} { width: 50em;}
   }
 
   h3 { margin: 0 auto ($topic_margin / 2); }
 
-  .topic {
-    margin: $topic_margin 0;
-    margin-right: $topic_margin * 2;
-    padding: ($topic_margin + .1) ($topic_margin * 2) $topic_margin;
-
-    color: $text-color;
-    font-size: 16px;
-    text-transform: uppercase;
-
-    background: $bg-color;
-    border: 1px solid $text-color;
-    cursor: pointer;
-    outline: none;
-
-    &:hover {
-      color: $bg-color;
-
-      background: $palette-blue-light;
-      border-color: $palette-blue-light;
-    }
-
-    &.selected {
-      color: $bg-color;
-
-      background: $palette-blue;
-      border-color: $palette-blue;
-
-      &:hover {
-        background: $palette-blue-dark; 
-        border-color: $palette-blue-dark;
-      }
-    }
-  }
-
   .best-practices {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: $standard-padding;
+    grid-gap: 1em;
   }
 
 }

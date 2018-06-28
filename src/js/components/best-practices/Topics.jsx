@@ -1,20 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+import Topic from './Topic';
 import BestPractice from './BestPractice';
 import topicData from '~/_data/topic-data';
-
-
-function Topic(props) {
-  return (
-    <button
-      className={`topic ${props.selected?'selected':''}`}
-      onClick={() => props.onClick()}
-    >
-      {props.title}
-    </button>
-  );
-}
 
 
 class Topics extends React.Component {
@@ -258,8 +246,5 @@ class Topics extends React.Component {
     );
   }
 }
-
-Topics.propTypes = {
-};
 
 export default Topics;
