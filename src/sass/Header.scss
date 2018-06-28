@@ -5,10 +5,19 @@
 
   border-bottom: 1px solid $color_bg-dark;
 
-  @media #{$phone} { display: block; }
+  @include media(medium) { 
+    display: block; 
+
+    width: 100%; 
+    padding: 0;
+
+    border-color: $color_bg-medium--dark;
+  }
 
   .title { 
-    flex: 1 0 30%;
+    flex: 1 0 40%; 
+
+    @include media(medium) { padding: 15px 20px; }
   }
 
   h1 {
@@ -20,8 +29,6 @@
     font-size: $font_size-base;
     font-weight: 100;
     text-transform: uppercase;
-
-    @media #{$tablet} { font-size: 0.875rem; }
   }
 
   img {
@@ -30,7 +37,7 @@
   }
 
   nav {
-    flex: 1 0 70%;
+    flex: 1 0 60%;
 
     text-align: center;
 
@@ -41,10 +48,14 @@
       margin: 0 auto;
       padding: 0;
 
-      @media #{$phone} {
+      @include media(medium) {
+        position: relative;
+        top: initial;
+        transform: initial;
+
         padding: 1em 0;
 
-        background: #f8f8f8;
+        background: $color_bg-medium;
         border-top: 2px solid #d0e4ea;
       }
 
@@ -52,6 +63,8 @@
         display: inline;
 
         padding: 0 1.5em;
+
+        @include media(x-small) { padding: 0 .8em; }
       }
     }
 
@@ -67,6 +80,8 @@
 
         transition: color .12s;
       }
+
+      @include media(x-small) { font-size: $font_size-base--rem - $font_mod-small; }
     }
   }
 

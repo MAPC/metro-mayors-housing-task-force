@@ -8,6 +8,8 @@ $color_bg-light: #fff;
 $color_bg-medium: #FAFAF8;
 $color_bg-dark: #002D40;
 
+$color_bg-medium--dark: mix(black, $color_bg-medium, 10);
+
 $color_palette-orange: #D49162;
 $color_palette-blue: #568095;
 $color_palette-skyblue: #98C3D1;
@@ -26,13 +28,23 @@ $font_family-primary: 'Roboto', sans-serif;
 $font_family-secondary: 'gastromond', serif;
 
 $font_size-base: 16px;
+$font_size-base--rem: 1rem;
 $font_size-small: .6875rem; // 11px
 $font_size-medium: 1.25rem; // 20px
 $font_size-large: 3.4375rem; // 55px
 $font_size-xlarge: 4.6875rem; // 75px
 
+$font_mod-small: .2rem;
+$font_mod-large: 1rem;
+
 
 // Breakpoints
+
+$break_xsmall: 500px;
+$break_small: 670px;
+$break_medium: 960px;
+$break_large: 1280px;
+$break_xlarge: 1600px;
 
 $underline-hover-transition-speed: 0.25s;
 

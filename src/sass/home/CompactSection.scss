@@ -61,6 +61,8 @@
     display: flex; 
 
     padding: 65px 0; 
+
+    @include media(small) { display: block; }
   }
 
   p {
@@ -70,6 +72,8 @@
 
     font-size: $font_size-medium;
     line-height: calc(#{$font_size-medium} + 12px);
+
+    @include media(small) { padding: 50px 0; }
 
     a {
       color: $color_font-dark;
@@ -85,6 +89,12 @@
   }
 
   .box-link {
+    display: block;
+
+    height: 100%;
+
+    @include media(small) { display: none; }
+
     span { 
       left: 0;
       transition: left .2s;
@@ -119,121 +129,12 @@
   .signatures {
     margin-top: 35px; 
 
-    img { width: 16.66%; }
+    img { 
+      width: 16.66%; 
+
+      @include media(medium) { width: 20%; }
+      @include media(small) { width: 33.33%; }
+    }
   }
 
 }
-
-//.component.CompactSection {
-//  overflow: hidden;
-//  background-color: #edf5f5;
-//  margin-top: 2em;
-//
-//  .container {
-//    position: relative;
-//    padding-left: $bubble-width;
-//    padding-right: $bubble-width;
-//    @media #{$phone} {
-//      padding-right: 1em;
-//      padding-left: 1em;
-//      font-size: 1.3em;
-//    }
-//  }
-//
-//  p {
-//    z-index: 30;
-//  }
-//
-//  p + p { margin-top: 2em; }
-//
-//  .bubble {
-//    h3 {
-//      margin: 0 0 0.5rem 0;
-//    }
-//    .text {
-//      position: absolute;
-//      top: 50%;
-//      transform: translateY(-50%);
-//    }
-//    @media #{$phone} {
-//      display: none;
-//    }
-//  }
-//
-//
-//  ol {
-//    margin: 2em auto;
-//    padding-left: 0;
-//    display: grid;
-//    grid-gap: 20px;
-//    grid-template-columns: 1fr 1fr;
-//    @media #{$phone} {
-//      columns: 1;
-//      display: initial;
-//    }
-//  }
-//
-//  li {
-//    line-height: 1.6em;
-//    font-size: 12px;
-//    display: flex;
-//    flex-direction: column;
-//    @media #{$phone} {
-//      display: initial;
-//      p {
-//        font-size: 12px;
-//      }
-//      & + li {
-//        margin-top: 0.5em;
-//      }
-//    }
-//  }
-//
-//  h4 {
-//    margin-top: 0;
-//    font-size: 13px;
-//    @media #{$phone} {
-//      margin-top: initial;
-//    }
-//  }
-//
-//  h2 {
-//    margin-top: 1.5em;
-//    z-index: 30;
-//  }
-//
-//
-//  .bubble.best-practices {
-//    width: $bubble-width * 2;
-//    height: $bubble-width * 2;
-//    position: absolute;
-//    top: 10rem;
-//    left: -#{$bubble-width + 1rem};
-//    background: url('/assets/images/best-practices-background.svg');
-//    background-repeat: no-repeat;
-//    color: white;
-//    .text {
-//      left: 66%;
-//    }
-//  }
-//
-//  .bubble.housing {
-//    width: $bubble-width * 2;
-//    height: $bubble-width * 2;
-//    position: absolute;
-//    top: 60rem;
-//    right: -#{$bubble-width - 15rem};
-//    color: white;
-//    background: url('/assets/images/housing-background.svg');
-//    background-repeat: no-repeat;
-//    .text {
-//      right: 40%;
-//    }
-//  }
-//
-//  ol li h4 {
-//    border-bottom: 0.2em solid $palette-green;
-//    padding-bottom: 0.2em;
-//    margin-bottom: 0.2em;
-//  }
-//}

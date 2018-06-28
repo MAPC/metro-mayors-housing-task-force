@@ -5,31 +5,61 @@
   font-size: 0.8rem;
   text-align: center;
 
+
   .image-container {
     width: 8rem;
 
-    @media #{$phone} {
-      position: relative;
-
+    @include media(small) {
       height: 8rem;
 
       border-radius: 50%;
       border: 1px solid black;
       overflow: hidden;
+
+      &.orange { 
+        color: darken($color_palette-orange, 10); 
+        background: $color_palette-orange;
+        border-color: $color_palette-orange;
+      }
+      &.blue { 
+        color: darken($color_palette-blue, 10); 
+        background: $color_palette-blue;
+        border-color: $color_palette-blue;
+      }
+      &.skyblue { 
+        color: darken($color_palette-skyblue, 10); 
+        background: $color_palette-skyblue;
+        border-color: $color_palette-skyblue;
+      }
+      &.green { 
+        color: darken($color_palette-green, 10); 
+        background: $color_palette-green;
+        border-color: $color_palette-green;
+      }
+      &.yellow { 
+        color: darken($color_palette-yellow, 10); 
+        background: $color_palette-yellow;
+        border-color: $color_palette-yellow;
+      }
     }
   }
 
   img {
-    position: relative;
-    top: -0.5%;
-    left: -0.5%;
+    top: -15%;
 
     height: auto;
-    max-width: 101%;
-    max-height: 101%;
+    max-width: 125%;
+    max-height: 125%;
 
     border-radius: 50%;
     object-fit: cover;
+
+    @include media(small) {
+      top: -5%; 
+
+      max-width: 110%;
+      max-height: 110%;
+    }
   }
 
   h4 {
@@ -41,16 +71,16 @@
 
     @media #{$phone} {
       position: absolute;
-      bottom: -57%;
-      left: 50%;
+      bottom: -.6em;
 
-      height: 50%;
       width: 100%;
-      padding: 0.25em 0 0 0;
+      padding: 0.3em 0 1.5em;
+
+      font-size: $font_size-base--rem - $font_mod-small;
 
       background-color: white;
-      transform: translate(-50%, -50%);
     }
+
   }
 
   .name, .title {

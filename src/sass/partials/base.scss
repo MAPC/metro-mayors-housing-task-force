@@ -29,6 +29,8 @@ h3 {
   font-family: $font_family-primary;
   text-transform: uppercase;
 
+  @include media(small) { font-size: $font_size-medium - $font_mod-small; }
+
   &.with-bar {
     &:after {
       content: '';
@@ -40,6 +42,8 @@ h3 {
       margin-left: .5em;
 
       border-bottom: 1px solid $color_bg-dark;
+
+      @include media(small) { width: 100px; }
     } 
   }
 }

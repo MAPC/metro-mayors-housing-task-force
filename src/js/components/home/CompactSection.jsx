@@ -53,11 +53,11 @@ class CompactSection extends React.Component {
               communities.
             </p>
 
-            <Link className="box-link" to={'/best-practices'}>
-              <img src="/assets/images/home-best-practices.jpg" alt="" />
+            <Link className="box-link" to={'/story'}>
+              <img src="/assets/images/home-housing.jpg" alt="" />
 
               <div className="box-content">
-                <large>Best Practices</large>
+                <large>Housing Metro Boston</large>
                 <small>Explore the tools <span>></span></small>
               </div>
             </Link>
@@ -79,11 +79,11 @@ class CompactSection extends React.Component {
               in Metro Boston in accordance with <Link to={'/guiding-principles'}>these principles.</Link>
             </p>
 
-            <Link className="box-link" to={'/guiding-principles'}>
-              <img src="/assets/images/home-housing.jpg" alt="" />
+            <Link className="box-link" to={'/best-practices'}>
+              <img src="/assets/images/home-best-practices.jpg" alt="" />
 
               <div className="box-content">
-                <large>Housing in the Region</large>
+                <large>Best Practices</large>
                 <small>Explore the tools <span>></span></small>
               </div>
             </Link>
