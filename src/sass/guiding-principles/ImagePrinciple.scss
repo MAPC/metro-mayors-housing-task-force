@@ -1,0 +1,16 @@
+.component.ImagePrinciple {
+  display: flex;
+
+  img {
+    flex: 1 0 25%;
+
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .Principle {
+    flex: 1 0 70%; 
+
+    margin-left: 5%;
+  }
+}

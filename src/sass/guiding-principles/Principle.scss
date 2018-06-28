@@ -1,0 +1,12 @@
+.component.Principle {
+
+  h3 { text-transform: uppercase; }
+
+  p { 
+    margin: 0 auto;
+
+    font-size: $font_size-medium; 
+    line-height: $font_size-medium * 1.5;
+  }
+
+}

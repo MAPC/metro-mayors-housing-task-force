@@ -1,0 +1,62 @@
+.component.PrinciplesSection {
+
+  ol { padding: 0; }
+
+  li { 
+    padding: 2.5em 0;
+
+    list-style-type: none; 
+
+    &:nth-of-type(3) {
+      &:before {
+        @extend ._pseudo; 
+        @extend ._grid-bg;
+
+        left: 0;
+        top: 0;
+
+        width: 33.33%;
+        height: 100%;
+      } 
+
+      &:after {
+        @extend ._pseudo; 
+        @extend ._partial-bg;
+
+        top: initial;
+        bottom: 0;
+
+        height: 18%;
+      }
+    }
+
+    &:nth-of-type(4),
+    &:nth-of-type(5) {
+      background: $color_bg-medium; 
+    }
+
+    &:nth-of-type(6) {
+      &:before {
+        @extend ._pseudo; 
+        @extend ._grid-bg;
+
+        right: 0;
+        top: -20%;
+
+        width: 50%;
+        height: 200%;
+      }
+
+      &:after {
+        @extend ._pseudo;
+        @extend ._partial-bg;
+
+        height: 65%;
+      } 
+    }
+
+    &:first-of-type { padding-top: 0; }
+    &:last-of-type { padding-bottom: 0; }
+  }
+
+}

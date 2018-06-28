@@ -11,14 +11,7 @@
     max-width: 65%;
     margin-bottom: 0;
 
-    font-size: $font_size-xlarge;
-
-    @include media(medium) { font-size: $font_size-large; }
-    @include media(small) { 
-      max-width: 80%;
-
-      font-size: $font_size-large - $font_mod-large; 
-    }
+    @include media(small) { max-width: 80%; }
     @include media(x-small) { max-width: 100%; }
   }
 

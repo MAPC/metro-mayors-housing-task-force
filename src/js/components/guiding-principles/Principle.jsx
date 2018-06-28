@@ -8,7 +8,7 @@ class Principle extends React.Component {
 
     return (
       <div className="component Principle">
-        <h3>{this.props.number} {title}</h3>
+        <h3>{this.props.number}. {title}</h3>
         <p>
           {content}
         </p>

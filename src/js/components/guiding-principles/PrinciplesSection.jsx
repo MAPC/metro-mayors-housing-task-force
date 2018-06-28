@@ -35,7 +35,7 @@ class PrinciplesSection extends React.Component {
 
   render() {
     return (
-      <section className="principles-section" >
+      <section className="component PrinciplesSection" >
         <ol className="principles-list"> 
           {this.renderPrinciples()}
         </ol>
