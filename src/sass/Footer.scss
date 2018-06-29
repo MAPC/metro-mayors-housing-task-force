@@ -1,6 +1,8 @@
 .component.Footer {
   $_opaque: .8;
 
+  z-index: 0;
+
   padding: 15px;
 
   color: rgba($color_font-light, $_opaque);

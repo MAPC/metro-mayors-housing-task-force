@@ -1,9 +1,17 @@
 .component.Header {
   display: flex;
+  z-index: 0;
 
   padding: 32px 0 20px;
 
   border-bottom: 1px solid $color_bg-dark;
+
+  &.light {
+    border-color: $color_font-light; 
+
+    h1, a { color: $color_font-light; } 
+    a:hover { color: $color_palette-blue; }
+  }
 
   @include media(medium) { 
     display: block; 

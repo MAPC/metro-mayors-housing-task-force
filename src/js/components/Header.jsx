@@ -1,10 +1,11 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 class Header extends React.Component {
   render() {
     return (
-      <header className="component Header container">
+      <header className={`component Header container ${this.props.light ? 'light' : ''}`}>
         <div className="title">
           <Link to='/'>
             <img src="/assets/images/logo.svg" />
@@ -26,5 +27,9 @@ class Header extends React.Component {
     );
   }
 }
+
+Header.propTypes = {
+  light: PropTypes.bool,
+};
 
 export default Header;
