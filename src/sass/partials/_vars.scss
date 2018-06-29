@@ -7,6 +7,7 @@ $color_font-dark--light: mix(white, $color_font-dark, 15);
 $color_bg-light: #fff;
 $color_bg-medium: #FAFAF8;
 $color_bg-dark: #002D40;
+$color_bg-dark--dark: mix(black, $color_bg-dark, 15);
 
 $color_bg-medium--dark: mix(black, $color_bg-medium, 10);
 

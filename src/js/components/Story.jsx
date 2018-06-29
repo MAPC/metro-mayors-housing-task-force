@@ -52,9 +52,16 @@ class Story extends React.Component {
   }
 
   render() {
+    const slide = slides[this.state.currentSlide];
+
     return (
       <main className="component Story">
-        <Header light={true} />
+        <Header 
+          light={!slide.darkHeader} 
+          color={slide.headerColor} 
+          shadowed={slide.headerShadow}
+        />
+
         {this.renderSlides()}
 
         <button className={`slide-control ${!this.hasPrevious() ? 'disabled' : ''}`} onClick={() => this.back()}></button>

@@ -1,6 +1,9 @@
 const wrap = (tagName, content) => `&lt;${tagName}&gt;${content}&lt;/${tagName}&gt;`;
 const br = "&lt;br/&gt;";
 
+const darkHeader = true;
+const headerShadow = true;
+
 module.exports = [
   {
     title: 'Housing Metro Boston',
@@ -13,7 +16,8 @@ module.exports = [
   },
   {
     image: 'birds-eye-1.jpg',
-    content: "Metro Boston's housing prices are among the highest in the nation.",
+    content: `Metro Boston's housing prices are among the ${wrap('b', 'highest in the nation.')}`,
+    headerShadow,
   },
   {
     image: 'residential-snow.jpg',
@@ -21,14 +25,17 @@ module.exports = [
     credit: {
       artist: 'Larry Tseng',
     },
+    headerShadow,
   },
   {
     image: 'birds-eye-1.jpg',
     content: "Some are being priced out of their neighborhoods.",
+    headerShadow,
   },
   {
     image: 'commuter-rail.jpg',
     content: "This is hardest for low-income residents who face fewer housing options and longer commutes to get to their jobs.",
+    headerShadow,
   },
   {
     image: 'island-1.jpg',
@@ -58,6 +65,7 @@ module.exports = [
   {
     image: 'birds-eye-1.jpg',
     content: "Baby boomers are retiring (800k a year in Massachusetts). Job vacancies are opening to younger generations.",
+    headerShadow,
   },
   {
     image: 'hedge-garden.jpg',
@@ -65,10 +73,12 @@ module.exports = [
     credit: {
       artist: 'Joyce Huis',
     },
+    headerShadow,
   },
   {
     image: 'birds-eye-1.jpg',
     content: "Speculative investment and the conversion of residential homes to hotel-like home sharing takes units off the rental market, depleting our already low supply.",
+    headerShadow,
   },
   {
     content: "So why don't we just build more homes?",
@@ -80,6 +90,7 @@ module.exports = [
   {
     image: 'birds-eye-1.jpg',
     content: "Some local laws overly restrict the type and amount of housing allowed.",
+    headerShadow,
   },
   {
     content: "Time consuming permitting processes and inconsistent approval processes are too risky to some real estate developers",
@@ -87,6 +98,7 @@ module.exports = [
   {
     image: 'birds-eye-1.jpg',
     content: "Community concerns about too much density or lack of affordable housing can stall development completely.",
+    headerShadow,
   },
   {
     chart: '',
@@ -95,10 +107,12 @@ module.exports = [
   {
     image: 'birds-eye-1.jpg',
     content: "To meet this demand, we must build 188,000 more units by 2030.",
+    headerShadow,
   },
   {
     image: 'birds-eye-1.jpg',
     content: "Housing demand will be felt across our region. This isn't one type of housing, or in a single community.",
+    headerShadow,
   },
   {
     content: "No one community can create a solution alone.",
@@ -106,6 +120,7 @@ module.exports = [
   {
     image: 'birds-eye-1.jpg',
     content: "All our cities and towns must work together to meet the needs of today and anticipate the needs of tomorrow.",
+    headerShadow,
   },
   {
     image: 'mayors.jpg',
@@ -120,6 +135,7 @@ module.exports = [
     credit: {
       artist: 'Qusai Akoud',
     },
+    darkHeader,
   },
   {
     image: 'skyline-2.jpg',
