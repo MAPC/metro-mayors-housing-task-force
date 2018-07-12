@@ -3,7 +3,7 @@
 
   .sub-section {
     &:nth-of-type(2n)  {
-      background: $color_bg-medium; 
+      background: $color_bg-medium;
 
       .columned { flex-direction: row-reverse; }
     }
@@ -13,20 +13,20 @@
     &:nth-of-type(2) {
       &:before {
         @extend ._pseudo;
-        @extend ._grid-bg; 
+        @extend ._grid-bg;
 
         top: -30%;
         left: 0;
 
         width: 31%;
         height: 36%;
-      } 
+      }
     }
 
     &:nth-of-type(3) {
-      .container, .container:last-of-type p { 
-        padding-top: 0; 
-        padding-bottom: 0; 
+      .container, .container:last-of-type p {
+        padding-top: 0;
+        padding-bottom: 0;
       }
 
       &:before {
@@ -45,21 +45,21 @@
         @extend ._partial-bg;
 
         height: 3%;
-      } 
+      }
     }
   }
 
-  .columned { 
-    display: flex; 
+  .columned {
+    display: flex;
 
-    padding: 65px 0; 
+    padding: 65px 0;
 
     @include media(small) { display: block; }
   }
 
   p {
     margin: auto;
-    padding: 65px 75px;  
+    padding: 65px 75px;
     vertical-align: middle;
 
     font-size: $font_size-medium;
@@ -87,16 +87,16 @@
 
     @include media(small) { display: none; }
 
-    span { 
+    span {
       left: 0;
       transition: left .2s;
     }
 
     &:hover {
-      span { 
+      span {
         left: 5px;
         transition: left .2s;
-      } 
+      }
     }
   }
 
@@ -110,19 +110,19 @@
 
     & > * { display: block; }
 
-    large { 
-      font-size: $font_size-large; 
+    span.large {
+      font-size: $font_size-large;
       font-family: $font_family-secondary;
     }
 
-    small { font-size: $font_size-medium; }
+    span.small { font-size: $font_size-medium; }
   }
 
   .signatures {
-    margin-top: 35px; 
-
-    img { 
-      width: 16.66%; 
+    margin-top: 35px;
+    padding: 0 75px;
+    img {
+      width: 16.66%;
 
       @include media(medium) { width: 20%; }
       @include media(small) { width: 33.33%; }
