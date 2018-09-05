@@ -1,49 +1,97 @@
 .component.Member {
-  padding: 0.4rem 1rem;
+  padding: 1rem;
+
+  color: $color_font-dark;
   font-size: 0.8rem;
   text-align: center;
-  img {
-    object-fit: cover;
-    border-radius: 50%;
-    height: auto;
-    max-width: 101%;
-    max-height: 101%;
-    top: -0.5%;
-    left: -0.5%;
-    position: relative;
-  }
-  .name-title {
-    margin-top: 0.4em;
-    .name {
-      font-weight: 700;
-    }
-  }
+
 
   .image-container {
     width: 8rem;
-    height: 9.4rem;
-    @media #{$phone} {
-      position: relative;
+
+    @include media(small) {
       height: 8rem;
+
       border-radius: 50%;
-      overflow: hidden;
       border: 1px solid black;
+      overflow: hidden;
+
+      &.orange { 
+        color: darken($color_palette-orange, 10); 
+        background: $color_palette-orange;
+        border-color: $color_palette-orange;
+      }
+      &.blue { 
+        color: darken($color_palette-blue, 10); 
+        background: $color_palette-blue;
+        border-color: $color_palette-blue;
+      }
+      &.skyblue { 
+        color: darken($color_palette-skyblue, 10); 
+        background: $color_palette-skyblue;
+        border-color: $color_palette-skyblue;
+      }
+      &.green { 
+        color: darken($color_palette-green, 10); 
+        background: $color_palette-green;
+        border-color: $color_palette-green;
+      }
+      &.yellow { 
+        color: darken($color_palette-yellow, 10); 
+        background: $color_palette-yellow;
+        border-color: $color_palette-yellow;
+      }
     }
   }
 
-  .municipality-name {
-    margin-top: 0.4em;
-    text-transform: uppercase;
-    font-weight: 700;
-    @media #{$phone} {
-      position: absolute;
-      bottom: -57%;
-      left: 50%;
-      background-color: white;
-      transform: translate(-50%, -50%);
-      padding: 0.25em 0 0 0;
-      height: 50%;
-      width: 100%;
+  img {
+    top: -15%;
+
+    height: auto;
+    max-width: 125%;
+    max-height: 125%;
+
+    border-radius: 50%;
+    object-fit: cover;
+
+    @include media(small) {
+      top: -5%; 
+
+      max-width: 110%;
+      max-height: 110%;
     }
   }
+
+  h4 {
+    margin: 0 auto;
+
+    font-weight: 700;
+    font-size: $font_size-base;
+    text-transform: uppercase;
+
+    @media #{$phone} {
+      position: absolute;
+      bottom: -.6em;
+
+      width: 100%;
+      padding: 0.3em 0 1.5em;
+
+      font-size: $font_size-base--rem - $font_mod-small;
+
+      background-color: white;
+    }
+
+  }
+
+  .name, .title {
+    font-size: $font_size-small; 
+  }
+
+  .name {
+    margin-top: $font_size-small / 2; 
+
+    font-weight: 500;
+  }
+
+  .title { font-style: italic; }
 }

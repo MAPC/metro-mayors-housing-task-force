@@ -5,33 +5,30 @@
   min-height: 15rem;
   border: 0.3em solid;
 
-  * { box-sizing: border-box; }
-
-
   &:nth-of-type(3n+1) {
-    color: $palette-blue;
-    border-color: $palette-blue; 
+    color: $color_palette-blue;
+    border-color: $color_palette-blue; 
 
     .best-practice-image { background-image: url('/assets/images/blue-best-practice.jpg'); }
   }
 
   &:nth-of-type(3n+2) {
-    color: $palette-red; 
-    border-color: $palette-red;
+    color: $color_palette-orange; 
+    border-color: $color_palette-orange;
 
     .best-practice-image { background-image: url('/assets/images/red-best-practice.jpg'); }
   }
 
   &:nth-of-type(3n) {
-    color: $palette-green; 
-    border-color: $palette-green;
+    color: $color_palette-green; 
+    border-color: $color_palette-green;
 
     .best-practice-image { background-image: url('/assets/images/green-best-practice.jpg'); }
   }
 
   .best-practice-description {
     flex: 1 0 70%;
-    padding: $standard-padding; 
+    padding: 1em;
 
     h4 { 
       margin-bottom: 0;

@@ -2,27 +2,31 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
+import colors from '~/_data/colors';
+
+
 class Member extends React.Component {
+
   render() {
     return (
       <Link
         className="component Member"
         to={this.props.municipalityName.toLowerCase()}
       >
-        <div className="image-container" style={{borderColor: this.props.color}}>
+        <div className={`image-container ${this.props.color}`}>
           <img
             alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
-            src={`/assets/images/${this.props.municipalityName}-small.png`}
+            src={`/assets/images/${this.props.municipalityName.toLowerCase()}.png`}
           />
-          <div className={`municipality-name ${this.props.color}`}>{this.props.municipalityName}</div>
+          <h4>{this.props.municipalityName}</h4>
         </div>
-        <div className="name-title">
-          <div>{this.props.title}</div>
-          <div className="name">{this.props.name}</div>
-        </div>
+
+        <div className="name">{this.props.name}</div>
+        <div className="title">{this.props.title}</div>
       </Link>
     );
   }
+
 }
 
 Member.propTypes = {

@@ -1,12 +1,13 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
-import BestPractices from './BestPractices.jsx';
-import Header from './Header.jsx';
-import Home from './Home.jsx';
-import Story from './Story.jsx';
-// import Municipality from './Municipality.jsx';
+import BestPractices from './BestPractices';
+import Header from './Header';
+import Footer from './Footer';
+import Home from './Home';
+import Story from './Story';
+import GuidingPrinciples from './GuidingPrinciples';
+
 
 class App extends React.Component {
   render() {
@@ -16,16 +17,15 @@ class App extends React.Component {
             <Header />
             <Switch>
               <Route exact path="/" component={Home} />
+              <Route exact path="/guiding-principles" component={GuidingPrinciples} />
               <Route exact path="/best-practices" component={BestPractices} />
               <Route path="/story" component={Story} />
             </Switch>
+            <Footer />
         </div>
       </BrowserRouter>
     );
   }
 }
-
-App.propTypes = {
-};
 
 export default App;

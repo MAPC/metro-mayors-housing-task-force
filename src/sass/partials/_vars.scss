@@ -1,0 +1,65 @@
+// Color
+
+$color_font-light: #fff;
+$color_font-dark: #002D40;
+$color_font-dark--light: mix(white, $color_font-dark, 15);
+
+$color_bg-light: #fff;
+$color_bg-medium: #FAFAF8;
+$color_bg-dark: #002D40;
+$color_bg-dark--dark: mix(black, $color_bg-dark, 15);
+
+$color_bg-medium--dark: mix(black, $color_bg-medium, 10);
+
+$color_palette-orange: #D49162;
+$color_palette-blue: #568095;
+$color_palette-skyblue: #98C3D1;
+$color_palette-green: #B5D4A4;
+$color_palette-yellow: #E7C55B;
+
+$color_palette-yellow--light: #F8DA71;
+
+$color_palette-blue--light: mix(white, $color_palette-blue, 10);
+$color_palette-blue--dark: mix(black, $color_palette-blue, 15);
+
+
+// Font
+
+$font_family-primary: 'Roboto', sans-serif;
+$font_family-secondary: 'gastromond', serif;
+
+$font_size-base: 16px;
+$font_size-base--rem: 1rem;
+$font_size-small: .6875rem; // 11px
+$font_size-medium: 1.25rem; // 20px
+$font_size-large: 3.4375rem; // 55px
+$font_size-xlarge: 4.6875rem; // 75px
+
+$font_spacing-small: .02em;
+$font_spacing-medium: .05em;
+$font_spacing-large: .10em;
+
+$font_mod-small: .2rem;
+$font_mod-large: 1rem;
+
+
+// Breakpoints
+
+$break_xsmall: 500px;
+$break_small: 670px;
+$break_medium: 960px;
+$break_large: 1280px;
+$break_xlarge: 1600px;
+
+$underline-hover-transition-speed: 0.25s;
+
+$tablet: "(min-width: 768px) and (max-width: 1100px)";
+$desktop: "(min-width: 1024px)";
+$phone: "(max-width: 768px)";
+
+$layout-tablet: "(max-width: 70rem)";
+
+
+// Element specific
+
+$topic_margin: .4em;

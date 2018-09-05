@@ -1,0 +1,67 @@
+.component.Member {
+  flex: 1 0 12.5%;
+
+  font-size: $font_size-10px;
+  text-align: center;
+
+  .image-container {
+    @media #{$phone} {
+      position: relative;
+
+      height: 8rem;
+
+      overflow: hidden;
+      border-radius: 50%;
+      border: 1px solid black;
+    }
+  }
+
+  img {
+    position: relative;
+    top: -0.5%;
+    left: -0.5%;
+
+    height: auto;
+    max-width: 101%;
+    max-height: 101%;
+
+    border-radius: 50%;
+  }
+
+  .municipality-name {
+    margin-top: 0.4em;
+
+    font-weight: 700;
+    text-transform: uppercase;
+
+    @media #{$phone} {
+      position: absolute;
+      bottom: -57%;
+      left: 50%;
+
+      height: 50%;
+      width: 100%;
+      padding: 0.25em 0 0 0;
+
+      background-color: white;
+      transform: translate(-50%, -50%);
+    }
+  }
+}
+
+.component.TaskForceSection {
+
+  .task-force-members {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin: 0 auto;
+
+    //@media (max-width: 1400px) { max-width: 40em; }
+
+    .Member:first-of-type {
+      margin-left: 1em;
+    }
+  }
+
+}

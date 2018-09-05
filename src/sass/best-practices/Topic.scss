@@ -1,0 +1,38 @@
+.component.Topic {
+  $_trans-speed: .08s;
+
+  margin: $topic_margin 0;
+  margin-right: $topic_margin * 2;
+  padding: ($topic_margin + .1) ($topic_margin * 2) $topic_margin;
+
+  color: $color_font-dark;
+  font-size: 16px;
+  text-transform: uppercase;
+
+  background: $color_bg-light;
+  border: 1px solid $color_font-dark;
+  cursor: pointer;
+  outline: none;
+  transition: color $_trans-speed, background $_trans-speed, border-color $_trans-speed;
+
+  &:hover {
+    color: $color_font-light;
+
+    background: $color_palette-blue--light;
+    border-color: $color_palette-blue--light;
+
+    transition: color $_trans-speed, background $_trans-speed, border-color $_trans-speed;
+  }
+
+  &.selected {
+    color: $color_font-light;
+
+    background: $color_palette-blue;
+    border-color: $color_palette-blue;
+
+    &:hover {
+      background: $color_palette-blue--dark; 
+      border-color: $color_palette-blue--dark;
+    }
+  }
+}

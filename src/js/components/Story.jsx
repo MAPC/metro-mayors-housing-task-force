@@ -1,82 +1,74 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 
+import Header from './Header';
 import Slide from './story/Slide.jsx';
+import slides from '~/_data/slides';
 
-const slides = [
-  {
-    text: 'Slide 1 We Hold These Truths',
-  }, 
-  {
-    text: 'Slide 2 To Be Self Evident',
-  }, 
-  {
-    text: 'Slide 3 That All Men are Created Equal',
-  }, 
-  /*
-  {
-  text: 'Slide 4 I Have a Dream',
-}, {
-  text: 'Slide 5 That One Day Everyone',
-}, {
-  text: 'Slide 6 Will Be Able to Afford Housing',
-}, {
-  text: 'Slide 7 In Metro Boston',
-}, {
-  text: 'Slide 8 This site is one small step for Boston',
-}, {
-  text: 'Slide 9 and one giant leap for America',
-}, {
-  text: 'Slide 10 We have nothing to fear',
-}, {
-  text: 'Slide 11 But Fear Itself',
-}, {
-  text: 'Slide 12 Some Test Text',
-}, {
-  text: 'Slide 13 More Test Text',
-}, {
-  text: 'Slide 14 Do not stop believing',
-}, {
-  text: 'Slide 15 Do not back down',
-}
-  */
-];
 
 class Story extends React.Component {
-  constructor(props) {
-    super(props);
+
+  constructor() {
+    super(...arguments);
+
+    this.back = this.back.bind(this);
+    this.forward = this.forward.bind(this);
+
     this.state = {
       currentSlide: 0,
     };
   }
 
-  handleForwardClick() {
-    if(this.state.currentSlide < slides.length - 1) {
-      this.setState({currentSlide: this.state.currentSlide + 1});
+  hasNext() {
+    return this.state.currentSlide < slides.length - 1; 
+  }
+
+  hasPrevious() {
+    return this.state.currentSlide > 0; 
+  }
+
+  forward() {
+    if (this.hasNext()) {
+      this.setState({ currentSlide: this.state.currentSlide + 1});
     }
   }
 
-  handleBackwardClick() {
-    if(this.state.currentSlide > 0) {
-      this.setState({currentSlide: this.state.currentSlide - 1});
-    }
+  back() {
+    if (this.hasPrevious()) {
+      this.setState({ currentSlide: this.state.currentSlide - 1 });
+    }  
+  }
+
+  renderSlides() {
+    return slides.map((slide, i) => (
+      <Slide
+        key={`${i}-${i === this.state.currentSlide}`}
+        active={i === this.state.currentSlide}
+        title={slide.title}
+        image={slide.image}
+        content={slide.content}
+        credit={slide.credit}
+      />
+    ));
   }
 
   render() {
+    const slide = slides[this.state.currentSlide];
+
     return (
       <main className="component Story">
-        <Slide
-          slide={slides[this.state.currentSlide]}
-          slideIndex={this.state.currentSlide}
-          onForwardClick={() => this.handleForwardClick()}
-          onBackwardClick={() => this.handleBackwardClick()}
+        <Header 
+          light={!slide.darkHeader} 
+          color={slide.headerColor} 
+          shadowed={slide.headerShadow}
         />
+
+        {this.renderSlides()}
+
+        <button className={`slide-control ${!this.hasPrevious() ? 'disabled' : ''}`} onClick={() => this.back()}></button>
+        <button className={`slide-control ${!this.hasNext() ? 'disabled' : ''}`} onClick={() => this.forward()}></button>
       </main>
     );
   }
 }
-
-Story.propTypes = {
-};
 
 export default Story;

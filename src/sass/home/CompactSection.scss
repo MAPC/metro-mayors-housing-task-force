@@ -1,113 +1,132 @@
 .component.CompactSection {
-  overflow: hidden;
-  background-color: #edf5f5;
-  margin-top: 2em;
+  h3 { margin-bottom: 0; }
 
-  .container {
-    position: relative;
-    padding-left: $bubble-width;
-    padding-right: $bubble-width;
-    @media #{$phone} {
-      padding-right: 1em;
-      padding-left: 1em;
-      font-size: 1.3em;
+  .sub-section {
+    &:nth-of-type(2n)  {
+      background: $color_bg-medium;
+
+      .columned { flex-direction: row-reverse; }
     }
+
+    &:first-of-type { z-index: 2; }
+
+    &:nth-of-type(2) {
+      &:before {
+        @extend ._pseudo;
+        @extend ._grid-bg;
+
+        top: -30%;
+        left: 0;
+
+        width: 31%;
+        height: 36%;
+      }
+    }
+
+    &:nth-of-type(3) {
+      .container, .container:last-of-type p {
+        padding-top: 0;
+        padding-bottom: 0;
+      }
+
+      &:before {
+        @extend ._pseudo;
+        @extend ._grid-bg;
+
+        right: 0;
+        top: -10%;
+
+        width: 50%;
+        height: 50%;
+      }
+
+      &:after {
+        @extend ._pseudo;
+        @extend ._partial-bg;
+
+        height: 3%;
+      }
+    }
+  }
+
+  .columned {
+    display: flex;
+
+    padding: 65px 0;
+
+    @include media(small) { display: block; }
   }
 
   p {
-    z-index: 30;
-  }
+    margin: auto;
+    padding: 65px 75px;
+    vertical-align: middle;
 
-  p + p { margin-top: 2em; }
+    font-size: $font_size-medium;
+    line-height: calc(#{$font_size-medium} + 12px);
 
-  .bubble {
-    h3 {
-      margin: 0 0 0.5rem 0;
-    }
-    .text {
-      position: absolute;
-      top: 50%;
-      transform: translateY(-50%);
-    }
-    @media #{$phone} {
-      display: none;
-    }
-  }
+    @include media(small) { padding: 50px 0; }
 
+    a {
+      color: $color_font-dark;
 
-  ol {
-    margin: 2em auto;
-    padding-left: 0;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: 1fr 1fr;
-    @media #{$phone} {
-      columns: 1;
-      display: initial;
-    }
-  }
+      background: $color_palette-yellow--light;
+      transition: background .18s;
 
-  li {
-    line-height: 1.6em;
-    font-size: 12px;
-    display: flex;
-    flex-direction: column;
-    @media #{$phone} {
-      display: initial;
-      p {
-        font-size: 12px;
-      }
-      & + li {
-        margin-top: 0.5em;
+      &:hover {
+        background: $color_palette-yellow;
+        transition: background .18s;
       }
     }
   }
 
-  h4 {
-    margin-top: 0;
-    font-size: 13px;
-    @media #{$phone} {
-      margin-top: initial;
+  .box-link {
+    display: block;
+
+    height: 100%;
+
+    @include media(small) { display: none; }
+
+    span {
+      left: 0;
+      transition: left .2s;
+    }
+
+    &:hover {
+      span {
+        left: 5px;
+        transition: left .2s;
+      }
     }
   }
 
-  h2 {
-    margin-top: 1.5em;
-    z-index: 30;
+  .box-content {
+    @extend ._vertical-center;
+
+    width: 66.66%;
+    margin: 0 auto;
+
+    color: $color_font-dark;
+
+    & > * { display: block; }
+
+    span.large {
+      font-size: $font_size-large;
+      font-family: $font_family-secondary;
+    }
+
+    span.small { font-size: $font_size-medium; }
   }
 
+  .signatures {
+    margin-top: 35px;
+    padding: 0 75px;
+    img {
+      width: 16.66%;
 
-  .bubble.best-practices {
-    width: $bubble-width * 2;
-    height: $bubble-width * 2;
-    position: absolute;
-    top: 10rem;
-    left: -#{$bubble-width + 1rem};
-    background: url('/assets/images/best-practices-background.svg');
-    background-repeat: no-repeat;
-    color: white;
-    .text {
-      left: 66%;
+      @include media(medium) { width: 20%; }
+      @include media(small) { width: 33.33%; }
     }
   }
 
-  .bubble.housing {
-    width: $bubble-width * 2;
-    height: $bubble-width * 2;
-    position: absolute;
-    top: 60rem;
-    right: -#{$bubble-width - 15rem};
-    color: white;
-    background: url('/assets/images/housing-background.svg');
-    background-repeat: no-repeat;
-    .text {
-      right: 40%;
-    }
-  }
-
-  ol li h4 {
-    border-bottom: 0.2em solid $palette-green;
-    padding-bottom: 0.2em;
-    margin-bottom: 0.2em;
-  }
 }

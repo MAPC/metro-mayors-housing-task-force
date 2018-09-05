@@ -1,0 +1,48 @@
+._clear {
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+._vertical-center {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 0;
+  right: 0;
+}
+
+._spinner {
+  animation: spinning;
+  animation-duration: 1.2s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+._pseudo {
+  content: '';
+  display: block;
+  height: 0;
+}
+
+._grid-bg {
+  position: absolute;
+
+  background-image: url('/assets/images/grid-pattern.svg');
+  background-size: 12px;
+  background-repeat: repeat;
+}
+
+._partial-bg {
+  position: absolute;
+  top: 0;
+  z-index: -2;
+
+  height: 50%;
+  width: 100%;
+
+  background: $color_bg-medium;
+}

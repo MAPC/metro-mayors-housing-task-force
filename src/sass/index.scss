@@ -1,9 +1,10 @@
 // Imports
-@import 'global';
-@import 'home/all';
+@import 'partials/all';
+
 @import 'Header';
-@import 'Home';
+@import 'Footer';
+
+@import 'home/all';
+@import 'guiding-principles/all';
 @import 'best-practices/all';
 @import 'story/all';
-
-@import url('https://fonts.googleapis.com/css?family=Roboto:200,400,700');

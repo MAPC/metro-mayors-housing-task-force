@@ -1,8 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import Topics from './best-practices/Topics.jsx';
+
 
 class BestPractices extends React.Component {
   render() {
@@ -13,8 +13,5 @@ class BestPractices extends React.Component {
     );
   }
 }
-
-BestPractices.propTypes = {
-};
 
 export default BestPractices;
