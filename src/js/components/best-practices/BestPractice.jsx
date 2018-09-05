@@ -9,7 +9,9 @@ class BestPractice extends React.Component {
           <h4>{this.props.title}</h4>
           <p>{this.props.description}</p>
         </div>
-        <div className="best-practice-image"></div>
+        <div className="best-practice-image">
+          <img src={`/assets/images/${this.props.image}`} />
+        </div>
       </div>
     );
   }

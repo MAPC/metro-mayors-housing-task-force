@@ -21,8 +21,8 @@ class Topics extends React.Component {
         topics[topic.title] = {
           selected: false,
           subTopics: topic.subTopics.reduce((subTopics, subTopic) => {
-            return { 
-              ...subTopics, 
+            return {
+              ...subTopics,
               [subTopic.title]: {
                 selected: false,
                 bestPractices: subTopic.bestPractices,
@@ -74,7 +74,7 @@ class Topics extends React.Component {
         topics[topic].subTopics[subTopic].selected = false;
       }
     }
- 
+
     return topics;
   }
 
@@ -102,7 +102,7 @@ class Topics extends React.Component {
         topics[topic].subTopics[subTopic].selected = false;
       }
     });
-        
+
     this.setState({ topics });
   }
 
@@ -130,12 +130,12 @@ class Topics extends React.Component {
       topics[topic].selected = false;
     }
 
-    this.setState({ topics }); 
+    this.setState({ topics });
   }
 
 
   deselectSubTopics() {
-    this.setState({ 
+    this.setState({
       topics: this.withoutSubTopics(),
     });
   }
@@ -160,7 +160,7 @@ class Topics extends React.Component {
         onClick={() => this.deselectTopics()}
         selected={this.getSelectedTopics().length === 0}
       />,
-      ...topics, 
+      ...topics,
     ];
   }
 
@@ -204,13 +204,15 @@ class Topics extends React.Component {
       const { subTopics } = { ...this.state.topics[topic] };
 
       const filteredSubTopics = (
-        selectedSubTopics.length > 0 
+        selectedSubTopics.length > 0
         ? Object.keys(subTopics).filter(subTopic => selectedSubTopics.includes(subTopic))
         : Object.keys(subTopics)
       );
 
       const topicBestPractices = filteredSubTopics.map(subTopic => subTopics[subTopic].bestPractices)
                                                   .reduce((a,b) => a.concat(b), []);
+
+      topicBestPractices.forEach(bestPractice => bestPractice.image = `${topic.toLowerCase().replace(' ', '-')}.svg`);
 
       return [ ...bestPractices, ...topicBestPractices ];
     }, []);

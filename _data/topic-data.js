@@ -692,19 +692,18 @@ module.exports = [
       }
     ]
   },
+  /*
   {
     "title": "Policy",
     "subTopics": [
       {
         "title": "Affordable Housing Preservation",
         "bestPractices": [
-          /*
           {
             "title": "Chapter 40T",
             "description": "Preserves existing privately-owned affordable housing by allowing a right of first refusal to DHCD or its designee to purchase housing and establishes protections for tenants",
             "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
           },
-          */
           {
             "title": "CA AB1521",
             "description": "Requires owners to accept a qualified offer to purchase an apartment complex with expiring affordability restrictions from someone who pledges to continue renting the homes to low-income residents",
@@ -715,28 +714,23 @@ module.exports = [
       {
         "title": "Affordable Housing Production",
         "bestPractices": [
-          /*
           {
             "title": "Chapter 40B",
             "description": "Allows developers to override local zoning of communities that have less than 10% subsidized housing if they provide 20-25% affordable housing in their project",
             "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
           },
-          */
           {
             "title": "CA SB35",
             "description": "Forces cities to approve projects that comply with existing zoning if not enough housing has been built to keep pace with state home-building targets. Projects must reserve a certain percentage of homes for low-income residents and pay construction workers union-level wages and abide by union-standard hiring rules",
             "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
           },
-          /*
           {
             "title": "CA AB73",
             "description": "City receives money when it designates a particular community for more housing and then additional dollars once it starts issueing permits for new homes. At least 20% of housing must be reserved for low or middle-income residents",
             "image": "https://i1.wp.com/evobsession.com/wp-content/uploads/2016/09/Tesla-p100d.jpg?resize=1170%2C611&ssl=1"
           }
-          */
         ]
       },
-      /*
       {
         "title": "Community Benefit",
         "bestPractices": [
@@ -747,7 +741,6 @@ module.exports = [
           }
         ]
       },
-      */
       {
         title: 'Housing Preservation',
         bestPractices: [
@@ -773,7 +766,6 @@ module.exports = [
           }
         ]
       },
-      /*
       {
         "title": "Planning/Technical Assistance",
         "bestPractices": [
@@ -784,9 +776,9 @@ module.exports = [
           }
         ]
       }
-      */
     ]
   },
+  */
   {
     "title": "Tenant Protection",
     "subTopics": [
