@@ -3,13 +3,13 @@
   display: flex;
 
   min-height: 15rem;
-  border: 0.3em solid #98c3d1;
+  border: 0.3em solid $color_palette-skyblue;
 
   .best-practice-description {
     flex: 1 0 70%;
     padding: 1em;
 
-    color: #568095;
+    color: $color_palette-blue;
 
     h4 {
       margin-bottom: 0;
