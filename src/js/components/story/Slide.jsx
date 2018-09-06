@@ -26,7 +26,6 @@ class Slide extends React.Component {
 
     return (
       <div className={`component Slide ${this.props.active ? 'active' : ''} ${!isImage ? background : ''}`}>
-
         <div className="image-wrapper">
           {isImage ? (<img src={`/assets/images/slides/${background}`} />) : ''}
         </div>
@@ -50,9 +49,14 @@ class Slide extends React.Component {
 }
 
 Slide.propTypes = {
-  title: PropTypes.string,
-  image: PropTypes.string,
-  content: PropTypes.string,
+  slide: PropTypes.shape({
+    content: PropTypes.arrayOf(PropTypes.shape({
+      text: PropTypes.string.isRequired,
+      style: PropTypes.arrayOf(PropTypes.string),
+      link: PropTypes.string,
+    })),
+    background: PropTypes.string,
+  }),
   credit: PropTypes.shape({
     location: PropTypes.string,
     artist: PropTypes.string,
