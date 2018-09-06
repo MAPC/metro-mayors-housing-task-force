@@ -10,20 +10,29 @@ class Slide extends React.Component {
     return elem.childNodes.length === 0 ? "" : elem.childNodes[0].nodeValue;
   }
 
+  renderContent() {
+    const { content } = this.props.slide;
+
+    return content.map(block => (
+      block.link
+      ? <a href={block.link} className={`content-block ${(block.style || []).join(' ')}`} dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
+      : <p className={`content-block ${(block.style || []).join(' ')}`} dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
+    ));
+  }
+
   render() {
-    const { title, content, image, credit, active } = this.props;
+    const { background, credit } = this.props.slide;
+    const isImage = (background || '').indexOf('.') !== -1;
 
     return (
-      <div className={`component Slide ${active ? 'active' : ''}`}>
+      <div className={`component Slide ${this.props.active ? 'active' : ''} ${!isImage ? background : ''}`}>
+
         <div className="image-wrapper">
-          {image ? (<img src={`/assets/images/slides/${image}`} />) : ''}
+          {isImage ? (<img src={`/assets/images/slides/${background}`} />) : ''}
         </div>
 
         <div className="container">
-          <div className="slide-content">
-            {title ? (<h1>{title}</h1>) : ''}
-            <div dangerouslySetInnerHTML={{ __html: this.htmlDecode(content) }} />
-          </div>
+          <div className="slide-content">{this.renderContent()}</div>
         </div>
 
         {credit

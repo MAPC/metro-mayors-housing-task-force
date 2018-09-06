@@ -19,11 +19,11 @@ class Story extends React.Component {
   }
 
   hasNext() {
-    return this.state.currentSlide < slides.length - 1; 
+    return this.state.currentSlide < slides.length - 1;
   }
 
   hasPrevious() {
-    return this.state.currentSlide > 0; 
+    return this.state.currentSlide > 0;
   }
 
   forward() {
@@ -35,7 +35,7 @@ class Story extends React.Component {
   back() {
     if (this.hasPrevious()) {
       this.setState({ currentSlide: this.state.currentSlide - 1 });
-    }  
+    }
   }
 
   renderSlides() {
@@ -43,10 +43,7 @@ class Story extends React.Component {
       <Slide
         key={`${i}-${i === this.state.currentSlide}`}
         active={i === this.state.currentSlide}
-        title={slide.title}
-        image={slide.image}
-        content={slide.content}
-        credit={slide.credit}
+        slide={slide}
       />
     ));
   }
@@ -56,9 +53,9 @@ class Story extends React.Component {
 
     return (
       <main className="component Story">
-        <Header 
-          light={!slide.darkHeader} 
-          color={slide.headerColor} 
+        <Header
+          light={!slide.darkHeader}
+          color={slide.headerColor}
           shadowed={slide.headerShadow}
         />
 
