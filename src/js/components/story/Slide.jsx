@@ -16,7 +16,7 @@ class Slide extends React.Component {
     return content.map(block => (
       block.link
       ? <a href={block.link} className={`content-block ${(block.style || []).join(' ')}`} dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
-      : <p className={`content-block ${(block.style || []).join(' ')}`} dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
+      : <div className={`content-block ${(block.style || []).join(' ')}`} dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
     ));
   }
 
