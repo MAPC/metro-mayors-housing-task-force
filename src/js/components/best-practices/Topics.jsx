@@ -234,11 +234,11 @@ class Topics extends React.Component {
     return (
       <div className="component Topics housing-best-practices container">
         <div className="button-container">
-          <h3>TOPIC</h3>
+          <h3>STRATEGY</h3>
           {this.renderTopics(topicData)}
         </div>
         <div className="button-container">
-          <h3>SUBTOPIC</h3>
+          <h3>FOCUS AREA</h3>
           {this.renderSubTopics()}
         </div>
         <div className="best-practices">
