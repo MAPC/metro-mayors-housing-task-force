@@ -25,7 +25,7 @@ module.exports = [
         text: 'An Interactive Story by the METROPOLITAN AREA PLANNING COUNCIL',
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'colorful-houses.jpg',
     credit: {
       location: 'Charlestown, Boston',
       artist: 'Qusai Akoud',
@@ -42,7 +42,7 @@ module.exports = [
         style: [ BG, BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'housing.jpg',
   },
   {
     content: [
@@ -59,7 +59,7 @@ module.exports = [
         style: [ SMALL, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'joseph.jpg',
   },
   {
     content: [
@@ -68,7 +68,7 @@ module.exports = [
         style: [ BG, BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'natick.jpg',
   },
   {
     content: [
@@ -81,7 +81,7 @@ module.exports = [
         style: [ BG, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'natick.jpg',
   },
   {
     content: [
@@ -90,7 +90,7 @@ module.exports = [
         style: [ BG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'somerville.png',
   },
   {
     content: [
@@ -107,7 +107,7 @@ module.exports = [
         style: [ SMALL, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'edmund.jpg',
   },
   {
     content: [
@@ -124,6 +124,7 @@ module.exports = [
         style: [ YELLOW, ITALIC ],
       },
     ],
+    image: 'chart.png',
     background: 'blue',
   },
   {
@@ -133,7 +134,7 @@ module.exports = [
         style: [ BG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'mbta.jpg',
   },
   {
     content: [
@@ -142,7 +143,7 @@ module.exports = [
         style: [ BG, BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'boston-seaport.jpg',
   },
   {
     content: [
@@ -155,7 +156,7 @@ module.exports = [
         style: [ BG, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'boston-seaport.jpg',
   },
   {
     content: [
@@ -168,7 +169,7 @@ module.exports = [
         style: [ BLUE, BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'innovation-economy.jpg',
   },
   {
     darkHeader,
@@ -187,7 +188,7 @@ module.exports = [
         style: [ BG, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'jobfair.jpg',
   },
   {
     content: [
@@ -209,16 +210,16 @@ module.exports = [
         style: [ BG, BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'doors.jpg',
   },
   {
     content: [
       {
         text: 'The cost of development is higher than ever.',
-        style: [ BLUE, BIG, BOLD, ITALIC ],
+        style: [ BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'construction.jpg',
   },
   {
     darkHeader,
@@ -245,9 +246,10 @@ module.exports = [
         style: [ LIGHT, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'colorful-houses.jpg',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'Community concerns about too much density, or not enough affordable housing',
@@ -258,21 +260,21 @@ module.exports = [
         style: [ BLUE, BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'tallbuilding.png',
   },
   {
     content: [
       {
         text: `We know housing demand will continue to grow. ${br}New workers will need homes.`,
-        style: [ LIGHT, ITALIC ],
+        style: [ BIG, BOLD, ITALIC ],
       },
       {
         text: 'Read more about our future regional growth.',
-        style: [ LIGHT, ITALIC, SMALL ],
+        style: [ ITALIC ],
         link: 'http://mapc.org',
       },
     ],
-    background: 'colorful-houses.jpeg',
+    background: 'blue',
   },
   {
     darkHeader,
@@ -324,6 +326,7 @@ module.exports = [
         link: 'http://mapc.org'
       },
     ],
+    image: 'mayors.jpg',
   },
   {
     content: [
