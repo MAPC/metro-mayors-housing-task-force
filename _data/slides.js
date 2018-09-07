@@ -1,6 +1,8 @@
 const wrap = (tagName, content) => `&lt;${tagName}&gt;${content}&lt;/${tagName}&gt;`;
 const br = "&lt;br/&gt;";
 
+const darkHeader = true;
+
 // Style classes
 const BG = 'text-background';
 const BIG = 'size-large';
@@ -169,6 +171,7 @@ module.exports = [
     background: 'colorful-houses.jpeg',
   },
   {
+    darkHeader,
     content: [
       {
         text: '...for a limited supply of available homes.',
@@ -218,6 +221,7 @@ module.exports = [
     background: 'colorful-houses.jpeg',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'Outdated laws may overly restrict the type and amount of housing allowed.',
@@ -271,6 +275,7 @@ module.exports = [
     background: 'colorful-houses.jpeg',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'To meet housing demand, we must build 188,000 more units by 2030.',
@@ -285,6 +290,7 @@ module.exports = [
     background: 'yellow',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'Housing demand will be felt all across the region. It won\'t happen in one place or limited to a specific type of home.',
@@ -306,6 +312,7 @@ module.exports = [
     background: 'blue',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'Together, a coalition of leaders in 15 communities of Metro Boston have pledged to build 180,000 homes by 2030.',
@@ -332,6 +339,7 @@ module.exports = [
     background: 'blue',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'We will need:',
@@ -341,6 +349,7 @@ module.exports = [
     background: 'yellow',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'We will need:',
@@ -355,6 +364,7 @@ module.exports = [
     background: 'yellow',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'We will need:',
@@ -372,6 +382,7 @@ module.exports = [
     background: 'yellow',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'We will need:',
@@ -393,6 +404,7 @@ module.exports = [
     background: 'yellow',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'We will need:',
@@ -418,10 +430,12 @@ module.exports = [
     background: 'yellow',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'Let\'s get started.',
         style: [ BG, BIG, BOLD, ITALIC ],
+        link: '/best-practices',
       },
     ],
   },

@@ -14,7 +14,7 @@ class Story extends React.Component {
     this.forward = this.forward.bind(this);
 
     this.state = {
-      currentSlide: 25,
+      currentSlide: 0,
     };
   }
 
@@ -30,6 +30,9 @@ class Story extends React.Component {
     if (this.hasNext()) {
       this.setState({ currentSlide: this.state.currentSlide + 1});
     }
+    else {
+      this.props.history.push('/best-practices');
+    }
   }
 
   back() {
@@ -39,13 +42,15 @@ class Story extends React.Component {
   }
 
   renderSlides() {
-    return slides.map((slide, i) => (
-      <Slide
-        key={`${i}-${i === this.state.currentSlide}`}
-        active={i === this.state.currentSlide}
-        slide={slide}
-      />
-    ));
+    return slides.map((slide, i) => {
+      return (
+        <Slide
+          key={`${i}-${slide.content[0].text}`}
+          active={i === this.state.currentSlide}
+          slide={slide}
+        />
+      );
+    });
   }
 
   render() {
@@ -61,8 +66,8 @@ class Story extends React.Component {
 
         {this.renderSlides()}
 
-        <button className={`slide-control ${!this.hasPrevious() ? 'disabled' : ''}`} onClick={() => this.back()}></button>
-        <button className={`slide-control ${!this.hasNext() ? 'disabled' : ''}`} onClick={() => this.forward()}></button>
+        <button className={`slide-control ${slide.darkHeader ? 'dark' : ''} ${!this.hasPrevious() ? 'disabled' : ''}`} onClick={() => this.back()}></button>
+        <button className={`slide-control ${slide.darkHeader ? 'dark' : ''}`} onClick={() => this.forward()}></button>
       </main>
     );
   }

@@ -15,8 +15,16 @@ class Slide extends React.Component {
 
     return content.map(block => (
       block.link
-      ? <a href={block.link} className={`content-block ${(block.style || []).join(' ')}`}><span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} /></a>
-      : <div className={`content-block ${(block.style || []).join(' ')}`}><span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} /></div>
+      ? (
+        <a key={block.text.slice(0,8)} href={block.link} className={`content-block ${(block.style || []).join(' ')}`}>
+          <span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
+        </a>
+      )
+      : (
+        <div key={block.text.slice(0,8)} className={`content-block ${(block.style || []).join(' ')}`}>
+          <span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
+        </div>
+      )
     ));
   }
 
