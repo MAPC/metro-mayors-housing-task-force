@@ -14,7 +14,7 @@ class Story extends React.Component {
     this.forward = this.forward.bind(this);
 
     this.state = {
-      currentSlide: 0,
+      currentSlide: 25,
     };
   }
 

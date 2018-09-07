@@ -33,7 +33,7 @@ module.exports = [
     content: [
       {
         text: 'Housing prices in Metro Boston are some of',
-        style: [ BG, ITALIC ],
+        style: [ BG, LIGHT, ITALIC ],
       },
       {
         text: 'the highest in the nation.',
@@ -63,7 +63,7 @@ module.exports = [
     content: [
       {
         text: 'Many seniors want to stay in their communities after retirement',
-        style: [ BIG, BOLD, ITALIC ],
+        style: [ BG, BIG, BOLD, ITALIC ],
       },
     ],
     background: 'colorful-houses.jpeg',
@@ -183,10 +183,6 @@ module.exports = [
         text: 'As baby boomers retire, even more workers will be needed to fill their jobs',
         style: [ BG, ITALIC ],
       },
-      {
-        text: 'the highest in the nation.',
-        style: [ BG, BIG, BOLD, ITALIC ],
-      },
     ],
     background: 'colorful-houses.jpeg',
   },
@@ -195,10 +191,6 @@ module.exports = [
       {
         text: `But we are gaining jobs and workers ${wrap('u', 'faster')} than we are building new homes.`,
         style: [ BIG, BOLD, ITALIC ],
-      },
-      {
-        text: 'the highest in the nation.',
-        style: [ BG, BIG, BOLD, ITALIC ],
       },
     ],
     background: 'blue',
@@ -254,19 +246,6 @@ module.exports = [
   {
     content: [
       {
-        text: 'Housing prices in Metro Boston are some of',
-        style: [ BG, ITALIC ],
-      },
-      {
-        text: 'the highest in the nation.',
-        style: [ BG, BIG, BOLD, ITALIC ],
-      },
-    ],
-    background: 'colorful-houses.jpeg',
-  },
-  {
-    content: [
-      {
         text: 'Community concerns about too much density, or not enough affordable housing',
         style: [ BLUE, LIGHT, ITALIC ],
       },
@@ -280,7 +259,7 @@ module.exports = [
   {
     content: [
       {
-        text: `We know housing deman will continue to grow. ${br}New workers will need homes.`,
+        text: `We know housing demand will continue to grow. ${br}New workers will need homes.`,
         style: [ LIGHT, ITALIC ],
       },
       {
@@ -299,7 +278,7 @@ module.exports = [
       },
       {
         text: 'See how we got to this number.',
-        style: [ BLUE, LIGHT, ITALIC, SMALL ],
+        style: [ BLUE, ITALIC ],
         link: 'http://mapc.org',
       },
     ],
@@ -309,7 +288,7 @@ module.exports = [
     content: [
       {
         text: 'Housing demand will be felt all across the region. It won\'t happen in one place or limited to a specific type of home.',
-        style: [ SMALL, BOLD, ITALIC, BLUE ],
+        style: [ BOLD, ITALIC, BLUE ],
       },
     ],
   },
@@ -330,11 +309,11 @@ module.exports = [
     content: [
       {
         text: 'Together, a coalition of leaders in 15 communities of Metro Boston have pledged to build 180,000 homes by 2030.',
-        style: [ BLUE, ITALIC ],
+        style: [ BOLD, BLUE, ITALIC ],
       },
       {
         text: 'Read about the Metro Mayor\'s Coalition.',
-        style: [ BLUE, LIGHT, ITALIC, SMALL ],
+        style: [ BLUE, ITALIC, SMALL ],
         link: 'http://mapc.org'
       },
     ],
