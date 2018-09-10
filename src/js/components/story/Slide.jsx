@@ -33,7 +33,7 @@ class Slide extends React.Component {
     const isImage = (background || '').indexOf('.') !== -1;
 
     return (
-      <div className={`component Slide ${this.props.active ? 'active' : ''} ${!isImage ? background : ''}`}>
+      <div className={`component Slide ${this.props.active ? 'active' : ''} ${!isImage && background ? background : ''}`}>
         {isImage
           ? (
             <div className="image" style={{backgroundImage: `url('/assets/images/slides/${background}')`}}>
