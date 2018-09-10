@@ -327,7 +327,7 @@ module.exports = [
         link: 'http://mapc.org'
       },
     ],
-    image: 'mayors.jpg',
+    image: 'mayors.png',
   },
   {
     content: [
