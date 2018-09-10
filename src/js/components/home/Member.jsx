@@ -9,10 +9,7 @@ class Member extends React.Component {
 
   render() {
     return (
-      <Link
-        className="component Member"
-        to={this.props.municipalityName.toLowerCase()}
-      >
+      <div className="component Member">
         <div className={`image-container ${this.props.color}`}>
           <img
             alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
@@ -23,7 +20,7 @@ class Member extends React.Component {
 
         <div className="name">{this.props.name}</div>
         <div className="title">{this.props.title}</div>
-      </Link>
+      </div>
     );
   }
 

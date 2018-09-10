@@ -16,28 +16,28 @@
       border: 1px solid black;
       overflow: hidden;
 
-      &.orange { 
-        color: darken($color_palette-orange, 10); 
+      &.orange {
+        color: darken($color_palette-orange, 10);
         background: $color_palette-orange;
         border-color: $color_palette-orange;
       }
-      &.blue { 
-        color: darken($color_palette-blue, 10); 
+      &.blue {
+        color: darken($color_palette-blue, 10);
         background: $color_palette-blue;
         border-color: $color_palette-blue;
       }
-      &.skyblue { 
-        color: darken($color_palette-skyblue, 10); 
+      &.skyblue {
+        color: darken($color_palette-skyblue, 10);
         background: $color_palette-skyblue;
         border-color: $color_palette-skyblue;
       }
-      &.green { 
-        color: darken($color_palette-green, 10); 
+      &.green {
+        color: darken($color_palette-green, 10);
         background: $color_palette-green;
         border-color: $color_palette-green;
       }
-      &.yellow { 
-        color: darken($color_palette-yellow, 10); 
+      &.yellow {
+        color: darken($color_palette-yellow, 10);
         background: $color_palette-yellow;
         border-color: $color_palette-yellow;
       }
@@ -55,7 +55,7 @@
     object-fit: cover;
 
     @include media(small) {
-      top: -5%; 
+      top: -5%;
 
       max-width: 110%;
       max-height: 110%;
@@ -84,11 +84,11 @@
   }
 
   .name, .title {
-    font-size: $font_size-small; 
+    font-size: $font_size-small;
   }
 
   .name {
-    margin-top: $font_size-small / 2; 
+    margin-top: $font_size-small / 2;
 
     font-weight: 500;
   }
