@@ -34,9 +34,14 @@ class Slide extends React.Component {
 
     return (
       <div className={`component Slide ${this.props.active ? 'active' : ''} ${!isImage ? background : ''}`}>
-        <div className="image-wrapper">
-          {isImage ? (<img src={`/assets/images/slides/${background}`} />) : ''}
-        </div>
+        {isImage
+          ? (
+            <div className="image" style={{backgroundImage: `url('/assets/images/slides/${background}')`}}>
+              <img src={`/assets/images/slides/${background}`} />
+            </div>
+          )
+          : null
+        }
 
         <div className="container">
           <div className="slide-content">{this.renderContent()}</div>
