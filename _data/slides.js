@@ -160,6 +160,7 @@ module.exports = [
     background: 'boston-seaport.jpg',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'Our innovation economy attracts highly educated workers',
@@ -327,7 +328,7 @@ module.exports = [
         link: 'http://mapc.org'
       },
     ],
-    image: 'mayors.jpg',
+    image: 'mayors.png',
   },
   {
     content: [
