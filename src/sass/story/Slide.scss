@@ -83,6 +83,7 @@
     }
     &.color-blue { color: $color_font-dark; }
     &.color-yellow { color: $color_palette-yellow; }
+    &.text-shadow { text-shadow: 1px 0 2px rgba(0,0,0,.3); }
     &.text-background span {
       display: inline-block;
 

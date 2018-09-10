@@ -5,6 +5,7 @@ const darkHeader = true;
 
 // Style classes
 const BG = 'text-background';
+const SHADOW = 'text-shadow';
 const BIG = 'size-large';
 const SMALL = 'size-small';
 const ITALIC = 'style-italic';
@@ -48,15 +49,15 @@ module.exports = [
     content: [
       {
         text: '"We\'ve lived in Somerville since 1954.',
-        style: [ LIGHT, ITALIC ],
+        style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
         text: 'The neighborhood has changed drastically. Most of my neighbors have moved away. The prices on houses are becoming ridiculous. So is the rent."',
-        style: [ LIGHT, ITALIC ],
+        style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
         text: 'Joseph, owner of a multi-family home, lives with his wife in Somerville, Massachusetts',
-        style: [ SMALL, ITALIC ],
+        style: [ SMALL, ITALIC, SHADOW ],
       },
     ],
     background: 'joseph.jpg',
@@ -216,7 +217,7 @@ module.exports = [
     content: [
       {
         text: 'The cost of development is higher than ever.',
-        style: [ BIG, BOLD, ITALIC ],
+        style: [ BIG, BOLD, ITALIC, SHADOW ],
       },
     ],
     background: 'construction.jpg',
@@ -235,15 +236,15 @@ module.exports = [
     content: [
       {
         text: 'Time consuming and uncertain approval processes are',
-        style: [ LIGHT, ITALIC ],
+        style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
         text: 'too risky',
-        style: [ BIG, BOLD, ITALIC ],
+        style: [ BIG, BOLD, ITALIC, SHADOW ],
       },
       {
         text: 'for some real estate developers.',
-        style: [ LIGHT, ITALIC ],
+        style: [ LIGHT, ITALIC, SHADOW ],
       },
     ],
     background: 'colorful-houses.jpg',
