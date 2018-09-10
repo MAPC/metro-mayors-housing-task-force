@@ -160,6 +160,7 @@ module.exports = [
     background: 'boston-seaport.jpg',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'Our innovation economy attracts highly educated workers',
