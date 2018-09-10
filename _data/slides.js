@@ -48,7 +48,7 @@ module.exports = [
   {
     content: [
       {
-        text: '"We\'ve lived in Somerville since 1954.',
+        text: '"I\'ve lived in Somerville since 1954.',
         style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
