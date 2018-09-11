@@ -17,14 +17,14 @@ class Header extends React.Component {
           <Link to='/'>
             <img src="/assets/images/logo.svg" />
             <h1 className="unstyled">
-              Metro Mayors Coalition <br /> 
+              Metro Mayors Coalition <br />
               Regional Housing Task Force
             </h1>
           </Link>
         </div>
         <nav>
           <ul>
-            <li><Link to={'/about'}>About</Link></li>
+            {/*<li><Link to={'/about'}>About</Link></li>-->*/}
             <li><Link to={'/guiding-principles'}>Guiding Principles</Link></li>
             <li><Link to={'/best-practices'}>Best Practices</Link></li>
             <li><Link to={'/story'}>Story</Link></li>
