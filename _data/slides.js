@@ -48,7 +48,7 @@ module.exports = [
   {
     content: [
       {
-        text: '"We\'ve lived in Somerville since 1954.',
+        text: '"I\'ve lived in Somerville since 1954.',
         style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
@@ -56,7 +56,7 @@ module.exports = [
         style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
-        text: 'Joseph, owner of a multi-family home, lives with his wife in Somerville, Massachusetts',
+        text: 'Joseph, owner of a multi-family home in Somerville, Massachusetts, with a photo of his late wife in their backyard',
         style: [ SMALL, ITALIC, SHADOW ],
       },
     ],
@@ -104,7 +104,7 @@ module.exports = [
         style: [ LIGHT, ITALIC ],
       },
       {
-        text: 'Edmund, a renter, lives with his mother and sister in Quincy, MA, Musician',
+        text: 'Edmund, a renter and musician, lives with his mother in Quincy, MA',
         style: [ SMALL, ITALIC ],
       },
     ],
@@ -186,6 +186,23 @@ module.exports = [
   {
     content: [
       {
+        text: '"We made an offer on a house that received 12 other offers, and it sold for well above asking price.',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'We thought the market was competitive then, but it wasn\'t nearly as competitive as it is now."',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'Jean and her husband purchased their home in Melrose, MA in 2013 to fit their growing family',
+        style: [ SMALL, ITALIC ],
+      },
+    ],
+    background: 'jean.jpg',
+  },
+  {
+    content: [
+      {
         text: 'As baby boomers retire, even more workers will be needed to fill their jobs',
         style: [ BG, ITALIC ],
       },
@@ -200,6 +217,23 @@ module.exports = [
       },
     ],
     background: 'blue',
+  },
+  {
+    content: [
+      {
+        text: '"At what point will rent stop going up? And, when will it begin to hurt the city?',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'I know some young, talented people who have already left."',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'Silvia and her husband have seen the rent for their one-bedroom apartment in Dorchester, MA more than double over the past 15 years',
+        style: [ SMALL, ITALIC ],
+      },
+    ],
+    background: 'silvia.jpg',
   },
   {
     content: [
