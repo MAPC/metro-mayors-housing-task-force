@@ -10,6 +10,17 @@ class BestPractices extends React.Component {
     return (
       <ScrollToTop>
         <main className="component BestPractices">
+          <div className="container">
+            <div className="best-practice-intro">
+              <h1>Best Practices</h1>
+
+              <p>
+                Elit magni provident omnis reiciendis hic velit! Iure porro ad accusamus dicta reprehenderit. Fugit animi assumenda repudiandae qui quos atque, quidem eaque Recusandae nesciunt nemo temporibus nulla veniam quis.
+                Dolor aut numquam vel consectetur suscipit Sunt fugit excepturi asperiores et perspiciatis Magnam temporibus provident ipsum asperiores aspernatur dicta nihil a! Consequatur assumenda est molestiae vitae provident omnis ab Quo.
+              </p>
+            </div>
+          </div>
+
           <Topics />
         </main>
       </ScrollToTop>
