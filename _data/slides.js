@@ -164,11 +164,11 @@ module.exports = [
     content: [
       {
         text: 'Our innovation economy attracts highly educated workers',
-        style: [ BLUE, ITALIC ],
+        style: [ BG, BIG, BOLD, ITALIC ],
       },
       {
         text: 'who can pay more for housing',
-        style: [ BLUE, BIG, BOLD, ITALIC ],
+        style: [ BG, BIG, ITALIC ],
       },
     ],
     background: 'innovation-economy.jpg',
@@ -178,7 +178,7 @@ module.exports = [
     content: [
       {
         text: '...for a limited supply of available homes.',
-        style: [ BLUE, BOLD, BIG, ITALIC ],
+        style: [ BLUE, BIG, ITALIC ],
       },
     ],
     background: 'yellow',
@@ -282,7 +282,7 @@ module.exports = [
         style: [ LIGHT, ITALIC, SHADOW ],
       },
     ],
-    background: 'colorful-houses.jpg',
+    background: 'sky-cranes.png',
   },
   {
     darkHeader,
@@ -353,7 +353,7 @@ module.exports = [
     darkHeader,
     content: [
       {
-        text: 'Together, a coalition of leaders in 15 communities of Metro Boston have pledged to build 180,000 homes by 2030.',
+        text: 'Together, a coalition of leaders in 15 communities of Metro Boston have pledged to build 188,000 homes by 2030.',
         style: [ BOLD, BLUE, ITALIC ],
       },
       {
@@ -365,17 +365,29 @@ module.exports = [
     image: 'mayors.png',
   },
   {
+    darkHeader,
     content: [
       {
         text: 'This will require strong support',
-        style: [ ITALIC ],
+        style: [ BG, BIG, BOLD, ITALIC ],
       },
       {
-        text: 'from our residents, business and non-profit leaders, and our governments.',
-        style: [ BIG, BOLD, ITALIC ],
+        text: 'From our residents',
+        style: [ BG, BOLD, ITALIC ],
+      },
+      {
+        text: 'From our community leaders',
+        style: [ BG, BOLD, ITALIC ],
+      },
+      {
+        text: 'From our business leaders',
+        style: [ BG, BOLD, ITALIC ],
+      },
+      {
+        text: 'And from our governments',
+        style: [ BG, BOLD, ITALIC ],
       },
     ],
-    background: 'blue',
   },
   {
     darkHeader,
