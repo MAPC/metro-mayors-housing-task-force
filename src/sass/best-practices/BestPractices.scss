@@ -1,0 +1,44 @@
+.component.BestPractices {
+
+  .contact-box {
+    position: absolute;
+    top: 32px;
+    right: 0;
+
+    padding: 20px 30px;
+
+    background: $color_bg-medium;
+
+    p {
+      margin: 0;
+      font-weight: 600;
+    }
+
+    a {
+      color: $color_palette-orange;
+
+      &:hover { color: $color_palette-orange--dark; }
+    }
+  }
+
+  /*
+  .contact-box {
+    margin-top: 30px;
+
+    p {
+      display: inline-block;
+
+      margin: 0;
+      margin-right: 10px;
+
+      font-weight: 600;
+    }
+
+    a {
+      color: $color_palette-orange;
+
+      &:hover { color: $color_palette-orange--dark; }
+    }
+  }
+  */
+}
