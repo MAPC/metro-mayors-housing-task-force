@@ -1,10 +1,12 @@
 .component.ImagePrinciple {
   display: flex;
 
+  @include media(small) { display: block; }
+
   img { flex: 1 0 25%; }
 
   .Principle {
-    flex: 1 0 70%; 
+    flex: 1 0 70%;
 
     margin-left: 5%;
   }
