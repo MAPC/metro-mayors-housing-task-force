@@ -6,10 +6,7 @@ import ScrollToTop from './utils/ScrollToTop';
 const AboutSection = props => (
   <div className="sub-section">
     <div className={`container ${props.columned ? 'columned' : ''}`}>
-      {typeof props.children === 'string'
-        ? (<p>{props.children}</p>)
-        : props.children
-      }
+      {props.children}
     </div>
   </div>
 );
@@ -24,13 +21,16 @@ class About extends React.Component {
           <h1 className="container huge">About</h1>
 
           <AboutSection>
-            To address the housing crisis in Metro Boston through regional collaboration and
-            mutual support, the Metropolitan Mayors Coalition (MMC) launched a Regional Housing
-            Taskforce to establish a regional housing production goal and identify best
-            practices to achieve that goal throughout the 15 participating communities. The
-            Taskforce includes mayors and managers, as well as municipal staff, from the
-            following municipalities: Arlington, Boston, Braintree, Brookline, Cambridge,
-            Chelsea, Everett, Malden, Medford, Melrose, Newton, Quincy, Revere, Somerville, and Winthrop.
+            <p>
+              To address the housing crisis in Metro Boston through regional collaboration and
+              mutual support, <a href="https://www.mapc.org/get-involved/coalitions/mmc/">the Metropolitan Mayors Coalition (MMC) </a>
+              launched a Regional Housing
+              Taskforce to establish a regional housing production goal and identify best
+              practices to achieve that goal throughout the 15 participating communities. The
+              Taskforce includes mayors and managers, as well as municipal staff, from the
+              following municipalities: Arlington, Boston, Braintree, Brookline, Cambridge,
+              Chelsea, Everett, Malden, Medford, Melrose, Newton, Quincy, Revere, Somerville, and Winthrop.
+            </p>
           </AboutSection>
 
           <AboutSection columned={true}>
@@ -45,7 +45,7 @@ class About extends React.Component {
 
             <div>
               <p>
-                Together, members of the Taskforce worked with the Metropolitan Area Planning Council (MAPC)
+                Together, members of the Taskforce worked with the <a href="https://mapc.org">Metropolitan Area Planning Council (MAPC)</a> to
                 agree on principles that guide future housing preservation and development in the MMC that
                 works for a range of household types and incomes: renters, young homebuyers, seniors looking
                 to downsize, families with children, people of color, people with disabilities, and others.
