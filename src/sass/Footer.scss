@@ -29,7 +29,7 @@
 
     @include media($_break) {
       display: grid;
-      grid-template-columns: .75fr 1fr;
+      grid-template-columns: .50fr 1fr;
       grid-template-rows: 1fr .75fr;
     }
   }
@@ -37,7 +37,12 @@
   .mapc-logo {
     height: 45px;
     margin: auto;
-    margin-right: 40px;
+    margin-right: 45px;
+
+    @include media($_break) {
+      height: 35px;
+      margin-right: 35px;
+    }
   }
 
   ul {
@@ -69,6 +74,7 @@
 
     &.social-list {
       display: inline-block;
+
       border-left: none;
 
       li {
@@ -79,10 +85,7 @@
     }
 
     li { display: inline-block; }
-
-    img {
-      height: 20px;
-    }
+    img { height: 20px; }
   }
 
   a {
@@ -102,6 +105,6 @@
   .social {
     margin: auto;
 
-    @include media($_break) { margin: auto 0; }
+    @include media($_break) { margin: 40px 0 15px; }
   }
 }
