@@ -1,18 +1,32 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
+import taskForce from '~/_data/task-force';
 import ScrollToTop from './utils/ScrollToTop';
 
-const AboutSection = props => (
+
+const AboutSection = ({ children, columned }) => (
   <div className="sub-section">
-    <div className={`container ${props.columned ? 'columned' : ''}`}>
-      {props.children}
+    <div className={`container ${columned ? 'columned' : ''}`}>
+      {children}
     </div>
   </div>
 );
 
 
 class About extends React.Component {
+
+  renderProfileLinks() {
+    const colors = ['orange', 'blue', 'skyblue', 'green', 'yellow'];
+
+    const links = taskForce.sort((a,b) => a.municipalityName.localeCompare(b.municipalityName))
+      .map(({ municipalityName }, i) => <span className="profile-link"><a className={colors[i % colors.length]} href={`https://datacommon.mapc.org/profile/${municipalityName.toLowerCase()}/housing`}> {municipalityName}</a>{i < taskForce.length - 1 ? ',' : ''}</span>);
+
+    links[links.length - 1] = <span> and {links[links.length - 1]}</span>;
+
+    return links;
+  }
+
 
   render() {
     return (
@@ -28,8 +42,7 @@ class About extends React.Component {
               Taskforce to establish a regional housing production goal and identify best
               practices to achieve that goal throughout the 15 participating communities. The
               Taskforce includes mayors and managers, as well as municipal staff, from the
-              following municipalities: Arlington, Boston, Braintree, Brookline, Cambridge,
-              Chelsea, Everett, Malden, Medford, Melrose, Newton, Quincy, Revere, Somerville, and Winthrop.
+              following municipalities: {this.renderProfileLinks()}.
             </p>
           </AboutSection>
 
@@ -73,10 +86,10 @@ class About extends React.Component {
 
             <p>
               These efforts, which were undertaken over a nine-month period starting in January 2018, are
-              collected here for the MMC, all municipalities in the regions, community leaders, residents,
+              collected here for the MMC, all municipalities in the region, community leaders, residents,
               and others to explore. It is our hope that this tool will support these allies by raising
               awareness and sharing important information about the regional housing crisis and how we can
-              work together to expanding housing opportunity for all.
+              work together to expand housing opportunity for all.
             </p>
           </AboutSection>
         </main>
