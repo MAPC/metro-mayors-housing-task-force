@@ -21,7 +21,7 @@ class Footer extends React.Component {
             </li>
             <li>
               <a href="mailto:hello@datacommon.org">
-                hello@datacommon.org
+                housingtaskforce@mapc.org
               </a>
             </li>
           </ul>
