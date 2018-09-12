@@ -4,6 +4,7 @@
 
   .sub-section {
     &:nth-of-type(2) {
+
       &:before {
         @extend ._pseudo;
         @extend ._grid-bg;
@@ -24,16 +25,22 @@
     }
   }
 
-  .columned { padding: 65px 0; }
+  .columned {
+    padding: 65px 0;
+
+    @include media(small) { padding: 35px 0; }
+  }
 
   .signatures {
     margin-top: 35px;
     padding: 0 75px;
 
+    @include media(medium) { padding: 0; }
+
     img {
       width: 16.66%;
 
-      @include media(medium) { width: 20%; }
+      @include media(medium) { width: 25%; }
       @include media(small) { width: 33.33%; }
     }
   }
