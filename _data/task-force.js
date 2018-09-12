@@ -12,12 +12,12 @@ module.exports = [{
       title: 'Mayor',
       name: 'Joseph Sullivan',
       municipalityName: 'Braintree',
-      color: 'yellow',
+      color: 'green',
     }, {
       title: 'Town Administrator',
       name: 'Mel Kleckner',
       municipalityName: 'Brookline',
-      color: 'green',
+      color: 'yellow',
     }, {
       title: 'City Manager',
       name: 'Louis Depasquale',
