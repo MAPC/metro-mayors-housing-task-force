@@ -1,6 +1,7 @@
 .component.BestPractices {
 
   .contact-box {
+    $_break: 1159px;
     position: absolute;
     top: 32px;
     right: 0;
@@ -9,9 +10,19 @@
 
     background: $color_bg-medium;
 
+    @include media($_break) {
+      top: initial;
+      left: 0;
+      bottom: -120px;
+
+      width: 100%;
+    }
+
     p {
       margin: 0;
       font-weight: 600;
+
+      @include media($_break) { margin-bottom: 1em; }
     }
 
     a {
@@ -20,6 +31,7 @@
       &:hover { color: $color_palette-orange--dark; }
     }
   }
+
 
   /*
   .contact-box {

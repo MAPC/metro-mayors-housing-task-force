@@ -1,9 +1,13 @@
 .component.BestPractice {
-
   display: flex;
 
   min-height: 15rem;
   border: 0.3em solid $color_palette-skyblue;
+
+  @include media(small) {
+    min-height: 10rem;
+    margin: 10px auto;
+  }
 
   .best-practice-description {
     flex: 1 0 70%;
@@ -23,6 +27,15 @@
     flex: 1 0 30%;
 
     width: 100%;
+
+    @include media(x-small) {
+      position: absolute;
+      top: 5px;
+      right: 5px;
+
+      width: 35px;
+      height: auto;
+    }
   }
 
 }
