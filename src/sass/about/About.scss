@@ -5,11 +5,14 @@
   .profile-link a {
     background: none;
 
-    &.orange:hover { background: $color_palette-orange; }
-    &.blue:hover { color: mix(black, $color_palette-blue, 60); background: $color_palette-blue; }
-    &.skyblue:hover { background: $color_palette-skyblue; }
+    &.blue:hover {
+      color: mix(black, $color_palette-blue, 60);
+      background: $color_palette-blue;
+    }
     &.green:hover { background: $color_palette-green; }
+    &.orange:hover { background: $color_palette-orange; }
     &.yellow:hover { background: $color_palette-yellow; }
+    &.skyblue:hover { background: $color_palette-skyblue; }
   }
 
 }
