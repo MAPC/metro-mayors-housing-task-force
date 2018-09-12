@@ -1,0 +1,18 @@
+.component.About {
+
+  h1 { margin: .75em auto .65em; }
+
+  .profile-link a {
+    background: none;
+
+    &.blue:hover {
+      color: mix(black, $color_palette-blue, 60);
+      background: $color_palette-blue;
+    }
+    &.green:hover { background: $color_palette-green; }
+    &.orange:hover { background: $color_palette-orange; }
+    &.yellow:hover { background: $color_palette-yellow; }
+    &.skyblue:hover { background: $color_palette-skyblue; }
+  }
+
+}

@@ -20,7 +20,7 @@ class CompactSection extends React.Component {
 
   render() {
     return (
-      <section className="component CompactSection">
+      <section className="component CompactSection content-page">
         <div className="sub-section">
           <div className="container">
             <h3 className="with-bar">The Compact</h3>
