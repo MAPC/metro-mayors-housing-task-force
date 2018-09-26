@@ -353,7 +353,7 @@ module.exports = [
     darkHeader,
     content: [
       {
-        text: 'Together, a coalition of leaders in 15 communities of Metro Boston have pledged to build 188,000 homes by 2030.',
+        text: 'Together, a coalition of leaders in 15 communities of Metro Boston have pledged to build 185,000 homes by 2030.',
         style: [ BOLD, BLUE, ITALIC ],
       },
       {
