@@ -70,7 +70,7 @@ module.exports = [{
       color: 'blue',
     }, {
       title: 'Town Manager',
-      name: 'David Cressman',
+      name: 'Austin Faison',
       municipalityName: 'Winthrop',
       color: 'green',
 }];
