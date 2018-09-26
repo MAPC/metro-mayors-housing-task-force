@@ -13,15 +13,15 @@ class Slide extends React.Component {
   renderContent() {
     const { content } = this.props.slide;
 
-    return content.map(block => (
+    return content.map((block,i) => (
       block.link
       ? (
-        <a key={block.text.slice(0,8)} href={block.link} className={`content-block ${(block.style || []).join(' ')}`}>
+        <a key={`${i}-${block.text.slice(0,8)}`} href={block.link} className={`content-block ${(block.style || []).join(' ')}`}>
           <span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
         </a>
       )
       : (
-        <div key={block.text.slice(0,8)} className={`content-block ${(block.style || []).join(' ')}`}>
+        <div key={`${i}-${block.text.slice(0,8)}`} className={`content-block ${(block.style || []).join(' ')}`}>
           <span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
         </div>
       )

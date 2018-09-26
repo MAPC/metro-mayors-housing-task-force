@@ -12,6 +12,7 @@ class Story extends React.Component {
 
     this.back = this.back.bind(this);
     this.forward = this.forward.bind(this);
+    this.arrowControls = this.arrowControls.bind(this);
 
     this.state = {
       currentSlide: 0,
@@ -39,6 +40,23 @@ class Story extends React.Component {
     if (this.hasPrevious()) {
       this.setState({ currentSlide: this.state.currentSlide - 1 });
     }
+  }
+
+  arrowControls({ keyCode }) {
+    if (keyCode === 37) {
+      this.back();
+    }
+    else if (keyCode === 39) {
+      this.forward();
+    }
+  }
+
+  componentDidMount() {
+    window.addEventListener('keydown', this.arrowControls);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this.arrowControls);
   }
 
   renderSlides() {
