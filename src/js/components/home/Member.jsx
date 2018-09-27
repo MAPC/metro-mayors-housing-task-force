@@ -11,10 +11,6 @@ class Member extends React.Component {
     return (
       <div className="component Member">
         <div className={`image-container ${this.props.color}`}>
-          <img
-            alt={`${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
-            src={`/assets/images/${this.props.municipalityName.toLowerCase()}.png`}
-          />
           <h4>{this.props.municipalityName}</h4>
         </div>
 

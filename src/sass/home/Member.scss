@@ -6,68 +6,49 @@
   text-align: center;
 
   .image-container {
-    width: 8rem;
-
-    @include media(small) {
-      height: 8rem;
-
-      border-radius: 50%;
-      border: 1px solid black;
-      overflow: hidden;
-
-      &.orange {
-        color: darken($color_palette-orange, 10);
-        background: $color_palette-orange;
-        border-color: $color_palette-orange;
-      }
-      &.blue {
-        color: darken($color_palette-blue, 10);
-        background: $color_palette-blue;
-        border-color: $color_palette-blue;
-      }
-      &.skyblue {
-        color: darken($color_palette-skyblue, 10);
-        background: $color_palette-skyblue;
-        border-color: $color_palette-skyblue;
-      }
-      &.green {
-        color: darken($color_palette-green, 10);
-        background: $color_palette-green;
-        border-color: $color_palette-green;
-      }
-      &.yellow {
-        color: darken($color_palette-yellow, 10);
-        background: $color_palette-yellow;
-        border-color: $color_palette-yellow;
-      }
-    }
-  }
-
-  img {
-    top: -15%;
-
-    height: auto;
-    max-width: 125%;
-    max-height: 125%;
+    width: 7rem;
+    height: 7rem;
 
     border-radius: 50%;
-    object-fit: cover;
+    border: 1px solid black;
+    overflow: hidden;
 
-    @include media(small) {
-      top: -5%;
-
-      max-width: 110%;
-      max-height: 110%;
+    &.orange {
+      color: darken($color_palette-orange, 30);
+      background: $color_palette-orange;
+      border-color: $color_palette-orange;
+    }
+    &.blue {
+      color: darken($color_palette-blue, 30);
+      background: $color_palette-blue;
+      border-color: $color_palette-blue;
+    }
+    &.skyblue {
+      color: darken($color_palette-skyblue, 30);
+      background: $color_palette-skyblue;
+      border-color: $color_palette-skyblue;
+    }
+    &.green {
+      color: darken($color_palette-green, 30);
+      background: $color_palette-green;
+      border-color: $color_palette-green;
+    }
+    &.yellow {
+      color: darken($color_palette-yellow, 30);
+      background: $color_palette-yellow;
+      border-color: $color_palette-yellow;
     }
   }
 
   h4 {
-    margin: 0 auto;
+    @extend ._vertical-center;
 
+    top: 30%;
     font-weight: 700;
     font-size: $font_size-base;
     text-transform: uppercase;
 
+    /*
     @media #{$phone} {
       position: absolute;
       bottom: -.6em;
@@ -79,6 +60,7 @@
 
       background-color: white;
     }
+    */
   }
 
   .name, .title { font-size: $font_size-small; }
