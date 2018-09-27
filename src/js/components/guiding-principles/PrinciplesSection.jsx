@@ -11,20 +11,18 @@ class PrinciplesSection extends React.Component {
   renderPrinciples() {
     return principles.map((principle, i) => {
       return (
-        <li>
+        <li key={principle.title}>
           <div className="container">
             {
               (principle.image)
-              ? (<ImagePrinciple 
-                  key={principle.title}
+              ? (<ImagePrinciple
                   number={i+1}
-                  principle={principle} 
+                  principle={principle}
 
                 />)
-              : (<Principle 
-                  key={principle.title}
+              : (<Principle
                   number={i+1}
-                  principle={principle} 
+                  principle={principle}
                 />)
             }
           </div>
@@ -36,7 +34,7 @@ class PrinciplesSection extends React.Component {
   render() {
     return (
       <section className="component PrinciplesSection" >
-        <ol className="principles-list"> 
+        <ol className="principles-list">
           {this.renderPrinciples()}
         </ol>
       </section>

@@ -2,10 +2,10 @@
 
   h3 { text-transform: uppercase; }
 
-  p { 
-    margin: 0 auto;
+  p {
+    max-width: 1000px;
 
-    font-size: $font_size-medium; 
+    font-size: $font_size-medium;
     line-height: $font_size-medium * 1.5;
   }
 
