@@ -1,11 +1,11 @@
 import React from 'react';
 
 
-class Topic extends React.Component {
+class Strategy extends React.Component {
   render() {
     return (
       <button
-        className={`component Topic ${this.props.selected ? 'selected' : ''}`}
+        className={`component Strategy ${this.props.selected ? 'selected' : ''}`}
         onClick={() => this.props.onClick()}
       >
         {this.props.title}
@@ -14,7 +14,7 @@ class Topic extends React.Component {
   }
 }
 
-Topic.propTypes = {
+Strategy.propTypes = {
 };
 
-export default Topic;
+export default Strategy;

@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 import ScrollToTop from './utils/ScrollToTop';
-import Topics from './best-practices/Topics.jsx';
+import Strategies from './best-practices/Strategies';
 
 
 class BestPractices extends React.Component {
@@ -10,7 +10,7 @@ class BestPractices extends React.Component {
     return (
       <ScrollToTop>
         <main className="component BestPractices">
-          <Topics />
+          <Strategies />
         </main>
       </ScrollToTop>
     );
