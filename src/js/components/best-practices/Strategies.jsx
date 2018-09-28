@@ -253,11 +253,6 @@ class Strategies extends React.Component {
   render() {
     return (
       <div className="component Strategies housing-best-practices container">
-        <div className="contact-box">
-          <p>Are we missing strategies?</p>
-           Share them with <a href="mailto:housingtaskforce@mapc.org">housingtaskforce@mapc.org</a>
-        </div>
-
         <div className="button-container">
           <h3>STRATEGY</h3>
           {this.renderStrategies(topicData)}

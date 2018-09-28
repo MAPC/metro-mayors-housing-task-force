@@ -2,9 +2,7 @@
   padding-top: 2rem;
 
   .button-container {
-    margin-bottom: $topic_margin * 8;
-
-    @media #{$desktop} { width: 50em;}
+    margin-bottom: $topic_margin * 4;
   }
 
   h3 { margin: 0 auto ($topic_margin / 2); }
