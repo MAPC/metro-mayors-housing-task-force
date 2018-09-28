@@ -227,21 +227,23 @@ class Strategies extends React.Component {
 
       const strategyBestPractices = filteredPrinciples
         .map(principle => principles[principle].practices)
-        .reduce((a,b) => a.concat(b), []);
+        .reduce((a,b) => a.concat(b), [])
+        .map(practice => ({ title: practice, image: null }));
 
 
-      //strategyBestPractices.forEach(bestPractice => bestPractice.image = `${strategy.toLowerCase().replace(' ', '-')}.svg`);
+      strategyBestPractices.forEach(practice => practice.image = `${strategy.toLowerCase().split(' ').join('-')}.svg`);
 
       return [ ...bestPractices, ...strategyBestPractices ];
     }, []);
 
 
-    return Array.from(new Set(bestPractices)).map(practiceTitle => {
-      const practice = this.state.practices[practiceTitle];
+    return Array.from(new Set(bestPractices)).map(_practice => {
+      const practice = this.state.practices[_practice.title];
 
       return (
         <BestPractice
           practice={practice}
+          image={_practice.image}
         />
       );
     });
