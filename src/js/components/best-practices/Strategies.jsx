@@ -228,7 +228,7 @@ class Strategies extends React.Component {
   }
 
   componentDidUpdate() {
-    const overlayContent = document.querySelector('.overlay-content');
+    const overlayContent = document.querySelector('.overlay-content-scrollbox');
 
     if (overlayContent) {
       overlayContent.scrollTo(0,0);
@@ -245,68 +245,94 @@ class Strategies extends React.Component {
         <div className="overlay-net" onClick={this.closeOverlay}></div>
 
         <div className='overlay-controls'>
-          <button className='overlay-control previous' onClick={this.previousPractice}>p</button>
-          <button className='overlay-control next' onClick={this.nextPractice}>></button>
+          <button className='slide-control' onClick={this.previousPractice}></button>
+          <button className='slide-control' onClick={this.nextPractice}></button>
         </div>
 
-        <div className="overlay-content">
-          <h2>{practice.title}</h2>
+        <div className="overlay-content-wrapper">
+          <div className="overlay-content-scrollbox">
+            <div className="overlay-content">
+              <h2>{practice.title}</h2>
 
-          <div className="field">
-            <h4>Location{practice.location.length > 1 ? 's' : null}</h4>
-            <ul className="locations">
-              {practice.location.map(location => <li key={location}>{location}</li>)}
-            </ul>
-          </div>
+              <img src={`/assets/images/${practice.image}`} className="overlay-icon" />
 
-          <div className="field">
-            <h4>Guiding Principle{practice.principles.length > 1 ? 's' : null}</h4>
-            <ul className="principles">
-              {practice.principles.map(principle => <li key={principle}>{principle}</li>)}
-            </ul>
-          </div>
+              <div className="field">
+                <h4>Location{practice.location.length > 1 ? 's' : null}</h4>
+                <ul className="locations">
+                  {practice.location.map(location => <li key={location}>{location}</li>)}
+                </ul>
+              </div>
 
-          <div className="field">
-            <h4>Overview</h4>
-            <p>{practice.overview}</p>
-          </div>
+              <div className="field">
+                <h4>Guiding Principle{practice.principles.length > 1 ? 's' : null}</h4>
+                <ul className="principles">
+                  {practice.principles.map(principle => <li key={principle}>{principle}</li>)}
+                </ul>
+              </div>
 
-          <div className="field">
-            <h4>Adoption</h4>
-            <p>{practice.adoption}</p>
-          </div>
+              <div className="field">
+                <h4>Overview</h4>
+                <p>{practice.overview}</p>
+              </div>
 
-          <div className="field">
-            <h4>Who</h4>
-            <p>{practice.who}</p>
-          </div>
+              {practice.adoption
+                ? (
+                  <div className="field">
+                    <h4>Adoption</h4>
+                    <p>{practice.adoption}</p>
+                  </div>
+                ) : null
+              }
 
-          <div className="field">
-            <h4>What</h4>
-            <p>{practice.what}</p>
-          </div>
+              {practice.who
+                ? (
+                  <div className="field">
+                    <h4>Who</h4>
+                    <p>{practice.who}</p>
+                  </div>
+                ) : null
+              }
 
-          <div className="field">
-            <h4>Where</h4>
-            <p>{practice.where}</p>
-          </div>
+              {practice.what
+                ? (
+                  <div className="field">
+                    <h4>What</h4>
+                    <p>{practice.what}</p>
+                  </div>
+                ) : null
+              }
 
-          <div className="field">
-            <h4>Considerations</h4>
-            <p>{practice.considerations}</p>
-          </div>
+              {practice.where
+                ? (
+                  <div className="field">
+                    <h4>Where</h4>
+                    <p>{practice.where}</p>
+                  </div>
+                ) : null
+              }
 
-          <div className="field">
-            <h4>Resources</h4>
-            <ul className="resources">
-              {practice.resources.map(resource => (
-                <li key={resource.title}>
-                  <a target="_blank" href={resource.link}>
-                    {resource.title}
-                  </a>
-                </li>
-              ))}
-            </ul>
+              {practice.considerations
+                ? (
+                  <div className="field">
+                    <h4>Considerations</h4>
+                    <p>{practice.considerations}</p>
+                  </div>
+                ) : null
+              }
+
+              <div className="field">
+                <h4>Resources</h4>
+                <ul className="resources">
+                  {practice.resources.map(resource => (
+                    <li key={resource.title}>
+                      <a target="_blank" href={resource.link}>
+                        {resource.title}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         </div>
       </div>

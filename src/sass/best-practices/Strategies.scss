@@ -43,31 +43,112 @@
 
     .overlay-controls {
       @extend ._vertical-center;
+      z-index: 5;
 
       width: 95%;
-      max-width: 800px;
+      max-width: 810px;
       margin: 0 auto;
 
-      .overlay-control {
+      .slide-control {
+        $_color: $color_palette-orange;
+        background: $color_bg-light;
+        border-color: rgba($_color, .7);
+        opacity: 1;
+        box-shadow: 2px 2px 7px 3px rgba(0,0,0,.1);
+        transition: border-color .12s;
+        border-radius: 0;
+
+        &:before { border-color: rgba($_color, .7); }
+
         &:first-of-type { float: left; }
         &:last-of-type { float: right; }
+
+        &:hover {
+          border-color: $_color;
+          transition: border-color .12s;
+
+          &:before {
+            border-color: $_color;
+            transition: border-color .12s;
+          }
+        }
       }
     }
 
-    .overlay-content {
-      top: 5vh;
-
+    .overlay-content-wrapper {
       width: 90%;
       max-width: 700px;
-      max-height: 90vh;
+      height: 100vh;
+      text-align: center;
+      overflow: hidden;
       margin: 0 auto;
-      padding: 20px 30px;
+    }
 
-      background: $color_bg-light;
-      border: 5px solid $color_palette-orange;
+    .overlay-content-scrollbox {
+      @extend ._vertical-center;
+
+      left: -5%;
+      width: 110%;
+      max-height: 100vh;
+      margin: 0 auto;
 
       overflow-x: hidden;
       overflow-y: auto;
+    }
+
+    .overlay-content {
+      width: 80%;
+      margin: 5vh auto;
+      padding: 20px 30px;
+
+      text-align: left;
+
+      background: $color_bg-light;
+      border: 5px solid $color_palette-blue;
+      overflow-x: hidden;
+      overflow-y: auto;
+
+      box-shadow: 2px 2px 7px 3px rgba(0,0,0,.1);
+
+      .overlay-icon {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+
+        width: 60px;
+        height: auto;
+      }
+
+      h2 { padding-right: 60px; }
+      h4 { margin-bottom: 5px; }
+      p { margin-top: 5px; }
+
+      ul {
+        padding-left: 2em;
+
+        list-style: none;
+      }
+
+      li {
+        &:before {
+          content: '▪';
+          display: inline-block;
+
+          position: relative;
+          top: .1em;
+
+          font-size: 2em;
+          line-height: .7em;
+          width: 1em;
+          margin-left: -1em;
+        }
+
+        &:nth-of-type(4n):before { color: $color_palette-orange; }
+        &:nth-of-type(4n + 1):before { color: $color_palette-skyblue; }
+        &:nth-of-type(4n + 2):before { color: $color_palette-blue; }
+        &:nth-of-type(4n + 3):before { color: $color_palette-green; }
+      }
+
     }
   }
 
