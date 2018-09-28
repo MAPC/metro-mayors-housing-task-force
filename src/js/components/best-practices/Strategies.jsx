@@ -16,8 +16,13 @@ class Strategies extends React.Component {
     this.getSelectedPrinciples = this.getSelectedPrinciples.bind(this);
     this.withoutPrinciples = this.withoutPrinciples.bind(this);
 
+    this.renderOverlay = this.renderOverlay.bind(this);
+    this.nextPractice = this.nextPractice.bind(this);
+    this.previousPractice = this.previousPractice.bind(this);
+    this.closeOverlay = this.closeOverlay.bind(this);
 
     this.state = {
+      overlayPracticeIndex: 0,
       strategies: topicData.reduce((strategies, strategy) => {
         strategies[strategy.title] = {
           selected: false,
@@ -48,8 +53,6 @@ class Strategies extends React.Component {
         return practices;
       }, {}),
     };
-
-    console.log(this.state);
   }
 
 
@@ -213,6 +216,105 @@ class Strategies extends React.Component {
 
 
   renderBestPractices() {
+    const uniquePractices = this.getPractices();
+
+    return uniquePractices.map((_practice, overlayPracticeIndex) => (
+      <BestPractice
+        key={_practice}
+        practice={this.state.practices[_practice]}
+        onClick={() => this.setState({ overlayPracticeIndex })}
+      />
+    ));
+  }
+
+  componentDidUpdate() {
+    const overlayContent = document.querySelector('.overlay-content');
+
+    if (overlayContent) {
+      overlayContent.scrollTo(0,0);
+    }
+  }
+
+
+  renderOverlay() {
+    const practices = this.getPractices();
+    const practice = this.state.practices[practices[this.state.overlayPracticeIndex]];
+
+    return (
+      <div className="practice-overlay">
+        <div className="overlay-net" onClick={this.closeOverlay}></div>
+
+        <div className='overlay-controls'>
+          <button className='overlay-control previous' onClick={this.previousPractice}>p</button>
+          <button className='overlay-control next' onClick={this.nextPractice}>></button>
+        </div>
+
+        <div className="overlay-content">
+          <h2>{practice.title}</h2>
+
+          <div className="field">
+            <h4>Location{practice.location.length > 1 ? 's' : null}</h4>
+            <ul className="locations">
+              {practice.location.map(location => <li key={location}>{location}</li>)}
+            </ul>
+          </div>
+
+          <div className="field">
+            <h4>Guiding Principle{practice.principles.length > 1 ? 's' : null}</h4>
+            <ul className="principles">
+              {practice.principles.map(principle => <li key={principle}>{principle}</li>)}
+            </ul>
+          </div>
+
+          <div className="field">
+            <h4>Overview</h4>
+            <p>{practice.overview}</p>
+          </div>
+
+          <div className="field">
+            <h4>Adoption</h4>
+            <p>{practice.adoption}</p>
+          </div>
+
+          <div className="field">
+            <h4>Who</h4>
+            <p>{practice.who}</p>
+          </div>
+
+          <div className="field">
+            <h4>What</h4>
+            <p>{practice.what}</p>
+          </div>
+
+          <div className="field">
+            <h4>Where</h4>
+            <p>{practice.where}</p>
+          </div>
+
+          <div className="field">
+            <h4>Considerations</h4>
+            <p>{practice.considerations}</p>
+          </div>
+
+          <div className="field">
+            <h4>Resources</h4>
+            <ul className="resources">
+              {practice.resources.map(resource => (
+                <li key={resource.title}>
+                  <a target="_blank" href={resource.link}>
+                    {resource.title}
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+      </div>
+    );
+  }
+
+
+  getPractices() {
     const strategies = this.getFilteredStrategies();
     const selectedPrinciples = this.getSelectedPrinciples();
 
@@ -227,32 +329,47 @@ class Strategies extends React.Component {
 
       const strategyBestPractices = filteredPrinciples
         .map(principle => principles[principle].practices)
-        .reduce((a,b) => a.concat(b), [])
-        .map(practice => ({ title: practice, image: null }));
-
-
-      strategyBestPractices.forEach(practice => practice.image = `${strategy.toLowerCase().split(' ').join('-')}.svg`);
+        .reduce((a,b) => a.concat(b), []);
 
       return [ ...bestPractices, ...strategyBestPractices ];
     }, []);
 
+    return Array.from(new Set(bestPractices));
+  }
 
-    return Array.from(new Set(bestPractices)).map(_practice => {
-      const practice = this.state.practices[_practice.title];
 
-      return (
-        <BestPractice
-          practice={practice}
-          image={_practice.image}
-        />
-      );
-    });
+  nextPractice() {
+    const overlayPracticeIndex = (
+      this.state.overlayPracticeIndex === this.getPractices().length - 1
+      ? 0
+      : this.state.overlayPracticeIndex + 1
+    );
+
+    this.setState({ overlayPracticeIndex });
+  }
+
+
+  previousPractice() {
+    const overlayPracticeIndex = (
+      this.state.overlayPracticeIndex === 0
+      ? this.getPractices().length
+      : this.state.overlayPracticeIndex
+    ) - 1;
+
+    this.setState({ overlayPracticeIndex });
+  }
+
+
+  closeOverlay() {
+    this.setState({ overlayPracticeIndex: null });
   }
 
 
   render() {
     return (
       <div className="component Strategies housing-best-practices container">
+        {typeof this.state.overlayPracticeIndex === 'number' ? this.renderOverlay() : null}
+
         <div className="button-container">
           <h3>STRATEGY</h3>
           {this.renderStrategies(topicData)}

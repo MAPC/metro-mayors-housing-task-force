@@ -2619,6 +2619,7 @@ const serialized = strategies.map(strategy => {
 
     practice.resources = titles.map((title,i) => ({ title, link: links[i] || ''}));
     practice.location = practice.location.split('\n').map(loc => loc.split(/\s{2,}/).join(''));
+    practice.image = `${strategy.title.toLowerCase().split(' ').join('-')}.svg`;
 
     return practice;
   });

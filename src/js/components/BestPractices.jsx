@@ -6,6 +6,7 @@ import Strategies from './best-practices/Strategies';
 
 
 class BestPractices extends React.Component {
+
   render() {
     return (
       <ScrollToTop>
@@ -54,6 +55,7 @@ class BestPractices extends React.Component {
       </ScrollToTop>
     );
   }
+
 }
 
 export default BestPractices;

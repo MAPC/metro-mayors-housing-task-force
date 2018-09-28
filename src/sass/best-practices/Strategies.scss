@@ -15,4 +15,60 @@
     @include media(small) { display: block; }
   }
 
+  .practice-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+
+    text-align: center;
+
+    .overlay-net {
+      position: absolute;
+      top: 0;
+      left: 0;
+
+      width: 100%;
+      height: 100%;
+
+      background: $color_bg-dark;
+      cursor: pointer;
+      opacity: .3;
+    }
+
+    .overlay-controls {
+      @extend ._vertical-center;
+
+      width: 95%;
+      max-width: 800px;
+      margin: 0 auto;
+
+      .overlay-control {
+        &:first-of-type { float: left; }
+        &:last-of-type { float: right; }
+      }
+    }
+
+    .overlay-content {
+      top: 5vh;
+
+      width: 90%;
+      max-width: 700px;
+      max-height: 90vh;
+      margin: 0 auto;
+      padding: 20px 30px;
+
+      background: $color_bg-light;
+      border: 5px solid $color_palette-orange;
+
+      overflow-x: hidden;
+      overflow-y: auto;
+    }
+  }
+
 }
