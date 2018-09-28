@@ -123,15 +123,15 @@ class Strategies extends React.Component {
   }
 
 
-  handlePrincipleClick(subtopic) {
+  handlePrincipleClick(principleTitle) {
     const { strategies } = this.state;
-    const selectedSubstrategies = this.getSelectedSubstrategies();
+    const selectedPrinciples = this.getSelectedPrinciples();
 
-    this.getFilteredstrategies().forEach(topic => {
-      const subTopic = strategies[topic].substrategies[subtopic];
+    this.getFilteredStrategies().forEach(strategy => {
+      const principle = strategies[strategy].principles[principleTitle];
 
-      if (subTopic) {
-        subTopic.selected = !subTopic.selected ? true : selectedSubstrategies.includes(subTopic.title);
+      if (principle) {
+        principle.selected = !principle.selected ? true : selectedPrinciples.includes(principleTitle);
       }
     });
 
@@ -186,7 +186,7 @@ class Strategies extends React.Component {
     const selectedPrinciples = this.getSelectedPrinciples();
     const strategies = this.getFilteredStrategies();
 
-    const uniquePrinciples = strategies.map(topic => this.state.strategies[topic].substrategies)
+    const uniquePrinciples = strategies.map(topic => this.state.strategies[topic].principles)
                                   .reduce((a, b) => ({ ...a, ...b }), {});
 
     const principles = Object.keys(uniquePrinciples).map(principle => {
