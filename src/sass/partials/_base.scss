@@ -148,7 +148,7 @@ a { text-decoration: none; }
 
     height: 100%;
 
-    @include media(small) { display: none; }
+    @include media(1120px) { display: none; }
 
     span {
       left: 0;

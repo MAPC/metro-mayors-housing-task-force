@@ -52,7 +52,7 @@ class About extends React.Component {
 
               <div className="box-content">
                 <span className="large">Guiding Principles</span>
-                <span className="small">Explore the principles</span>
+                <span className="small">Explore the principles &gt;</span>
               </div>
             </Link>
 
