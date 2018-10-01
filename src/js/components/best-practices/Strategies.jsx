@@ -134,7 +134,7 @@ class Strategies extends React.Component {
       const principle = strategies[strategy].principles[principleTitle];
 
       if (principle) {
-        principle.selected = !principle.selected ? true : selectedPrinciples.includes(principleTitle);
+        principle.selected = !principle.selected ? true : !selectedPrinciples.includes(principleTitle);
       }
     });
 
@@ -400,8 +400,13 @@ class Strategies extends React.Component {
           <h3>STRATEGY</h3>
           {this.renderStrategies(topicData)}
         </div>
+
         <div className="button-container">
           <h3>Principles</h3>
+          <p>
+            Which of the MMC Regional Housing Task Force principles do these strategies advance?
+          </p>
+
           {this.renderPrinciples()}
         </div>
         <div className="best-practices">
