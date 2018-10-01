@@ -13,13 +13,13 @@ class BestPractices extends React.Component {
         <main className="component BestPractices">
           <div className="container">
             <div className="best-practice-intro">
-              <h1>Best Practices</h1>
+              <h1>Strategies</h1>
 
               <p>
                 The housing crisis in Metro Boston is serious and complicated. It requires a robust
                 toolkit of strategies to plan for and facilitate housing production and preservation,
                 mitigate displacement, foster housing discussion, and other important approaches to
-                addressing housing need and demand. To identify best practices, the MMC Regional Housing
+                addressing housing need and demand. Towards that end, the MMC Regional Housing
                 Taskforce looked to local and national case studies and reports from reliable public,
                 private, and non-profit organizations, including but not limited to Harvard’s Joint Center
                 for Housing Studies, Berkeley’s Terner Center for Housing Innovation, NYU’s Furman Center,
@@ -28,7 +28,7 @@ class BestPractices extends React.Component {
               </p>
 
               <p>
-                This serves as a digital repository of a diverse set of housing best practices, a go-to
+                This serves as a digital repository of a diverse set of housing strategies, a go-to
                 resource for residents, advocates, municipal staff, elected officials, community leaders,
                 and others to educate themselves and their neighbors, advocate for, and implement. Here you
                 will find information on more than 150 strategies ranging from state legislation to local

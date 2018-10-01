@@ -98,11 +98,11 @@ class CompactSection extends React.Component {
               with <Link to={'/guiding-principles'}>these principles.</Link>
             </p>
 
-            <Link className="box-link" to={'/best-practices'}>
+            <Link className="box-link" to={'/strategies'}>
               <img src="/assets/images/home-best-practices.jpg" alt="" />
 
               <div className="box-content">
-                <span className="large">Best Practices</span>
+                <span className="large">Strategies</span>
                 <span className="small">Explore the tools &gt;</span>
               </div>
             </Link>

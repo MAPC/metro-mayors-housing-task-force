@@ -22,7 +22,7 @@ class Strategies extends React.Component {
     this.closeOverlay = this.closeOverlay.bind(this);
 
     this.state = {
-      overlayPracticeIndex: 0,
+      overlayPracticeIndex: null,
       strategies: topicData.reduce((strategies, strategy) => {
         strategies[strategy.title] = {
           selected: false,

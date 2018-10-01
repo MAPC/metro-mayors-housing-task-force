@@ -32,7 +32,7 @@ class Story extends React.Component {
       this.setState({ currentSlide: this.state.currentSlide + 1});
     }
     else {
-      this.props.history.push('/best-practices');
+      this.props.history.push('/strategies');
     }
   }
 

@@ -79,7 +79,7 @@ class About extends React.Component {
               the Taskforce researched best practices to facilitate housing production and preservation.
               These include changes to the regulatory framework, resource generation and allocation, local
               planning and policy, education and advocacy, and other tools. These strategies are
-              <Link to={'/best-practices'}> collected here as a menu for municipalities</Link> to
+              <Link to={'/strategies'}> collected here as a menu for municipalities</Link> to
               choose what might work best in their community to meet
               housing need and demand.
             </p>

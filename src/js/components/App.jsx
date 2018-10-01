@@ -20,7 +20,7 @@ class App extends React.Component {
               <Route exact path="/" component={Home} />
               <Route exact path="/about" component={About} />
               <Route exact path="/guiding-principles" component={GuidingPrinciples} />
-              <Route exact path="/best-practices" component={BestPractices} />
+              <Route exact path="/strategies" component={BestPractices} />
               <Route path="/story" component={Story} />
             </Switch>
             <Footer />
