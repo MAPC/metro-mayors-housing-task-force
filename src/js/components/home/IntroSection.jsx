@@ -8,7 +8,7 @@ class IntroSection extends React.Component {
       <section className="component IntroSection container">
         <h1 className="huge">Housing Metro Boston</h1>
         <p>
-          Meet the 15 leaders united in a landmark regional commitment to housing production.
+          15 cities and towns united in a landmark regional commitment to housing production.
         </p>
 
         <div className="header-image">
