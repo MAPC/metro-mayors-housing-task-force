@@ -257,14 +257,14 @@ class Strategies extends React.Component {
               <img src={`/assets/images/${practice.image}`} className="overlay-icon" />
 
               <div className="field">
-                <h4>Location{practice.location.length > 1 ? 's' : null}</h4>
+                <h4>Location{practice.location.length > 1 ? 's' : null} <span className="sub-header">Select areas where this strategy has been implemented</span></h4>
                 <ul className="locations">
                   {practice.location.map(location => <li key={location}>{location}</li>)}
                 </ul>
               </div>
 
               <div className="field">
-                <h4>Guiding Principle{practice.principles.length > 1 ? 's' : null}</h4>
+                <h4>Guiding Principle{practice.principles.length > 1 ? 's' : null} <span className="sub-header">MMC Guiding Principles advanced by this strategy</span></h4>
                 <ul className="principles">
                   {practice.principles.map(principle => <li key={principle}>{principle}</li>)}
                 </ul>
@@ -278,7 +278,7 @@ class Strategies extends React.Component {
               {practice.adoption
                 ? (
                   <div className="field">
-                    <h4>Adoption</h4>
+                    <h4>Adoption <span className="sub-header">Does this strategy require state or local action to implement?</span></h4>
                     <p>{practice.adoption}</p>
                   </div>
                 ) : null
@@ -287,7 +287,10 @@ class Strategies extends React.Component {
               {practice.who
                 ? (
                   <div className="field">
-                    <h4>Who</h4>
+                    <h4>
+                      Who Implements It?
+                      <span class="sub-header">Those in the lead and supporting roles to put this strategy into action</span>
+                    </h4>
                     <p>{practice.who}</p>
                   </div>
                 ) : null
@@ -296,7 +299,7 @@ class Strategies extends React.Component {
               {practice.what
                 ? (
                   <div className="field">
-                    <h4>What</h4>
+                    <h4>What Does It Do?</h4>
                     <p>{practice.what}</p>
                   </div>
                 ) : null
@@ -305,7 +308,7 @@ class Strategies extends React.Component {
               {practice.where
                 ? (
                   <div className="field">
-                    <h4>Where</h4>
+                    <h4>Where Has It Worked? <span className="sub-header">Select local and national case studies</span></h4>
                     <p>{practice.where}</p>
                   </div>
                 ) : null
@@ -314,14 +317,14 @@ class Strategies extends React.Component {
               {practice.considerations
                 ? (
                   <div className="field">
-                    <h4>Considerations</h4>
+                    <h4>Key Considerations <span className="sub-header">Some things strategy users and supporters should keep in mind</span></h4>
                     <p>{practice.considerations}</p>
                   </div>
                 ) : null
               }
 
               <div className="field">
-                <h4>Resources</h4>
+                <h4>Resources <span className="sub-header">More information</span></h4>
                 <ul className="resources">
                   {practice.resources.map(resource => (
                     <li key={resource.title}>

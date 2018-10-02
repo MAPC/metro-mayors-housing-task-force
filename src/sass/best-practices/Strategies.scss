@@ -119,9 +119,21 @@
         height: auto;
       }
 
+      .field { margin: 20px auto; }
+
       h2 { padding-right: 60px; }
       h4 { margin-bottom: 5px; }
-      p { margin-top: 5px; }
+      p { margin-top: 15px; }
+
+      .sub-header {
+        display: block;
+
+        margin-top: 4px;
+
+        color: mix($color_font-dark, $color_palette-skyblue, 20);
+        font-size: 12px;
+        font-weight: 300;
+      }
 
       ul {
         padding-left: 2em;
