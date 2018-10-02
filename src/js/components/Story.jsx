@@ -4,7 +4,7 @@ import Header from './Header';
 import Slide from './story/Slide.jsx';
 import slides from '~/_data/slides';
 
-let lastSlide = 22;
+let lastSlide = 0;
 
 class Story extends React.Component {
 
