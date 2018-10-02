@@ -39,8 +39,8 @@ class About extends React.Component {
               To address the housing crisis in Metro Boston through regional collaboration and
               mutual support, <a href="https://www.mapc.org/get-involved/coalitions/mmc/">the Metropolitan Mayors Coalition (MMC) </a>
               launched a Regional Housing
-              Taskforce to establish a regional housing production goal and identify best
-              practices to achieve that goal throughout the 15 participating communities. The
+              Taskforce to establish a regional housing production goal and identify strategies
+              to achieve that goal throughout the 15 participating communities. The
               Taskforce includes mayors and managers, as well as municipal staff, from the
               following municipalities: {this.renderProfileLinks()}.
             </p>
@@ -76,7 +76,7 @@ class About extends React.Component {
           <AboutSection>
             <p>
               To respond to demand and help make progress towards this regional housing production goal,
-              the Taskforce researched best practices to facilitate housing production and preservation.
+              the Taskforce researched strategies to facilitate housing production and preservation.
               These include changes to the regulatory framework, resource generation and allocation, local
               planning and policy, education and advocacy, and other tools. These strategies are
               <Link to={'/strategies'}> collected here as a menu for municipalities</Link> to
