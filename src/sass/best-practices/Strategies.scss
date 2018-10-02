@@ -32,6 +32,8 @@
   .additional-practices h3 { margin: 45px 0 30px; }
 
   .practice-overlay {
+    $_break: 780px;
+
     position: fixed;
     top: 0;
     left: 0;
@@ -61,7 +63,6 @@
       @extend ._vertical-center;
       z-index: 5;
 
-      width: 95%;
       max-width: 810px;
       margin: 0 auto;
 
@@ -79,6 +80,19 @@
         &:first-of-type { float: left; }
         &:last-of-type { float: right; }
 
+        @include media($_break) {
+          width: 45px;
+          height: 45px;
+
+          &:before {
+            height: 15px;
+            width: 15px;
+          }
+
+          &:first-of-type { left: 5px; }
+          &:last-of-type { right: 5px; }
+        }
+
         &:hover {
           border-color: $_color;
           transition: border-color .12s;
@@ -93,17 +107,48 @@
 
     .overlay-content-wrapper {
       width: 90%;
-      max-width: 700px;
       height: 100vh;
-      text-align: center;
-      overflow: hidden;
+      max-width: 700px;
       margin: 0 auto;
+
+      text-align: center;
+
+      overflow: hidden;
+
+      @include media($_break) { width: 95%; }
+
+      .close-button {
+        position: absolute;
+        top: 28px;
+        left: -1px;
+        z-index: 1000;
+
+        padding: .5em .75em;
+
+        color: rgba($color_palette-orange, .7);
+        font-size: 14px;
+        font-weight: 600;
+
+        background: $color_bg-light;
+        border: 3px solid rgba($color_palette-orange, .7);
+        box-shadow: 2px 2px 7px 3px rgba(0,0,0,.1);
+        outline: none;
+        transition: border-color .12s, color .12s;
+
+        @include media($_break)  { display: block; }
+
+        &:hover {
+          color: rgba($color_palette-orange, 1);
+          border-color: rgba($color_palette-orange, 1);
+          transition: border-color .12s, color .12s;
+        }
+      }
     }
 
     .overlay-content-scrollbox {
       @extend ._vertical-center;
-
       left: -5%;
+
       width: 110%;
       max-height: 100vh;
       margin: 0 auto;
@@ -121,10 +166,16 @@
 
       background: $color_bg-light;
       border: 5px solid $color_palette-blue;
+      box-shadow: 2px 2px 7px 3px rgba(0,0,0,.1);
       overflow-x: hidden;
       overflow-y: auto;
 
-      box-shadow: 2px 2px 7px 3px rgba(0,0,0,.1);
+      @include media($_break) { width: 85%; }
+
+      @include media(small) {
+        width: 90%;
+        padding: 14px 22px;
+      }
 
       .overlay-icon {
         position: absolute;

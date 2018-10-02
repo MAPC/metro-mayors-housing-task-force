@@ -266,6 +266,7 @@ class Strategies extends React.Component {
         </div>
 
         <div className="overlay-content-wrapper">
+          <button className="close-button" onClick={this.closeOverlay}>Close</button>
           <div className="overlay-content-scrollbox">
             <div className="overlay-content">
               <h2>{practice.title}</h2>
@@ -311,7 +312,7 @@ class Strategies extends React.Component {
                   <div className="field">
                     <h4>
                       Who Implements It?
-                      <span class="sub-header">Those in the lead and supporting roles to put this strategy into action</span>
+                      <span className="sub-header">Those in the lead and supporting roles to put this strategy into action</span>
                     </h4>
                     <p>{practice.who}</p>
                   </div>
