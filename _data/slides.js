@@ -48,19 +48,45 @@ module.exports = [
   {
     content: [
       {
-        text: '"I\'ve lived in this neighborhood since 1954.',
-        style: [ LIGHT, ITALIC, SHADOW ],
+        text: '"At what point will rent stop going up? And, when will it begin to hurt the city?',
+        style: [ LIGHT, ITALIC ],
       },
       {
-        text: 'The neighborhood has changed drastically. Most of my neighbors have moved away. The prices on houses are becoming ridiculous. So is the rent."',
-        style: [ LIGHT, ITALIC, SHADOW ],
+        text: 'I know some young, talented people who have already left."',
+        style: [ LIGHT, ITALIC ],
       },
       {
-        text: 'Joseph, owner of a multi-family home, with a photo of his late wife in their backyard',
-        style: [ SMALL, ITALIC, SHADOW ],
+        text: 'Silvia and her husband have seen the rent for their one-bedroom apartment more than double over the past 15 years',
+        style: [ SMALL, ITALIC ],
       },
     ],
-    background: 'joseph.jpg',
+    background: 'silvia.jpg',
+  },
+  {
+    content: [
+      {
+        text: 'Residents are being priced out of the neighborhoods where they live',
+        style: [ BG, BOLD, ITALIC ],
+      },
+    ],
+    background: 'somerville.png',
+  },
+  {
+    content: [
+      {
+        text: '"My job is keeping me close to the city. My upbringing, my family. I have friends who live here, and my church is here.',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'I have to come to the city here every day. But it’s difficult living away from the city and trying to maintain those relationships. It’s exhausting and expensive having to go back-and-forth."',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'Edmund, a renter and musician.',
+        style: [ SMALL, ITALIC ],
+      },
+    ],
+    background: 'edmund.jpg',
   },
   {
     content: [
@@ -87,77 +113,20 @@ module.exports = [
   {
     content: [
       {
-        text: 'Residents are being priced out of the neighborhoods where they live',
-        style: [ BG, BOLD, ITALIC ],
+        text: '"I\'ve lived in this neighborhood since 1954.',
+        style: [ LIGHT, ITALIC, SHADOW ],
+      },
+      {
+        text: 'The neighborhood has changed drastically. Most of my neighbors have moved away. The prices on houses are becoming ridiculous. So is the rent."',
+        style: [ LIGHT, ITALIC, SHADOW ],
+      },
+      {
+        text: 'Joseph, owner of a multi-family home, with a photo of his late wife in their backyard',
+        style: [ SMALL, ITALIC, SHADOW ],
       },
     ],
-    background: 'somerville.png',
+    background: 'joseph.jpg',
   },
-  {
-    content: [
-      {
-        text: '"At what point will rent stop going up? And, when will it begin to hurt the city?',
-        style: [ LIGHT, ITALIC ],
-      },
-      {
-        text: 'I know some young, talented people who have already left."',
-        style: [ LIGHT, ITALIC ],
-      },
-      {
-        text: 'Silvia and her husband have seen the rent for their one-bedroom apartment more than double over the past 15 years',
-        style: [ SMALL, ITALIC ],
-      },
-    ],
-    background: 'silvia.jpg',
-  },
-  /*
-  {
-    content: [
-      {
-        text: '"My job is keeping me close to the city. My upbringing, my family. I have friends who live here, and my church is here.',
-        style: [ LIGHT, ITALIC ],
-      },
-      {
-        text: 'I have to come to the city here every day. But it’s difficult living away from the city and trying to maintain those relationships. It’s exhausting and expensive having to go back-and-forth."',
-        style: [ LIGHT, ITALIC ],
-      },
-      {
-        text: 'Edmund, a renter and musician.',
-        style: [ SMALL, ITALIC ],
-      },
-    ],
-    background: 'edmund.jpg',
-  },
-  */
-  {
-    content: [
-      {
-        text: 'Unaffordable housing hits low-income residents hardest who spend',
-        style: [ YELLOW, ITALIC ],
-      },
-      {
-        text: 'more than 50%',
-        style: [ YELLOW, BIG, BOLD, ITALIC ],
-      },
-      {
-        text: 'of their income on rent',
-        style: [ YELLOW, ITALIC ],
-      },
-    ],
-    image: 'chart.png',
-    background: 'blue',
-  },
-  /*
-  {
-    content: [
-      {
-        text: 'And high rent is a major burden on those who have few housing options near their jobs',
-        style: [ BG, BOLD, ITALIC ],
-      },
-    ],
-    background: 'mbta.jpg',
-  },
-  */
   {
     content: [
       {
@@ -221,25 +190,16 @@ module.exports = [
     ],
     background: 'jean.jpg',
   },
-  /*
   {
-    content: [
-      {
-        text: 'As baby boomers retire, even more workers will be needed to fill their jobs',
-        style: [ BG, ITALIC ],
-      },
-    ],
-    background: 'jobfair.jpg',
-  },
-  */
-  {
+    darkHeader,
     content: [
       {
         text: `But we are gaining jobs and workers ${wrap('u', 'faster')} than we are building new homes.`,
-        style: [ BIG, BOLD, ITALIC ],
+        style: [ BLUE, BIG, BOLD, ITALIC ],
       },
     ],
-    background: 'blue',
+    background: 'yellow',
+    image: 'past-growth-chart.png',
   },
   {
     content: [
@@ -261,7 +221,7 @@ module.exports = [
         style: [ BG, BIG, BOLD, ITALIC ],
       },
       {
-        text: 'It costs $500,000 to build a 1,000 sqft. home.',
+        text: 'It costs $410,000 to build a 1,500 square foot, 2-bedroom apartment.',
         style: [ BG, BOLD, ITALIC],
       },
 
@@ -315,11 +275,6 @@ module.exports = [
         text: `We know housing demand will continue to grow. ${br}New workers will need homes.`,
         style: [ BIG, BOLD, ITALIC ],
       },
-      {
-        text: 'Read more about our future regional growth.',
-        style: [ ITALIC ],
-        link: 'http://mapc.org',
-      },
     ],
     background: 'blue',
   },
@@ -333,10 +288,11 @@ module.exports = [
       {
         text: 'See how we got to this number.',
         style: [ BLUE, ITALIC ],
-        link: 'http://mapc.org',
+        link: 'http://mapc.org/about#methods',
       },
     ],
     background: 'yellow',
+    image: 'hu-demand-chart.png',
   },
   {
     darkHeader,
@@ -370,7 +326,7 @@ module.exports = [
       {
         text: 'Read about the Metro Mayor\'s Coalition.',
         style: [ BLUE, ITALIC, SMALL ],
-        link: 'http://mapc.org'
+        link: 'https://www.mapc.org/get-involved/coalitions/mmc/',
       },
     ],
     image: 'mayors.png',
