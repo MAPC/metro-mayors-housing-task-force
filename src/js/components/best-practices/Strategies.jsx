@@ -217,14 +217,30 @@ class Strategies extends React.Component {
 
   renderBestPractices() {
     const uniquePractices = this.getPractices();
+    const rendered = {
+      practices: [],
+      additionalPractices: [],
+    };
 
-    return uniquePractices.map((_practice, overlayPracticeIndex) => (
-      <BestPractice
-        key={_practice}
-        practice={this.state.practices[_practice]}
-        onClick={() => this.setState({ overlayPracticeIndex })}
-      />
-    ));
+    uniquePractices.forEach((_practice, overlayPracticeIndex) => {
+      const practice = this.state.practices[_practice];
+      const render = (
+        <BestPractice
+          key={_practice}
+          practice={this.state.practices[_practice]}
+          onClick={() => this.setState({ overlayPracticeIndex })}
+        />
+      );
+
+      if (practice.additional)  {
+        rendered.additionalPractices.push(render);
+      }
+      else {
+        rendered.practices.push(render);
+      }
+    });
+
+    return rendered;
   }
 
   componentDidUpdate() {
@@ -253,6 +269,12 @@ class Strategies extends React.Component {
           <div className="overlay-content-scrollbox">
             <div className="overlay-content">
               <h2>{practice.title}</h2>
+
+              {practice.additional
+                ? (
+                  <span className="additional-tag">Additional Strategy</span>
+                ) : null
+              }
 
               <img src={`/assets/images/${practice.image}`} className="overlay-icon" />
 
@@ -395,6 +417,8 @@ class Strategies extends React.Component {
 
 
   render() {
+    const { practices, additionalPractices } = this.renderBestPractices();
+
     return (
       <div className="component Strategies housing-best-practices container">
         {typeof this.state.overlayPracticeIndex === 'number' ? this.renderOverlay() : null}
@@ -412,9 +436,22 @@ class Strategies extends React.Component {
 
           {this.renderPrinciples()}
         </div>
+
         <div className="best-practices">
-          {this.renderBestPractices()}
+          {practices}
         </div>
+
+        {additionalPractices.length > 0
+          ? (
+            <div className="additional-practices">
+              <h3>Additional Strategies</h3>
+
+              <div className="best-practices">
+                {additionalPractices}
+              </div>
+            </div>
+          ) : null
+        }
       </div>
     );
   }
