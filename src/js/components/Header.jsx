@@ -26,7 +26,7 @@ class Header extends React.Component {
           <ul>
             <li><Link to={'/about'}>About</Link></li>
             <li><Link to={'/guiding-principles'}>Guiding Principles</Link></li>
-            <li><Link to={'/best-practices'}>Best Practices</Link></li>
+            <li><Link to={'/strategies'}>Strategies</Link></li>
             <li><Link to={'/story'}>Story</Link></li>
           </ul>
         </nav>

@@ -4,6 +4,7 @@ import Header from './Header';
 import Slide from './story/Slide.jsx';
 import slides from '~/_data/slides';
 
+let lastSlide = 0;
 
 class Story extends React.Component {
 
@@ -15,7 +16,7 @@ class Story extends React.Component {
     this.arrowControls = this.arrowControls.bind(this);
 
     this.state = {
-      currentSlide: 0,
+      currentSlide: lastSlide,
     };
   }
 
@@ -29,16 +30,18 @@ class Story extends React.Component {
 
   forward() {
     if (this.hasNext()) {
-      this.setState({ currentSlide: this.state.currentSlide + 1});
+      lastSlide = this.state.currentSlide + 1;
+      this.setState({ currentSlide: lastSlide });
     }
     else {
-      this.props.history.push('/best-practices');
+      this.props.history.push('/strategies');
     }
   }
 
   back() {
     if (this.hasPrevious()) {
-      this.setState({ currentSlide: this.state.currentSlide - 1 });
+      lastSlide = this.state.currentSlide - 1;
+      this.setState({ currentSlide: lastSlide });
     }
   }
 

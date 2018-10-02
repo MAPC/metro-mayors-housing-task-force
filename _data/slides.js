@@ -48,7 +48,7 @@ module.exports = [
   {
     content: [
       {
-        text: '"I\'ve lived in Somerville since 1954.',
+        text: '"I\'ve lived in this neighborhood since 1954.',
         style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
@@ -56,7 +56,7 @@ module.exports = [
         style: [ LIGHT, ITALIC, SHADOW ],
       },
       {
-        text: 'Joseph, owner of a multi-family home in Somerville, Massachusetts, with a photo of his late wife in their backyard',
+        text: 'Joseph, owner of a multi-family home, with a photo of his late wife in their backyard',
         style: [ SMALL, ITALIC, SHADOW ],
       },
     ],
@@ -96,20 +96,39 @@ module.exports = [
   {
     content: [
       {
-        text: '"I grew up in Boston. I work in Boston. I now live in Quincy because Boston got too expensive.',
+        text: '"At what point will rent stop going up? And, when will it begin to hurt the city?',
         style: [ LIGHT, ITALIC ],
       },
       {
-        text: 'It wasn\'t by choice that we moved away."',
+        text: 'I know some young, talented people who have already left."',
         style: [ LIGHT, ITALIC ],
       },
       {
-        text: 'Edmund, a renter and musician, lives with his mother in Quincy, MA',
+        text: 'Silvia and her husband have seen the rent for their one-bedroom apartment more than double over the past 15 years',
+        style: [ SMALL, ITALIC ],
+      },
+    ],
+    background: 'silvia.jpg',
+  },
+  /*
+  {
+    content: [
+      {
+        text: '"My job is keeping me close to the city. My upbringing, my family. I have friends who live here, and my church is here.',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'I have to come to the city here every day. But it’s difficult living away from the city and trying to maintain those relationships. It’s exhausting and expensive having to go back-and-forth."',
+        style: [ LIGHT, ITALIC ],
+      },
+      {
+        text: 'Edmund, a renter and musician.',
         style: [ SMALL, ITALIC ],
       },
     ],
     background: 'edmund.jpg',
   },
+  */
   {
     content: [
       {
@@ -128,6 +147,7 @@ module.exports = [
     image: 'chart.png',
     background: 'blue',
   },
+  /*
   {
     content: [
       {
@@ -137,6 +157,7 @@ module.exports = [
     ],
     background: 'mbta.jpg',
   },
+  */
   {
     content: [
       {
@@ -194,12 +215,13 @@ module.exports = [
         style: [ LIGHT, ITALIC ],
       },
       {
-        text: 'Jean and her husband purchased their home in Melrose, MA in 2013 to fit their growing family',
+        text: 'Jean and her husband purchased their home in 2013 to fit their growing family',
         style: [ SMALL, ITALIC ],
       },
     ],
     background: 'jean.jpg',
   },
+  /*
   {
     content: [
       {
@@ -209,6 +231,7 @@ module.exports = [
     ],
     background: 'jobfair.jpg',
   },
+  */
   {
     content: [
       {
@@ -217,23 +240,6 @@ module.exports = [
       },
     ],
     background: 'blue',
-  },
-  {
-    content: [
-      {
-        text: '"At what point will rent stop going up? And, when will it begin to hurt the city?',
-        style: [ LIGHT, ITALIC ],
-      },
-      {
-        text: 'I know some young, talented people who have already left."',
-        style: [ LIGHT, ITALIC ],
-      },
-      {
-        text: 'Silvia and her husband have seen the rent for their one-bedroom apartment in Dorchester, MA more than double over the past 15 years',
-        style: [ SMALL, ITALIC ],
-      },
-    ],
-    background: 'silvia.jpg',
   },
   {
     content: [
@@ -252,8 +258,13 @@ module.exports = [
     content: [
       {
         text: 'The cost of development is higher than ever.',
-        style: [ BIG, BOLD, ITALIC, SHADOW ],
+        style: [ BG, BIG, BOLD, ITALIC ],
       },
+      {
+        text: 'It costs $500,000 to build a 1,000 sqft. home.',
+        style: [ BG, BOLD, ITALIC],
+      },
+
     ],
     background: 'construction.jpg',
   },
@@ -316,7 +327,7 @@ module.exports = [
     darkHeader,
     content: [
       {
-        text: 'To meet housing demand, we must build 188,000 more units by 2030.',
+        text: 'To meet housing demand, we are committed to building 185,000 more units by 2030.',
         style: [ BLUE, BIG, BOLD, ITALIC ],
       },
       {

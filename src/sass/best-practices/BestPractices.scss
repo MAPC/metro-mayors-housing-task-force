@@ -1,5 +1,14 @@
 .component.BestPractices {
 
+  .best-practice-intro {
+    width: 60%;
+    max-width: 885px;
+
+    @include media(medium) {
+      width: 100%;
+    }
+  }
+
   .contact-box {
     $_break: 1159px;
     position: absolute;
@@ -11,9 +20,8 @@
     background: $color_bg-medium;
 
     @include media($_break) {
+      position: relative;
       top: initial;
-      left: 0;
-      bottom: -120px;
 
       width: 100%;
     }
@@ -32,25 +40,4 @@
     }
   }
 
-
-  /*
-  .contact-box {
-    margin-top: 30px;
-
-    p {
-      display: inline-block;
-
-      margin: 0;
-      margin-right: 10px;
-
-      font-weight: 600;
-    }
-
-    a {
-      color: $color_palette-orange;
-
-      &:hover { color: $color_palette-orange--dark; }
-    }
-  }
-  */
 }
