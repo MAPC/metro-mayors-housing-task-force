@@ -8,6 +8,7 @@ import Home from './Home';
 import About from './About';
 import Story from './Story';
 import GuidingPrinciples from './GuidingPrinciples';
+import GA from './utils/GoogleAnalytics';
 
 
 class App extends React.Component {
@@ -15,15 +16,16 @@ class App extends React.Component {
     return (
       <BrowserRouter>
         <div className="component App">
-            <Header />
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route exact path="/about" component={About} />
-              <Route exact path="/guiding-principles" component={GuidingPrinciples} />
-              <Route exact path="/strategies" component={BestPractices} />
-              <Route path="/story" component={Story} />
-            </Switch>
-            <Footer />
+          <GA.RouteTracker />
+          <Header />
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/about" component={About} />
+            <Route exact path="/guiding-principles" component={GuidingPrinciples} />
+            <Route exact path="/strategies" component={BestPractices} />
+            <Route path="/story" component={Story} />
+          </Switch>
+          <Footer />
         </div>
       </BrowserRouter>
     );
