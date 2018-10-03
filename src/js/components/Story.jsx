@@ -80,6 +80,7 @@ class Story extends React.Component {
     return (
       <main className="component Story">
         <Header
+          story={true}
           light={!slide.darkHeader}
           color={slide.headerColor}
           shadowed={slide.headerShadow}
