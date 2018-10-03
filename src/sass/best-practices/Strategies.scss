@@ -66,6 +66,11 @@
       max-width: 810px;
       margin: 0 auto;
 
+      @include media($_break) {
+        top: initial;
+        bottom: 10%;
+      }
+
       .slide-control {
         $_color: $color_palette-orange;
         background: $color_bg-light;
