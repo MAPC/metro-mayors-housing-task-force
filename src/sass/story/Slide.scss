@@ -78,8 +78,24 @@
     font-size: $font_size-medium + $font_mod-small;
     text-align: left;
 
-    &.size-large { font-size: $font_size-large + $font_mod-small; }
-    &.size-small { font-size: $font_size-base--rem + $font_mod-small; }
+    @include media(medium) { font-size: $font_size-medium - $font_mod-small; }
+
+    &.size-large {
+      font-size: $font_size-large + $font_mod-small;
+
+      @include media(medium) {
+        font-size: $font_size-medium + $font_mod-large;
+      }
+    }
+
+    &.size-small {
+      font-size: $font_size-base--rem + $font_mod-small;
+
+      @include media(medium) {
+        font-size: $font_size-base--rem - $font_mod-small;
+      }
+    }
+
     &.style-italic { font-style: italic; }
     &.weight-bold { font-weight: 800; }
     &.weight-light {
