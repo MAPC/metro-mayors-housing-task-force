@@ -253,9 +253,16 @@ a { text-decoration: none; }
   @include media(medium) {
     top: initial;
     transform: initial;
-    bottom: 5%;
+    bottom: 2%;
 
     opacity: 1;
+    width: 45px;
+    height: 45px;
+
+    &:before {
+      height: 15px;
+      width: 15px;
+    }
   }
 
   &.disabled {
