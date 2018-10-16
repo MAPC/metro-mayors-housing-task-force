@@ -6,6 +6,7 @@ class Header extends React.Component {
   render() {
     const classes = [
       'component Header container',
+      this.props.story ? 'story' : '',
       this.props.light ? 'light' : '',
       this.props.shadowed ? 'shadowed' : '',
       this.props.color ? this.props.color : '',
@@ -36,6 +37,7 @@ class Header extends React.Component {
 }
 
 Header.propTypes = {
+  story: PropTypes.bool,
   light: PropTypes.bool,
   shadowed: PropTypes.bool,
   color: PropTypes.string,

@@ -188,6 +188,7 @@ a { text-decoration: none; }
   $_control-size: 65px;
   $_arrow-size: $_control-size - 45px;
   $_line-thickness: 3px;
+  $_color: $color_palette-orange;
   @extend ._vertical-center;
 
   z-index: 8;
@@ -197,8 +198,8 @@ a { text-decoration: none; }
 
   text-align: center;
 
-  background: none;
-  border: $_line-thickness solid $color_font-light;
+  background: $color_bg-light;
+  border: $_line-thickness solid $_color;
   border-radius: 50%;
   outline: none;
   opacity: .7;
@@ -226,10 +227,12 @@ a { text-decoration: none; }
 
     &:before {
       left: 50%;
-      border-top: $_line-thickness solid $color_font-light;
-      border-left: $_line-thickness solid $color_font-light;
+      border-top: $_line-thickness solid $_color;
+      border-left: $_line-thickness solid $_color;
       transform: rotate(-45deg) translateY(-50%);
     }
+
+    @include media(medium) { left: 5px; }
   }
 
   &:last-of-type {
@@ -239,9 +242,26 @@ a { text-decoration: none; }
     &:before {
       left: initial;
       right: 52%;
-      border-top: $_line-thickness solid $color_font-light;
-      border-right: $_line-thickness solid $color_font-light;
+      border-top: $_line-thickness solid $_color;
+      border-right: $_line-thickness solid $_color;
       transform: rotate(45deg) translateY(-50%);
+    }
+
+    @include media(medium) { right: 5px; }
+  }
+
+  @include media(medium) {
+    top: initial;
+    transform: initial;
+    bottom: 2%;
+
+    opacity: 1;
+    width: 45px;
+    height: 45px;
+
+    &:before {
+      height: 15px;
+      width: 15px;
     }
   }
 
@@ -250,10 +270,4 @@ a { text-decoration: none; }
     cursor: normal;
     transition: opacity .25s;
   }
-
-  &.dark {
-    border-color: $color_font-dark;
-    &:before { border-color: $color_font-dark; }
-  }
-
 }
