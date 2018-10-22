@@ -455,7 +455,7 @@ module.exports = [
       {
         text: 'Let\'s get started.',
         style: [ BG, BIG, BOLD, ITALIC ],
-        link: '/best-practices',
+        link: '/strategies',
       },
     ],
   },
