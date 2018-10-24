@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
+import { HashLink } from 'react-router-hash-link';
 
 class Header extends React.Component {
   render() {
@@ -26,8 +27,9 @@ class Header extends React.Component {
         <nav>
           <ul>
             <li><Link to={'/about'}>About</Link></li>
-            <li><Link to={'/guiding-principles'}>Guiding Principles</Link></li>
+            <li><Link to={'/guiding-principles'}>Principles</Link></li>
             <li><Link to={'/strategies'}>Strategies</Link></li>
+            <li><HashLink to='/about#methods'>Methods</HashLink></li>
             <li><Link to={'/story'}>Story</Link></li>
           </ul>
         </nav>

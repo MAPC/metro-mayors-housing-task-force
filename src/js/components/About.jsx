@@ -18,15 +18,21 @@ class About extends React.Component {
 
   renderProfileLinks() {
     const colors = ['orange', 'blue', 'skyblue', 'green', 'yellow'];
-
     const links = taskForce.sort((a,b) => a.municipalityName.localeCompare(b.municipalityName))
       .map(({ municipalityName }, i) => <span className="profile-link"><a className={colors[i % colors.length]} href={`https://datacommon.mapc.org/profile/${municipalityName.toLowerCase()}/housing`}> {municipalityName}</a>{i < taskForce.length - 1 ? ',' : ''}</span>);
 
     links[links.length - 1] = <span> and {links[links.length - 1]}</span>;
-
     return links;
   }
 
+  componentDidMount() {
+    window.location.hash = window.decodeURIComponent(window.location.hash);
+    const hashParts = window.location.hash.split('#');
+    if (hashParts.length > 1) {
+      const hash = hashParts.slice(-1)[0];
+      document.querySelector(`#${hash}`).scrollIntoView();
+    }
+  }
 
   render() {
     return (
@@ -90,6 +96,24 @@ class About extends React.Component {
               and others to explore. It is our hope that this tool will support these allies by raising
               awareness and sharing important information about the regional housing crisis and how we can
               work together to expand housing opportunity for all.
+            </p>
+          </AboutSection>
+
+          <AboutSection>
+            <h3 id="methods">Methods</h3>
+            <p>
+              The Metro Mayors Regional Housing Taskforce worked together with the Metropolitan Area Planning
+              Council to create a regional housing production target for 2015-2030. This housing production
+              target was created to answer the question: If Metropolitan Mayors Communities continue to
+              experience job growth at 2008-2016 rates, how many housing units would be needed in 2030? The
+              projection of total housing demand is a combination of the demand associated with the net change
+              in working households as employment in the region grows, demand associated with the net change
+              in non-working households as more baby boomers retire, and the amount of units needed to create
+              and maintain a healthy vacancy rate. These three elements of demand combine to create the
+              Taskforce’s target of 185,000 new housing units from 2015-2030.
+              <br />
+              <br />
+              Read more about our methods <a href="/assets/documents/MAPC_MMC_Methods.pdf" target="_blank">here</a>.
             </p>
           </AboutSection>
         </main>
