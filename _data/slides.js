@@ -285,13 +285,11 @@ module.exports = [
         text: 'To meet housing demand, we are committed to building 185,000 more units by 2030.',
         style: [ BLUE, BIG, BOLD, ITALIC ],
       },
-      /*
       {
         text: 'See how we got to this number.',
         style: [ BLUE, ITALIC ],
-        link: 'http://mapc.org/about#methods',
+        link: '/assets/documents/MAPC_MMC_Methods.pdf',
       },
-      */
     ],
     background: 'yellow',
     image: 'hu-demand-chart.png',
