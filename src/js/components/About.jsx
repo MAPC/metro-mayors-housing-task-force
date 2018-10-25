@@ -102,7 +102,7 @@ class About extends React.Component {
           <AboutSection>
             <h3 id="methods">Methods</h3>
             <p>
-              The Metro Mayors Regional Housing Taskforce worked together with the Metropolitan Area Planning
+              The Metro Mayors Coalition worked together with the Metropolitan Area Planning
               Council to create a regional housing production target for 2015-2030. This housing production
               target was created to answer the question: If Metropolitan Mayors Communities continue to
               experience job growth at 2008-2016 rates, how many housing units would be needed in 2030? The
@@ -110,7 +110,7 @@ class About extends React.Component {
               in working households as employment in the region grows, demand associated with the net change
               in non-working households as more baby boomers retire, and the amount of units needed to create
               and maintain a healthy vacancy rate. These three elements of demand combine to create the
-              Taskforce’s target of 185,000 new housing units from 2015-2030.
+              Coalition’s target of 185,000 new housing units from 2015-2030.
               <br />
               <br />
               Read more about our methods <a href="/assets/documents/MAPC_MMC_Methods.pdf" target="_blank">here</a>.
