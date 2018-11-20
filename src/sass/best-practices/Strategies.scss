@@ -24,7 +24,6 @@
   .best-practices {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 1em;
 
     @include media(small) { display: block; }
   }
@@ -64,6 +63,7 @@
       z-index: 5;
 
       max-width: 810px;
+      width: 100%;
       margin: 0 auto;
 
       @include media($_break) {
@@ -73,18 +73,16 @@
 
       .slide-control {
         $_color: $color_palette-orange;
+        position: absolute;
 
+        opacity: 1;
         background: $color_bg-light;
         border-color: rgba($_color, .7);
-        opacity: 1;
+        border-radius: 0;
         box-shadow: 2px 2px 7px 3px rgba(0,0,0,.1);
         transition: border-color .12s;
-        border-radius: 0;
 
         &:before { border-color: rgba($_color, .7); }
-
-        &:first-of-type { float: left; }
-        &:last-of-type { float: right; }
 
         @include media($_break) {
           &:first-of-type { left: 5px; }

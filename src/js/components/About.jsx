@@ -19,18 +19,17 @@ class About extends React.Component {
   renderProfileLinks() {
     const colors = ['orange', 'blue', 'skyblue', 'green', 'yellow'];
     const links = taskForce.sort((a,b) => a.municipalityName.localeCompare(b.municipalityName))
-      .map(({ municipalityName }, i) => <span className="profile-link"><a className={colors[i % colors.length]} href={`https://datacommon.mapc.org/profile/${municipalityName.toLowerCase()}/housing`}> {municipalityName}</a>{i < taskForce.length - 1 ? ',' : ''}</span>);
+      .map(({ municipalityName }, i) => <span key={municipalityName} className="profile-link"><a className={colors[i % colors.length]} href={`https://datacommon.mapc.org/profile/${municipalityName.toLowerCase()}/housing`}> {municipalityName}</a>{i < taskForce.length - 1 ? ',' : ''}</span>);
 
-    links[links.length - 1] = <span> and {links[links.length - 1]}</span>;
+    links[links.length - 1] = <span key={'and-wrapper'}> and {links[links.length - 1]}</span>;
     return links;
   }
 
   componentDidMount() {
-    window.location.hash = window.decodeURIComponent(window.location.hash);
-    const hashParts = window.location.hash.split('#');
+    const hashParts = window.decodeURIComponent(window.location.hash).split('#');
     if (hashParts.length > 1) {
       const hash = hashParts.slice(-1)[0];
-      document.querySelector(`#${hash}`).scrollIntoView();
+      //document.querySelector(`#${hash}`).scrollIntoView();
     }
   }
 

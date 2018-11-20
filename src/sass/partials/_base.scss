@@ -236,11 +236,11 @@ a { text-decoration: none; }
   }
 
   &:last-of-type {
-    left: initial;
+    left: auto;
     right: $_window-pad;
 
     &:before {
-      left: initial;
+      left: auto;
       right: 52%;
       border-top: $_line-thickness solid $_color;
       border-right: $_line-thickness solid $_color;
@@ -251,7 +251,7 @@ a { text-decoration: none; }
   }
 
   @include media(medium) {
-    top: initial;
+    top: auto;
     transform: initial;
     bottom: 2%;
 

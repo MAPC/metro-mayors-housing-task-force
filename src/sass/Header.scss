@@ -51,7 +51,9 @@
   nav {
     flex: 1 0 60%;
 
-    text-align: center;
+    text-align: right;
+
+    @include media(medium) { text-align: center; }
 
     ul {
       @extend ._vertical-center;
