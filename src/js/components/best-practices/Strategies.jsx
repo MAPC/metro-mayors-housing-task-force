@@ -75,7 +75,7 @@ class Strategies extends React.Component {
       ))
       .reduce((a,b) => a.concat(b), []);
 
-    return Array.from(new Set(selectedPrinciples));
+    return unique(selectedPrinciples);
   }
 
 
@@ -247,7 +247,7 @@ class Strategies extends React.Component {
     const overlayContent = document.querySelector('.overlay-content-scrollbox');
 
     if (overlayContent) {
-      overlayContent.scrollTo(0,0);
+      overlayContent.scrollTop = 0;
     }
   }
 
@@ -386,7 +386,7 @@ class Strategies extends React.Component {
       return [ ...bestPractices, ...strategyBestPractices ];
     }, []);
 
-    return Array.from(new Set(bestPractices));
+    return unique(bestPractices);
   }
 
 
@@ -456,6 +456,10 @@ class Strategies extends React.Component {
       </div>
     );
   }
+}
+
+function unique(arr) {
+  return arr.filter((item, i, ar) => ar.indexOf(item) === i);
 }
 
 export default Strategies;
