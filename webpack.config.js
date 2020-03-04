@@ -40,9 +40,9 @@ module.exports = {
         exclude: /node_modules/,
         loader: 'babel-loader', // "babel-loader" is also a legal name to reference
         query: {
-          presets: ['react', 'es2015', '@babel/polyfill'],
+          presets: ['@babel/preset-react', '@babel/preset-env'],
           plugins: [
-            require('babel-plugin-transform-object-rest-spread'),
+            require('@babel/plugin-proposal-object-rest-spread'),
             require('babel-plugin-root-import').default,
           ],
         }
