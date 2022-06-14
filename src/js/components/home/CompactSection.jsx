@@ -21,6 +21,8 @@ class CompactSection extends React.Component {
   }
 
   render() {
+    const isOriginalContract =  window.location.href.split("/").pop() === 'original-compact';
+
     return (
       <section className="component CompactSection content-page">
         <div className="sub-section">
@@ -76,14 +78,16 @@ class CompactSection extends React.Component {
             </Link>
           </div>
 
-          <div className="container">
+          {isOriginalContract &&
+            <><div className="container">
             <p>
               SIGNED,
             </p>
             <div className="signatures">
               {this.renderSignatures()}
             </div>
-          </div>
+          </div></>
+          }
         </div>
       </section>
     );

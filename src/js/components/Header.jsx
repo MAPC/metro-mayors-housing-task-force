@@ -31,6 +31,7 @@ class Header extends React.Component {
             <li><Link to={'/strategies'}>Strategies</Link></li>
             <li><HashLink to='/about#methods'>Methods</HashLink></li>
             <li><Link to={'/story'}>Story</Link></li>
+            <li><Link to={'/original-compact'}>Original Compact</Link></li>
           </ul>
         </nav>
       </header>

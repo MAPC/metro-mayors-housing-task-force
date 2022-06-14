@@ -6,6 +6,7 @@ const normalize = x => x.split(' ').join('-').toLowerCase();
 class Member extends React.Component {
 
   render() {
+    const isOriginalContract =  window.location.href.split("/").pop() === 'original-compact';
     return (
       <div className="component Member">
         <a href={`https://datacommon.mapc.org/profile/${normalize(this.props.municipalityName)}/housing`}>
@@ -13,9 +14,10 @@ class Member extends React.Component {
             <h4>{this.props.municipalityName}</h4>
           </div>
         </a>
-
-        <div className="name">{this.props.name}</div>
-        <div className="title">{this.props.title}</div>
+      {isOriginalContract &&
+        <><div className="name">{this.props.name}</div>
+        <div className="title">{this.props.title}</div></>
+      }
       </div>
     );
   }

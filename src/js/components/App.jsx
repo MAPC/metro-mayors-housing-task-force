@@ -5,6 +5,7 @@ import BestPractices from './BestPractices';
 import Header from './Header';
 import Footer from './Footer';
 import Home from './Home';
+import OriginalCompact from './OriginalCompact';
 import About from './About';
 import Story from './Story';
 import GuidingPrinciples from './GuidingPrinciples';
@@ -20,6 +21,7 @@ class App extends React.Component {
           <Header />
           <Switch>
             <Route exact path="/" component={Home} />
+            <Route exact path="/original-compact" component={OriginalCompact} />
             <Route path="/about" component={About} />
             <Route exact path="/guiding-principles" component={GuidingPrinciples} />
             <Route exact path="/strategies" component={BestPractices} />
