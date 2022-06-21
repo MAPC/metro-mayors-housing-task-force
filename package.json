@@ -31,9 +31,10 @@
     "webpack-dev-server": "^3.10.3"
   },
   "dependencies": {
+    "@babel/compat-data": "^7.18.5",
     "@babel/core": "^7.8.6",
     "@babel/plugin-proposal-object-rest-spread": "^7.8.3",
-    "@babel/preset-env": "^7.8.6",
+    "@babel/preset-env": "^7.18.2",
     "@babel/preset-react": "^7.8.3",
     "babel-preset-env": "^1.7.0",
     "core-js": "^3.6.4",
