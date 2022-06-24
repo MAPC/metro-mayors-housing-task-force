@@ -1,5 +1,10 @@
 import React from 'react';
-import { BrowserRouter, Route, Switch } from 'react-router-dom';
+// import { BrowserRouter, Route, Switch, useLocation } from 'react-router-dom';
+import {
+  BrowserRouter as Router,
+  Route,
+  Switch
+} from "react-router-dom";
 
 import BestPractices from './BestPractices';
 import Header from './Header';
@@ -12,10 +17,15 @@ import GuidingPrinciples from './GuidingPrinciples';
 import GA from './utils/GoogleAnalytics';
 
 
-class App extends React.Component {
-  render() {
+const App = () => {
+  // render() {
+  //   let location = useLocation();
+  //   React.useEffect(() => {
+  //     ga('send', 'pageview');
+  //   }, [location]);
+    // usePageViews();
     return (
-      <BrowserRouter>
+      <Router>
         <div className="component App">
           <GA.RouteTracker />
           <Header />
@@ -29,9 +39,9 @@ class App extends React.Component {
           </Switch>
           <Footer />
         </div>
-      </BrowserRouter>
+      </Router>
     );
-  }
+  // }
 }
 
 export default App;

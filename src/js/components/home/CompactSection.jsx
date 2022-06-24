@@ -1,13 +1,15 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 
 import Signature from './Signature';
 import taskForce from '~/_data/task-force';
 
 
-class CompactSection extends React.Component {
+const CompactSection = (props) => {
+  const location = useLocation();
+  const isOriginalContract =  location.pathname.split("/").pop() === 'original-compact';
 
-  renderSignatures() {
+  const renderSignatures = () => {
     return taskForce.map(member => (
       member.municipalityName !== 'Winthrop'
       ? <Signature
@@ -19,9 +21,6 @@ class CompactSection extends React.Component {
       : null
     ));
   }
-
-  render() {
-    const isOriginalContract =  window.location.href.split("/").pop() === 'original-compact';
 
     return (
       <section className="component CompactSection content-page">
@@ -84,14 +83,13 @@ class CompactSection extends React.Component {
               SIGNED,
             </p>
             <div className="signatures">
-              {this.renderSignatures()}
+              {renderSignatures()}
             </div>
           </div></>
           }
         </div>
       </section>
     );
-  }
 }
 
 

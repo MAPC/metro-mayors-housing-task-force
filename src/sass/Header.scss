@@ -87,6 +87,7 @@
       font-size: $font_size-base;
       font-weight: 500;
       letter-spacing: $font_spacing-small;
+      white-space: nowrap;
 
       transition: color .12s;
 
@@ -95,7 +96,7 @@
 
         transition: color .12s;
       }
-
+      @include media(medium) { font-size: $font_size-base--rem - $font_mod-medium; }
       @include media(x-small) { font-size: $font_size-base--rem - $font_mod-small; }
     }
   }

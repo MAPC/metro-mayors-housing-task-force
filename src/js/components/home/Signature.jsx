@@ -1,16 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-class Signature extends React.Component {
-  render() {
-    return (
-      <img
-        className="component Signature"
-        alt={`Signature of ${this.props.title} ${this.props.name} from ${this.props.municipalityName}`}
-        src={`/assets/images/${this.props.municipalityName.toLowerCase()}-signature.svg`}
-      />
-    );
-  }
+const Signature = (props) => {
+  return (
+    <img
+      className="component Signature"
+      alt={`Signature of ${props.title} ${props.name} from ${props.municipalityName}`}
+      src={`/assets/images/${props.municipalityName.toLowerCase()}-signature.svg`}
+    />
+  );
 }
 
 Signature.propTypes = {

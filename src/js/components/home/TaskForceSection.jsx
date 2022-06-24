@@ -1,12 +1,13 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 
 import Member from './Member';
 import taskForce from '~/_data/task-force';
 
 
-class TaskForceSection extends React.Component {
+const TaskForceSection = (props) => {
 
-  renderMembers() {
+  const renderMembers = () => {
     return taskForce.map(member => (
       <Member
         key={member.name}
@@ -17,19 +18,16 @@ class TaskForceSection extends React.Component {
       />
     ));
   }
-
-  render() {
-    const isOriginalContract =  window.location.href.split("/").pop() === 'original-compact';
+    const location = useLocation();
+    const isOriginalContract =  location.pathname.split("/").pop() === 'original-compact';
     return (
       <section className="component TaskForceSection container">
-        <h3 className="with-bar">{isOriginalContract ? 'The Task Force' : 'Taskforce Communities'}</h3>
+        <h3 className="with-bar">{isOriginalContract ? 'The Task Force' : 'The Task Force Communities'}</h3>
         <div className="task-force-members">
-          {this.renderMembers()}
+          {renderMembers()}
         </div>
       </section>
     );
-  }
-
 }
 
 export default TaskForceSection;
