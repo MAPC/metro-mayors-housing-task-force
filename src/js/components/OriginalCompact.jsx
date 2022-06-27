@@ -6,18 +6,16 @@ import TaskForceSection from './home/TaskForceSection.jsx';
 import CompactSection from './home/CompactSection.jsx';
 
 
-class OriginalCompact extends React.Component {
-  render() {
-    return (
-      <main className="component Home">
-        <ScrollToTop>
-          <IntroSection />
-          <TaskForceSection />
-          <CompactSection />
-        </ScrollToTop>
-      </main>
-    );
-  }
+const OriginalCompact = () => {
+  return (
+    <main className="component Home">
+      <ScrollToTop>
+        <IntroSection />
+        <TaskForceSection />
+        <CompactSection />
+      </ScrollToTop>
+    </main>
+  );
 }
 
 export default OriginalCompact;

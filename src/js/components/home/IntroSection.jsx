@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const IntroSection = (props) => {
+const IntroSection = () => {
   return (
     <section className="component IntroSection container">
       <h1 className="huge">Housing Metro Boston</h1>

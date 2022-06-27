@@ -4,20 +4,20 @@ import ScrollToTop from './utils/ScrollToTop';
 import IntroSection from './home/IntroSection.jsx';
 import TaskForceSection from './home/TaskForceSection.jsx';
 import CompactSection from './home/CompactSection.jsx';
+import About from './home/About';
 
 
-class Home extends React.Component {
-  render() {
-    return (
-      <main className="component Home">
-        <ScrollToTop>
-          <IntroSection />
-          <TaskForceSection />
-          <CompactSection />
-        </ScrollToTop>
-      </main>
-    );
-  }
+const Home = () => {
+
+  return (
+    <main className="component Home">
+      <ScrollToTop>
+        <IntroSection />
+        <TaskForceSection />
+        <About />
+      </ScrollToTop>
+    </main>
+  );
 }
 
 export default Home;

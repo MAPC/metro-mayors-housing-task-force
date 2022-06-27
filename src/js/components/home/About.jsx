@@ -1,8 +1,8 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { Link } from 'react-router-dom';
 
 import taskForce from '~/_data/task-force';
-import ScrollToTop from './utils/ScrollToTop';
+import ScrollToTop from '../utils/ScrollToTop';
 
 
 const AboutSection = ({ children, columned }) => (
@@ -13,30 +13,27 @@ const AboutSection = ({ children, columned }) => (
   </div>
 );
 
+const About = () => {
 
-class About extends React.Component {
-
-  renderProfileLinks() {
+  const renderProfileLinks = () => {
     const colors = ['orange', 'blue', 'skyblue', 'green', 'yellow'];
     const links = taskForce.sort((a,b) => a.municipalityName.localeCompare(b.municipalityName))
       .map(({ municipalityName }, i) => <span key={municipalityName} className="profile-link"><a className={colors[i % colors.length]} href={`https://datacommon.mapc.org/profile/${municipalityName.toLowerCase()}/housing`}> {municipalityName}</a>{i < taskForce.length - 1 ? ',' : ''}</span>);
 
     links[links.length - 1] = <span key={'and-wrapper'}> and {links[links.length - 1]}</span>;
     return links;
-  }
+  };
 
-  componentDidMount() {
+  useEffect (() => {
     const hashParts = window.decodeURIComponent(window.location.hash).split('#');
     if (hashParts.length > 1) {
-      const hash = hashParts.slice(-1)[0];
-      //document.querySelector(`#${hash}`).scrollIntoView();
+      const hash = hashParts.slice(-1)[0]
     }
-  }
-
-  render() {
-    return (
-      <ScrollToTop>
-        <main className="component About content-page">
+  }, []);
+  
+  return (
+    <ScrollToTop>
+        <div className="component About content-page">
           <h1 className="container huge">About</h1>
 
           <AboutSection>
@@ -47,7 +44,7 @@ class About extends React.Component {
               Taskforce to establish a regional housing production goal and identify strategies
               to achieve that goal throughout the 15 participating communities. The
               Taskforce includes mayors and managers, as well as municipal staff, from the
-              following municipalities: {this.renderProfileLinks()}.
+              following municipalities: {renderProfileLinks()}.
             </p>
           </AboutSection>
 
@@ -115,10 +112,9 @@ class About extends React.Component {
               Read more about our methods <a href="/assets/documents/MAPC_MMC_Methods.pdf" target="_blank">here</a>.
             </p>
           </AboutSection>
-        </main>
+        </div>
       </ScrollToTop>
     );
-  }
 
 }
 

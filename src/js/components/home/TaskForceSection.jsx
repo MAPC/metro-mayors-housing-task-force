@@ -19,7 +19,7 @@ const TaskForceSection = (props) => {
     ));
   }
     const location = useLocation();
-    const isOriginalContract =  location.pathname.split("/").pop() === 'original-compact';
+    const isOriginalContract =  location.pathname.split("/").pop() === '2018-compact';
     return (
       <section className="component TaskForceSection container">
         <h3 className="with-bar">{isOriginalContract ? 'The Task Force' : 'The Task Force Communities'}</h3>

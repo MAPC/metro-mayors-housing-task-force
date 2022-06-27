@@ -7,7 +7,7 @@ import taskForce from '~/_data/task-force';
 
 const CompactSection = (props) => {
   const location = useLocation();
-  const isOriginalContract =  location.pathname.split("/").pop() === 'original-compact';
+  const isOriginalContract =  location.pathname.split("/").pop() === '2018-compact';
 
   const renderSignatures = () => {
     return taskForce.map(member => (

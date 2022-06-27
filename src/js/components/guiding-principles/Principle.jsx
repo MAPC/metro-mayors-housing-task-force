@@ -1,20 +1,17 @@
 import React from 'react';
 
+const Principle = (props) => {
 
-class Principle extends React.Component {
+  const { title, content } = props.principle;
 
-  render() {
-    const { title, content } = this.props.principle;
-
-    return (
-      <div className="component Principle">
-        <h3>{this.props.number}. {title}</h3>
-        <p>
-          {content}
-        </p>
-      </div>
-    );
-  }
+  return (
+    <div className="component Principle">
+      <h3>{props.number}. {title}</h3>
+      <p>
+        {content}
+      </p>
+    </div>
+  );
 
 }
 

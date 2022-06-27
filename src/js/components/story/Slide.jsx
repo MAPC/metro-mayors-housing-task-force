@@ -2,38 +2,37 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 
-class Slide extends React.Component {
+const Slide = (props) => {
 
-  htmlDecode(content) {
+  const htmlDecode = (content) => {
     const elem = document.createElement('div');
     elem.innerHTML = content;
     return elem.childNodes.length === 0 ? "" : elem.childNodes[0].nodeValue;
-  }
+  };
 
-  renderContent() {
-    const { content } = this.props.slide;
+  const renderContent = () => {
+    const { content } = props.slide;
 
     return content.map((block,i) => (
       block.link
       ? (
         <a key={`${i}-${block.text.slice(0,8)}`} href={block.link} target="_blank" className={`content-block ${(block.style || []).join(' ')}`}>
-          <span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
+          <span dangerouslySetInnerHTML={{__html: htmlDecode(block.text)}} />
         </a>
       )
       : (
         <div key={`${i}-${block.text.slice(0,8)}`} className={`content-block ${(block.style || []).join(' ')}`}>
-          <span dangerouslySetInnerHTML={{__html: this.htmlDecode(block.text)}} />
+          <span dangerouslySetInnerHTML={{__html: htmlDecode(block.text)}} />
         </div>
       )
     ));
   }
 
-  render() {
-    const { background, image, credit } = this.props.slide;
+    const { background, image, credit } = props.slide;
     const isImage = (background || '').indexOf('.') !== -1;
 
     return (
-      <div className={`component Slide ${this.props.active ? 'active' : ''} ${!isImage && background ? background : ''}`}>
+      <div className={`component Slide ${props.active ? 'active' : ''} ${!isImage && background ? background : ''}`}>
         {isImage
           ? (
             <div className="image" style={{backgroundImage: `url('/assets/images/slides/${background}')`}}>
@@ -44,7 +43,7 @@ class Slide extends React.Component {
         }
 
         <div className="container">
-          <div className="slide-content">{this.renderContent()}</div>
+          <div className="slide-content">{renderContent()}</div>
 
           {image
             ? <img className="slide-image" src={`/assets/images/slides/${image}`} />
@@ -63,7 +62,6 @@ class Slide extends React.Component {
         }
       </div>
     )
-  }
 }
 
 Slide.propTypes = {

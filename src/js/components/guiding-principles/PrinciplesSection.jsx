@@ -6,9 +6,9 @@ import ImagePrinciple from './ImagePrinciple';
 import principles from '~/_data/principles';
 
 
-class PrinciplesSection extends React.Component {
+const PrinciplesSection = () => {
 
-  renderPrinciples() {
+  const renderPrinciples = () => {
     return principles.map((principle, i) => {
       return (
         <li key={principle.title}>
@@ -31,15 +31,13 @@ class PrinciplesSection extends React.Component {
     });
   }
 
-  render() {
-    return (
-      <section className="component PrinciplesSection" >
-        <ol className="principles-list">
-          {this.renderPrinciples()}
-        </ol>
-      </section>
-    );
-  }
+  return (
+    <section className="component PrinciplesSection" >
+      <ol className="principles-list">
+        {renderPrinciples()}
+      </ol>
+    </section>
+  );
 
 }
 

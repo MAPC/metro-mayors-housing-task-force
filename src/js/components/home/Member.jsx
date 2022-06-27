@@ -6,7 +6,7 @@ const normalize = x => x.split(' ').join('-').toLowerCase();
 
 const Member = (props) => {
     const location = useLocation();
-    const isOriginalContract =  location.pathname.split("/").pop() === 'original-compact';
+    const isOriginalContract =  location.pathname.split("/").pop() === '2018-compact';
     return (
       <div className="component Member">
         <a href={`https://datacommon.mapc.org/profile/${normalize(props.municipalityName)}/housing`}>

@@ -4,20 +4,18 @@ import ScrollToTop from './utils/ScrollToTop';
 import PrinciplesSection from './guiding-principles/PrinciplesSection';
 
 
-class GuidingPrinciples extends React.Component {
+const GuidingPrinciples = () => {
 
-  render() {
-    return (
-      <ScrollToTop>
-        <main className="component GuidingPrinciples">
-            <h1 className="container huge">10 Guiding Principles</h1>
+  return (
+    <ScrollToTop>
+      <main className="component GuidingPrinciples">
+          <h1 className="container huge">10 Guiding Principles</h1>
 
-            <PrinciplesSection />
-        </main>
-      </ScrollToTop>
-    );
-  }
-
+          <PrinciplesSection />
+      </main>
+    </ScrollToTop>
+  );
+  
 }
 
 export default GuidingPrinciples;

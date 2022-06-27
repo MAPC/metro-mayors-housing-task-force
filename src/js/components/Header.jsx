@@ -26,12 +26,11 @@ class Header extends React.Component {
         </div>
         <nav>
           <ul>
-            <li><Link to={'/about'}>About</Link></li>
             <li><Link to={'/guiding-principles'}>Principles</Link></li>
             <li><Link to={'/strategies'}>Strategies</Link></li>
-            <li><HashLink to='/about#methods'>Methods</HashLink></li>
+            <li><HashLink to='/#methods'>Methods</HashLink></li>
             <li><Link to={'/story'}>Story</Link></li>
-            <li><Link to={'/original-compact'}>Original Compact</Link></li>
+            <li><Link to={'/2018-compact'}>2018 Compact</Link></li>
           </ul>
         </nav>
       </header>
