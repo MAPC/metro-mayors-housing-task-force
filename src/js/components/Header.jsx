@@ -31,6 +31,7 @@ class Header extends React.Component {
             <li><HashLink to='/#methods'>Methods</HashLink></li>
             <li><Link to={'/story'}>Story</Link></li>
             <li><Link to={'/2018-compact'}>2018 Compact</Link></li>
+            <li><a href="/assets/documents/MetroMayors_HousingTaskforce_TrackingProgressFindings_Phase2_Memo.pdf" target="_blank">Tracking Progress</a></li>
           </ul>
         </nav>
       </header>
