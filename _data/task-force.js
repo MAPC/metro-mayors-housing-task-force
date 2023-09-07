@@ -22,7 +22,7 @@ module.exports = [{
       title: 'City Manager',
       name: 'Thomas Ambrosino',
       municipalityName: 'Chelsea',
-      color: 'orange',
+      color: 'green',
     }, {
       title: 'Mayor',
       name: 'Carlo DeMaria Jr.',
