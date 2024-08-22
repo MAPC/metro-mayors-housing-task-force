@@ -8,7 +8,14 @@ module.exports = [{
       name: 'Martin Walsh',
       municipalityName: 'Boston',
       color: 'skyblue',
-    }, {
+    }, 
+    {
+      title: 'Mayor',
+      name: 'Joseph Sullivan',
+      municipalityName: 'Braintree',
+      color: 'green',
+    },
+    {
       title: 'Town Administrator',
       name: 'Mel Kleckner',
       municipalityName: 'Brookline',
@@ -63,7 +70,8 @@ module.exports = [{
       name: 'Joseph Curatone',
       municipalityName: 'Somerville',
       color: 'blue',
-    }, {
+    }, 
+    {
       title: 'City Manager',
       name: 'George Proakis',
       municipalityName: 'Watertown',

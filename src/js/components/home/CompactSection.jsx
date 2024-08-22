@@ -11,7 +11,7 @@ const CompactSection = (props) => {
 
   const renderSignatures = () => {
     return taskForce.map(member => (
-      member.municipalityName !== 'Winthrop'
+      member.municipalityName !== 'Winthrop' && member.municipalityName !== "Watertown"
       ? <Signature
           key={member.name}
           title={member.title}
