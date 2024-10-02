@@ -19,7 +19,7 @@
     background: $color_palette-blue;
   }
 
-  h3 { margin: 0 auto ($topic_margin / 2); }
+  h3 { margin: 0 auto calc($topic_margin / 2); }
 
   .best-practices {
     display: grid;
@@ -193,7 +193,7 @@
 
         margin-top: 4px;
 
-        color: mix($color_font-dark, $color_palette-skyblue, 20);
+        color: mix($color_font-dark, $color_palette-skyblue, 20%);
         font-size: 12px;
         font-weight: 300;
       }

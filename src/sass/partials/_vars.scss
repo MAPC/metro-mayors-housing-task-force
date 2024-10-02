@@ -2,14 +2,14 @@
 
 $color_font-light: #fff;
 $color_font-dark: #002D40;
-$color_font-dark--light: mix(white, $color_font-dark, 15);
+$color_font-dark--light: mix(white, $color_font-dark, 15%);
 
 $color_bg-light: #fff;
 $color_bg-medium: #FAFAF8;
 $color_bg-dark: #002D40;
-$color_bg-dark--dark: mix(black, $color_bg-dark, 15);
+$color_bg-dark--dark: mix(black, $color_bg-dark, 15%);
 
-$color_bg-medium--dark: mix(black, $color_bg-medium, 10);
+$color_bg-medium--dark: mix(black, $color_bg-medium, 10%);
 
 $color_palette-orange: #D49162;
 $color_palette-blue: #568095;
@@ -17,12 +17,12 @@ $color_palette-skyblue: #98C3D1;
 $color_palette-green: #B5D4A4;
 $color_palette-yellow: #E7C55B;
 
-$color_palette-orange--dark: mix(black, $color_palette-orange, 15);
+$color_palette-orange--dark: mix(black, $color_palette-orange, 15%);
 
 $color_palette-yellow--light: #F8DA71;
 
-$color_palette-blue--light: mix(white, $color_palette-blue, 10);
-$color_palette-blue--dark: mix(black, $color_palette-blue, 15);
+$color_palette-blue--light: mix(white, $color_palette-blue, 10%);
+$color_palette-blue--dark: mix(black, $color_palette-blue, 15%);
 
 
 // Font

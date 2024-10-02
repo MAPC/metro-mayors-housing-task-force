@@ -65,8 +65,8 @@
       background: $color_palette-yellow;
 
       @include media(small) {
-        bottom: -(($_height / 2) * .35);
-        height: $_height / 2;
+        bottom: -(calc($_height / 2) * .35);
+        height: calc($_height / 2);
       }
     }
   }

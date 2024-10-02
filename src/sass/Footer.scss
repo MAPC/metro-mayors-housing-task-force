@@ -7,12 +7,12 @@
   padding: 15px;
 
   color: rgba($color_font-light, $_opaque);
-  font-size: #{(10/16)}rem;
+  font-size: #{calc(10/16)}rem;
 
   background: $color_bg-dark;
 
   @include media($_break) {
-    font-size: #{(14/16)}rem;
+    font-size: #{calc(14/16)}rem;
 
     .break {
       display: block;

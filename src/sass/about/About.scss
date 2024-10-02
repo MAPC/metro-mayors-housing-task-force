@@ -11,7 +11,7 @@
     background: none;
 
     &.blue:hover {
-      color: mix(black, $color_palette-blue, 60);
+      color: mix(black, $color_palette-blue, 60%);
       background: $color_palette-blue;
     }
     &.green:hover { background: $color_palette-green; }
