@@ -13,12 +13,11 @@ const GoogleAnalytics = () => {
   let routerLocation = useLocation();
 
   useEffect(() => {
-    const page = routerLocation.pathname + routerLocation.search
+    const page = routerLocation.pathname + routerLocation.search;
     const { location } = window;
     ReactGA.set({
       page,
-      location: `${location.origin}${page}`,
-      ...this.props.options
+      location: `${location.origin}${page}`
     })
     ReactGA.pageview(page)
   }, [routerLocation])
