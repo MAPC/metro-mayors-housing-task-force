@@ -4,4 +4,4 @@
 `yarn install`
 
 ## Run locally
-`npm start`
+`yarn start`
