@@ -22,12 +22,16 @@ module.exports = {
       filename: "[name].css",
       chunkFilename: "[id].css"
     }),
-    new CopyWebpackPlugin([
-      { from: __dirname + '/public/favicon.ico' }, // <- your path to favicon
-    ]),
+    new CopyWebpackPlugin({
+      patterns: [
+        { from: __dirname + '/public/favicon.ico' }
+      ]
+    }),
   ],
   devServer: {
-    contentBase: __dirname + '/public',
+    static: {
+      directory: __dirname + '/public',
+    },
     historyApiFallback: true,
   },
   resolve: {
@@ -38,18 +42,20 @@ module.exports = {
       {
         test: /\.jsx?$/,
         exclude: /node_modules/,
-        loader: 'babel-loader', // "babel-loader" is also a legal name to reference
-        query: {
-          presets: ['@babel/preset-react', '@babel/preset-env'],
-          plugins: [
-            require('@babel/plugin-proposal-object-rest-spread'),
-            require('babel-plugin-root-import').default,
-          ],
+        use: {
+          loader: 'babel-loader', // "babel-loader" is also a legal name to reference
+          options: {
+            presets: ['@babel/preset-react', '@babel/preset-env'],
+            plugins: [
+              require('@babel/plugin-proposal-object-rest-spread'),
+              require('babel-plugin-root-import').default,
+            ],
+          }
         }
       }, {
         test: /\.scss$/,
         include: __dirname + '/src/sass',
-        loader: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { url: false } }, 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, { loader: 'css-loader', options: { url: false } }, 'sass-loader'],
         exclude: /node_modules/,
       }
     ]
