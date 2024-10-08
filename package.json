@@ -9,6 +9,7 @@
     "production": "NODE_ENV=production webpack && rsync -r public/* metro-mayors-housing-task-force@live.mapc.org:/var/www/metro-mayors-housing-task-force"
   },
   "devDependencies": {
+    "@mapc/eslint-config": "^1.0.2",
     "babel-core": "^6.26.3",
     "babel-loader": "^9.2.1",
     "babel-plugin-root-import": "^6.6.0",
@@ -24,6 +25,7 @@
     "file-loader": "^6.2.0",
     "immutability-helper": "^3.1.1",
     "mini-css-extract-plugin": "^2.9.1",
+    "prettier": "^3.3.3",
     "sass": "^1.79.4",
     "sass-loader": "^16.0.2",
     "style-loader": "^4.0.0",

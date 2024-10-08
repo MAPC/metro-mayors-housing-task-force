@@ -1,44 +1,42 @@
-import React from 'react';
+import React from "react";
 
-import Principle from './Principle';
-import ImagePrinciple from './ImagePrinciple';
-
-import principles from '~/_data/principles';
-
+import Principle from "./Principle";
+import ImagePrinciple from "./ImagePrinciple";
+import { useAirtableCMS } from "../../hooks/useAirtableCMS";
 
 const PrinciplesSection = () => {
-
-  const renderPrinciples = () => {
-    return principles.map((principle, i) => {
-      return (
-        <li key={principle.title}>
-          <div className="container">
-            {
-              (principle.image)
-              ? (<ImagePrinciple
-                  number={i+1}
-                  principle={principle}
-
-                />)
-              : (<Principle
-                  number={i+1}
-                  principle={principle}
-                />)
-            }
-          </div>
-        </li>
-      );
-    });
-  }
+  const principles = useAirtableCMS({
+    baseID: "app1YqNgXXkVH04nO",
+    tableName: "Principles",
+    keyField: "title",
+    fieldMapping: {
+      title: "Title",
+      content: "Content",
+      image: "Image",
+      order: "Order",
+    },
+    sortBy: (a, b) => Number(a.order) - Number(b.order),
+  });
 
   return (
-    <section className="component PrinciplesSection" >
+    <section className="component PrinciplesSection">
       <ol className="principles-list">
-        {renderPrinciples()}
+        {principles.map((principle, i) => {
+          return (
+            <li key={principle.title}>
+              <div className="container">
+                {principle.image ? (
+                  <ImagePrinciple number={i + 1} principle={principle} />
+                ) : (
+                  <Principle number={i + 1} principle={principle} />
+                )}
+              </div>
+            </li>
+          );
+        })}
       </ol>
     </section>
   );
-
-}
+};
 
 export default PrinciplesSection;
