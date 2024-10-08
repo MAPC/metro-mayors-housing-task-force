@@ -1,9 +1,5 @@
-import React from 'react';
-import { useLocation } from 'react-router-dom';
-
-import MemberName from './MemberName';
-import { useAirtableCMS } from '../hooks/useAirtableCMS';
-
+import MemberName from "./MemberName";
+import { useAirtableCMS } from "../hooks/useAirtableCMS";
 
 const TaskForceNames = () => {
   const taskForce = useAirtableCMS({
@@ -18,7 +14,7 @@ const TaskForceNames = () => {
       originalCompact: "Original Compact",
       currentMember: "Current Member",
     },
-    sortBy: (a, b) => a.municipality.localeCompare(b.municipality)
+    sortBy: (a, b) => a.municipality.localeCompare(b.municipality),
   });
 
   return (
@@ -27,20 +23,13 @@ const TaskForceNames = () => {
       <div className="task-force-members">
         {taskForce
           // Filter any members that were not part of the original 2018 compact
-          .filter(member => member.originalCompact)
-          .map(member => (
-            <MemberName
-              key={member.name}
-              title={member.title}
-              name={member.name}
-              municipalityName={member.municipality}
-              color={member.color}
-            />
-          ))
-        }
+          .filter((member) => member.originalCompact)
+          .map((member) => (
+            <MemberName key={member.name} title={member.title} name={member.name} municipalityName={member.municipality} color={member.color} />
+          ))}
       </div>
     </section>
   );
-}
+};
 
 export default TaskForceNames;

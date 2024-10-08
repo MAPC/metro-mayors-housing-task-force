@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useEffect } from "react";
 import { useLocalStorage } from "./useLocalStorage";
 import Airtable from "airtable";
 
 const isLocalOrStaging = window.location.host.startsWith("staging") || window.location.host.startsWith("localhost");
 
-export const useAirtableCMS = ({baseID, tableName, viewName = "Grid view", keyField, fieldMapping, asList = true, sortBy}) => {
+export const useAirtableCMS = ({ baseID, tableName, viewName = "Grid view", keyField, fieldMapping, asList = true, sortBy }) => {
   const [cmsObjects, setCMSObjects, lastUpdated] = useLocalStorage(tableName, {});
   const cmsBase = new Airtable({ apiKey: process.env.AIRTABLE_API_KEY }).base(baseID);
 
@@ -15,16 +15,16 @@ export const useAirtableCMS = ({baseID, tableName, viewName = "Grid view", keyFi
       .select({
         view: viewName,
         filterByFormula: `IS_AFTER({Last Modified}, '${new Date(lastUpdated).toISOString()}')`,
-        fields: [...Object.values(fieldMapping), "Status"]
+        fields: [...Object.values(fieldMapping), "Status"],
       })
       .eachPage(
         (records, fetchNextPage) => {
-          records.forEach(function (record) {
-            const recordStatus = record.get("Status")
+          records.forEach((record) => {
+            const recordStatus = record.get("Status");
             if (recordStatus === "Published" || (isLocalOrStaging && recordStatus === "Preview")) {
               const updatedRecord = {};
               Object.entries(fieldMapping).forEach(([key, value]) => {
-                updatedRecord[key] = record.get(value)
+                updatedRecord[key] = record.get(value);
               });
               updatedRecords[updatedRecord[keyField]] = updatedRecord;
             } else {
@@ -41,7 +41,7 @@ export const useAirtableCMS = ({baseID, tableName, viewName = "Grid view", keyFi
             if (Object.keys(updatedRecords).length > 0 || unpublishedRecords.length > 0) {
               const mergedObject = {
                 ...cmsObjects,
-                ...updatedRecords
+                ...updatedRecords,
               };
               for (let key of unpublishedRecords) {
                 delete mergedObject[key];
@@ -49,9 +49,9 @@ export const useAirtableCMS = ({baseID, tableName, viewName = "Grid view", keyFi
               setCMSObjects(mergedObject);
             }
           }
-        }
+        },
       );
-  }, []);
+  }, [cmsBase, cmsObjects, fieldMapping, keyField, lastUpdated, setCMSObjects, tableName, viewName]);
 
   if (asList) {
     const objectList = Object.values(cmsObjects);
@@ -62,6 +62,6 @@ export const useAirtableCMS = ({baseID, tableName, viewName = "Grid view", keyFi
   }
 
   return cmsObjects;
-}
+};
 
 export default useAirtableCMS;

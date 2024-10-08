@@ -1,10 +1,7 @@
-import React from 'react';
-
-import ScrollToTop from './utils/ScrollToTop';
-import IntroSection from './home/IntroSection.jsx';
-import TaskForceNames from './TaskForceNames.jsx';
-import CompactSection from './home/CompactSection.jsx';
-
+import ScrollToTop from "./utils/ScrollToTop";
+import IntroSection from "./home/IntroSection.jsx";
+import TaskForceNames from "./TaskForceNames.jsx";
+import CompactSection from "./home/CompactSection.jsx";
 
 const OriginalCompact = () => {
   return (
@@ -16,6 +13,6 @@ const OriginalCompact = () => {
       </ScrollToTop>
     </main>
   );
-}
+};
 
 export default OriginalCompact;

@@ -7,7 +7,7 @@ const getStorageValue = (key, defaultValue) => {
   const saved = localStorage.getItem(key);
   const initial = JSON.parse(saved);
   return initial || defaultValue;
-}
+};
 
 export const useLocalStorage = (key, defaultValue) => {
   const lastUpdated = JSON.parse(localStorage.getItem(`${key}-lastUpdated`)) || 0;

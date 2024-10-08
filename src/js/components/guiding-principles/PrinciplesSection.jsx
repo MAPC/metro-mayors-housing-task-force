@@ -1,5 +1,3 @@
-import React from "react";
-
 import Principle from "./Principle";
 import ImagePrinciple from "./ImagePrinciple";
 import { useAirtableCMS } from "../../hooks/useAirtableCMS";
@@ -25,11 +23,7 @@ const PrinciplesSection = () => {
           return (
             <li key={principle.title}>
               <div className="container">
-                {principle.image ? (
-                  <ImagePrinciple number={i + 1} principle={principle} />
-                ) : (
-                  <Principle number={i + 1} principle={principle} />
-                )}
+                {principle.image ? <ImagePrinciple number={i + 1} principle={principle} /> : <Principle number={i + 1} principle={principle} />}
               </div>
             </li>
           );

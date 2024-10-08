@@ -1,18 +1,12 @@
-import React from 'react';
-
-const Principle = (props) => {
-
-  const { title, content } = props.principle;
-
+const Principle = ({ principle: { title, content }, number }) => {
   return (
     <div className="component Principle">
-      <h3>{props.number}. {title}</h3>
-      <p>
-        {content}
-      </p>
+      <h3>
+        {number}. {title}
+      </h3>
+      <p>{content}</p>
     </div>
   );
-
-}
+};
 
 export default Principle;

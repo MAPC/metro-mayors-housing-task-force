@@ -1,8 +1,6 @@
-import React from "react";
-
 import { getMuniProfileURL } from "../../utils";
 
-const MemberMuni = ({municipalityName, color}) => {
+const MemberMuni = ({ municipalityName, color }) => {
   return (
     <div className="component Member">
       <a href={getMuniProfileURL(municipalityName)}>
@@ -12,6 +10,6 @@ const MemberMuni = ({municipalityName, color}) => {
       </a>
     </div>
   );
-}
+};
 
 export default MemberMuni;

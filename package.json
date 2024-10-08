@@ -8,6 +8,7 @@
     "staging": "webpack && rsync -r public/* metro-mayors-housing-task-force@prep.mapc.org:/var/www/metro-mayors-housing-task-force",
     "production": "NODE_ENV=production webpack && rsync -r public/* metro-mayors-housing-task-force@live.mapc.org:/var/www/metro-mayors-housing-task-force"
   },
+  "type": "module",
   "devDependencies": {
     "@mapc/eslint-config": "^1.0.2",
     "babel-core": "^6.26.3",

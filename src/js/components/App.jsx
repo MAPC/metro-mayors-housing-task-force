@@ -1,19 +1,13 @@
-import React from 'react';
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import BestPractices from './BestPractices';
-import Header from './Header';
-import Footer from './Footer';
-import Home from './Home';
-import OriginalCompact from './OriginalCompact';
-import Story from './Story';
-import GuidingPrinciples from './GuidingPrinciples';
-import GoogleAnalytics from './utils/GoogleAnalytics';
-
+import BestPractices from "./BestPractices";
+import Header from "./Header";
+import Footer from "./Footer";
+import Home from "./Home";
+import OriginalCompact from "./OriginalCompact";
+import Story from "./Story";
+import GuidingPrinciples from "./GuidingPrinciples";
+import GoogleAnalytics from "./utils/GoogleAnalytics";
 
 const App = () => {
   return (
@@ -32,6 +26,6 @@ const App = () => {
       </div>
     </Router>
   );
-}
+};
 
 export default App;
