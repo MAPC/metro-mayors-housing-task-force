@@ -2,7 +2,7 @@ import React from 'react';
 
 import ScrollToTop from './utils/ScrollToTop';
 import IntroSection from './home/IntroSection.jsx';
-import TaskForceSection from './home/TaskForceSection.jsx';
+import TaskForceMunis from './home/TaskForceMunis.jsx';
 import CompactSection from './home/CompactSection.jsx';
 import About from './home/About';
 
@@ -13,7 +13,7 @@ const Home = () => {
     <main className="component Home">
       <ScrollToTop>
         <IntroSection />
-        <TaskForceSection />
+        <TaskForceMunis />
         <About />
       </ScrollToTop>
     </main>
