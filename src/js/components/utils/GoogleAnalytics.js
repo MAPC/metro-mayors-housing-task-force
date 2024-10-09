@@ -1,12 +1,11 @@
-import React, { useEffect } from 'react'
-import PropTypes from 'prop-types'
-import ReactGA from 'react-ga'
-import { Route, useLocation } from 'react-router-dom'
+import { useEffect } from "react";
+import ReactGA from "react-ga";
+import { useLocation } from "react-router-dom";
 
-import env from '../../constants';
+import env from "../../constants";
 
 if (env.REACT_APP_GA_TRACKING_ID) {
-  ReactGA.initialize(env.REACT_APP_GA_TRACKING_ID)
+  ReactGA.initialize(env.REACT_APP_GA_TRACKING_ID);
 }
 
 const GoogleAnalytics = () => {
@@ -17,10 +16,10 @@ const GoogleAnalytics = () => {
     const { location } = window;
     ReactGA.set({
       page,
-      location: `${location.origin}${page}`
-    })
-    ReactGA.pageview(page)
-  }, [routerLocation])
-}
+      location: `${location.origin}${page}`,
+    });
+    ReactGA.pageview(page);
+  }, [routerLocation]);
+};
 
 export default GoogleAnalytics;

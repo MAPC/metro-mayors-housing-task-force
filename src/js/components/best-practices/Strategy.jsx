@@ -1,18 +1,9 @@
-import React from 'react';
-
-
-const Strategy = (props) => {
+const Strategy = ({ selected, onClick, title }) => {
   return (
-    <button
-      className={`component Strategy ${props.selected ? 'selected' : ''}`}
-      onClick={() => props.onClick()}
-    >
-      {props.title}
+    <button className={`component Strategy ${selected ? "selected" : ""}`} onClick={() => onClick()}>
+      {title}
     </button>
   );
-}
-
-Strategy.propTypes = {
 };
 
 export default Strategy;

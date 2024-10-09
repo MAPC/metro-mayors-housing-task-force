@@ -1,8 +1,4 @@
-import React from 'react';
-
-
 const Footer = () => {
-
   return (
     <footer className="component Footer">
       <div className="container">
@@ -17,14 +13,10 @@ const Footer = () => {
             </a>
           </li>
           <li>
-            <a href="tel:617-933-0700">
-              617-933-0700
-            </a>
+            <a href="tel:617-933-0700">617-933-0700</a>
           </li>
           <li>
-            <a href="mailto:housingtaskforce@mapc.org">
-              housingtaskforce@mapc.org
-            </a>
+            <a href="mailto:housingtaskforce@mapc.org">housingtaskforce@mapc.org</a>
           </li>
         </ul>
 
@@ -53,6 +45,6 @@ const Footer = () => {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

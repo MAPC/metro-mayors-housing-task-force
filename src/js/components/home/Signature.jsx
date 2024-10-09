@@ -1,20 +1,11 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-
-const Signature = (props) => {
+const Signature = ({ title, name, municipalityName }) => {
   return (
     <img
       className="component Signature"
-      alt={`Signature of ${props.title} ${props.name} from ${props.municipalityName}`}
-      src={`/assets/images/${props.municipalityName.toLowerCase()}-signature.svg`}
+      alt={`Signature of ${title} ${name} from ${municipalityName}`}
+      src={`/assets/images/${municipalityName.toLowerCase()}-signature.svg`}
     />
   );
-}
-
-Signature.propTypes = {
-  title: PropTypes.string.isRequired,
-  name: PropTypes.string.isRequired,
-  municipalityName: PropTypes.string.isRequired,
 };
 
 export default Signature;
