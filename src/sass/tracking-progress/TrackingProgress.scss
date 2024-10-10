@@ -1,0 +1,8 @@
+.component.TrackingProgress {
+
+    h2 { margin: .75em auto 1.2em; }
+    .container { padding: 0 2em; }
+    .presentation-slides { display: flex; justify-content: center; margin: 1em;
+        &iframe { border: 1px solid #dedede; padding: 1em 0.5em;}
+    }
+  }
