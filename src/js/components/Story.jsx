@@ -1,98 +1,87 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 
 import Header from './Header';
 import Slide from './story/Slide.jsx';
 import slides from '~/_data/slides';
+import { useHistory } from 'react-router-dom';
 
-let lastSlide = 0;
 
-class Story extends React.Component {
+const Story = () => {
 
-  constructor() {
-    super(...arguments);
+  const history = useHistory();
+  const [currentSlide, setCurrentSlide] = useState(0);  //0 is the initial value of lastSlide
 
-    this.back = this.back.bind(this);
-    this.forward = this.forward.bind(this);
-    this.arrowControls = this.arrowControls.bind(this);
+  useEffect(() => {
+    window.addEventListener('keydown', arrowControls);
 
-    this.state = {
-      currentSlide: lastSlide,
+    return () => {
+      // cleanup code
+      window.removeEventListener('keydown', arrowControls);
     };
+  }, []);
+
+  const hasNext = () => {
+    return currentSlide < slides.length - 1;
   }
 
-  hasNext() {
-    return this.state.currentSlide < slides.length - 1;
+  const hasPrevious = () => {
+    return currentSlide > 0;
   }
 
-  hasPrevious() {
-    return this.state.currentSlide > 0;
-  }
-
-  forward() {
-    if (this.hasNext()) {
-      lastSlide = this.state.currentSlide + 1;
-      this.setState({ currentSlide: lastSlide });
+  const forward = () => {
+    if (hasNext()) {
+      setCurrentSlide(currentSlide + 1);
     }
     else {
-      this.props.history.push('/strategies');
+      history.push('/strategies');
     }
   }
 
-  back() {
-    if (this.hasPrevious()) {
-      lastSlide = this.state.currentSlide - 1;
-      this.setState({ currentSlide: lastSlide });
+  const back = () => {
+    if (hasPrevious()) {
+      setCurrentSlide(currentSlide - 1);
     }
   }
 
-  arrowControls({ keyCode }) {
+  const arrowControls = (keyCode) => {
     if (keyCode === 37) {
-      this.back();
+      back();
     }
     else if (keyCode === 39) {
-      this.forward();
+      forward();
     }
   }
 
-  componentDidMount() {
-    window.addEventListener('keydown', this.arrowControls);
-  }
-
-  componentWillUnmount() {
-    window.removeEventListener('keydown', this.arrowControls);
-  }
-
-  renderSlides() {
+  const renderSlides = () => {
     return slides.map((slide, i) => {
       return (
         <Slide
           key={`${i}-${slide.content[0].text}`}
-          active={i === this.state.currentSlide}
+          active={i === currentSlide}
           slide={slide}
         />
       );
     });
   }
 
-  render() {
-    const slide = slides[this.state.currentSlide];
+  const slide = slides[currentSlide];
 
-    return (
-      <main className="component Story">
-        <Header
-          story={true}
-          light={!slide.darkHeader}
-          color={slide.headerColor}
-          shadowed={slide.headerShadow}
-        />
+  return (
+    <main className="component Story">
+      <Header
+        story={true}
+        light={!slide.darkHeader}
+        color={slide.headerColor}
+        shadowed={slide.headerShadow}
+      />
 
-        {this.renderSlides()}
+      {renderSlides()}
 
-        <button className={`slide-control ${slide.darkHeader ? 'dark' : ''} ${!this.hasPrevious() ? 'disabled' : ''}`} onClick={() => this.back()}></button>
-        <button className={`slide-control ${slide.darkHeader ? 'dark' : ''}`} onClick={() => this.forward()}></button>
-      </main>
-    );
-  }
+      <button className={`slide-control ${slide.darkHeader ? 'dark' : ''} ${!hasPrevious ? 'disabled' : ''}`} onClick={back}></button>
+      <button className={`slide-control ${slide.darkHeader ? 'dark' : ''}`} onClick={forward}></button>
+    </main>
+  );
+  
 }
 
 export default Story;

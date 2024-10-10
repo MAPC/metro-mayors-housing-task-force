@@ -1,16 +1,11 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
-class ScrollToTop extends React.Component {
-
-  componentDidMount() {
+const ScrollToTop = ({ children }) => {
+  useEffect(() => {
     window.scrollTo(0, 0);
-  }
+  }, []);
 
-  render() {
-    return this.props.children;
-  }
-
+  return children;
 };
-
 
 export default ScrollToTop;
