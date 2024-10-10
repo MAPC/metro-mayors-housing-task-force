@@ -45,9 +45,7 @@ const Header = ({ story, light, shadowed, color }) => {
             <Link to={"/2018-compact"}>2018 Compact</Link>
           </li>
           <li>
-            <a href="/assets/documents/MetroMayors_HousingTaskforce_TrackingProgressFindings_Phase2_Memo.pdf" target="_blank">
-              Tracking Progress
-            </a>
+            <Link to={"/tracking-progress"}>Tracking Progress</Link>
           </li>
         </ul>
       </nav>
