@@ -1,3 +1,5 @@
+import useAirtableCMS from "../hooks/useAirtableCMS";
+
 const LesiglativePriorities = (props) => {
   const lesiglativePriorities = useAirtableCMS({
     baseID: "app1YqNgXXkVH04nO",

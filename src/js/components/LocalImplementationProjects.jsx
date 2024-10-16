@@ -1,3 +1,5 @@
+import useAirtableCMS from "../hooks/useAirtableCMS";
+
 const LocalImplementationProjects = (props) => {
   const lip = useAirtableCMS({
     baseID: "app1YqNgXXkVH04nO",
