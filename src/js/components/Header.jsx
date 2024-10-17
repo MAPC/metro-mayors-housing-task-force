@@ -30,22 +30,16 @@ const Header = ({ story, light, shadowed, color }) => {
       <nav>
         <ul>
           <li>
-            <Link to={"/guiding-principles"}>Principles</Link>
-          </li>
-          <li>
             <Link to={"/strategies"}>Strategies</Link>
           </li>
           <li>
-            <HashLink to="/#methods">Methods</HashLink>
-          </li>
-          <li>
-            <Link to={"/story"}>Story</Link>
-          </li>
-          <li>
-            <Link to={"/2018-compact"}>2018 Compact</Link>
-          </li>
-          <li>
             <Link to={"/tracking-progress"}>Tracking Progress</Link>
+          </li>
+          <li>
+            <Link to={"/local-implementation-projects"}>Local Implementation Projects</Link>
+          </li>
+          <li>
+            <Link to={"/legislative-priorities"}>Legislative Priorities</Link>
           </li>
         </ul>
       </nav>
