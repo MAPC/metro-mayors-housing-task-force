@@ -1,9 +1,11 @@
 import useAirtableCMS from "../hooks/useAirtableCMS";
+import Markdown from "react-markdown";
+import remarkGfm from "remark-gfm";
 
-const LesiglativePriorities = (props) => {
-  const lesiglativePriorities = useAirtableCMS({
+const LegislativePriorities = (props) => {
+  const legislativePriorities = useAirtableCMS({
     baseID: "app1YqNgXXkVH04nO",
-    tableName: "Lesiglative Priorities",
+    tableName: "Legislative Priorities",
     keyField: "name",
     fieldMapping: {
       name: "Name",
@@ -12,8 +14,8 @@ const LesiglativePriorities = (props) => {
   });
 
   return (
-    <div className="component LesiglativePriorities">
-      {lesiglativePriorities.map((record) => {
+    <div className="component LegislativePriorities">
+      {legislativePriorities.map((record) => {
         return (
           <div className="container">
             <h2>{record.name}</h2>
@@ -25,4 +27,4 @@ const LesiglativePriorities = (props) => {
   );
 };
 
-export default LesiglativePriorities;
+export default LegislativePriorities;
