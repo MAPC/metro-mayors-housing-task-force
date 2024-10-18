@@ -19,7 +19,7 @@ const LocalImplementationProjects = () => {
         return (
           <div key={project.name} className="container">
             <h2>{project.name}</h2>
-            <Markdown remarkPlugins={[remarkGfm]}>{project.desc}</Markdown>
+            <Markdown remarkPlugins={[remarkGfm]}>{project.description}</Markdown>
           </div>
         );
       })}
