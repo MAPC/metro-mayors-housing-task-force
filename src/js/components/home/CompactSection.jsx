@@ -89,7 +89,7 @@ const CompactSection = () => {
             </p>
           </div>
 
-          <Link className="box-link" to={"/story"}>
+          <Link key="/story" className="box-link" to={"/story"}>
             <img src="/assets/images/home-housing.jpg" alt="" />
 
             <div className="box-content">
@@ -110,10 +110,12 @@ const CompactSection = () => {
             leaders of our communities, we believe current residents must have housing options they can afford in the communities where they live, and that
             newcomers looking to live and work in the region should be able to make a home here. Toward these ends, we pledge to work together – and in
             partnership with the Commonwealth – to increase housing opportunity in Metro Boston in accordance with{" "}
-            <Link to={"/guiding-principles"}>these principles.</Link>
+            <Link key="/guiding-principles" to={"/guiding-principles"}>
+              these principles.
+            </Link>
           </p>
 
-          <Link className="box-link" to={"/strategies"}>
+          <Link key="/strategies" className="box-link" to={"/strategies"}>
             <img src="/assets/images/home-best-practices.jpg" alt="" />
 
             <div className="box-content">
