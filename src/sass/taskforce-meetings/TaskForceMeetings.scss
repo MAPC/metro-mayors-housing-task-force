@@ -1,0 +1,53 @@
+/* Global styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+/* Table styles */
+.meetings-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.meetings-table th, .meetings-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+    text-align: left;
+}
+
+/* Header styles */
+.meetings-table th {
+    background-color: #4CAF50;
+    color: white;
+}
+
+/* Row styles */
+.meetings-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.meetings-table tr:hover {
+    background-color: #ddd;
+}
+
+/* Attachment styles */
+.attachment {
+    margin-bottom: 8px;
+}
+
+.thumbnail {
+    max-width: 100px;
+    margin-left: 10px;
+    vertical-align: middle; /* Aligns thumbnail vertically with text */
+}
+
+.component.TaskForceMeetings {
+    margin: .75em auto 1.2em;
+}
+
+.meetings-table-header {
+    border: 1px solid #ddd;
+    padding: "8px";
+}

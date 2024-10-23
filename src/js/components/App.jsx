@@ -11,6 +11,7 @@ import GoogleAnalytics from "./utils/GoogleAnalytics";
 import TrackingProgress from "./TrackingProgress";
 import LocalImplementationProjects from "./LocalImplementationProjects";
 import LesiglativePriorities from "./LegislativePriorities";
+import TaskForceMeetings from "./TaskForceMeetings";
 
 const App = () => {
   return (
@@ -25,6 +26,7 @@ const App = () => {
           <Route exact path="/guiding-principles" element={<GuidingPrinciples />} />
           <Route exact path="/local-implementation-projects" element={<LocalImplementationProjects />} />
           <Route exact path="/legislative-priorities" element={<LesiglativePriorities />} />
+          <Route exact path="/meetings" element={<TaskForceMeetings />} />
           <Route exact path="/strategies" element={<BestPractices />} />
           <Route path="/story" element={<Story />} />
         </Routes>
