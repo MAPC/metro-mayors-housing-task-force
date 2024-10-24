@@ -45,6 +45,7 @@ body {
 
 .component.TaskForceMeetings {
     margin: .75em auto 1.2em;
+    height: calc(100vh - 230px); //Calculated based on subtracting header and footer
 }
 
 .meetings-table-header, .meetings-table-data {
