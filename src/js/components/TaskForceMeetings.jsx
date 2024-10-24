@@ -68,27 +68,7 @@ const TaskForceMeetings = (props) => {
 
   return (
     <div className="component TaskForceMeetings">
-      {/* <table>
-        <thead>
-          <tr>
-            <th>Meeting Date</th>
-            <th>Summary</th>
-            <th>Attachments</th>
-          </tr>
-        </thead>
-        <tbody>
-          {taskForceMeetings.map((val, key) => {
-            return (
-              <tr key={key}>
-                <td>{val.date}</td>
-                <td>{val.summary}</td>
-                <td>{val.attachments[0].filename}</td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table> */}
-
+      <h2>Task Force Meetings History</h2>
       <table className="meetings-table">
         <thead>
           <tr>
@@ -102,17 +82,18 @@ const TaskForceMeetings = (props) => {
             const meeting = taskForceMeetings[dateKey];
             return (
               <tr key={dateKey}>
-                <td style={{ border: "1px solid #ddd", padding: "8px" }}>{meeting.date}</td>
-                <td style={{ border: "1px solid #ddd", padding: "8px" }} dangerouslySetInnerHTML={{ __html: meeting.summary }} />
-                <td style={{ border: "1px solid #ddd", padding: "8px" }}>
+                <td className="meetings-table-data">{meeting.date}</td>
+                <td className="meetings-table-data">
+                  <Markdown remarkPlugins={[remarkGfm]}>{meeting.summary}</Markdown>
+                </td>
+                <td className="meetings-table-data">
                   {meeting.attachments.map((attachment) => (
                     <div key={attachment.id}>
-                      <a href={attachment.url} target="_blank" rel="noopener noreferrer">
-                        {attachment.filename}
-                      </a>
-                      {attachment.type.startsWith("image/") && (
-                        <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} />
-                      )}
+                        <a href={attachment.url} target="_blank" rel="noopener noreferrer">
+                          {attachment.type.startsWith("image/") ?
+                           <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} /> : (attachment.filename)
+                          }
+                        </a>
                     </div>
                   ))}
                 </td>
