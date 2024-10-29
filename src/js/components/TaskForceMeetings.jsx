@@ -1,7 +1,5 @@
-import { useMemo } from "react";
 import useAirtableCMS from "../hooks/useAirtableCMS";
 import Markdown from "react-markdown";
-import { useTable } from "react-table";
 import remarkGfm from "remark-gfm";
 
 const TaskForceMeetings = (props) => {

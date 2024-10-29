@@ -1023,10 +1023,10 @@
   resolved "https://registry.yarnpkg.com/@leichtgewicht/ip-codec/-/ip-codec-2.0.5.tgz#4fc56c15c580b9adb7dc3c333a134e540b44bfb1"
   integrity sha512-Vo+PSpZG2/fmgmiNzYK9qWRh8h/CHrwD0mo1h1DzL4yzHNSfWYujGTYsWGreD000gcgmZ7K4Ys6Tx9TxtsKdDw==
 
-"@mapc/airtable-cms@^1.0.0":
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/@mapc/airtable-cms/-/airtable-cms-1.0.0.tgz#45fe54f43ff10455ba79282fea9f385074f80ad6"
-  integrity sha512-1c2FMkVvxzMxBrzTJ4E+JhZfyYov3olsSnqG8KSX1lsxnr5C2H981YVjOVTWt2iN43k5YGrnke+Sk45wjmp9aA==
+"@mapc/airtable-cms@^1.1.1":
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/@mapc/airtable-cms/-/airtable-cms-1.1.1.tgz#abb2a6083b9e09ec64c02bc2e173440b927d6ac9"
+  integrity sha512-PE9oP8pi/gMlCRlCSbfd7fALGXI5I76rniAibw9CiDfc+M9+XvRSE9oBWglk4FVYB9G5rp7sgAoLL1FUwI58Yw==
   dependencies:
     airtable "^0.12.2"
 

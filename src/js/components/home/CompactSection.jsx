@@ -1,30 +1,9 @@
 import { Link } from "react-router-dom";
+import CMSComponent from "../CMSComponent";
 
-import { useAirtableCMS } from "../../hooks/useAirtableCMS";
 import Signature from "./Signature";
 
 const CompactSection = () => {
-  const taskForce = useAirtableCMS({
-    baseID: "app1YqNgXXkVH04nO",
-    tableName: "Task Force Members",
-    keyField: "municipality",
-    fieldMapping: {
-      municipality: "Municipality",
-      title: "Title",
-      name: "Name",
-      color: "Color",
-      originalCompact: "Original Compact",
-      currentMember: "Current Member",
-    },
-    sortBy: (a, b) => a.municipality.localeCompare(b.municipality),
-  });
-
-  const renderSignatures = () => {
-    return taskForce
-      .filter((member) => member.municipality !== "Winthrop" && member.municipality !== "Watertown")
-      .map((member) => <Signature key={member.name} title={member.title} name={member.name} municipalityName={member.municipality} />);
-  };
-
   return (
     <section className="component CompactSection content-page">
       <div className="sub-section">
@@ -126,7 +105,23 @@ const CompactSection = () => {
         </div>
         <div className="container">
           <p>SIGNED,</p>
-          <div className="signatures">{renderSignatures()}</div>
+          <div className="signatures">
+            <CMSComponent
+              tableName="Task Force Members"
+              keyField="municipality"
+              fieldMapping={{
+                municipality: "Municipality",
+                title: "Title",
+                name: "Name",
+                color: "Color",
+                originalCompact: "Original Compact",
+                currentMember: "Current Member",
+              }}
+              sortBy={(a, b) => a.municipality.localeCompare(b.municipality)}
+              filterBy={(member) => member.originalCompact}
+              recordComponent={Signature}
+            />
+          </div>
         </div>
       </div>
     </section>

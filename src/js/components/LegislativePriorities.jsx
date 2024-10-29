@@ -1,28 +1,31 @@
-import useAirtableCMS from "../hooks/useAirtableCMS";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const LegislativePriorities = () => {
-  const legislativePriorities = useAirtableCMS({
-    baseID: "app1YqNgXXkVH04nO",
-    tableName: "Legislative Priorities",
-    keyField: "name",
-    fieldMapping: {
-      name: "Name",
-      content: "Content",
-    },
-  });
+import CMSComponent from "./CMSComponent";
 
+const LegislativePriority = ({ name, content }) => {
+  return (
+    <div key={name} className="container">
+      <h2>{name}</h2>
+      <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
+    </div>
+  );
+};
+
+const LegislativePriorities = () => {
   return (
     <div className="component LegislativePriorities">
-      {legislativePriorities.map((priority) => {
-        return (
-          <div key={priority.name} className="container">
-            <h2>{priority.name}</h2>
-            <Markdown remarkPlugins={[remarkGfm]}>{priority.content}</Markdown>
-          </div>
-        );
-      })}
+      <CMSComponent
+        tableName="Legislative Priorities"
+        keyField="name"
+        fieldMapping={{
+          name: "Name",
+          order: "Order",
+          content: "Content",
+        }}
+        sortBy={(a, b) => a.order - b.order}
+        recordComponent={LegislativePriority}
+      />
     </div>
   );
 };
