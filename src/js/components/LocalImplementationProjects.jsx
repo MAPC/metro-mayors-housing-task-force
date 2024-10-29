@@ -1,28 +1,31 @@
-import useAirtableCMS from "../hooks/useAirtableCMS";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const LocalImplementationProjects = () => {
-  const projects = useAirtableCMS({
-    baseID: "app1YqNgXXkVH04nO",
-    tableName: "Local Implementation Projects",
-    keyField: "name",
-    fieldMapping: {
-      name: "Name",
-      description: "Description",
-    },
-  });
+import CMSComponent from "./CMSComponent";
 
+const LocalImplementationProject = ({ name, description }) => {
+  return (
+    <div className="container">
+      <h2>{name}</h2>
+      <Markdown remarkPlugins={[remarkGfm]}>{description}</Markdown>
+    </div>
+  );
+};
+
+const LocalImplementationProjects = () => {
   return (
     <div className="component LocalImplementationProjects">
-      {projects.map((project) => {
-        return (
-          <div key={project.name} className="container">
-            <h2>{project.name}</h2>
-            <Markdown remarkPlugins={[remarkGfm]}>{project.description}</Markdown>
-          </div>
-        );
-      })}
+      <CMSComponent
+        tableName="Local Implementation Projects"
+        keyField="name"
+        fieldMapping={{
+          name: "Name",
+          order: "Order",
+          description: "Description",
+        }}
+        sortBy={(a, b) => a.order - b.order}
+        recordComponent={LocalImplementationProject}
+      />
     </div>
   );
 };

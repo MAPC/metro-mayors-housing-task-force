@@ -1,45 +1,63 @@
-import useAirtableCMS from "../hooks/useAirtableCMS";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const TrackingProgress = () => {
-  const trackingProgress = useAirtableCMS({
-    baseID: "app1YqNgXXkVH04nO",
-    tableName: "Tracking Progress",
-    keyField: "section",
-    fieldMapping: {
-      section: "Section",
-      content: "Content",
-    },
-  });
+import CMSComponent from "./CMSComponent";
 
+const PageSection = ({ section, content }) => {
+  return (
+    <div key={section} className="container">
+      <h2>{section}</h2>
+      <Markdown
+        components={{
+          img: (props) => {
+            if (props.src.indexOf("gallery.shinyapps.io") >= 0) {
+              return (
+                <iframe
+                  src={props.src}
+                  width="1366"
+                  height="768"
+                  title={props.title}
+                  scrolling="no"
+                  frameBorder="0"
+                  webkitallowfullscreen
+                  mozallowfullscreen
+                  allowfullscreen
+                ></iframe>
+              );
+            } else {
+              return <img {...props} />;
+            }
+          },
+        }}
+        remarkPlugins={[remarkGfm]}
+      >
+        {content}
+      </Markdown>
+    </div>
+  );
+};
+
+const TrackingProgress = () => {
   return (
     <div className="component TrackingProgress">
-      {trackingProgress.map((record) => {
-        return (
-          <div className="container">
-            <h2>{record.section}</h2>
-            <Markdown 
-            components={{
-                img: (props) => {
-                    if(props.src.indexOf("gallery.shinyapps.io") >= 0) {
-                        return <iframe src={props.src} width="1366" height="768" title={props.title} scrolling="no" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-                    } else {
-                        return <img {...props} />
-                    }
-                }
-            }}
-            remarkPlugins={[remarkGfm]}>{record.content}</Markdown>
-          </div>
-        );
-      })}
+      <CMSComponent
+        tableName="Tracking Progress"
+        keyField="section"
+        fieldMapping={{
+          section: "Section",
+          content: "Content",
+          order: "Order",
+        }}
+        sortBy={(a, b) => a.order - b.order}
+        recordComponent={PageSection}
+      />
       <div className="presentation-slides">
         <iframe
           src="https://slides.com/mapc/deck-7b8e5c/embed"
           width="576"
           height="420"
           scrolling="no"
-          frameborder="0"
+          frameBorder="0"
           webkitallowfullscreen
           mozallowfullscreen
           allowfullscreen
