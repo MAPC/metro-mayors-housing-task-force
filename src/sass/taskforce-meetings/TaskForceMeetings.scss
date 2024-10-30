@@ -9,6 +9,18 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
+
+    // & tbody {
+    //     display: block; /* Makes tbody behave like a block */
+    //     max-height: inherit; /* Set the desired height */
+    //     overflow-y: auto;
+
+    //     & tr {
+    //         display: table; /* Makes sure the rows are displayed properly */
+    //         width: 100%; /* Ensures rows stretch the full width */
+    //         table-layout: fixed; /* Ensures columns align properly */
+    //     }
+    // }
 }
 
 .meetings-table th, .meetings-table td {
@@ -46,9 +58,14 @@ body {
 .component.TaskForceMeetings {
     margin: .75em auto 1.2em;
     height: calc(100vh - 230px); //Calculated based on subtracting header and footer
+    overflow-y: scroll;
 }
 
 .meetings-table-header, .meetings-table-data {
     border: 1px solid #ddd;
     padding: 8px;
+}
+
+.meetings-table-data div {
+    margin-bottom: 1em;
 }

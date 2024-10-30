@@ -91,7 +91,14 @@ const TaskForceMeetings = (props) => {
                     <div key={attachment.id}>
                         <a href={attachment.url} target="_blank" rel="noopener noreferrer">
                           {attachment.type.startsWith("image/") ?
-                           <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} /> : (attachment.filename)
+                            <div>
+                              <h4>Images:</h4>
+                              <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} />
+                            </div>
+                            : <div>
+                              <h4>Files:</h4>
+                              {attachment.filename}
+                            </div> 
                           }
                         </a>
                     </div>
