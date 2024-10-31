@@ -3,14 +3,16 @@ import remarkGfm from "remark-gfm";
 
 import CMSComponent from "./CMSComponent";
 
+const isShinyApp = (src) => src.startsWith("https://staging.shiny.mapc.org") || src.startsWith("https://shiny.mapc.org");
+
 const PageSection = ({ section, content }) => {
   return (
-    <div key={section} className="container">
+    <div className="container">
       <h2>{section}</h2>
       <Markdown
         components={{
           img: (props) => {
-            if (props.src.indexOf("gallery.shinyapps.io") >= 0) {
+            if (isShinyApp(props.src)) {
               return (
                 <iframe
                   src={props.src}
@@ -66,4 +68,5 @@ const TrackingProgress = () => {
     </div>
   );
 };
+
 export default TrackingProgress;
