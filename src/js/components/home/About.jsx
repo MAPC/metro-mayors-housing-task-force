@@ -12,7 +12,6 @@ const AboutSection = ({ children, columned }) => (
 
 const About = () => {
   const { data: taskForce } = useAirtableCMS({
-    baseID: "app1YqNgXXkVH04nO",
     tableName: "Task Force Members",
     keyField: "municipality",
     fieldMapping: {

@@ -1,10 +1,9 @@
-import useAirtableCMS from "../hooks/useAirtableCMS";
+import { useAirtableCMS } from "@mapc/airtable-cms";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
-const TaskForceMeetings = (props) => {
-  const taskForceMeetings = useAirtableCMS({
-    baseID: "app1YqNgXXkVH04nO",
+const TaskForceMeetings = () => {
+  const { data: taskForceMeetings } = useAirtableCMS({
     tableName: "Task Force Meetings",
     keyField: "date",
     fieldMapping: {
@@ -37,18 +36,16 @@ const TaskForceMeetings = (props) => {
                 <td className="meetings-table-data">
                   {meeting.attachments.map((attachment) => (
                     <div key={attachment.id}>
-                        <a href={attachment.url} target="_blank" rel="noopener noreferrer">
-                          {attachment.type.startsWith("image/") ?
-                            <div>
-                              <h4>Images:</h4>
-                              <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} />
-                            </div>
-                            : <div>
-                              <h4>Files:</h4>
-                              {attachment.filename}
-                            </div> 
-                          }
-                        </a>
+                      <a href={attachment.url} target="_blank" rel="noopener noreferrer">
+                        <div>
+                          <h4>{attachment.type.startsWith("image/") ? "Images: " : "Files:"}</h4>
+                          {attachment.type.startsWith("image/") ? (
+                            <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} />
+                          ) : (
+                            <p>{attachment.filename}</p>
+                          )}
+                        </div>
+                      </a>
                     </div>
                   ))}
                 </td>
