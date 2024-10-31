@@ -16,56 +16,6 @@ const TaskForceMeetings = (props) => {
     },
   });
 
-  console.log(taskForceMeetings);
-
-  // const columns = useMemo(
-  //   () => [
-  //     { Header: "Meeting Date", accessor: "date" },
-  //     { Header: "Summary", accessor: "summary" },
-  //     { Header: "Attachments", accessor: "attachments" },
-  //   ],
-  //   [],
-  // );
-
-  // const data = useMemo(
-  //   () => [
-  //     { id: 1, name: 'John Doe', age: 28 },
-  //     { id: 2, name: 'Jane Smith', age: 34 },
-  //     { id: 3, name: 'Alice Johnson', age: 22 },
-  //   ],
-  //   []
-  // );
-
-  //const { getTableProps, getTableBodyProps, headerGroups, rows, prepareRow } = useTable({ columns, data });
-
-  // return (
-  //   <div className="table-container">
-  //     <table {...getTableProps()}>
-  //       <thead>
-  //         {headerGroups.map((headerGroup) => (
-  //           <tr {...headerGroup.getHeaderGroupProps()}>
-  //             {headerGroup.headers.map((column) => (
-  //               <th {...column.getHeaderProps()} key={column.id}>{column.render("Header")}</th>
-  //             ))}
-  //           </tr>
-  //         ))}
-  //       </thead>
-  //       <tbody {...getTableBodyProps()}>
-  //         {rows.map((row) => {
-  //           prepareRow(row);
-  //           return (
-  //             <tr {...row.getRowProps()} key={row.id}>
-  //               {row.cells.map((cell) => (
-  //                 <td {...cell.getCellProps()} key={cell.column.id}>{cell.render("Cell")}</td>
-  //               ))}
-  //             </tr>
-  //           );
-  //         })}
-  //       </tbody>
-  //     </table>
-  //   </div>
-  // );
-
   return (
     <div className="component TaskForceMeetings">
       <h2>Task Force Meetings History</h2>
