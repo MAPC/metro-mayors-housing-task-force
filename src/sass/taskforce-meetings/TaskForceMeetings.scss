@@ -9,18 +9,6 @@ body {
     width: 100%;
     border-collapse: collapse;
     margin-top: 20px;
-
-    // & tbody {
-    //     display: block; /* Makes tbody behave like a block */
-    //     max-height: inherit; /* Set the desired height */
-    //     overflow-y: auto;
-
-    //     & tr {
-    //         display: table; /* Makes sure the rows are displayed properly */
-    //         width: 100%; /* Ensures rows stretch the full width */
-    //         table-layout: fixed; /* Ensures columns align properly */
-    //     }
-    // }
 }
 
 .meetings-table th, .meetings-table td {
