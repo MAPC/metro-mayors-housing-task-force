@@ -1,9 +1,9 @@
-const Signature = ({ title, name, municipalityName }) => {
+const Signature = ({ title, name, municipality }) => {
   return (
     <img
       className="component Signature"
-      alt={`Signature of ${title} ${name} from ${municipalityName}`}
-      src={`/assets/images/${municipalityName.toLowerCase()}-signature.svg`}
+      alt={`Signature of ${title} ${name} from ${municipality}`}
+      src={`/assets/images/${municipality.toLowerCase()}-signature.svg`}
     />
   );
 };

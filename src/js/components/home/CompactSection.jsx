@@ -1,30 +1,9 @@
 import { Link } from "react-router-dom";
+import CMSComponent from "../CMSComponent";
 
-import { useAirtableCMS } from "../../hooks/useAirtableCMS";
 import Signature from "./Signature";
 
 const CompactSection = () => {
-  const taskForce = useAirtableCMS({
-    baseID: "app1YqNgXXkVH04nO",
-    tableName: "Task Force Members",
-    keyField: "municipality",
-    fieldMapping: {
-      municipality: "Municipality",
-      title: "Title",
-      name: "Name",
-      color: "Color",
-      originalCompact: "Original Compact",
-      currentMember: "Current Member",
-    },
-    sortBy: (a, b) => a.municipality.localeCompare(b.municipality),
-  });
-
-  const renderSignatures = () => {
-    return taskForce
-      .filter((member) => member.municipality !== "Winthrop" && member.municipality !== "Watertown")
-      .map((member) => <Signature key={member.name} title={member.title} name={member.name} municipalityName={member.municipality} />);
-  };
-
   return (
     <section className="component CompactSection content-page">
       <div className="sub-section">
@@ -89,7 +68,7 @@ const CompactSection = () => {
             </p>
           </div>
 
-          <Link className="box-link" to={"/story"}>
+          <Link key="/story" className="box-link" to={"/story"}>
             <img src="/assets/images/home-housing.jpg" alt="" />
 
             <div className="box-content">
@@ -110,10 +89,12 @@ const CompactSection = () => {
             leaders of our communities, we believe current residents must have housing options they can afford in the communities where they live, and that
             newcomers looking to live and work in the region should be able to make a home here. Toward these ends, we pledge to work together – and in
             partnership with the Commonwealth – to increase housing opportunity in Metro Boston in accordance with{" "}
-            <Link to={"/guiding-principles"}>these principles.</Link>
+            <Link key="/guiding-principles" to={"/guiding-principles"}>
+              these principles.
+            </Link>
           </p>
 
-          <Link className="box-link" to={"/strategies"}>
+          <Link key="/strategies" className="box-link" to={"/strategies"}>
             <img src="/assets/images/home-best-practices.jpg" alt="" />
 
             <div className="box-content">
@@ -124,7 +105,23 @@ const CompactSection = () => {
         </div>
         <div className="container">
           <p>SIGNED,</p>
-          <div className="signatures">{renderSignatures()}</div>
+          <div className="signatures">
+            <CMSComponent
+              tableName="Task Force Members"
+              keyField="municipality"
+              fieldMapping={{
+                municipality: "Municipality",
+                title: "Title",
+                name: "Name",
+                color: "Color",
+                originalCompact: "Original Compact",
+                currentMember: "Current Member",
+              }}
+              sortBy={(a, b) => a.municipality.localeCompare(b.municipality)}
+              filterBy={(member) => member.originalCompact}
+              recordComponent={Signature}
+            />
+          </div>
         </div>
       </div>
     </section>

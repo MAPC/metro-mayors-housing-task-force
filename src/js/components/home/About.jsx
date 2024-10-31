@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-import { useAirtableCMS } from "../../hooks/useAirtableCMS";
+import { useAirtableCMS } from "@mapc/airtable-cms";
 import { getMuniProfileURL } from "../../utils";
 import ScrollToTop from "../utils/ScrollToTop";
 
@@ -11,7 +11,7 @@ const AboutSection = ({ children, columned }) => (
 );
 
 const About = () => {
-  const taskForce = useAirtableCMS({
+  const { data: taskForce } = useAirtableCMS({
     baseID: "app1YqNgXXkVH04nO",
     tableName: "Task Force Members",
     keyField: "municipality",
@@ -25,12 +25,12 @@ const About = () => {
     },
     sortBy: (a, b) => a.municipality.localeCompare(b.municipality),
   });
+
   const renderProfileLinks = () => {
-    const colors = ["orange", "blue", "skyblue", "green", "yellow"];
-    const links = taskForce.map(({ municipality }, i) => (
+    const links = taskForce.map(({ municipality, color }, i) => (
       <span key={municipality} className="profile-link">
-        <a className={colors[i % colors.length]} href={getMuniProfileURL(municipality)}>
-          {" "}
+        {" "}
+        <a className={color} href={getMuniProfileURL(municipality)}>
           {municipality}
         </a>
         {i < taskForce.length - 1 ? "," : ""}

@@ -1,11 +1,11 @@
 import { getMuniProfileURL } from "../../utils";
 
-const MemberMuni = ({ municipalityName, color }) => {
+const MemberMuni = ({ municipality, color }) => {
   return (
     <div className="component Member">
-      <a href={getMuniProfileURL(municipalityName)}>
+      <a href={getMuniProfileURL(municipality)}>
         <div className={`image-container ${color}`}>
-          <h4>{municipalityName}</h4>
+          <h4>{municipality}</h4>
         </div>
       </a>
     </div>
