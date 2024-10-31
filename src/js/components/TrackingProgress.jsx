@@ -12,7 +12,7 @@ const PageSection = ({ section, content }) => {
       <Markdown
         components={{
           img: (props) => {
-            if (props.src.indexOf("gallery.shinyapps.io") >= 0) {
+            if (isShinyApp(props.src)) {
               return (
                 <iframe
                   src={props.src}
