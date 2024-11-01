@@ -57,3 +57,8 @@ body {
 .meetings-table-data div {
     margin-bottom: 1em;
 }
+
+.meetings-attachment-container {
+    display: flex;
+    flex-wrap: wrap;
+}
