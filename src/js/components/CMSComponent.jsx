@@ -60,9 +60,14 @@ const CMSComponent = ({
 
   const renderedComponents = [];
 
-  if (!done && data.length === 0) {
-    // If we're still fetching updates and have nothing in the cache to display, show loadingComponent
-    renderedComponents.push(React.createElement(loadingComponent));
+  if (!done) {
+    if (data.length === 0) {
+      // If we're still fetching updates and have nothing in the cache to display, show loadingComponent
+      renderedComponents.push(React.createElement(loadingComponent));
+    } else if (data.length > 0) {
+      // If we're still fetching updates but have cached data, show those records
+      renderedComponents.push(...data.map((record) => React.createElement(recordComponent, { key: record[keyField], ...record })));
+    }
   } else if (done) {
     if (data.length === 0) {
       if (error) {
@@ -78,6 +83,7 @@ const CMSComponent = ({
       renderedComponents.push(...data.map((record) => React.createElement(recordComponent, { key: record[keyField], ...record })));
     }
   }
+
   return renderedComponents;
 };
 
