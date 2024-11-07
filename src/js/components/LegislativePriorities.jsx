@@ -2,12 +2,19 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import CMSComponent from "./CMSComponent";
+import Accordion from "react-bootstrap/Accordion";
 
 const LegislativePriority = ({ name, content }) => {
   return (
     <div key={name} className="container">
-      <h2>{name}</h2>
-      <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
+      <Accordion defaultActiveKey="0">
+        <Accordion.Item eventKey="0">
+          <Accordion.Header>{name}</Accordion.Header>
+          <Accordion.Body>
+            <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
+          </Accordion.Body>
+        </Accordion.Item>
+      </Accordion>
     </div>
   );
 };
