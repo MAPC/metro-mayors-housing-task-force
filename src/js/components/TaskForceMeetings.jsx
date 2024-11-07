@@ -34,18 +34,12 @@ const TaskForceMeetings = () => {
                   <Markdown remarkPlugins={[remarkGfm]}>{meeting.summary}</Markdown>
                 </td>
                 <td className="meetings-table-data">
-                <h6>{meeting.attachments[0].type.startsWith("image/") ? "Images: " : "Files:"}</h6>
                   {meeting.attachments.length > 0 && (
                     <div className="meetings-attachment-container">
-                      
                       {meeting.attachments.map((attachment) => (
                         <div key={attachment.id}>
                           <a href={attachment.url} target="_blank" rel="noopener noreferrer">
-                            {attachment.type.startsWith("image/") ? (
-                              <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} />
-                            ) : (
-                              <p>{attachment.filename}</p>
-                            )}
+                            <p>{attachment.filename}</p>
                           </a>
                         </div>
                       ))}
