@@ -2,9 +2,13 @@
   h2 {
     font-family: Arial, Helvetica, sans-serif;
   }
-  
+
   .container {
     padding: 0 2em;
     margin: 1em auto;
   }
+}
+
+.accordion-item:first-of-type > .accordion-header .accordion-button {
+    font-size: 0.75em;
 }
