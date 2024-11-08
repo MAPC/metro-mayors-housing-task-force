@@ -12,3 +12,29 @@
 .accordion-item:first-of-type > .accordion-header .accordion-button {
     font-size: 0.75em;
 }
+
+summary {
+  cursor: pointer;
+  list-style-type: none; /* Remove default bullets */
+  position: relative;
+  padding-left: 20px;
+  font-weight: bold;
+  font-style: italic;
+  margin-bottom: 0.5em;
+}
+
+summary::before {
+  content: '▶'; /* Right-pointing arrow */
+  position: absolute;
+  left: 0;
+  transition: transform 0.2s ease;
+  font-style: normal;
+}
+
+details {
+  margin-bottom: 0.5em;
+}
+
+details[open] summary::before {
+  transform: rotate(90deg); /* Rotate the arrow when open */
+}

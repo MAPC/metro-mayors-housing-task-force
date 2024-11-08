@@ -3,18 +3,15 @@ import remarkGfm from "remark-gfm";
 
 import CMSComponent from "./CMSComponent";
 import Accordion from "react-bootstrap/Accordion";
+import rehypeRaw from "rehype-raw";
 
 const LegislativePriority = ({ name, content }) => {
   return (
     <div key={name} className="container">
-      <Accordion defaultActiveKey="0">
-        <Accordion.Item eventKey="0">
-          <Accordion.Header>{name}</Accordion.Header>
-          <Accordion.Body>
-            <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
-          </Accordion.Body>
-        </Accordion.Item>
-      </Accordion>
+      <h2>{name}</h2>
+      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
+        {content}
+      </Markdown>
     </div>
   );
 };
