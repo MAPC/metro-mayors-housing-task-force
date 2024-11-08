@@ -2,4 +2,146 @@
 
     h2 { margin: .75em auto 1.2em; }
     .container { padding: 0 2em; }
+
+    .text-primary {
+        color: #002D40 !important;
+    }
+
+    .card {
+        border: none;
+        transition: transform 0.2s ease-in-out;
+        cursor: pointer;
+        
+        &:hover {
+            transform: translateY(-5px);
+        }
+        
+        .card-body {
+            padding: 1.5rem;
+            box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+            border-radius: 10px;
+            
+            h2 {
+                margin: 0 0 1rem 0;
+                font-size: 1.5rem;
+            }
+        }
+
+        .preview-text {
+            overflow: hidden;
+            
+            p {
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    // Modal styles
+    .local-implementation-modal {
+        .modal-content {
+            .modal-header {
+                border-bottom: none;
+                padding: 1.5rem 1.5rem 0.5rem;
+                .modal-title {
+                    font-size: 2rem;
+                    color: #002D40 !important;
+                }
+                
+            }
+
+            .modal-body {
+                padding: 1.5rem;
+            }
+
+            .modal-image-container {
+                width: 100%;
+                margin: 1rem 0;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .modal-markdown-img {
+                    max-width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                    border-radius: 8px;
+                }
+            }
+        }
+
+        .modal-dialog.modal-90w {
+            max-width: 90%;
+            width: 800px;  // Set a max-width for larger screens
+        }
+    }
+
+    @media (max-width: 768px) {
+        .container {
+            padding: 0 1em;
+        }
+
+        .card .card-body {
+            padding: 1rem;
+
+            h2 {
+                font-size: 1.25rem;
+            }
+        }
+
+        .local-implementation-modal {
+            .modal-dialog.modal-90w {
+                max-width: 95%;
+                margin: 0.5rem;
+            }
+
+            .modal-content {
+                .modal-header {
+                    .modal-title {
+                        font-size: 1.5rem;
+                    }
+                }
+            }
+        }
+    }
+    .intro-section {
+        margin-bottom: 3rem;
+
+        .intro-content {
+        
+            .intro-image-container {
+                margin: 2rem auto;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+
+                .intro-image {
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
+                    border-radius: 8px;
+                    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+                }
+            }
+        }
+    }
+
+    // Responsive styles for intro section
+    @media (max-width: 768px) {
+        .intro-section {
+            padding: 0 1rem;
+            
+            h2 {
+                font-size: 1.75rem;
+            }
+
+            .intro-content {
+                font-size: 1rem;
+                
+                .intro-image-container {
+                    margin: 1.5rem auto;
+                }
+            }
+        }
+    }
 }
