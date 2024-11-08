@@ -1,5 +1,6 @@
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Figure from "react-bootstrap/Figure";
 
 import CMSComponent from "./CMSComponent";
 
@@ -21,13 +22,30 @@ const PageSection = ({ section, content }) => {
                   title={props.title}
                   scrolling="no"
                   frameBorder="0"
-                  webkitallowfullscreen
-                  mozallowfullscreen
-                  allowfullscreen
+                  webkitallowfullscreen="true"
+                  mozallowfullscreen="true"
+                  allowFullScreen
                 ></iframe>
               );
             } else {
-              return <img {...props} />;
+              // FIXME: Hacking image height into the alt-text for now
+              const [alt, height] = props.alt.split("|");
+
+              return (
+                <Figure
+                  style={{
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "center",
+                    justifyContent: "center",
+                    height: "fit-content",
+                    margin: "3rem 0rem",
+                  }}
+                >
+                  <Figure.Image style={{ height: `${height}px` }} height={height} alt={alt} src={props.src} />
+                  <Figure.Caption style={{ textAlign: "center" }}>{alt}</Figure.Caption>
+                </Figure>
+              );
             }
           },
         }}
@@ -60,9 +78,9 @@ const TrackingProgress = () => {
           height="420"
           scrolling="no"
           frameBorder="0"
-          webkitallowfullscreen
-          mozallowfullscreen
-          allowfullscreen
+          webkitallowfullscreen="true"
+          mozallowfullscreen="true"
+          allowFullScreen
         ></iframe>
       </div>
     </div>
