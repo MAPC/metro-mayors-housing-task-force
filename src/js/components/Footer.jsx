@@ -1,6 +1,36 @@
 const Footer = () => {
   return (
     <footer className="component Footer">
+      <style>
+        {`
+          .sitemap-columns {
+            display: flex;
+            justify-content: flex-start;
+          }
+
+          .sitemap-column {
+            display: flex;
+            flex-direction: column;
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            width: 50%; /* Adjust width as needed */
+          }
+
+          .sitemap-column li {
+            margin-bottom: 0.5rem;
+          }
+
+          .sitemap-column a {
+            color: #007bff;
+            text-decoration: none;
+          }
+
+          .sitemap-column a:hover {
+            text-decoration: underline;
+          }
+        `}
+      </style>
       <div className="container">
         <a href="https://mapc.org">
           <img className="mapc-logo" src="/assets/images/mapc-logo.svg" alt="MAPC Logo" />
@@ -41,6 +71,21 @@ const Footer = () => {
               </a>
             </li>
           </ul>
+        </div>
+        
+        <div className="sitemap">
+          <h6>Site Map</h6>
+          <div className="sitemap-columns">
+            <ul className="sitemap-column">
+              <li><a href="/">Home</a></li>
+              <li><a href="/strategies">Strategies</a></li>
+              <li><a href="/tracking-progress">Tracking Progress</a></li>
+            </ul>
+            <ul className="sitemap-column">
+              <li><a href="/local-implementation-projects">Local Implementation Projects</a></li>
+              <li><a href="/legislative-priorities">Legislative Priorities</a></li>
+            </ul>
+          </div>
         </div>
       </div>
     </footer>

@@ -21,6 +21,10 @@
       height: 0;
       margin-top: -2px;
     }
+
+    .blank-grid-cell{
+      display: none;
+    }
   }
 
   .container {
@@ -107,4 +111,18 @@
 
     @include media($_break) { margin: 40px 0 15px; }
   }
+
+  .sitemap{
+    margin-left: 10rem;
+
+    @include media($_break) { 
+      margin-left: 0; 
+
+      ul.sitemap-column li{
+        padding: 3px 15px;
+        margin-bottom: 0;
+      }
+    }
+  }
+  
 }
