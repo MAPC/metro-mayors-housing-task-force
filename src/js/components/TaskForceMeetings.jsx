@@ -21,7 +21,6 @@ const TaskForceMeetings = () => {
           <tr>
             <th className="meetings-table-header">Date</th>
             <th className="meetings-table-header">Summary</th>
-            <th className="meetings-table-header">Attachments</th>
           </tr>
         </thead>
         <tbody>
@@ -32,19 +31,6 @@ const TaskForceMeetings = () => {
                 <td className="meetings-table-data">{meeting.date}</td>
                 <td className="meetings-table-data">
                   <Markdown remarkPlugins={[remarkGfm]}>{meeting.summary}</Markdown>
-                </td>
-                <td className="meetings-table-data">
-                  {meeting.attachments.length > 0 && (
-                    <div className="meetings-attachment-container">
-                      {meeting.attachments.map((attachment) => (
-                        <div key={attachment.id}>
-                          <a href={attachment.url} target="_blank" rel="noopener noreferrer">
-                            <p>{attachment.filename}</p>
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </td>
               </tr>
             );
