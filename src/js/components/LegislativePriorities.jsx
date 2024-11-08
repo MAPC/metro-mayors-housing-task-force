@@ -2,12 +2,16 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 import CMSComponent from "./CMSComponent";
+import Accordion from "react-bootstrap/Accordion";
+import rehypeRaw from "rehype-raw";
 
 const LegislativePriority = ({ name, content }) => {
   return (
     <div key={name} className="container">
       <h2>{name}</h2>
-      <Markdown remarkPlugins={[remarkGfm]}>{content}</Markdown>
+      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
+        {content}
+      </Markdown>
     </div>
   );
 };
