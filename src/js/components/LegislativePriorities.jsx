@@ -1,15 +1,24 @@
+import { useCallback } from "react";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import Table from "react-bootstrap/Table";
 
 import CMSComponent from "./CMSComponent";
 import Accordion from "react-bootstrap/Accordion";
 import rehypeRaw from "rehype-raw";
 
 const LegislativePriority = ({ name, content }) => {
+  const PartialTable = useCallback((props) => <Table bordered hover {...props} />, []);
   return (
     <div key={name} className="container">
       <h2>{name}</h2>
-      <Markdown rehypePlugins={[rehypeRaw]} remarkPlugins={[remarkGfm]}>
+      <Markdown
+        components={{
+          table: PartialTable,
+        }}
+        rehypePlugins={[rehypeRaw]}
+        remarkPlugins={[remarkGfm]}
+      >
         {content}
       </Markdown>
     </div>
