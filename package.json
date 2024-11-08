@@ -41,7 +41,7 @@
     "@babel/plugin-proposal-object-rest-spread": "^7.20.7",
     "@babel/preset-env": "^7.25.7",
     "@babel/preset-react": "^7.25.7",
-    "@mapc/airtable-cms": "^1.1.2",
+    "@mapc/airtable-cms": "^1.3.0",
     "airtable": "^0.12.2",
     "babel-preset-env": "^1.7.0",
     "bootstrap": "^5.3.3",
