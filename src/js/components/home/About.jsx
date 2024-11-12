@@ -30,9 +30,9 @@ const munis = new Set([
 const AboutSection = ({ title, content, showTitle }) => {
   return (
     <div className="sub-section">
-      <div className={`container ${title === "Principles" ? "columned" : ""}`}>
+      <div className={`container ${title === "Guiding Principles" ? "columned" : ""}`}>
         {title != null && title !== "" && showTitle && <h3 id={title.toLowerCase()}>{title}</h3>}
-        {title === "Principles" && (
+        {title === "Guiding Principles" && (
           <Link className="box-link" to={"/guiding-principles"}>
             <img
               src="/assets/images/home-housing.jpg"
