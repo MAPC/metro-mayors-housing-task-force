@@ -21,7 +21,6 @@ const TaskForceMeetings = () => {
           <tr>
             <th className="meetings-table-header">Date</th>
             <th className="meetings-table-header">Summary</th>
-            <th className="meetings-table-header">Attachments</th>
           </tr>
         </thead>
         <tbody>
@@ -32,25 +31,6 @@ const TaskForceMeetings = () => {
                 <td className="meetings-table-data">{meeting.date}</td>
                 <td className="meetings-table-data">
                   <Markdown remarkPlugins={[remarkGfm]}>{meeting.summary}</Markdown>
-                </td>
-                <td className="meetings-table-data">
-                <h6>{meeting.attachments[0].type.startsWith("image/") ? "Images: " : "Files:"}</h6>
-                  {meeting.attachments.length > 0 && (
-                    <div className="meetings-attachment-container">
-                      
-                      {meeting.attachments.map((attachment) => (
-                        <div key={attachment.id}>
-                          <a href={attachment.url} target="_blank" rel="noopener noreferrer">
-                            {attachment.type.startsWith("image/") ? (
-                              <img src={attachment.thumbnails.small.url} alt={attachment.filename} style={{ maxWidth: "100px", marginLeft: "10px" }} />
-                            ) : (
-                              <p>{attachment.filename}</p>
-                            )}
-                          </a>
-                        </div>
-                      ))}
-                    </div>
-                  )}
                 </td>
               </tr>
             );
