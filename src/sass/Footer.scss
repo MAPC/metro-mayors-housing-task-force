@@ -29,7 +29,7 @@
 
   .container {
     display: flex;
-    vertical-align: middle;
+    align-items: center;
 
     @include media($_break) {
       display: grid;

@@ -1,5 +1,9 @@
 .component.LocalImplementationProjects {
 
+  .row {
+    margin-top: 3rem;
+  }
+
     h2 { margin: .75em auto 1.2em; }
     .container { padding: 0 2em; }
 
@@ -11,6 +15,11 @@
         border: none;
         transition: transform 0.2s ease-in-out;
         cursor: pointer;
+        p {
+          font-size: 16px;
+          padding: 0;
+          margin-bottom: 1rem;
+        }
         
         &:hover {
             transform: translateY(-5px);
