@@ -12,14 +12,14 @@ const LocalImplementationProject = ({ name, preview, order, description }) => {
       <div className="col-12 mb-5 intro-section">
         <h2 className="text-primary">{name}</h2>
         <div className="intro-content">
-          <Markdown 
+          <Markdown
             remarkPlugins={[remarkGfm]}
             components={{
               img: ({ node, ...props }) => (
                 <div className="intro-image-container">
                   <img {...props} className="intro-image" />
                 </div>
-              )
+              ),
             }}
           >
             {description}
@@ -37,14 +37,14 @@ const LocalImplementationProject = ({ name, preview, order, description }) => {
           <Card.Body className="d-flex flex-column">
             <h2 className="text-primary">{name}</h2>
             <Card.Text as="div" className="description-container flex-grow-1">
-              <Markdown 
+              <Markdown
                 remarkPlugins={[remarkGfm]}
                 components={{
                   img: ({ node, ...props }) => (
                     <div className="image-container">
                       <img {...props} className="markdown-img" />
                     </div>
-                  )
+                  ),
                 }}
               >
                 {preview}
@@ -54,14 +54,7 @@ const LocalImplementationProject = ({ name, preview, order, description }) => {
         </Card>
       </div>
 
-      <Modal 
-        show={showModal} 
-        onHide={() => setShowModal(false)}
-        size="lg"
-        centered
-        dialogClassName="modal-90w"
-        className="local-implementation-modal"
-      >
+      <Modal show={showModal} onHide={() => setShowModal(false)} size="lg" centered dialogClassName="modal-90w" className="local-implementation-modal">
         <Modal.Header closeButton>
           <Modal.Title>{name}</Modal.Title>
         </Modal.Header>
@@ -73,7 +66,7 @@ const LocalImplementationProject = ({ name, preview, order, description }) => {
                 <div className="modal-image-container">
                   <img {...props} className="modal-markdown-img" />
                 </div>
-              )
+              ),
             }}
           >
             {description}
@@ -86,8 +79,9 @@ const LocalImplementationProject = ({ name, preview, order, description }) => {
 
 const LocalImplementationProjects = () => {
   return (
-    <div className="component LocalImplementationProjects py-5">
+    <div className="component LocalImplementationProjects content-page py-5">
       <div className="container">
+        <h1>Local Implementation Projects</h1>
         <div className="row">
           <CMSComponent
             tableName="Local Implementation Projects"
