@@ -16,6 +16,7 @@ const munis = new Set([
   "Cambridge",
   "Chelsea",
   "Everett",
+  "Lynn",
   "Malden",
   "Medford",
   "Melrose",
