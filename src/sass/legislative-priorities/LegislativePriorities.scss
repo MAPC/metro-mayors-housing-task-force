@@ -5,6 +5,17 @@
     font-size: 0.75em;
 }
 
+table.programs {
+  th {
+    border: 1px solid #a4ccd8 ;
+    background-color: #a4ccd8 !important;
+    color: #002d3d;
+  }
+  td {
+    border: 1px solid #a4ccd8;
+  }
+}
+
 summary {
   cursor: pointer;
   list-style-type: none; /* Remove default bullets */
