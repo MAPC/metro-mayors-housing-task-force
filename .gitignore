@@ -4,6 +4,7 @@
 # Build outputs
 assets/bundle.js
 public/bundle.js
+public/bundle.js.LICENSE.txt
 public/bundle.js.map
 public/bundle.css
 public/bundle.css.map

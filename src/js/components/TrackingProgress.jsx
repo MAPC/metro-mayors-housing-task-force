@@ -44,7 +44,7 @@ const PageSection = ({ section, content }) => {
                         margin: "3rem 0rem",
                       }}
                     >
-                      <Figure.Image style={{ height: `${height}px` }} height={height} alt={alt} src={props.src} />
+                      <Figure.Image style={{ maxHeight: `${height}px` }} height={height} alt={alt} src={props.src} />
                       <Figure.Caption style={{ textAlign: "center" }}>{alt}</Figure.Caption>
                     </Figure>
                   );
