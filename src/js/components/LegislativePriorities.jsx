@@ -7,7 +7,7 @@ import CMSComponent from "./CMSComponent";
 import rehypeRaw from "rehype-raw";
 
 const LegislativePriority = ({ name, content }) => {
-  const PartialTable = useCallback((props) => <Table bordered hover {...props} />, []);
+  const PartialTable = useCallback((props) => <Table className="programs" bordered striped hover {...props} />, []);
   return (
     <div className="cms-section">
       <div key={name} className="container">

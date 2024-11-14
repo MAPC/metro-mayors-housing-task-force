@@ -1,5 +1,6 @@
 import { useAirtableCMS } from "@mapc/airtable-cms";
 import Markdown from "react-markdown";
+import Table from "react-bootstrap/Table";
 import remarkGfm from "remark-gfm";
 
 const TaskForceMeetings = () => {
@@ -14,29 +15,31 @@ const TaskForceMeetings = () => {
   });
 
   return (
-    <div className="component TaskForceMeetings">
-      <h2>Task Force Meetings History</h2>
-      <table className="meetings-table">
-        <thead>
-          <tr>
-            <th className="meetings-table-header">Date</th>
-            <th className="meetings-table-header">Summary</th>
-          </tr>
-        </thead>
-        <tbody>
-          {Object.keys(taskForceMeetings).map((dateKey) => {
-            const meeting = taskForceMeetings[dateKey];
-            return (
-              <tr key={dateKey}>
-                <td className="meetings-table-data">{meeting.date}</td>
-                <td className="meetings-table-data">
-                  <Markdown remarkPlugins={[remarkGfm]}>{meeting.summary}</Markdown>
-                </td>
-              </tr>
-            );
-          })}
-        </tbody>
-      </table>
+    <div className="component TaskForceMeetings content-page">
+      <div className="container">
+        <h1>Task Force Meetings History</h1>
+        <Table bordered striped hover className="meetings">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Summary</th>
+            </tr>
+          </thead>
+          <tbody>
+            {Object.keys(taskForceMeetings).map((dateKey) => {
+              const meeting = taskForceMeetings[dateKey];
+              return (
+                <tr key={dateKey}>
+                  <td>{meeting.date}</td>
+                  <td>
+                    <Markdown remarkPlugins={[remarkGfm]}>{meeting.summary}</Markdown>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </Table>
+      </div>
     </div>
   );
 };

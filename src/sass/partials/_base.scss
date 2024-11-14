@@ -65,6 +65,17 @@ a { text-decoration: none; }
 }
 
 .content-page {
+  a {
+    color: $color_font-dark;
+
+    background: $color_palette-yellow--light;
+    transition: background .18s;
+
+    &:hover {
+      background: $color_palette-yellow;
+      transition: background .18s;
+    }
+  }
 
   .cms-section {
     &:nth-of-type(2n)  {
@@ -167,17 +178,12 @@ a { text-decoration: none; }
     line-height: calc(#{$font_size-medium} + 12px);
 
     @include media(small) { padding: 50px 0; }
+  }
 
-    a {
-      color: $color_font-dark;
-
-      background: $color_palette-yellow--light;
-      transition: background .18s;
-
-      &:hover {
-        background: $color_palette-yellow;
-        transition: background .18s;
-      }
+  table {
+    p {
+      padding: initial;
+      font-size: 16px;
     }
   }
 
