@@ -87,6 +87,7 @@ const About = () => {
             showTitle: "Show Title",
             order: "Order",
           }}
+          keyField="title"
           sortBy={(a, b) => a.order - b.order}
           recordComponent={AboutSection}
         />
