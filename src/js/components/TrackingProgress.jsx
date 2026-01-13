@@ -77,18 +77,6 @@ const TrackingProgress = () => {
           sortBy={(a, b) => a.order - b.order}
           recordComponent={PageSection}
         />
-        <div className="presentation-slides">
-          <iframe
-            src="https://slides.com/mapc/deck-7b8e5c/embed"
-            width="576"
-            height="420"
-            scrolling="no"
-            frameBorder="0"
-            webkitallowfullscreen="true"
-            mozallowfullscreen="true"
-            allowFullScreen
-          ></iframe>
-        </div>
       </div>
     </div>
   );
